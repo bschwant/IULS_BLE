@@ -1,0 +1,1718 @@
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"stm32wbxx_nucleo.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.BSP_GetVersion,"ax",%progbits
+  18              		.align	1
+  19              		.global	BSP_GetVersion
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv4-sp-d16
+  26              	BSP_GetVersion:
+  27              	.LFB950:
+  28              		.file 1 "Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c"
+   1:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /**
+   2:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   ******************************************************************************
+   3:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @file    stm32wbxx_nucleo.c
+   4:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @author  MCD Application Team
+   5:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @brief   This file provides set of firmware functions to manage:
+   6:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *          - LEDs and push-button available on STM32WBXX-Nucleo Kit 
+   7:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *            from STMicroelectronics
+   8:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *          - LCD, joystick and microSD available on Adafruit 1.8" TFT LCD 
+   9:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *            shield (reference ID 802)
+  10:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   ******************************************************************************
+  11:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @attention
+  12:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *
+  13:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * Copyright (c) 2019-2021 STMicroelectronics.
+  14:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * All rights reserved.
+  15:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *
+  16:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * This software is licensed under terms that can be found in the LICENSE file
+  17:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * in the root directory of this software component.
+  18:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  19:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *
+  20:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   ******************************************************************************
+  21:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */
+  22:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+  23:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /* Includes ------------------------------------------------------------------*/
+  24:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** #include "stm32wbxx_nucleo.h"
+  25:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+  26:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /** @addtogroup BSP
+  27:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @{
+  28:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */ 
+  29:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+  30:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /** @defgroup STM32WBXX_NUCLEO STM32WBxx-Nucleo
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 2
+
+
+  31:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @brief This file provides set of firmware functions to manage Leds and push-button
+  32:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *        available on STM32WBxx-Nucleo Kit from STMicroelectronics.
+  33:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *        It provides also LCD, joystick and uSD functions to communicate with 
+  34:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *        Adafruit 1.8" TFT LCD shield (reference ID 802)
+  35:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @{
+  36:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */ 
+  37:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+  38:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /** @defgroup STM32WBXX_NUCLEO_Private_Defines Private Defines
+  39:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @{
+  40:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */ 
+  41:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+  42:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /**
+  43:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @brief STM32WBxx NUCLEO BSP Driver
+  44:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */
+  45:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** #define __STM32WBxx_NUCLEO_BSP_VERSION_MAIN   (0x01U) /*!< [31:24] main version */
+  46:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** #define __STM32WBxx_NUCLEO_BSP_VERSION_SUB1   (0x00U) /*!< [23:16] sub1 version */
+  47:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** #define __STM32WBxx_NUCLEO_BSP_VERSION_SUB2   (0x04U) /*!< [15:8]  sub2 version */
+  48:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** #define __STM32WBxx_NUCLEO_BSP_VERSION_RC     (0x00U) /*!< [7:0]  release candidate */ 
+  49:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** #define __STM32WBxx_NUCLEO_BSP_VERSION        ((__STM32WBxx_NUCLEO_BSP_VERSION_MAIN << 24)\
+  50:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****                                              |(__STM32WBxx_NUCLEO_BSP_VERSION_SUB1 << 16)\
+  51:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****                                              |(__STM32WBxx_NUCLEO_BSP_VERSION_SUB2 << 8 )\
+  52:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****                                              |(__STM32WBxx_NUCLEO_BSP_VERSION_RC))   
+  53:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+  54:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /**
+  55:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @brief LINK SD Card
+  56:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */
+  57:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** #define SD_DUMMY_BYTE            0xFF    
+  58:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** #define SD_NO_RESPONSE_EXPECTED  0x80
+  59:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+  60:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /**
+  61:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @}
+  62:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */ 
+  63:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+  64:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /** @defgroup STM32WBXX_NUCLEO_LOW_LEVEL_Private_Variables Private Variables
+  65:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @{
+  66:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */ 
+  67:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** GPIO_TypeDef* GPIO_PORT[LEDn] = {LED1_GPIO_PORT, LED2_GPIO_PORT, LED3_GPIO_PORT};
+  68:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** const uint16_t GPIO_PIN[LEDn] = {LED1_PIN, LED2_PIN, LED3_PIN};
+  69:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+  70:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** GPIO_TypeDef* BUTTON_PORT[BUTTONn] = {BUTTON_SW1_GPIO_PORT, BUTTON_SW2_GPIO_PORT, BUTTON_SW3_GPIO_P
+  71:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** const uint16_t BUTTON_PIN[BUTTONn] = {BUTTON_SW1_PIN, BUTTON_SW2_PIN, BUTTON_SW3_PIN}; 
+  72:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** const uint8_t BUTTON_IRQn[BUTTONn] = {BUTTON_SW1_EXTI_IRQn, BUTTON_SW2_EXTI_IRQn, BUTTON_SW3_EXTI_I
+  73:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+  74:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /**
+  75:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****  * @brief BUS variables
+  76:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****  */
+  77:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+  78:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** #ifdef HAL_SPI_MODULE_ENABLED
+  79:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** uint32_t hnucleo_SpixTimeout = NUCLEO_SPIx_TIMEOUT_MAX;        /*<! Value of Timeout when SPI commu
+  80:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** static SPI_HandleTypeDef hnucleo_Spi;
+  81:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** #endif /* HAL_SPI_MODULE_ENABLED */
+  82:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+  83:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** #ifdef HAL_ADC_MODULE_ENABLED
+  84:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** static ADC_HandleTypeDef hnucleo_Adc;
+  85:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /* ADC channel configuration structure declaration */
+  86:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** static ADC_ChannelConfTypeDef hnucleo_AdcChannelConfig;
+  87:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** #endif /* HAL_ADC_MODULE_ENABLED */
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 3
+
+
+  88:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+  89:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /**
+  90:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @}
+  91:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */ 
+  92:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+  93:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /** @defgroup STM32WBXX_NUCLEO_Private_Functions Private Functions
+  94:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @{
+  95:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */ 
+  96:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** #ifdef HAL_SPI_MODULE_ENABLED
+  97:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** static void               SPIx_Init(void);
+  98:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** static void               SPIx_Write(uint8_t Value);
+  99:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** static void               SPIx_Error (void);
+ 100:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** static void               SPIx_MspInit(void);
+ 101:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** #endif /* HAL_SPI_MODULE_ENABLED */
+ 102:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+ 103:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** #ifdef HAL_ADC_MODULE_ENABLED
+ 104:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** static HAL_StatusTypeDef  ADCx_Init(void);
+ 105:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** static void               ADCx_MspInit(ADC_HandleTypeDef *hadc);
+ 106:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** #endif /* HAL_ADC_MODULE_ENABLED */
+ 107:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+ 108:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** #ifdef HAL_SPI_MODULE_ENABLED
+ 109:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /* SD IO functions */
+ 110:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** void                      SD_IO_Init(void);
+ 111:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** void                      SD_IO_CSState(uint8_t state);
+ 112:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** void                      SD_IO_WriteReadData(const uint8_t *DataIn, uint8_t *DataOut, uint16_t Dat
+ 113:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** uint8_t                   SD_IO_WriteByte(uint8_t Data);
+ 114:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+ 115:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /* LCD IO functions */
+ 116:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** void                      LCD_IO_Init(void);
+ 117:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** void                      LCD_IO_WriteMultipleData(uint8_t *pData, uint32_t Size);
+ 118:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** void                      LCD_IO_WriteReg(uint8_t LCDReg);
+ 119:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** void                      LCD_Delay(uint32_t delay);
+ 120:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** #endif /* HAL_SPI_MODULE_ENABLED */
+ 121:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /**
+ 122:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @}
+ 123:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */ 
+ 124:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+ 125:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /** @defgroup STM32WBXX_NUCLEO_Exported_Functions Exported Functions
+ 126:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @{
+ 127:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */ 
+ 128:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+ 129:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /**
+ 130:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @brief  This method returns the STM32WBxx NUCLEO BSP Driver revision
+ 131:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @retval version: 0xXYZR (8bits for each decimal, R for RC)
+ 132:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */
+ 133:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** uint32_t BSP_GetVersion(void)
+ 134:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** {
+  29              		.loc 1 134 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+ 135:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   return __STM32WBxx_NUCLEO_BSP_VERSION;
+  34              		.loc 1 135 3 view .LVU1
+ 136:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** }
+  35              		.loc 1 136 1 is_stmt 0 view .LVU2
+  36 0000 0048     		ldr	r0, .L2
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 4
+
+
+  37 0002 7047     		bx	lr
+  38              	.L3:
+  39              		.align	2
+  40              	.L2:
+  41 0004 00040001 		.word	16778240
+  42              		.cfi_endproc
+  43              	.LFE950:
+  45              		.section	.text.BSP_LED_Init,"ax",%progbits
+  46              		.align	1
+  47              		.global	BSP_LED_Init
+  48              		.syntax unified
+  49              		.thumb
+  50              		.thumb_func
+  51              		.fpu fpv4-sp-d16
+  53              	BSP_LED_Init:
+  54              	.LVL0:
+  55              	.LFB951:
+ 137:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+ 138:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /** @defgroup STM32WBXX_NUCLEO_LED_Functions LED Functions
+ 139:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @{
+ 140:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */ 
+ 141:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+ 142:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /**
+ 143:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @brief  Configures LED GPIO.
+ 144:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @param  Led: LED to be configured. 
+ 145:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *          This parameter can be one of the following values:
+ 146:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *            @arg LED1
+ 147:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *            @arg LED2
+ 148:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *            @arg LED3
+ 149:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @retval None
+ 150:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */
+ 151:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** void BSP_LED_Init(Led_TypeDef Led)
+ 152:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** {
+  56              		.loc 1 152 1 is_stmt 1 view -0
+  57              		.cfi_startproc
+  58              		@ args = 0, pretend = 0, frame = 24
+  59              		@ frame_needed = 0, uses_anonymous_args = 0
+  60              		.loc 1 152 1 is_stmt 0 view .LVU4
+  61 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  62              	.LCFI0:
+  63              		.cfi_def_cfa_offset 20
+  64              		.cfi_offset 4, -20
+  65              		.cfi_offset 5, -16
+  66              		.cfi_offset 6, -12
+  67              		.cfi_offset 7, -8
+  68              		.cfi_offset 14, -4
+  69 0002 87B0     		sub	sp, sp, #28
+  70              	.LCFI1:
+  71              		.cfi_def_cfa_offset 48
+  72 0004 0446     		mov	r4, r0
+ 153:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   GPIO_InitTypeDef  gpioinitstruct = {0};
+  73              		.loc 1 153 3 is_stmt 1 view .LVU5
+  74              		.loc 1 153 21 is_stmt 0 view .LVU6
+  75 0006 0025     		movs	r5, #0
+  76 0008 0595     		str	r5, [sp, #20]
+ 154:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   
+ 155:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   /* Enable the GPIO_LED Clock */
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 5
+
+
+ 156:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   LEDx_GPIO_CLK_ENABLE(Led);
+  77              		.loc 1 156 3 is_stmt 1 view .LVU7
+  78              	.LVL1:
+  79              	.LBB10:
+  80              	.LBI10:
+  81              		.file 2 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h"
+   1:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+   2:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   ******************************************************************************
+   3:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @file    stm32wbxx_ll_bus.h
+   4:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @author  MCD Application Team
+   5:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @brief   Header file of BUS LL module.
+   6:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   ******************************************************************************
+   7:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @attention
+   8:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *
+   9:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * Copyright (c) 2019 STMicroelectronics.
+  10:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * All rights reserved.
+  11:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *
+  12:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * This software is licensed under terms that can be found in the LICENSE file
+  13:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * in the root directory of this software component.
+  14:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  15:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *
+  16:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   ******************************************************************************
+  17:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   @verbatim
+  18:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****                       ##### RCC Limitations #####
+  19:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   ==============================================================================
+  20:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****     [..]
+  21:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****       A delay between an RCC peripheral clock enable and the effective peripheral
+  22:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****       enabling should be taken into account in order to manage the peripheral read/write
+  23:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****       from/to registers.
+  24:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****       (+) This delay depends on the peripheral mapping.
+  25:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****         (++) AHB & APB peripherals, 1 dummy read is necessary
+  26:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+  27:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****     [..]
+  28:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****       Workarounds:
+  29:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****       (#) For AHB & APB peripherals, a dummy read to the peripheral register has been
+  30:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****           inserted in each LL_{BUS}_GRP{x}_EnableClock() function.
+  31:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+  32:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   @endverbatim
+  33:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   ******************************************************************************
+  34:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+  35:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+  36:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /* Define to prevent recursive inclusion -------------------------------------*/
+  37:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #ifndef STM32WBxx_LL_BUS_H
+  38:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define STM32WBxx_LL_BUS_H
+  39:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+  40:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #ifdef __cplusplus
+  41:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** extern "C" {
+  42:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+  43:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+  44:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /* Includes ------------------------------------------------------------------*/
+  45:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #include "stm32wbxx.h"
+  46:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+  47:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @addtogroup STM32WBxx_LL_Driver
+  48:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
+  49:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+  50:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+  51:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(RCC)
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 6
+
+
+  52:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+  53:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL BUS
+  54:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
+  55:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+  56:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+  57:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /* Private types -------------------------------------------------------------*/
+  58:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /* Private variables ---------------------------------------------------------*/
+  59:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+  60:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /* Private constants ---------------------------------------------------------*/
+  61:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+  62:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /* Private macros ------------------------------------------------------------*/
+  63:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+  64:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /* Exported types ------------------------------------------------------------*/
+  65:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+  66:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /* Exported constants --------------------------------------------------------*/
+  67:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_Exported_Constants BUS Exported Constants
+  68:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
+  69:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+  70:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+  71:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EC_AHB1_GRP1_PERIPH  AHB1 GRP1 PERIPH
+  72:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
+  73:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+  74:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB1_GRP1_PERIPH_ALL            (0xFFFFFFFFU)
+  75:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+  76:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB1_GRP1_PERIPH_DMA1           RCC_AHB1ENR_DMA1EN
+  77:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(DMA2)
+  78:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB1_GRP1_PERIPH_DMA2           RCC_AHB1ENR_DMA2EN
+  79:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+  80:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB1_GRP1_PERIPH_DMAMUX1        RCC_AHB1ENR_DMAMUX1EN
+  81:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB1_GRP1_PERIPH_SRAM1          RCC_AHB1SMENR_SRAM1SMEN
+  82:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB1_GRP1_PERIPH_CRC            RCC_AHB1ENR_CRCEN
+  83:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(TSC)
+  84:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB1_GRP1_PERIPH_TSC            RCC_AHB1ENR_TSCEN
+  85:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+  86:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+  87:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @}
+  88:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+  89:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+  90:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EC_AHB2_GRP1_PERIPH  AHB2 GRP1 PERIPH
+  91:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
+  92:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+  93:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_ALL            (0xFFFFFFFFU)
+  94:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+  95:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOA          RCC_AHB2ENR_GPIOAEN
+  96:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOB          RCC_AHB2ENR_GPIOBEN
+  97:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOC          RCC_AHB2ENR_GPIOCEN
+  98:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(GPIOD)
+  99:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOD          RCC_AHB2ENR_GPIODEN
+ 100:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 101:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOE          RCC_AHB2ENR_GPIOEEN
+ 102:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_GPIOH          RCC_AHB2ENR_GPIOHEN
+ 103:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(ADC_SUPPORT_5_MSPS)
+ 104:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_ADC            RCC_AHB2ENR_ADCEN
+ 105:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 106:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(AES1)
+ 107:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB2_GRP1_PERIPH_AES1           RCC_AHB2ENR_AES1EN
+ 108:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 7
+
+
+ 109:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ 110:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @}
+ 111:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 112:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 113:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EC_AHB3_GRP1_PERIPH  AHB3 GRP1 PERIPH
+ 114:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
+ 115:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 116:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB3_GRP1_PERIPH_ALL            (0xFFFFFFFFU)
+ 117:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(QUADSPI)
+ 118:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB3_GRP1_PERIPH_QUADSPI        RCC_AHB3ENR_QUADSPIEN
+ 119:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 120:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB3_GRP1_PERIPH_PKA            RCC_AHB3ENR_PKAEN
+ 121:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB3_GRP1_PERIPH_AES2           RCC_AHB3ENR_AES2EN
+ 122:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB3_GRP1_PERIPH_RNG            RCC_AHB3ENR_RNGEN
+ 123:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB3_GRP1_PERIPH_HSEM           RCC_AHB3ENR_HSEMEN
+ 124:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB3_GRP1_PERIPH_IPCC           RCC_AHB3ENR_IPCCEN
+ 125:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB3_GRP1_PERIPH_SRAM2          RCC_AHB3SMENR_SRAM2SMEN
+ 126:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_AHB3_GRP1_PERIPH_FLASH          RCC_AHB3ENR_FLASHEN
+ 127:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ 128:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @}
+ 129:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 130:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 131:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EC_APB1_GRP1_PERIPH  APB1 GRP1 PERIPH
+ 132:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
+ 133:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 134:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_ALL            (0xFFFFFFFFU)
+ 135:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_TIM2           RCC_APB1ENR1_TIM2EN
+ 136:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(LCD)
+ 137:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_LCD            RCC_APB1ENR1_LCDEN
+ 138:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 139:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_RTCAPB         RCC_APB1ENR1_RTCAPBEN
+ 140:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_WWDG           RCC_APB1ENR1_WWDGEN
+ 141:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(SPI2)
+ 142:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_SPI2           RCC_APB1ENR1_SPI2EN
+ 143:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 144:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_I2C1           RCC_APB1ENR1_I2C1EN
+ 145:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(I2C3)
+ 146:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_I2C3           RCC_APB1ENR1_I2C3EN
+ 147:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 148:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(CRS)
+ 149:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_CRS            RCC_APB1ENR1_CRSEN
+ 150:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 151:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(USB)
+ 152:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_USB            RCC_APB1ENR1_USBEN
+ 153:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 154:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB1_GRP1_PERIPH_LPTIM1         RCC_APB1ENR1_LPTIM1EN
+ 155:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ 156:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @}
+ 157:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 158:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 159:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 160:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EC_APB1_GRP2_PERIPH  APB1 GRP2 PERIPH
+ 161:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
+ 162:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 163:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB1_GRP2_PERIPH_ALL            (0xFFFFFFFFU)
+ 164:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 165:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(LPUART1)
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 8
+
+
+ 166:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB1_GRP2_PERIPH_LPUART1        RCC_APB1ENR2_LPUART1EN
+ 167:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 168:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB1_GRP2_PERIPH_LPTIM2         RCC_APB1ENR2_LPTIM2EN
+ 169:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ 170:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @}
+ 171:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 172:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 173:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EC_APB2_GRP1_PERIPH  APB2 GRP1 PERIPH
+ 174:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
+ 175:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 176:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_ALL            (0xFFFFFFFFU)
+ 177:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   
+ 178:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(ADC_SUPPORT_2_5_MSPS)
+ 179:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_ADC            RCC_APB2ENR_ADCEN
+ 180:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 181:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_TIM1           RCC_APB2ENR_TIM1EN
+ 182:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_SPI1           RCC_APB2ENR_SPI1EN
+ 183:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_USART1         RCC_APB2ENR_USART1EN
+ 184:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(TIM16)
+ 185:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_TIM16          RCC_APB2ENR_TIM16EN
+ 186:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 187:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(TIM17)
+ 188:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_TIM17          RCC_APB2ENR_TIM17EN
+ 189:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 190:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(SAI1)
+ 191:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB2_GRP1_PERIPH_SAI1           RCC_APB2ENR_SAI1EN
+ 192:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 193:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ 194:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @}
+ 195:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 196:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 197:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EC_APB3_GRP1_PERIPH  APB3 GRP1 PERIPH
+ 198:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
+ 199:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 200:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB3_GRP1_PERIPH_ALL            (0xFFFFFFFFU)
+ 201:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_APB3_GRP1_PERIPH_RF             RCC_APB3RSTR_RFRST
+ 202:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ 203:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @}
+ 204:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 205:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 206:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 207:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EC_C2_AHB1_GRP1_PERIPH  C2 AHB1 GRP1 PERIPH
+ 208:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
+ 209:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 210:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB1_GRP1_PERIPH_DMA1         RCC_C2AHB1ENR_DMA1EN
+ 211:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(DMA2)
+ 212:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB1_GRP1_PERIPH_DMA2         RCC_C2AHB1ENR_DMA2EN
+ 213:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 214:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB1_GRP1_PERIPH_DMAMUX1      RCC_C2AHB1ENR_DMAMUX1EN
+ 215:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB1_GRP1_PERIPH_SRAM1        RCC_C2AHB1ENR_SRAM1EN
+ 216:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB1_GRP1_PERIPH_CRC          RCC_C2AHB1ENR_CRCEN
+ 217:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(TSC)
+ 218:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB1_GRP1_PERIPH_TSC          RCC_C2AHB1ENR_TSCEN
+ 219:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 220:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ 221:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @}
+ 222:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 9
+
+
+ 223:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 224:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 225:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EC_C2_AHB2_GRP1_PERIPH  C2 AHB2 GRP1 PERIPH
+ 226:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
+ 227:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 228:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB2_GRP1_PERIPH_GPIOA        RCC_C2AHB2ENR_GPIOAEN
+ 229:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB2_GRP1_PERIPH_GPIOB        RCC_C2AHB2ENR_GPIOBEN
+ 230:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB2_GRP1_PERIPH_GPIOC        RCC_C2AHB2ENR_GPIOCEN
+ 231:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(GPIOD)
+ 232:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB2_GRP1_PERIPH_GPIOD        RCC_C2AHB2ENR_GPIODEN
+ 233:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 234:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB2_GRP1_PERIPH_GPIOE        RCC_C2AHB2ENR_GPIOEEN
+ 235:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB2_GRP1_PERIPH_GPIOH        RCC_C2AHB2ENR_GPIOHEN
+ 236:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(ADC_SUPPORT_5_MSPS)
+ 237:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB2_GRP1_PERIPH_ADC          RCC_C2AHB2ENR_ADCEN
+ 238:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 239:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(AES1)
+ 240:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB2_GRP1_PERIPH_AES1         RCC_C2AHB2ENR_AES1EN
+ 241:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 242:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ 243:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @}
+ 244:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 245:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 246:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 247:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EC_C2_AHB3_GRP1_PERIPH  C2 AHB3 GRP1 PERIPH
+ 248:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
+ 249:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 250:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB3_GRP1_PERIPH_PKA          RCC_C2AHB3ENR_PKAEN
+ 251:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB3_GRP1_PERIPH_AES2         RCC_C2AHB3ENR_AES2EN
+ 252:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB3_GRP1_PERIPH_RNG          RCC_C2AHB3ENR_RNGEN
+ 253:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB3_GRP1_PERIPH_HSEM         RCC_C2AHB3ENR_HSEMEN
+ 254:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB3_GRP1_PERIPH_IPCC         RCC_C2AHB3ENR_IPCCEN
+ 255:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB3_GRP1_PERIPH_FLASH        RCC_C2AHB3ENR_FLASHEN
+ 256:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_AHB3_GRP1_PERIPH_SRAM2        RCC_C2AHB3SMENR_SRAM2SMEN
+ 257:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ 258:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @}
+ 259:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 260:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 261:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 262:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EC_C2_APB1_GRP1_PERIPH  C2 APB1 GRP1 PERIPH
+ 263:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
+ 264:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 265:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB1_GRP1_PERIPH_TIM2         RCC_C2APB1ENR1_TIM2EN
+ 266:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(LCD)
+ 267:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB1_GRP1_PERIPH_LCD          RCC_C2APB1ENR1_LCDEN
+ 268:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 269:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB1_GRP1_PERIPH_RTCAPB       RCC_C2APB1ENR1_RTCAPBEN
+ 270:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(SPI2)
+ 271:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB1_GRP1_PERIPH_SPI2         RCC_C2APB1ENR1_SPI2EN
+ 272:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 273:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB1_GRP1_PERIPH_I2C1         RCC_C2APB1ENR1_I2C1EN
+ 274:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(I2C3)
+ 275:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB1_GRP1_PERIPH_I2C3         RCC_C2APB1ENR1_I2C3EN
+ 276:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB1_GRP1_PERIPH_CRS          RCC_C2APB1ENR1_CRSEN
+ 277:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB1_GRP1_PERIPH_USB          RCC_C2APB1ENR1_USBEN
+ 278:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 279:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB1_GRP1_PERIPH_LPTIM1       RCC_C2APB1ENR1_LPTIM1EN
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 10
+
+
+ 280:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ 281:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @}
+ 282:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 283:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 284:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 285:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EC_C2_APB1_GRP2_PERIPH  C2 APB1 GRP2 PERIPH
+ 286:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
+ 287:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 288:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(LPUART1)
+ 289:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB1_GRP2_PERIPH_LPUART1      RCC_C2APB1ENR2_LPUART1EN
+ 290:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 291:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB1_GRP2_PERIPH_LPTIM2       RCC_C2APB1ENR2_LPTIM2EN
+ 292:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ 293:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @}
+ 294:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 295:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 296:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 297:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EC_C2_APB2_GRP1_PERIPH  C2 APB2 GRP1 PERIPH
+ 298:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
+ 299:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 300:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(ADC_SUPPORT_2_5_MSPS)
+ 301:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB2_GRP1_PERIPH_ADC          RCC_C2APB2ENR_ADCEN
+ 302:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 303:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB2_GRP1_PERIPH_TIM1         RCC_C2APB2ENR_TIM1EN
+ 304:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB2_GRP1_PERIPH_SPI1         RCC_C2APB2ENR_SPI1EN
+ 305:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB2_GRP1_PERIPH_USART1       RCC_C2APB2ENR_USART1EN
+ 306:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(TIM16)
+ 307:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB2_GRP1_PERIPH_TIM16        RCC_C2APB2ENR_TIM16EN
+ 308:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 309:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(TIM17)
+ 310:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB2_GRP1_PERIPH_TIM17        RCC_C2APB2ENR_TIM17EN
+ 311:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 312:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(SAI1)
+ 313:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB2_GRP1_PERIPH_SAI1         RCC_C2APB2ENR_SAI1EN
+ 314:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 315:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ 316:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @}
+ 317:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 318:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 319:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 320:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EC_C2_APB3_GRP1_PERIPH  C2 APB3 GRP1 PERIPH
+ 321:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
+ 322:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 323:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB3_GRP1_PERIPH_BLE          RCC_C2APB3ENR_BLEEN
+ 324:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #if defined(RCC_802_SUPPORT)
+ 325:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #define LL_C2_APB3_GRP1_PERIPH_802          RCC_C2APB3ENR_802EN
+ 326:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** #endif
+ 327:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ 328:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @}
+ 329:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 330:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 331:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 332:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ 333:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @}
+ 334:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 335:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 336:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /* Exported macro ------------------------------------------------------------*/
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 11
+
+
+ 337:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 338:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /* Exported functions --------------------------------------------------------*/
+ 339:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 340:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_Exported_Functions BUS Exported Functions
+ 341:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
+ 342:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 343:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 344:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EF_AHB1 AHB1
+ 345:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
+ 346:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 347:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 348:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ 349:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @brief  Enable AHB1 peripherals clock.
+ 350:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @rmtoll AHB1ENR      DMA1EN        LL_AHB1_GRP1_EnableClock\n
+ 351:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1ENR      DMA2EN        LL_AHB1_GRP1_EnableClock\n
+ 352:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1ENR      DMAMUX1EN      LL_AHB1_GRP1_EnableClock\n
+ 353:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1ENR      CRCEN         LL_AHB1_GRP1_EnableClock\n
+ 354:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1ENR      TSCEN         LL_AHB1_GRP1_EnableClock
+ 355:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
+ 356:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA1
+ 357:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA2 (*)
+ 358:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMAMUX1
+ 359:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
+ 360:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_TSC
+ 361:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @note  (*) Not supported by all the devices
+ 362:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @retval None
+ 363:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 364:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** __STATIC_INLINE void LL_AHB1_GRP1_EnableClock(uint32_t Periphs)
+ 365:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** {
+ 366:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   __IO uint32_t tmpreg;
+ 367:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   SET_BIT(RCC->AHB1ENR, Periphs);
+ 368:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
+ 369:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   tmpreg = READ_BIT(RCC->AHB1ENR, Periphs);
+ 370:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
+ 371:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** }
+ 372:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 373:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ 374:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @brief  Check if AHB1 peripheral clock is enabled or not
+ 375:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @rmtoll AHB1ENR      DMA1EN        LL_AHB1_GRP1_IsEnabledClock\n
+ 376:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1ENR      DMA2EN        LL_AHB1_GRP1_IsEnabledClock\n
+ 377:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1ENR      DMAMUX1EN      LL_AHB1_GRP1_IsEnabledClock\n
+ 378:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1ENR      CRCEN         LL_AHB1_GRP1_IsEnabledClock\n
+ 379:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1ENR      TSCEN         LL_AHB1_GRP1_IsEnabledClock
+ 380:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
+ 381:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA1
+ 382:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA2 (*)
+ 383:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMAMUX1
+ 384:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
+ 385:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_TSC
+ 386:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @note  (*) Not supported by all the devices
+ 387:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @retval uint32_t
+ 388:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 389:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** __STATIC_INLINE uint32_t LL_AHB1_GRP1_IsEnabledClock(uint32_t Periphs)
+ 390:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** {
+ 391:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   return ((READ_BIT(RCC->AHB1ENR, Periphs) == (Periphs)) ? 1UL : 0UL);
+ 392:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** }
+ 393:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 12
+
+
+ 394:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ 395:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @brief  Disable AHB1 peripherals clock.
+ 396:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @rmtoll AHB1ENR      DMA1EN        LL_AHB1_GRP1_DisableClock\n
+ 397:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1ENR      DMA2EN        LL_AHB1_GRP1_DisableClock\n
+ 398:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1ENR      DMAMUX1EN      LL_AHB1_GRP1_DisableClock\n
+ 399:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1ENR      CRCEN         LL_AHB1_GRP1_DisableClock\n
+ 400:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1ENR      TSCEN         LL_AHB1_GRP1_DisableClock
+ 401:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
+ 402:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA1
+ 403:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA2 (*)
+ 404:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMAMUX1
+ 405:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
+ 406:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_TSC
+ 407:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @note  (*) Not supported by all the devices
+ 408:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @retval None
+ 409:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 410:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** __STATIC_INLINE void LL_AHB1_GRP1_DisableClock(uint32_t Periphs)
+ 411:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** {
+ 412:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   CLEAR_BIT(RCC->AHB1ENR, Periphs);
+ 413:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** }
+ 414:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 415:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ 416:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @brief  Force AHB1 peripherals reset.
+ 417:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @rmtoll AHB1RSTR     DMA1RST       LL_AHB1_GRP1_ForceReset\n
+ 418:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1RSTR     DMA2RST       LL_AHB1_GRP1_ForceReset\n
+ 419:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1RSTR     DMAMUX1RST     LL_AHB1_GRP1_ForceReset\n
+ 420:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1RSTR     CRCRST        LL_AHB1_GRP1_ForceReset\n
+ 421:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1RSTR     TSCRST        LL_AHB1_GRP1_ForceReset
+ 422:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
+ 423:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_ALL
+ 424:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA1
+ 425:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA2 (*)
+ 426:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMAMUX1
+ 427:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
+ 428:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_TSC
+ 429:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @note  (*) Not supported by all the devices
+ 430:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @retval None
+ 431:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 432:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** __STATIC_INLINE void LL_AHB1_GRP1_ForceReset(uint32_t Periphs)
+ 433:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** {
+ 434:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   SET_BIT(RCC->AHB1RSTR, Periphs);
+ 435:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** }
+ 436:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 437:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ 438:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @brief  Release AHB1 peripherals reset.
+ 439:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @rmtoll AHB1RSTR     DMA1RST       LL_AHB1_GRP1_ReleaseReset\n
+ 440:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1RSTR     DMA2RST       LL_AHB1_GRP1_ReleaseReset\n
+ 441:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1RSTR     DMAMUX1RST     LL_AHB1_GRP1_ReleaseReset\n
+ 442:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1RSTR     CRCRST        LL_AHB1_GRP1_ReleaseReset\n
+ 443:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1RSTR     TSCRST        LL_AHB1_GRP1_ReleaseReset
+ 444:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
+ 445:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_ALL
+ 446:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA1
+ 447:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA2 (*)
+ 448:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMAMUX1
+ 449:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
+ 450:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_TSC
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 13
+
+
+ 451:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @note  (*) Not supported by all the devices
+ 452:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @retval None
+ 453:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 454:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** __STATIC_INLINE void LL_AHB1_GRP1_ReleaseReset(uint32_t Periphs)
+ 455:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** {
+ 456:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   CLEAR_BIT(RCC->AHB1RSTR, Periphs);
+ 457:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** }
+ 458:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 459:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ 460:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @brief  Enable AHB1 peripherals clock during Low Power (Sleep) mode.
+ 461:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @rmtoll AHB1SMENR    DMA1SMEN      LL_AHB1_GRP1_EnableClockSleep\n
+ 462:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1SMENR    DMA2SMEN      LL_AHB1_GRP1_EnableClockSleep\n
+ 463:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1SMENR    DMAMUX1SMEN    LL_AHB1_GRP1_EnableClockSleep\n
+ 464:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1SMENR    SRAM1SMEN     LL_AHB1_GRP1_EnableClockSleep\n
+ 465:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1SMENR    CRCSMEN       LL_AHB1_GRP1_EnableClockSleep\n
+ 466:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1SMENR    TSCSMEN       LL_AHB1_GRP1_EnableClockSleep
+ 467:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
+ 468:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA1
+ 469:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA2 (*)
+ 470:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMAMUX1
+ 471:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_SRAM1
+ 472:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
+ 473:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_TSC
+ 474:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @note  (*) Not supported by all the devices
+ 475:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @retval None
+ 476:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 477:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** __STATIC_INLINE void LL_AHB1_GRP1_EnableClockSleep(uint32_t Periphs)
+ 478:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** {
+ 479:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   __IO uint32_t tmpreg;
+ 480:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   SET_BIT(RCC->AHB1SMENR, Periphs);
+ 481:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
+ 482:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   tmpreg = READ_BIT(RCC->AHB1SMENR, Periphs);
+ 483:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
+ 484:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** }
+ 485:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 486:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ 487:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @brief  Disable AHB1 peripherals clock during Low Power (Sleep) mode.
+ 488:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @rmtoll AHB1SMENR    DMA1SMEN      LL_AHB1_GRP1_DisableClockSleep\n
+ 489:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1SMENR    DMA2SMEN      LL_AHB1_GRP1_DisableClockSleep\n
+ 490:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1SMENR    DMAMUX1SMEN    LL_AHB1_GRP1_DisableClockSleep\n
+ 491:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1SMENR    SRAM1SMEN     LL_AHB1_GRP1_DisableClockSleep\n
+ 492:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1SMENR    CRCSMEN       LL_AHB1_GRP1_DisableClockSleep\n
+ 493:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB1SMENR    TSCSMEN       LL_AHB1_GRP1_DisableClockSleep
+ 494:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
+ 495:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA1
+ 496:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMA2 (*)
+ 497:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_DMAMUX1
+ 498:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_SRAM1
+ 499:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_CRC
+ 500:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB1_GRP1_PERIPH_TSC
+ 501:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @note  (*) Not supported by all the devices
+ 502:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @retval None
+ 503:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 504:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** __STATIC_INLINE void LL_AHB1_GRP1_DisableClockSleep(uint32_t Periphs)
+ 505:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** {
+ 506:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   CLEAR_BIT(RCC->AHB1SMENR, Periphs);
+ 507:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** }
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 14
+
+
+ 508:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 509:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ 510:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @}
+ 511:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 512:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 513:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /** @defgroup BUS_LL_EF_AHB2 AHB2
+ 514:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @{
+ 515:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 516:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** 
+ 517:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** /**
+ 518:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @brief  Enable AHB2 peripherals clock.
+ 519:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @rmtoll AHB2ENR      GPIOAEN       LL_AHB2_GRP1_EnableClock\n
+ 520:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2ENR      GPIOBEN       LL_AHB2_GRP1_EnableClock\n
+ 521:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2ENR      GPIOCEN       LL_AHB2_GRP1_EnableClock\n
+ 522:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2ENR      GPIODEN       LL_AHB2_GRP1_EnableClock\n
+ 523:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2ENR      GPIOEEN       LL_AHB2_GRP1_EnableClock\n
+ 524:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2ENR      GPIOHEN       LL_AHB2_GRP1_EnableClock\n
+ 525:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2ENR      ADCEN         LL_AHB2_GRP1_EnableClock\n
+ 526:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         AHB2ENR      AES1EN        LL_AHB2_GRP1_EnableClock
+ 527:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @param  Periphs This parameter can be a combination of the following values:
+ 528:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOA
+ 529:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOB
+ 530:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOC
+ 531:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOD (*)
+ 532:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOE
+ 533:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_GPIOH
+ 534:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_ADC (*)
+ 535:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   *         @arg @ref LL_AHB2_GRP1_PERIPH_AES1 (*)
+ 536:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @note  (*) Not supported by all the devices
+ 537:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   * @retval None
+ 538:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   */
+ 539:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** __STATIC_INLINE void LL_AHB2_GRP1_EnableClock(uint32_t Periphs)
+  82              		.loc 2 539 22 view .LVU8
+  83              	.LBB11:
+ 540:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** {
+ 541:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   __IO uint32_t tmpreg;
+  84              		.loc 2 541 3 view .LVU9
+ 542:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   SET_BIT(RCC->AHB2ENR, Periphs);
+  85              		.loc 2 542 3 view .LVU10
+  86 000a 4FF0B043 		mov	r3, #1476395008
+  87 000e DA6C     		ldr	r2, [r3, #76]
+  88 0010 42F00202 		orr	r2, r2, #2
+  89 0014 DA64     		str	r2, [r3, #76]
+ 543:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
+ 544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   tmpreg = READ_BIT(RCC->AHB2ENR, Periphs);
+  90              		.loc 2 544 3 view .LVU11
+  91              		.loc 2 544 12 is_stmt 0 view .LVU12
+  92 0016 DB6C     		ldr	r3, [r3, #76]
+  93 0018 03F00203 		and	r3, r3, #2
+  94              		.loc 2 544 10 view .LVU13
+  95 001c 0093     		str	r3, [sp]
+ 545:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
+  96              		.loc 2 545 3 is_stmt 1 view .LVU14
+  97 001e 009B     		ldr	r3, [sp]
+  98              	.LVL2:
+  99              		.loc 2 545 3 is_stmt 0 view .LVU15
+ 100              	.LBE11:
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 15
+
+
+ 101              	.LBE10:
+ 157:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   
+ 158:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   /* Configure the GPIO_LED pin */
+ 159:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   gpioinitstruct.Pin = GPIO_PIN[Led];
+ 102              		.loc 1 159 3 is_stmt 1 view .LVU16
+ 103              		.loc 1 159 32 is_stmt 0 view .LVU17
+ 104 0020 0B4B     		ldr	r3, .L6
+ 105 0022 33F81070 		ldrh	r7, [r3, r0, lsl #1]
+ 106              		.loc 1 159 22 view .LVU18
+ 107 0026 0197     		str	r7, [sp, #4]
+ 160:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   gpioinitstruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 108              		.loc 1 160 3 is_stmt 1 view .LVU19
+ 109              		.loc 1 160 23 is_stmt 0 view .LVU20
+ 110 0028 0123     		movs	r3, #1
+ 111 002a 0293     		str	r3, [sp, #8]
+ 161:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   gpioinitstruct.Pull = GPIO_NOPULL;
+ 112              		.loc 1 161 3 is_stmt 1 view .LVU21
+ 113              		.loc 1 161 23 is_stmt 0 view .LVU22
+ 114 002c 0395     		str	r5, [sp, #12]
+ 162:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   gpioinitstruct.Speed = GPIO_SPEED_FREQ_HIGH;
+ 115              		.loc 1 162 3 is_stmt 1 view .LVU23
+ 116              		.loc 1 162 24 is_stmt 0 view .LVU24
+ 117 002e 0223     		movs	r3, #2
+ 118 0030 0493     		str	r3, [sp, #16]
+ 163:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   
+ 164:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   HAL_GPIO_Init(GPIO_PORT[Led], &gpioinitstruct);
+ 119              		.loc 1 164 3 is_stmt 1 view .LVU25
+ 120 0032 084E     		ldr	r6, .L6+4
+ 121 0034 01A9     		add	r1, sp, #4
+ 122 0036 56F82000 		ldr	r0, [r6, r0, lsl #2]
+ 123              	.LVL3:
+ 124              		.loc 1 164 3 is_stmt 0 view .LVU26
+ 125 003a FFF7FEFF 		bl	HAL_GPIO_Init
+ 126              	.LVL4:
+ 165:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   
+ 166:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   HAL_GPIO_WritePin(GPIO_PORT[Led], GPIO_PIN[Led], GPIO_PIN_RESET); 
+ 127              		.loc 1 166 3 is_stmt 1 view .LVU27
+ 128 003e 2A46     		mov	r2, r5
+ 129 0040 3946     		mov	r1, r7
+ 130 0042 56F82400 		ldr	r0, [r6, r4, lsl #2]
+ 131 0046 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 132              	.LVL5:
+ 167:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** }
+ 133              		.loc 1 167 1 is_stmt 0 view .LVU28
+ 134 004a 07B0     		add	sp, sp, #28
+ 135              	.LCFI2:
+ 136              		.cfi_def_cfa_offset 20
+ 137              		@ sp needed
+ 138 004c F0BD     		pop	{r4, r5, r6, r7, pc}
+ 139              	.L7:
+ 140 004e 00BF     		.align	2
+ 141              	.L6:
+ 142 0050 00000000 		.word	.LANCHOR0
+ 143 0054 00000000 		.word	.LANCHOR1
+ 144              		.cfi_endproc
+ 145              	.LFE951:
+ 147              		.section	.text.BSP_LED_DeInit,"ax",%progbits
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 16
+
+
+ 148              		.align	1
+ 149              		.global	BSP_LED_DeInit
+ 150              		.syntax unified
+ 151              		.thumb
+ 152              		.thumb_func
+ 153              		.fpu fpv4-sp-d16
+ 155              	BSP_LED_DeInit:
+ 156              	.LVL6:
+ 157              	.LFB952:
+ 168:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+ 169:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /**
+ 170:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @brief  DeInit LEDs.
+ 171:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @param  Led: LED to be de-init. 
+ 172:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *   This parameter can be one of the following values:
+ 173:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *     @arg  LED1
+ 174:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *     @arg  LED2
+ 175:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *     @arg  LED3
+ 176:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @note Led DeInit does not disable the GPIO clock nor disable the Mfx 
+ 177:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @retval None
+ 178:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */
+ 179:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** void BSP_LED_DeInit(Led_TypeDef Led)
+ 180:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** {
+ 158              		.loc 1 180 1 is_stmt 1 view -0
+ 159              		.cfi_startproc
+ 160              		@ args = 0, pretend = 0, frame = 0
+ 161              		@ frame_needed = 0, uses_anonymous_args = 0
+ 162              		.loc 1 180 1 is_stmt 0 view .LVU30
+ 163 0000 70B5     		push	{r4, r5, r6, lr}
+ 164              	.LCFI3:
+ 165              		.cfi_def_cfa_offset 16
+ 166              		.cfi_offset 4, -16
+ 167              		.cfi_offset 5, -12
+ 168              		.cfi_offset 6, -8
+ 169              		.cfi_offset 14, -4
+ 170 0002 0446     		mov	r4, r0
+ 181:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   GPIO_InitTypeDef  gpio_init_structure;
+ 171              		.loc 1 181 3 is_stmt 1 view .LVU31
+ 182:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+ 183:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   /* Turn off LED */
+ 184:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   HAL_GPIO_WritePin(GPIO_PORT[Led], GPIO_PIN[Led], GPIO_PIN_RESET);
+ 172              		.loc 1 184 3 view .LVU32
+ 173 0004 074B     		ldr	r3, .L10
+ 174 0006 33F81060 		ldrh	r6, [r3, r0, lsl #1]
+ 175 000a 074D     		ldr	r5, .L10+4
+ 176 000c 0022     		movs	r2, #0
+ 177 000e 3146     		mov	r1, r6
+ 178 0010 55F82000 		ldr	r0, [r5, r0, lsl #2]
+ 179              	.LVL7:
+ 180              		.loc 1 184 3 is_stmt 0 view .LVU33
+ 181 0014 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 182              	.LVL8:
+ 185:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   /* DeInit the GPIO_LED pin */
+ 186:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   gpio_init_structure.Pin = GPIO_PIN[Led];
+ 183              		.loc 1 186 3 is_stmt 1 view .LVU34
+ 187:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   HAL_GPIO_DeInit(GPIO_PORT[Led], gpio_init_structure.Pin);
+ 184              		.loc 1 187 3 view .LVU35
+ 185 0018 3146     		mov	r1, r6
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 17
+
+
+ 186 001a 55F82400 		ldr	r0, [r5, r4, lsl #2]
+ 187 001e FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 188              	.LVL9:
+ 188:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** }
+ 189              		.loc 1 188 1 is_stmt 0 view .LVU36
+ 190 0022 70BD     		pop	{r4, r5, r6, pc}
+ 191              	.L11:
+ 192              		.align	2
+ 193              	.L10:
+ 194 0024 00000000 		.word	.LANCHOR0
+ 195 0028 00000000 		.word	.LANCHOR1
+ 196              		.cfi_endproc
+ 197              	.LFE952:
+ 199              		.section	.text.BSP_LED_On,"ax",%progbits
+ 200              		.align	1
+ 201              		.global	BSP_LED_On
+ 202              		.syntax unified
+ 203              		.thumb
+ 204              		.thumb_func
+ 205              		.fpu fpv4-sp-d16
+ 207              	BSP_LED_On:
+ 208              	.LVL10:
+ 209              	.LFB953:
+ 189:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+ 190:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /**
+ 191:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @brief  Turns selected LED On.
+ 192:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @param  Led: Specifies the Led to be set on. 
+ 193:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *   This parameter can be one of following parameters:
+ 194:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *     @arg LED1
+ 195:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *     @arg LED2
+ 196:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *     @arg LED3
+ 197:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @retval None
+ 198:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */
+ 199:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** void BSP_LED_On(Led_TypeDef Led)
+ 200:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** {
+ 210              		.loc 1 200 1 is_stmt 1 view -0
+ 211              		.cfi_startproc
+ 212              		@ args = 0, pretend = 0, frame = 0
+ 213              		@ frame_needed = 0, uses_anonymous_args = 0
+ 214              		.loc 1 200 1 is_stmt 0 view .LVU38
+ 215 0000 08B5     		push	{r3, lr}
+ 216              	.LCFI4:
+ 217              		.cfi_def_cfa_offset 8
+ 218              		.cfi_offset 3, -8
+ 219              		.cfi_offset 14, -4
+ 201:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   HAL_GPIO_WritePin(GPIO_PORT[Led], GPIO_PIN[Led], GPIO_PIN_SET); 
+ 220              		.loc 1 201 3 is_stmt 1 view .LVU39
+ 221 0002 0122     		movs	r2, #1
+ 222 0004 044B     		ldr	r3, .L14
+ 223 0006 33F81010 		ldrh	r1, [r3, r0, lsl #1]
+ 224 000a 044B     		ldr	r3, .L14+4
+ 225 000c 53F82000 		ldr	r0, [r3, r0, lsl #2]
+ 226              	.LVL11:
+ 227              		.loc 1 201 3 is_stmt 0 view .LVU40
+ 228 0010 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 229              	.LVL12:
+ 202:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** }
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 18
+
+
+ 230              		.loc 1 202 1 view .LVU41
+ 231 0014 08BD     		pop	{r3, pc}
+ 232              	.L15:
+ 233 0016 00BF     		.align	2
+ 234              	.L14:
+ 235 0018 00000000 		.word	.LANCHOR0
+ 236 001c 00000000 		.word	.LANCHOR1
+ 237              		.cfi_endproc
+ 238              	.LFE953:
+ 240              		.section	.text.BSP_LED_Off,"ax",%progbits
+ 241              		.align	1
+ 242              		.global	BSP_LED_Off
+ 243              		.syntax unified
+ 244              		.thumb
+ 245              		.thumb_func
+ 246              		.fpu fpv4-sp-d16
+ 248              	BSP_LED_Off:
+ 249              	.LVL13:
+ 250              	.LFB954:
+ 203:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+ 204:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /**
+ 205:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @brief  Turns selected LED Off.
+ 206:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @param  Led: Specifies the Led to be set off. 
+ 207:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *   This parameter can be one of following parameters:
+ 208:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *     @arg LED1
+ 209:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *     @arg LED2
+ 210:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *     @arg LED3
+ 211:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @retval None
+ 212:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */
+ 213:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** void BSP_LED_Off(Led_TypeDef Led)
+ 214:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** {
+ 251              		.loc 1 214 1 is_stmt 1 view -0
+ 252              		.cfi_startproc
+ 253              		@ args = 0, pretend = 0, frame = 0
+ 254              		@ frame_needed = 0, uses_anonymous_args = 0
+ 255              		.loc 1 214 1 is_stmt 0 view .LVU43
+ 256 0000 08B5     		push	{r3, lr}
+ 257              	.LCFI5:
+ 258              		.cfi_def_cfa_offset 8
+ 259              		.cfi_offset 3, -8
+ 260              		.cfi_offset 14, -4
+ 215:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   HAL_GPIO_WritePin(GPIO_PORT[Led], GPIO_PIN[Led], GPIO_PIN_RESET); 
+ 261              		.loc 1 215 3 is_stmt 1 view .LVU44
+ 262 0002 0022     		movs	r2, #0
+ 263 0004 044B     		ldr	r3, .L18
+ 264 0006 33F81010 		ldrh	r1, [r3, r0, lsl #1]
+ 265 000a 044B     		ldr	r3, .L18+4
+ 266 000c 53F82000 		ldr	r0, [r3, r0, lsl #2]
+ 267              	.LVL14:
+ 268              		.loc 1 215 3 is_stmt 0 view .LVU45
+ 269 0010 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 270              	.LVL15:
+ 216:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** }
+ 271              		.loc 1 216 1 view .LVU46
+ 272 0014 08BD     		pop	{r3, pc}
+ 273              	.L19:
+ 274 0016 00BF     		.align	2
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 19
+
+
+ 275              	.L18:
+ 276 0018 00000000 		.word	.LANCHOR0
+ 277 001c 00000000 		.word	.LANCHOR1
+ 278              		.cfi_endproc
+ 279              	.LFE954:
+ 281              		.section	.text.BSP_LED_Toggle,"ax",%progbits
+ 282              		.align	1
+ 283              		.global	BSP_LED_Toggle
+ 284              		.syntax unified
+ 285              		.thumb
+ 286              		.thumb_func
+ 287              		.fpu fpv4-sp-d16
+ 289              	BSP_LED_Toggle:
+ 290              	.LVL16:
+ 291              	.LFB955:
+ 217:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+ 218:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /**
+ 219:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @brief  Toggles the selected LED.
+ 220:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @param  Led: Specifies the Led to be toggled. 
+ 221:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *   This parameter can be one of following parameters:
+ 222:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *     @arg LED1
+ 223:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *     @arg LED2
+ 224:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *     @arg LED3
+ 225:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @retval None
+ 226:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */
+ 227:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** void BSP_LED_Toggle(Led_TypeDef Led)
+ 228:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** {
+ 292              		.loc 1 228 1 is_stmt 1 view -0
+ 293              		.cfi_startproc
+ 294              		@ args = 0, pretend = 0, frame = 0
+ 295              		@ frame_needed = 0, uses_anonymous_args = 0
+ 296              		.loc 1 228 1 is_stmt 0 view .LVU48
+ 297 0000 08B5     		push	{r3, lr}
+ 298              	.LCFI6:
+ 299              		.cfi_def_cfa_offset 8
+ 300              		.cfi_offset 3, -8
+ 301              		.cfi_offset 14, -4
+ 229:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   HAL_GPIO_TogglePin(GPIO_PORT[Led], GPIO_PIN[Led]);
+ 302              		.loc 1 229 3 is_stmt 1 view .LVU49
+ 303 0002 044B     		ldr	r3, .L22
+ 304 0004 33F81010 		ldrh	r1, [r3, r0, lsl #1]
+ 305 0008 034B     		ldr	r3, .L22+4
+ 306 000a 53F82000 		ldr	r0, [r3, r0, lsl #2]
+ 307              	.LVL17:
+ 308              		.loc 1 229 3 is_stmt 0 view .LVU50
+ 309 000e FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 310              	.LVL18:
+ 230:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** }
+ 311              		.loc 1 230 1 view .LVU51
+ 312 0012 08BD     		pop	{r3, pc}
+ 313              	.L23:
+ 314              		.align	2
+ 315              	.L22:
+ 316 0014 00000000 		.word	.LANCHOR0
+ 317 0018 00000000 		.word	.LANCHOR1
+ 318              		.cfi_endproc
+ 319              	.LFE955:
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 20
+
+
+ 321              		.section	.text.BSP_PB_Init,"ax",%progbits
+ 322              		.align	1
+ 323              		.global	BSP_PB_Init
+ 324              		.syntax unified
+ 325              		.thumb
+ 326              		.thumb_func
+ 327              		.fpu fpv4-sp-d16
+ 329              	BSP_PB_Init:
+ 330              	.LVL19:
+ 331              	.LFB956:
+ 231:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+ 232:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /**
+ 233:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @}
+ 234:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */ 
+ 235:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+ 236:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /** @defgroup STM32WBXX_NUCLEO_BUTTON_Functions BUTTON Functions
+ 237:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @{
+ 238:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */ 
+ 239:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+ 240:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /**
+ 241:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @brief  Configures Button GPIO and EXTI Line.
+ 242:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @param  Button: Specifies the Button to be configured.
+ 243:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *   This parameter can be one of following parameters:
+ 244:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *     @arg BUTTON_SW1
+ 245:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *     @arg BUTTON_SW2
+ 246:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *     @arg BUTTON_SW3
+ 247:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @param  ButtonMode: Specifies Button mode.
+ 248:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *   This parameter can be one of following parameters:   
+ 249:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *     @arg BUTTON_MODE_GPIO: Button will be used as simple IO 
+ 250:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *     @arg BUTTON_MODE_EXTI: Button will be connected to EXTI line with interrupt
+ 251:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *                            generation capability  
+ 252:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @retval None
+ 253:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */
+ 254:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** void BSP_PB_Init(Button_TypeDef Button, ButtonMode_TypeDef ButtonMode)
+ 255:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** {
+ 332              		.loc 1 255 1 is_stmt 1 view -0
+ 333              		.cfi_startproc
+ 334              		@ args = 0, pretend = 0, frame = 32
+ 335              		@ frame_needed = 0, uses_anonymous_args = 0
+ 336              		.loc 1 255 1 is_stmt 0 view .LVU53
+ 337 0000 70B5     		push	{r4, r5, r6, lr}
+ 338              	.LCFI7:
+ 339              		.cfi_def_cfa_offset 16
+ 340              		.cfi_offset 4, -16
+ 341              		.cfi_offset 5, -12
+ 342              		.cfi_offset 6, -8
+ 343              		.cfi_offset 14, -4
+ 344 0002 88B0     		sub	sp, sp, #32
+ 345              	.LCFI8:
+ 346              		.cfi_def_cfa_offset 48
+ 347 0004 0C46     		mov	r4, r1
+ 256:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   GPIO_InitTypeDef gpioinitstruct = {0};
+ 348              		.loc 1 256 3 is_stmt 1 view .LVU54
+ 349              		.loc 1 256 20 is_stmt 0 view .LVU55
+ 350 0006 0023     		movs	r3, #0
+ 351 0008 0393     		str	r3, [sp, #12]
+ 352 000a 0493     		str	r3, [sp, #16]
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 21
+
+
+ 353 000c 0593     		str	r3, [sp, #20]
+ 354 000e 0693     		str	r3, [sp, #24]
+ 355 0010 0793     		str	r3, [sp, #28]
+ 257:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   
+ 258:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   /* Enable the BUTTON Clock */
+ 259:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   BUTTONx_GPIO_CLK_ENABLE(Button);
+ 356              		.loc 1 259 3 is_stmt 1 view .LVU56
+ 357              		.loc 1 259 3 view .LVU57
+ 358 0012 0546     		mov	r5, r0
+ 359 0014 78B9     		cbnz	r0, .L25
+ 360              		.loc 1 259 3 view .LVU58
+ 361              	.LVL20:
+ 362              	.LBB12:
+ 363              	.LBI12:
+ 539:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** {
+ 364              		.loc 2 539 22 view .LVU59
+ 365              	.LBB13:
+ 541:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   SET_BIT(RCC->AHB2ENR, Periphs);
+ 366              		.loc 2 541 3 view .LVU60
+ 542:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
+ 367              		.loc 2 542 3 view .LVU61
+ 368 0016 4FF0B043 		mov	r3, #1476395008
+ 369 001a DA6C     		ldr	r2, [r3, #76]
+ 370 001c 42F00402 		orr	r2, r2, #4
+ 371 0020 DA64     		str	r2, [r3, #76]
+ 544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
+ 372              		.loc 2 544 3 view .LVU62
+ 544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
+ 373              		.loc 2 544 12 is_stmt 0 view .LVU63
+ 374 0022 DB6C     		ldr	r3, [r3, #76]
+ 375 0024 03F00403 		and	r3, r3, #4
+ 544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
+ 376              		.loc 2 544 10 view .LVU64
+ 377 0028 0093     		str	r3, [sp]
+ 378              		.loc 2 545 3 is_stmt 1 view .LVU65
+ 379 002a 009B     		ldr	r3, [sp]
+ 380              	.LVL21:
+ 381              	.L26:
+ 382              		.loc 2 545 3 is_stmt 0 view .LVU66
+ 383              	.LBE13:
+ 384              	.LBE12:
+ 385              		.loc 1 259 3 is_stmt 1 discriminator 9 view .LVU67
+ 260:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   
+ 261:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   if(ButtonMode == BUTTON_MODE_GPIO)
+ 386              		.loc 1 261 3 discriminator 9 view .LVU68
+ 387              		.loc 1 261 5 is_stmt 0 discriminator 9 view .LVU69
+ 388 002c FCB1     		cbz	r4, .L31
+ 389              	.LVL22:
+ 390              	.L28:
+ 262:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   {
+ 263:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     /* Configure Button pin as input */
+ 264:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     gpioinitstruct.Pin = BUTTON_PIN[Button];
+ 265:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     gpioinitstruct.Mode = GPIO_MODE_INPUT;
+ 266:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     gpioinitstruct.Pull = GPIO_PULLUP;
+ 267:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     gpioinitstruct.Speed = GPIO_SPEED_FREQ_HIGH;
+ 268:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     HAL_GPIO_Init(BUTTON_PORT[Button], &gpioinitstruct);
+ 269:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 22
+
+
+ 270:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     /* Wait Button pin startup stability */
+ 271:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     HAL_Delay(1);
+ 272:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   }
+ 273:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   
+ 274:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   if(ButtonMode == BUTTON_MODE_EXTI)
+ 391              		.loc 1 274 3 is_stmt 1 view .LVU70
+ 392              		.loc 1 274 5 is_stmt 0 view .LVU71
+ 393 002e 012C     		cmp	r4, #1
+ 394 0030 31D0     		beq	.L32
+ 395              	.L24:
+ 275:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   {
+ 276:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     /* Configure Button pin as input with External interrupt */
+ 277:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     gpioinitstruct.Pin = BUTTON_PIN[Button];
+ 278:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     gpioinitstruct.Pull = GPIO_PULLUP;
+ 279:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     gpioinitstruct.Mode = GPIO_MODE_IT_FALLING; 
+ 280:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     HAL_GPIO_Init(BUTTON_PORT[Button], &gpioinitstruct);
+ 281:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     
+ 282:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     /* Enable and set Button EXTI Interrupt to the lowest priority */
+ 283:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     HAL_NVIC_SetPriority((IRQn_Type)(BUTTON_IRQn[Button]), 0x0F, 0x00);
+ 284:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     HAL_NVIC_EnableIRQ((IRQn_Type)(BUTTON_IRQn[Button]));
+ 285:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   }
+ 286:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** }
+ 396              		.loc 1 286 1 view .LVU72
+ 397 0032 08B0     		add	sp, sp, #32
+ 398              	.LCFI9:
+ 399              		.cfi_remember_state
+ 400              		.cfi_def_cfa_offset 16
+ 401              		@ sp needed
+ 402 0034 70BD     		pop	{r4, r5, r6, pc}
+ 403              	.LVL23:
+ 404              	.L25:
+ 405              	.LCFI10:
+ 406              		.cfi_restore_state
+ 259:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   
+ 407              		.loc 1 259 3 is_stmt 1 discriminator 2 view .LVU73
+ 408 0036 0128     		cmp	r0, #1
+ 409 0038 0DD0     		beq	.L33
+ 259:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   
+ 410              		.loc 1 259 3 discriminator 5 view .LVU74
+ 411 003a 0228     		cmp	r0, #2
+ 412 003c F6D1     		bne	.L26
+ 259:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   
+ 413              		.loc 1 259 3 view .LVU75
+ 414              	.LVL24:
+ 415              	.LBB14:
+ 416              	.LBI14:
+ 539:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** {
+ 417              		.loc 2 539 22 view .LVU76
+ 418              	.LBB15:
+ 541:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   SET_BIT(RCC->AHB2ENR, Periphs);
+ 419              		.loc 2 541 3 view .LVU77
+ 542:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
+ 420              		.loc 2 542 3 view .LVU78
+ 421 003e 4FF0B043 		mov	r3, #1476395008
+ 422 0042 DA6C     		ldr	r2, [r3, #76]
+ 423 0044 42F00802 		orr	r2, r2, #8
+ 424 0048 DA64     		str	r2, [r3, #76]
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 23
+
+
+ 544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
+ 425              		.loc 2 544 3 view .LVU79
+ 544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
+ 426              		.loc 2 544 12 is_stmt 0 view .LVU80
+ 427 004a DB6C     		ldr	r3, [r3, #76]
+ 428 004c 03F00803 		and	r3, r3, #8
+ 544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
+ 429              		.loc 2 544 10 view .LVU81
+ 430 0050 0293     		str	r3, [sp, #8]
+ 431              		.loc 2 545 3 is_stmt 1 view .LVU82
+ 432 0052 029B     		ldr	r3, [sp, #8]
+ 546:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** }
+ 433              		.loc 2 546 1 is_stmt 0 view .LVU83
+ 434 0054 EAE7     		b	.L26
+ 435              	.LVL25:
+ 436              	.L33:
+ 437              		.loc 2 546 1 view .LVU84
+ 438              	.LBE15:
+ 439              	.LBE14:
+ 259:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   
+ 440              		.loc 1 259 3 is_stmt 1 view .LVU85
+ 441              	.LBB16:
+ 442              	.LBI16:
+ 539:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** {
+ 443              		.loc 2 539 22 view .LVU86
+ 444              	.LBB17:
+ 541:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   SET_BIT(RCC->AHB2ENR, Periphs);
+ 445              		.loc 2 541 3 view .LVU87
+ 542:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   /* Delay after an RCC peripheral clock enabling */
+ 446              		.loc 2 542 3 view .LVU88
+ 447 0056 4FF0B043 		mov	r3, #1476395008
+ 448 005a DA6C     		ldr	r2, [r3, #76]
+ 449 005c 42F00802 		orr	r2, r2, #8
+ 450 0060 DA64     		str	r2, [r3, #76]
+ 544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
+ 451              		.loc 2 544 3 view .LVU89
+ 544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
+ 452              		.loc 2 544 12 is_stmt 0 view .LVU90
+ 453 0062 DB6C     		ldr	r3, [r3, #76]
+ 454 0064 03F00803 		and	r3, r3, #8
+ 544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h ****   (void)tmpreg;
+ 455              		.loc 2 544 10 view .LVU91
+ 456 0068 0193     		str	r3, [sp, #4]
+ 545:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_bus.h **** }
+ 457              		.loc 2 545 3 is_stmt 1 view .LVU92
+ 458 006a 019B     		ldr	r3, [sp, #4]
+ 459              		.loc 2 546 1 is_stmt 0 view .LVU93
+ 460 006c DEE7     		b	.L26
+ 461              	.LVL26:
+ 462              	.L31:
+ 463              		.loc 2 546 1 view .LVU94
+ 464              	.LBE17:
+ 465              	.LBE16:
+ 264:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     gpioinitstruct.Mode = GPIO_MODE_INPUT;
+ 466              		.loc 1 264 5 is_stmt 1 view .LVU95
+ 264:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     gpioinitstruct.Mode = GPIO_MODE_INPUT;
+ 467              		.loc 1 264 36 is_stmt 0 view .LVU96
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 24
+
+
+ 468 006e 174B     		ldr	r3, .L34
+ 469 0070 33F81530 		ldrh	r3, [r3, r5, lsl #1]
+ 264:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     gpioinitstruct.Mode = GPIO_MODE_INPUT;
+ 470              		.loc 1 264 24 view .LVU97
+ 471 0074 0393     		str	r3, [sp, #12]
+ 265:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     gpioinitstruct.Pull = GPIO_PULLUP;
+ 472              		.loc 1 265 5 is_stmt 1 view .LVU98
+ 265:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     gpioinitstruct.Pull = GPIO_PULLUP;
+ 473              		.loc 1 265 25 is_stmt 0 view .LVU99
+ 474 0076 0023     		movs	r3, #0
+ 475 0078 0493     		str	r3, [sp, #16]
+ 266:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     gpioinitstruct.Speed = GPIO_SPEED_FREQ_HIGH;
+ 476              		.loc 1 266 5 is_stmt 1 view .LVU100
+ 266:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     gpioinitstruct.Speed = GPIO_SPEED_FREQ_HIGH;
+ 477              		.loc 1 266 25 is_stmt 0 view .LVU101
+ 478 007a 0126     		movs	r6, #1
+ 479 007c 0596     		str	r6, [sp, #20]
+ 267:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     HAL_GPIO_Init(BUTTON_PORT[Button], &gpioinitstruct);
+ 480              		.loc 1 267 5 is_stmt 1 view .LVU102
+ 267:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     HAL_GPIO_Init(BUTTON_PORT[Button], &gpioinitstruct);
+ 481              		.loc 1 267 26 is_stmt 0 view .LVU103
+ 482 007e 0223     		movs	r3, #2
+ 483 0080 0693     		str	r3, [sp, #24]
+ 268:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     
+ 484              		.loc 1 268 5 is_stmt 1 view .LVU104
+ 485 0082 03A9     		add	r1, sp, #12
+ 486              	.LVL27:
+ 268:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     
+ 487              		.loc 1 268 5 is_stmt 0 view .LVU105
+ 488 0084 124B     		ldr	r3, .L34+4
+ 489 0086 53F82500 		ldr	r0, [r3, r5, lsl #2]
+ 490              	.LVL28:
+ 268:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     
+ 491              		.loc 1 268 5 view .LVU106
+ 492 008a FFF7FEFF 		bl	HAL_GPIO_Init
+ 493              	.LVL29:
+ 271:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   }
+ 494              		.loc 1 271 5 is_stmt 1 view .LVU107
+ 495 008e 3046     		mov	r0, r6
+ 496 0090 FFF7FEFF 		bl	HAL_Delay
+ 497              	.LVL30:
+ 498 0094 CBE7     		b	.L28
+ 499              	.L32:
+ 277:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     gpioinitstruct.Pull = GPIO_PULLUP;
+ 500              		.loc 1 277 5 view .LVU108
+ 277:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     gpioinitstruct.Pull = GPIO_PULLUP;
+ 501              		.loc 1 277 36 is_stmt 0 view .LVU109
+ 502 0096 0D4B     		ldr	r3, .L34
+ 503 0098 33F81530 		ldrh	r3, [r3, r5, lsl #1]
+ 277:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     gpioinitstruct.Pull = GPIO_PULLUP;
+ 504              		.loc 1 277 24 view .LVU110
+ 505 009c 0393     		str	r3, [sp, #12]
+ 278:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     gpioinitstruct.Mode = GPIO_MODE_IT_FALLING; 
+ 506              		.loc 1 278 5 is_stmt 1 view .LVU111
+ 278:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     gpioinitstruct.Mode = GPIO_MODE_IT_FALLING; 
+ 507              		.loc 1 278 25 is_stmt 0 view .LVU112
+ 508 009e 0123     		movs	r3, #1
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 25
+
+
+ 509 00a0 0593     		str	r3, [sp, #20]
+ 279:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     HAL_GPIO_Init(BUTTON_PORT[Button], &gpioinitstruct);
+ 510              		.loc 1 279 5 is_stmt 1 view .LVU113
+ 279:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     HAL_GPIO_Init(BUTTON_PORT[Button], &gpioinitstruct);
+ 511              		.loc 1 279 25 is_stmt 0 view .LVU114
+ 512 00a2 4FF40413 		mov	r3, #2162688
+ 513 00a6 0493     		str	r3, [sp, #16]
+ 280:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     
+ 514              		.loc 1 280 5 is_stmt 1 view .LVU115
+ 515 00a8 03A9     		add	r1, sp, #12
+ 516 00aa 094B     		ldr	r3, .L34+4
+ 517 00ac 53F82500 		ldr	r0, [r3, r5, lsl #2]
+ 518 00b0 FFF7FEFF 		bl	HAL_GPIO_Init
+ 519              	.LVL31:
+ 283:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     HAL_NVIC_EnableIRQ((IRQn_Type)(BUTTON_IRQn[Button]));
+ 520              		.loc 1 283 5 view .LVU116
+ 521 00b4 074B     		ldr	r3, .L34+8
+ 522 00b6 5C57     		ldrsb	r4, [r3, r5]
+ 523 00b8 0022     		movs	r2, #0
+ 524 00ba 0F21     		movs	r1, #15
+ 525 00bc 2046     		mov	r0, r4
+ 526 00be FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 527              	.LVL32:
+ 284:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   }
+ 528              		.loc 1 284 5 view .LVU117
+ 529 00c2 2046     		mov	r0, r4
+ 530 00c4 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+ 531              	.LVL33:
+ 532              		.loc 1 286 1 is_stmt 0 view .LVU118
+ 533 00c8 B3E7     		b	.L24
+ 534              	.L35:
+ 535 00ca 00BF     		.align	2
+ 536              	.L34:
+ 537 00cc 00000000 		.word	.LANCHOR2
+ 538 00d0 00000000 		.word	.LANCHOR3
+ 539 00d4 00000000 		.word	.LANCHOR4
+ 540              		.cfi_endproc
+ 541              	.LFE956:
+ 543              		.section	.text.BSP_PB_DeInit,"ax",%progbits
+ 544              		.align	1
+ 545              		.global	BSP_PB_DeInit
+ 546              		.syntax unified
+ 547              		.thumb
+ 548              		.thumb_func
+ 549              		.fpu fpv4-sp-d16
+ 551              	BSP_PB_DeInit:
+ 552              	.LVL34:
+ 553              	.LFB957:
+ 287:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+ 288:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /**
+ 289:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @brief  Push Button DeInit.
+ 290:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @param  Button: Button to be configured
+ 291:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *   This parameter can be one of following parameters:
+ 292:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *     @arg BUTTON_SW1
+ 293:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *     @arg BUTTON_SW2
+ 294:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *     @arg BUTTON_SW3
+ 295:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @note PB DeInit does not disable the GPIO clock
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 26
+
+
+ 296:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @retval None
+ 297:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */
+ 298:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** void BSP_PB_DeInit(Button_TypeDef Button)
+ 299:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** {
+ 554              		.loc 1 299 1 is_stmt 1 view -0
+ 555              		.cfi_startproc
+ 556              		@ args = 0, pretend = 0, frame = 0
+ 557              		@ frame_needed = 0, uses_anonymous_args = 0
+ 558              		.loc 1 299 1 is_stmt 0 view .LVU120
+ 559 0000 38B5     		push	{r3, r4, r5, lr}
+ 560              	.LCFI11:
+ 561              		.cfi_def_cfa_offset 16
+ 562              		.cfi_offset 3, -16
+ 563              		.cfi_offset 4, -12
+ 564              		.cfi_offset 5, -8
+ 565              		.cfi_offset 14, -4
+ 566 0002 0446     		mov	r4, r0
+ 300:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     GPIO_InitTypeDef gpio_init_structure;
+ 567              		.loc 1 300 5 is_stmt 1 view .LVU121
+ 301:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+ 302:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     gpio_init_structure.Pin = BUTTON_PIN[Button];
+ 568              		.loc 1 302 5 view .LVU122
+ 569              		.loc 1 302 41 is_stmt 0 view .LVU123
+ 570 0004 064B     		ldr	r3, .L38
+ 571 0006 33F81050 		ldrh	r5, [r3, r0, lsl #1]
+ 303:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     HAL_NVIC_DisableIRQ((IRQn_Type)(BUTTON_IRQn[Button]));
+ 572              		.loc 1 303 5 is_stmt 1 view .LVU124
+ 573 000a 064B     		ldr	r3, .L38+4
+ 574 000c 1856     		ldrsb	r0, [r3, r0]
+ 575              	.LVL35:
+ 576              		.loc 1 303 5 is_stmt 0 view .LVU125
+ 577 000e FFF7FEFF 		bl	HAL_NVIC_DisableIRQ
+ 578              	.LVL36:
+ 304:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****     HAL_GPIO_DeInit(BUTTON_PORT[Button], gpio_init_structure.Pin);
+ 579              		.loc 1 304 5 is_stmt 1 view .LVU126
+ 580 0012 2946     		mov	r1, r5
+ 581 0014 044B     		ldr	r3, .L38+8
+ 582 0016 53F82400 		ldr	r0, [r3, r4, lsl #2]
+ 583 001a FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 584              	.LVL37:
+ 305:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** }
+ 585              		.loc 1 305 1 is_stmt 0 view .LVU127
+ 586 001e 38BD     		pop	{r3, r4, r5, pc}
+ 587              	.L39:
+ 588              		.align	2
+ 589              	.L38:
+ 590 0020 00000000 		.word	.LANCHOR2
+ 591 0024 00000000 		.word	.LANCHOR4
+ 592 0028 00000000 		.word	.LANCHOR3
+ 593              		.cfi_endproc
+ 594              	.LFE957:
+ 596              		.section	.text.BSP_PB_GetState,"ax",%progbits
+ 597              		.align	1
+ 598              		.global	BSP_PB_GetState
+ 599              		.syntax unified
+ 600              		.thumb
+ 601              		.thumb_func
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 27
+
+
+ 602              		.fpu fpv4-sp-d16
+ 604              	BSP_PB_GetState:
+ 605              	.LVL38:
+ 606              	.LFB958:
+ 306:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** 
+ 307:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** /**
+ 308:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @brief  Returns the selected Button state.
+ 309:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @param  Button: Specifies the Button to be checked.
+ 310:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *   This parameter can be one of following parameters:
+ 311:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *     @arg BUTTON_SW1
+ 312:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *     @arg BUTTON_SW2
+ 313:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   *     @arg BUTTON_SW3
+ 314:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   * @retval The Button GPIO pin value.
+ 315:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   */
+ 316:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** uint32_t BSP_PB_GetState(Button_TypeDef Button)
+ 317:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** {
+ 607              		.loc 1 317 1 is_stmt 1 view -0
+ 608              		.cfi_startproc
+ 609              		@ args = 0, pretend = 0, frame = 0
+ 610              		@ frame_needed = 0, uses_anonymous_args = 0
+ 611              		.loc 1 317 1 is_stmt 0 view .LVU129
+ 612 0000 08B5     		push	{r3, lr}
+ 613              	.LCFI12:
+ 614              		.cfi_def_cfa_offset 8
+ 615              		.cfi_offset 3, -8
+ 616              		.cfi_offset 14, -4
+ 318:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c ****   return HAL_GPIO_ReadPin(BUTTON_PORT[Button], BUTTON_PIN[Button]);
+ 617              		.loc 1 318 3 is_stmt 1 view .LVU130
+ 618              		.loc 1 318 10 is_stmt 0 view .LVU131
+ 619 0002 044B     		ldr	r3, .L42
+ 620 0004 33F81010 		ldrh	r1, [r3, r0, lsl #1]
+ 621 0008 034B     		ldr	r3, .L42+4
+ 622 000a 53F82000 		ldr	r0, [r3, r0, lsl #2]
+ 623              	.LVL39:
+ 624              		.loc 1 318 10 view .LVU132
+ 625 000e FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 626              	.LVL40:
+ 319:Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c **** }
+ 627              		.loc 1 319 1 view .LVU133
+ 628 0012 08BD     		pop	{r3, pc}
+ 629              	.L43:
+ 630              		.align	2
+ 631              	.L42:
+ 632 0014 00000000 		.word	.LANCHOR2
+ 633 0018 00000000 		.word	.LANCHOR3
+ 634              		.cfi_endproc
+ 635              	.LFE958:
+ 637              		.global	BUTTON_IRQn
+ 638              		.global	BUTTON_PIN
+ 639              		.global	BUTTON_PORT
+ 640              		.global	GPIO_PIN
+ 641              		.global	GPIO_PORT
+ 642              		.section	.data.BUTTON_PORT,"aw"
+ 643              		.align	2
+ 644              		.set	.LANCHOR3,. + 0
+ 647              	BUTTON_PORT:
+ 648 0000 00080048 		.word	1207961600
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 28
+
+
+ 649 0004 000C0048 		.word	1207962624
+ 650 0008 000C0048 		.word	1207962624
+ 651              		.section	.data.GPIO_PORT,"aw"
+ 652              		.align	2
+ 653              		.set	.LANCHOR1,. + 0
+ 656              	GPIO_PORT:
+ 657 0000 00040048 		.word	1207960576
+ 658 0004 00040048 		.word	1207960576
+ 659 0008 00040048 		.word	1207960576
+ 660              		.section	.rodata.BUTTON_IRQn,"a"
+ 661              		.align	2
+ 662              		.set	.LANCHOR4,. + 0
+ 665              	BUTTON_IRQn:
+ 666 0000 0A0607   		.ascii	"\012\006\007"
+ 667              		.section	.rodata.BUTTON_PIN,"a"
+ 668              		.align	2
+ 669              		.set	.LANCHOR2,. + 0
+ 672              	BUTTON_PIN:
+ 673 0000 1000     		.short	16
+ 674 0002 0100     		.short	1
+ 675 0004 0200     		.short	2
+ 676              		.section	.rodata.GPIO_PIN,"a"
+ 677              		.align	2
+ 678              		.set	.LANCHOR0,. + 0
+ 681              	GPIO_PIN:
+ 682 0000 2000     		.short	32
+ 683 0002 0100     		.short	1
+ 684 0004 0200     		.short	2
+ 685              		.text
+ 686              	.Letext0:
+ 687              		.file 3 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wb55xx.h"
+ 688              		.file 4 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
+ 689              		.file 5 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
+ 690              		.file 6 "Drivers/CMSIS/Include/core_cm4.h"
+ 691              		.file 7 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/system_stm32wbxx.h"
+ 692              		.file 8 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_def.h"
+ 693              		.file 9 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_flash.h"
+ 694              		.file 10 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_gpio.h"
+ 695              		.file 11 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_uart.h"
+ 696              		.file 12 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h"
+ 697              		.file 13 "Drivers/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.h"
+ 698              		.file 14 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_cortex.h"
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s 			page 29
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32wbxx_nucleo.c
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:18     .text.BSP_GetVersion:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:26     .text.BSP_GetVersion:0000000000000000 BSP_GetVersion
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:41     .text.BSP_GetVersion:0000000000000004 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:46     .text.BSP_LED_Init:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:53     .text.BSP_LED_Init:0000000000000000 BSP_LED_Init
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:142    .text.BSP_LED_Init:0000000000000050 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:148    .text.BSP_LED_DeInit:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:155    .text.BSP_LED_DeInit:0000000000000000 BSP_LED_DeInit
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:194    .text.BSP_LED_DeInit:0000000000000024 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:200    .text.BSP_LED_On:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:207    .text.BSP_LED_On:0000000000000000 BSP_LED_On
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:235    .text.BSP_LED_On:0000000000000018 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:241    .text.BSP_LED_Off:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:248    .text.BSP_LED_Off:0000000000000000 BSP_LED_Off
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:276    .text.BSP_LED_Off:0000000000000018 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:282    .text.BSP_LED_Toggle:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:289    .text.BSP_LED_Toggle:0000000000000000 BSP_LED_Toggle
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:316    .text.BSP_LED_Toggle:0000000000000014 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:322    .text.BSP_PB_Init:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:329    .text.BSP_PB_Init:0000000000000000 BSP_PB_Init
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:537    .text.BSP_PB_Init:00000000000000cc $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:544    .text.BSP_PB_DeInit:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:551    .text.BSP_PB_DeInit:0000000000000000 BSP_PB_DeInit
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:590    .text.BSP_PB_DeInit:0000000000000020 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:597    .text.BSP_PB_GetState:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:604    .text.BSP_PB_GetState:0000000000000000 BSP_PB_GetState
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:632    .text.BSP_PB_GetState:0000000000000014 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:665    .rodata.BUTTON_IRQn:0000000000000000 BUTTON_IRQn
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:672    .rodata.BUTTON_PIN:0000000000000000 BUTTON_PIN
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:647    .data.BUTTON_PORT:0000000000000000 BUTTON_PORT
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:681    .rodata.GPIO_PIN:0000000000000000 GPIO_PIN
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:656    .data.GPIO_PORT:0000000000000000 GPIO_PORT
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:643    .data.BUTTON_PORT:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:652    .data.GPIO_PORT:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:661    .rodata.BUTTON_IRQn:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:668    .rodata.BUTTON_PIN:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHVd1ak.s:677    .rodata.GPIO_PIN:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+HAL_GPIO_Init
+HAL_GPIO_WritePin
+HAL_GPIO_DeInit
+HAL_GPIO_TogglePin
+HAL_Delay
+HAL_NVIC_SetPriority
+HAL_NVIC_EnableIRQ
+HAL_NVIC_DisableIRQ
+HAL_GPIO_ReadPin

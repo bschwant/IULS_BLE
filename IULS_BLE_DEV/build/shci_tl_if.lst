@@ -1,0 +1,109 @@
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cceZDKsr.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"shci_tl_if.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.shci_register_io_bus,"ax",%progbits
+  18              		.align	1
+  19              		.global	shci_register_io_bus
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv4-sp-d16
+  26              	shci_register_io_bus:
+  27              	.LVL0:
+  28              	.LFB107:
+  29              		.file 1 "Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c"
+   1:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c **** /**
+   2:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c ****  ******************************************************************************
+   3:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c ****  * @file    shci_tl_if.c
+   4:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c ****  * @author  MCD Application Team
+   5:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c ****  * @brief   Transport layer interface to the system channel
+   6:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c ****  ******************************************************************************
+   7:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c ****  * @attention
+   8:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c ****  *
+   9:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c ****  * Copyright (c) 2018-2021 STMicroelectronics.
+  10:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c ****  * All rights reserved.
+  11:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c ****  *
+  12:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c ****  * This software is licensed under terms that can be found in the LICENSE file
+  13:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c ****  * in the root directory of this software component.
+  14:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c ****  * If no LICENSE file comes with this software, it is provided AS-IS.
+  15:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c ****  *
+  16:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c ****  ******************************************************************************
+  17:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c ****  */
+  18:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c **** 
+  19:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c **** #include "shci_tl.h"
+  20:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c **** #include "tl.h"
+  21:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c **** 
+  22:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c **** 
+  23:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c **** void shci_register_io_bus(tSHciIO* fops)
+  24:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c **** {
+  30              		.loc 1 24 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cceZDKsr.s 			page 2
+
+
+  25:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c ****   /* Register IO bus services */
+  26:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c ****   fops->Init    = TL_SYS_Init;
+  35              		.loc 1 26 3 view .LVU1
+  36              		.loc 1 26 17 is_stmt 0 view .LVU2
+  37 0000 024B     		ldr	r3, .L2
+  38 0002 0360     		str	r3, [r0]
+  27:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c ****   fops->Send    = TL_SYS_SendCmd;
+  39              		.loc 1 27 3 is_stmt 1 view .LVU3
+  40              		.loc 1 27 17 is_stmt 0 view .LVU4
+  41 0004 024B     		ldr	r3, .L2+4
+  42 0006 0361     		str	r3, [r0, #16]
+  28:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c **** 
+  29:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c ****   return;
+  43              		.loc 1 29 3 is_stmt 1 view .LVU5
+  30:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c **** }
+  44              		.loc 1 30 1 is_stmt 0 view .LVU6
+  45 0008 7047     		bx	lr
+  46              	.L3:
+  47 000a 00BF     		.align	2
+  48              	.L2:
+  49 000c 00000000 		.word	TL_SYS_Init
+  50 0010 00000000 		.word	TL_SYS_SendCmd
+  51              		.cfi_endproc
+  52              	.LFE107:
+  54              		.text
+  55              	.Letext0:
+  56              		.file 2 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
+  57              		.file 3 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
+  58              		.file 4 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/lock.h"
+  59              		.file 5 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_types.
+  60              		.file 6 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/inclu
+  61              		.file 7 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/reent.h
+  62              		.file 8 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
+  63              		.file 9 "Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl.h"
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cceZDKsr.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 shci_tl_if.c
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cceZDKsr.s:18     .text.shci_register_io_bus:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cceZDKsr.s:26     .text.shci_register_io_bus:0000000000000000 shci_register_io_bus
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cceZDKsr.s:49     .text.shci_register_io_bus:000000000000000c $d
+
+UNDEFINED SYMBOLS
+TL_SYS_Init
+TL_SYS_SendCmd

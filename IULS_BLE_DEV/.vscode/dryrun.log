@@ -1,0 +1,6 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/brianschwantes/Desktop/IULS_BLE/IULS_BLE_DEV'
+ 
+make: Nothing to be done for `all'.
+make: Leaving directory `/Users/brianschwantes/Desktop/IULS_BLE/IULS_BLE_DEV'
+ 

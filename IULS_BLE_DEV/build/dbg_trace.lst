@@ -1,0 +1,1591 @@
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"dbg_trace.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.DbgTrace_TxCpltCallback,"ax",%progbits
+  18              		.align	1
+  19              		.arch armv7e-m
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu fpv4-sp-d16
+  25              	DbgTrace_TxCpltCallback:
+  26              	.LFB1263:
+  27              		.file 1 "Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c"
+   1:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /**
+   2:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   ******************************************************************************
+   3:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   * @file    dbg_trace.c
+   4:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   * @author  MCD Application Team
+   5:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   * @brief   This file contains the Interface with BLE Drivers functions.
+   6:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   ******************************************************************************
+   7:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   * @attention
+   8:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   *
+   9:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   * Copyright (c) 2018-2021 STMicroelectronics.
+  10:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   * All rights reserved.
+  11:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   *
+  12:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   * This software is licensed under terms that can be found in the LICENSE file
+  13:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   * in the root directory of this software component.
+  14:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  15:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   *
+  16:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   ******************************************************************************
+  17:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   */
+  18:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+  19:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+  20:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /* Includes ------------------------------------------------------------------*/
+  21:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #include "utilities_common.h"
+  22:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #include "stm_queue.h"
+  23:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #include "dbg_trace.h"
+  24:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+  25:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /* Definition of the function */
+  26:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #if !defined(__GNUC__)  /* SW4STM32 */
+  27:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** size_t __write(int handle, const unsigned char * buf, size_t bufSize);
+  28:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #endif
+  29:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+  30:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /** @addtogroup TRACE
+  31:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @{
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 2
+
+
+  32:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  */
+  33:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+  34:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+  35:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /** @defgroup TRACE_LOG
+  36:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @brief TRACE Logging functions
+  37:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @{
+  38:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  */
+  39:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+  40:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /* Private typedef -----------------------------------------------------------*/
+  41:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /** @defgroup TRACE Log private typedef 
+  42:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @{
+  43:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  */
+  44:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+  45:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /**
+  46:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @}
+  47:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  */
+  48:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+  49:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /* Private defines -----------------------------------------------------------*/
+  50:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /** @defgroup TRACE Log private defines 
+  51:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @{
+  52:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  */
+  53:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+  54:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /**
+  55:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @}
+  56:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  */
+  57:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+  58:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /* Private macros ------------------------------------------------------------*/
+  59:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /** @defgroup TRACE Log private macros 
+  60:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @{
+  61:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  */
+  62:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /**
+  63:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @}
+  64:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  */
+  65:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+  66:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /* Private variables ---------------------------------------------------------*/
+  67:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /** @defgroup TRACE Log private variables 
+  68:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @{
+  69:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  */
+  70:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #if (( CFG_DEBUG_TRACE_FULL != 0 ) || ( CFG_DEBUG_TRACE_LIGHT != 0 ))
+  71:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #if (DBG_TRACE_USE_CIRCULAR_QUEUE != 0)
+  72:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** static queue_t MsgDbgTraceQueue;
+  73:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** static uint8_t MsgDbgTraceQueueBuff[DBG_TRACE_MSG_QUEUE_SIZE];
+  74:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #endif
+  75:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** __IO ITStatus DbgTracePeripheralReady = SET;
+  76:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #endif
+  77:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /**
+  78:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @}
+  79:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  */
+  80:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+  81:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /* Global variables ----------------------------------------------------------*/
+  82:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /** @defgroup TRACE Log Global variable
+  83:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @{
+  84:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  */
+  85:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /**
+  86:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @}
+  87:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  */
+  88:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 3
+
+
+  89:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /* Private function prototypes -----------------------------------------------*/
+  90:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /** @defgroup TRACE Log private function prototypes 
+  91:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @{
+  92:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  */
+  93:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #if (( CFG_DEBUG_TRACE_FULL != 0 ) || ( CFG_DEBUG_TRACE_LIGHT != 0 ))
+  94:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** static void DbgTrace_TxCpltCallback(void);
+  95:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #endif
+  96:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+  97:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+  98:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /**
+  99:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @}
+ 100:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  */
+ 101:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 102:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 103:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /* Private Functions Definition ------------------------------------------------------*/
+ 104:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /** @defgroup TRACE Log Private function 
+ 105:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @{
+ 106:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  */
+ 107:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 108:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 109:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /* Functions Definition ------------------------------------------------------*/
+ 110:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /** @defgroup TRACE Log APIs 
+ 111:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @{
+ 112:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  */
+ 113:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 114:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /**
+ 115:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @brief  DbgTraceGetFileName: Return filename string extracted from full path information
+ 116:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @param  *fullPath Fullpath string (path + filename)
+ 117:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @retval char* Pointer on filename string
+ 118:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  */
+ 119:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 120:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** const char *DbgTraceGetFileName(const char *fullpath)
+ 121:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** {
+ 122:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   const char *ret = fullpath;
+ 123:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 124:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   if (strrchr(fullpath, '\\') != NULL)
+ 125:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   {
+ 126:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     ret = strrchr(fullpath, '\\') + 1;
+ 127:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   }
+ 128:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   else if (strrchr(fullpath, '/') != NULL)
+ 129:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   {
+ 130:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     ret = strrchr(fullpath, '/') + 1;
+ 131:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   }
+ 132:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 133:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   return ret;
+ 134:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** }
+ 135:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 136:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /**
+ 137:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @brief  DbgTraceBuffer: Output buffer content information to output Stream
+ 138:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @param  *pBuffer  Pointer on buffer to be output
+ 139:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @param  u32Length buffer Size
+ 140:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @paramt strFormat string as expected by "printf" function. Used to desrcibe buffer content infor
+ 141:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @param  ...       Paremeters to be "formatted" in strFormat string (if any)
+ 142:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @retval None
+ 143:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  */
+ 144:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 145:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** void DbgTraceBuffer(const void *pBuffer, uint32_t u32Length, const char *strFormat, ...)
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 4
+
+
+ 146:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** {
+ 147:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   va_list vaArgs;
+ 148:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   uint32_t u32Index;
+ 149:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   va_start(vaArgs, strFormat);
+ 150:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   vprintf(strFormat, vaArgs);
+ 151:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   va_end(vaArgs);
+ 152:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   for (u32Index = 0; u32Index < u32Length; u32Index ++)
+ 153:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   {
+ 154:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     printf(" %02X", ((const uint8_t *) pBuffer)[u32Index]);
+ 155:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   }
+ 156:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** }
+ 157:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 158:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #if (( CFG_DEBUG_TRACE_FULL != 0 ) || ( CFG_DEBUG_TRACE_LIGHT != 0 ))
+ 159:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /**
+ 160:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @brief  DBG_TRACE USART Tx Transfer completed callback
+ 161:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @param  UartHandle: UART handle.
+ 162:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @note   Indicate the end of the transmission of a DBG_TRACE trace buffer to DBG_TRACE USART. If 
+ 163:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  *         contains new trace data to transmit, start a new transmission.
+ 164:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @retval None
+ 165:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  */
+ 166:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** static void DbgTrace_TxCpltCallback(void)
+ 167:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** {
+  28              		.loc 1 167 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 8
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 30B5     		push	{r4, r5, lr}
+  33              	.LCFI0:
+  34              		.cfi_def_cfa_offset 12
+  35              		.cfi_offset 4, -12
+  36              		.cfi_offset 5, -8
+  37              		.cfi_offset 14, -4
+  38 0002 83B0     		sub	sp, sp, #12
+  39              	.LCFI1:
+  40              		.cfi_def_cfa_offset 24
+ 168:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #if (DBG_TRACE_USE_CIRCULAR_QUEUE != 0)
+ 169:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   uint8_t* buf;
+  41              		.loc 1 169 3 view .LVU1
+ 170:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   uint16_t bufSize;
+  42              		.loc 1 170 3 view .LVU2
+ 171:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 172:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   BACKUP_PRIMASK();
+  43              		.loc 1 172 3 view .LVU3
+  44              	.LBB18:
+  45              	.LBI18:
+  46              		.file 2 "Drivers/CMSIS/Include/cmsis_gcc.h"
+   1:Drivers/CMSIS/Include/cmsis_gcc.h **** /**************************************************************************//**
+   2:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @file     cmsis_gcc.h
+   3:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @brief    CMSIS compiler GCC header file
+   4:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @version  V5.2.0
+   5:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @date     08. May 2019
+   6:Drivers/CMSIS/Include/cmsis_gcc.h ****  ******************************************************************************/
+   7:Drivers/CMSIS/Include/cmsis_gcc.h **** /*
+   8:Drivers/CMSIS/Include/cmsis_gcc.h ****  * Copyright (c) 2009-2019 Arm Limited. All rights reserved.
+   9:Drivers/CMSIS/Include/cmsis_gcc.h ****  *
+  10:Drivers/CMSIS/Include/cmsis_gcc.h ****  * SPDX-License-Identifier: Apache-2.0
+  11:Drivers/CMSIS/Include/cmsis_gcc.h ****  *
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 5
+
+
+  12:Drivers/CMSIS/Include/cmsis_gcc.h ****  * Licensed under the Apache License, Version 2.0 (the License); you may
+  13:Drivers/CMSIS/Include/cmsis_gcc.h ****  * not use this file except in compliance with the License.
+  14:Drivers/CMSIS/Include/cmsis_gcc.h ****  * You may obtain a copy of the License at
+  15:Drivers/CMSIS/Include/cmsis_gcc.h ****  *
+  16:Drivers/CMSIS/Include/cmsis_gcc.h ****  * www.apache.org/licenses/LICENSE-2.0
+  17:Drivers/CMSIS/Include/cmsis_gcc.h ****  *
+  18:Drivers/CMSIS/Include/cmsis_gcc.h ****  * Unless required by applicable law or agreed to in writing, software
+  19:Drivers/CMSIS/Include/cmsis_gcc.h ****  * distributed under the License is distributed on an AS IS BASIS, WITHOUT
+  20:Drivers/CMSIS/Include/cmsis_gcc.h ****  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  21:Drivers/CMSIS/Include/cmsis_gcc.h ****  * See the License for the specific language governing permissions and
+  22:Drivers/CMSIS/Include/cmsis_gcc.h ****  * limitations under the License.
+  23:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+  24:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  25:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __CMSIS_GCC_H
+  26:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_H
+  27:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  28:Drivers/CMSIS/Include/cmsis_gcc.h **** /* ignore some GCC warnings */
+  29:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic push
+  30:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wsign-conversion"
+  31:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wconversion"
+  32:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wunused-parameter"
+  33:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  34:Drivers/CMSIS/Include/cmsis_gcc.h **** /* Fallback for __has_builtin */
+  35:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __has_builtin
+  36:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __has_builtin(x) (0)
+  37:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  38:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  39:Drivers/CMSIS/Include/cmsis_gcc.h **** /* CMSIS compiler specific defines */
+  40:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __ASM
+  41:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __ASM                                  __asm
+  42:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  43:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __INLINE
+  44:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __INLINE                               inline
+  45:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  46:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __STATIC_INLINE
+  47:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __STATIC_INLINE                        static inline
+  48:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  49:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __STATIC_FORCEINLINE                 
+  50:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __STATIC_FORCEINLINE                   __attribute__((always_inline)) static inline
+  51:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif                                           
+  52:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __NO_RETURN
+  53:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __NO_RETURN                            __attribute__((__noreturn__))
+  54:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  55:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __USED
+  56:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __USED                                 __attribute__((used))
+  57:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  58:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __WEAK
+  59:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __WEAK                                 __attribute__((weak))
+  60:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  61:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED
+  62:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED                               __attribute__((packed, aligned(1)))
+  63:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  64:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED_STRUCT
+  65:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED_STRUCT                        struct __attribute__((packed, aligned(1)))
+  66:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  67:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED_UNION
+  68:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED_UNION                         union __attribute__((packed, aligned(1)))
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 6
+
+
+  69:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  70:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32        /* deprecated */
+  71:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  72:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  73:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  74:Drivers/CMSIS/Include/cmsis_gcc.h ****   struct __attribute__((packed)) T_UINT32 { uint32_t v; };
+  75:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  76:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32(x)                  (((struct T_UINT32 *)(x))->v)
+  77:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  78:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_WRITE
+  79:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  80:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  81:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  82:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_WRITE { uint16_t v; };
+  83:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  84:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT16_WRITE(addr, val)    (void)((((struct T_UINT16_WRITE *)(void *)(addr))-
+  85:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  86:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_READ
+  87:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  88:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  89:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  90:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_READ { uint16_t v; };
+  91:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  92:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT16_READ(addr)          (((const struct T_UINT16_READ *)(const void *)(add
+  93:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  94:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_WRITE
+  95:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  96:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  97:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  98:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_WRITE { uint32_t v; };
+  99:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+ 100:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32_WRITE(addr, val)    (void)((((struct T_UINT32_WRITE *)(void *)(addr))-
+ 101:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 102:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_READ
+ 103:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+ 104:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+ 105:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+ 106:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_READ { uint32_t v; };
+ 107:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+ 108:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32_READ(addr)          (((const struct T_UINT32_READ *)(const void *)(add
+ 109:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 110:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __ALIGNED
+ 111:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __ALIGNED(x)                           __attribute__((aligned(x)))
+ 112:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 113:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __RESTRICT
+ 114:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __RESTRICT                             __restrict
+ 115:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 116:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __COMPILER_BARRIER
+ 117:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __COMPILER_BARRIER()                   __ASM volatile("":::"memory")
+ 118:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 119:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 120:Drivers/CMSIS/Include/cmsis_gcc.h **** /* #########################  Startup and Lowlevel Init  ######################## */
+ 121:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 122:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __PROGRAM_START
+ 123:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 124:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 125:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Initializes data and bss sections
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 7
+
+
+ 126:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details This default implementations initialized all data and additional bss
+ 127:Drivers/CMSIS/Include/cmsis_gcc.h ****            sections relying on .copy.table and .zero.table specified properly
+ 128:Drivers/CMSIS/Include/cmsis_gcc.h ****            in the used linker script.
+ 129:Drivers/CMSIS/Include/cmsis_gcc.h ****   
+ 130:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 131:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE __NO_RETURN void __cmsis_start(void)
+ 132:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 133:Drivers/CMSIS/Include/cmsis_gcc.h ****   extern void _start(void) __NO_RETURN;
+ 134:Drivers/CMSIS/Include/cmsis_gcc.h ****   
+ 135:Drivers/CMSIS/Include/cmsis_gcc.h ****   typedef struct {
+ 136:Drivers/CMSIS/Include/cmsis_gcc.h ****     uint32_t const* src;
+ 137:Drivers/CMSIS/Include/cmsis_gcc.h ****     uint32_t* dest;
+ 138:Drivers/CMSIS/Include/cmsis_gcc.h ****     uint32_t  wlen;
+ 139:Drivers/CMSIS/Include/cmsis_gcc.h ****   } __copy_table_t;
+ 140:Drivers/CMSIS/Include/cmsis_gcc.h ****   
+ 141:Drivers/CMSIS/Include/cmsis_gcc.h ****   typedef struct {
+ 142:Drivers/CMSIS/Include/cmsis_gcc.h ****     uint32_t* dest;
+ 143:Drivers/CMSIS/Include/cmsis_gcc.h ****     uint32_t  wlen;
+ 144:Drivers/CMSIS/Include/cmsis_gcc.h ****   } __zero_table_t;
+ 145:Drivers/CMSIS/Include/cmsis_gcc.h ****   
+ 146:Drivers/CMSIS/Include/cmsis_gcc.h ****   extern const __copy_table_t __copy_table_start__;
+ 147:Drivers/CMSIS/Include/cmsis_gcc.h ****   extern const __copy_table_t __copy_table_end__;
+ 148:Drivers/CMSIS/Include/cmsis_gcc.h ****   extern const __zero_table_t __zero_table_start__;
+ 149:Drivers/CMSIS/Include/cmsis_gcc.h ****   extern const __zero_table_t __zero_table_end__;
+ 150:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 151:Drivers/CMSIS/Include/cmsis_gcc.h ****   for (__copy_table_t const* pTable = &__copy_table_start__; pTable < &__copy_table_end__; ++pTable
+ 152:Drivers/CMSIS/Include/cmsis_gcc.h ****     for(uint32_t i=0u; i<pTable->wlen; ++i) {
+ 153:Drivers/CMSIS/Include/cmsis_gcc.h ****       pTable->dest[i] = pTable->src[i];
+ 154:Drivers/CMSIS/Include/cmsis_gcc.h ****     }
+ 155:Drivers/CMSIS/Include/cmsis_gcc.h ****   }
+ 156:Drivers/CMSIS/Include/cmsis_gcc.h ****  
+ 157:Drivers/CMSIS/Include/cmsis_gcc.h ****   for (__zero_table_t const* pTable = &__zero_table_start__; pTable < &__zero_table_end__; ++pTable
+ 158:Drivers/CMSIS/Include/cmsis_gcc.h ****     for(uint32_t i=0u; i<pTable->wlen; ++i) {
+ 159:Drivers/CMSIS/Include/cmsis_gcc.h ****       pTable->dest[i] = 0u;
+ 160:Drivers/CMSIS/Include/cmsis_gcc.h ****     }
+ 161:Drivers/CMSIS/Include/cmsis_gcc.h ****   }
+ 162:Drivers/CMSIS/Include/cmsis_gcc.h ****  
+ 163:Drivers/CMSIS/Include/cmsis_gcc.h ****   _start();
+ 164:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 165:Drivers/CMSIS/Include/cmsis_gcc.h ****   
+ 166:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __PROGRAM_START           __cmsis_start
+ 167:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 168:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 169:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __INITIAL_SP
+ 170:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __INITIAL_SP              __StackTop
+ 171:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 172:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 173:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __STACK_LIMIT
+ 174:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __STACK_LIMIT             __StackLimit
+ 175:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 176:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 177:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __VECTOR_TABLE
+ 178:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __VECTOR_TABLE            __Vectors
+ 179:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 180:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 181:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __VECTOR_TABLE_ATTRIBUTE
+ 182:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __VECTOR_TABLE_ATTRIBUTE  __attribute((used, section(".vectors")))
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 8
+
+
+ 183:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 184:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 185:Drivers/CMSIS/Include/cmsis_gcc.h **** /* ###########################  Core Function Access  ########################### */
+ 186:Drivers/CMSIS/Include/cmsis_gcc.h **** /** \ingroup  CMSIS_Core_FunctionInterface
+ 187:Drivers/CMSIS/Include/cmsis_gcc.h ****     \defgroup CMSIS_Core_RegAccFunctions CMSIS Core Register Access Functions
+ 188:Drivers/CMSIS/Include/cmsis_gcc.h ****   @{
+ 189:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 190:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 191:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 192:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Enable IRQ Interrupts
+ 193:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Enables IRQ interrupts by clearing the I-bit in the CPSR.
+ 194:Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
+ 195:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 196:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __enable_irq(void)
+ 197:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 198:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsie i" : : : "memory");
+ 199:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 200:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 201:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 202:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 203:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Disable IRQ Interrupts
+ 204:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Disables IRQ interrupts by setting the I-bit in the CPSR.
+ 205:Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
+ 206:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 207:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __disable_irq(void)
+ 208:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 209:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsid i" : : : "memory");
+ 210:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 211:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 212:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 213:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 214:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Control Register
+ 215:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the Control Register.
+ 216:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Control Register value
+ 217:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 218:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_CONTROL(void)
+ 219:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 220:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 221:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 222:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, control" : "=r" (result) );
+ 223:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 224:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 225:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 226:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 227:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 228:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 229:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Control Register (non-secure)
+ 230:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the non-secure Control Register when in secure mode.
+ 231:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               non-secure Control Register value
+ 232:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 233:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_CONTROL_NS(void)
+ 234:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 235:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 236:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 237:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, control_ns" : "=r" (result) );
+ 238:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 239:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 9
+
+
+ 240:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 241:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 242:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 243:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 244:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Control Register
+ 245:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Writes the given value to the Control Register.
+ 246:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    control  Control Register value to set
+ 247:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 248:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_CONTROL(uint32_t control)
+ 249:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 250:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR control, %0" : : "r" (control) : "memory");
+ 251:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 252:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 253:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 254:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 255:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 256:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Control Register (non-secure)
+ 257:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Writes the given value to the non-secure Control Register when in secure state.
+ 258:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    control  Control Register value to set
+ 259:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 260:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_CONTROL_NS(uint32_t control)
+ 261:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 262:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR control_ns, %0" : : "r" (control) : "memory");
+ 263:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 264:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 265:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 266:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 267:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 268:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get IPSR Register
+ 269:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the IPSR Register.
+ 270:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               IPSR Register value
+ 271:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 272:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_IPSR(void)
+ 273:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 274:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 275:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 276:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, ipsr" : "=r" (result) );
+ 277:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 278:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 279:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 280:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 281:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 282:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get APSR Register
+ 283:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the APSR Register.
+ 284:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               APSR Register value
+ 285:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 286:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_APSR(void)
+ 287:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 288:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 289:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 290:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, apsr" : "=r" (result) );
+ 291:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 292:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 293:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 294:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 295:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 296:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get xPSR Register
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 10
+
+
+ 297:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the xPSR Register.
+ 298:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               xPSR Register value
+ 299:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 300:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_xPSR(void)
+ 301:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 302:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 303:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 304:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, xpsr" : "=r" (result) );
+ 305:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 306:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 307:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 308:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 309:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 310:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Process Stack Pointer
+ 311:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Process Stack Pointer (PSP).
+ 312:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               PSP Register value
+ 313:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 314:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_PSP(void)
+ 315:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 316:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 317:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 318:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, psp"  : "=r" (result) );
+ 319:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 320:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 321:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 322:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 323:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 324:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 325:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Process Stack Pointer (non-secure)
+ 326:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the non-secure Process Stack Pointer (PSP) when in secure s
+ 327:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               PSP Register value
+ 328:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 329:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_PSP_NS(void)
+ 330:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 331:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 332:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 333:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, psp_ns"  : "=r" (result) );
+ 334:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 335:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 336:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 337:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 338:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 339:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 340:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Process Stack Pointer
+ 341:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Process Stack Pointer (PSP).
+ 342:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfProcStack  Process Stack Pointer value to set
+ 343:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 344:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_PSP(uint32_t topOfProcStack)
+ 345:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 346:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR psp, %0" : : "r" (topOfProcStack) : );
+ 347:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 348:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 349:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 350:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 351:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 352:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Process Stack Pointer (non-secure)
+ 353:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Process Stack Pointer (PSP) when in secure sta
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 11
+
+
+ 354:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfProcStack  Process Stack Pointer value to set
+ 355:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 356:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_PSP_NS(uint32_t topOfProcStack)
+ 357:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 358:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR psp_ns, %0" : : "r" (topOfProcStack) : );
+ 359:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 360:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 361:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 362:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 363:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 364:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Main Stack Pointer
+ 365:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Main Stack Pointer (MSP).
+ 366:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               MSP Register value
+ 367:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 368:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_MSP(void)
+ 369:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 370:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 371:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 372:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, msp" : "=r" (result) );
+ 373:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 374:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 375:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 376:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 377:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 378:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 379:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Main Stack Pointer (non-secure)
+ 380:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the non-secure Main Stack Pointer (MSP) when in secure stat
+ 381:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               MSP Register value
+ 382:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 383:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_MSP_NS(void)
+ 384:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 385:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 386:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 387:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, msp_ns" : "=r" (result) );
+ 388:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 389:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 390:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 391:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 392:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 393:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 394:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Main Stack Pointer
+ 395:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Main Stack Pointer (MSP).
+ 396:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfMainStack  Main Stack Pointer value to set
+ 397:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 398:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_MSP(uint32_t topOfMainStack)
+ 399:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 400:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR msp, %0" : : "r" (topOfMainStack) : );
+ 401:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 402:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 403:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 404:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 405:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 406:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Main Stack Pointer (non-secure)
+ 407:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Main Stack Pointer (MSP) when in secure state.
+ 408:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfMainStack  Main Stack Pointer value to set
+ 409:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 410:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_MSP_NS(uint32_t topOfMainStack)
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 12
+
+
+ 411:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 412:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR msp_ns, %0" : : "r" (topOfMainStack) : );
+ 413:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 414:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 415:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 416:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 417:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 418:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 419:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Stack Pointer (non-secure)
+ 420:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the non-secure Stack Pointer (SP) when in secure state.
+ 421:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               SP Register value
+ 422:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 423:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_SP_NS(void)
+ 424:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 425:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 426:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 427:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, sp_ns" : "=r" (result) );
+ 428:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 429:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 430:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 431:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 432:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 433:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Stack Pointer (non-secure)
+ 434:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Stack Pointer (SP) when in secure state.
+ 435:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfStack  Stack Pointer value to set
+ 436:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 437:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_SP_NS(uint32_t topOfStack)
+ 438:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 439:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR sp_ns, %0" : : "r" (topOfStack) : );
+ 440:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 441:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 442:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 443:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 444:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 445:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Priority Mask
+ 446:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current state of the priority mask bit from the Priority Mask Register.
+ 447:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Priority Mask value
+ 448:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 449:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_PRIMASK(void)
+  47              		.loc 2 449 31 view .LVU4
+  48              	.LBB19:
+ 450:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 451:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+  49              		.loc 2 451 3 view .LVU5
+ 452:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 453:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, primask" : "=r" (result) :: "memory");
+  50              		.loc 2 453 3 view .LVU6
+  51              		.syntax unified
+  52              	@ 453 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+  53 0004 EFF31085 		MRS r5, primask
+  54              	@ 0 "" 2
+  55              	.LVL0:
+ 454:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+  56              		.loc 2 454 3 view .LVU7
+  57              		.loc 2 454 3 is_stmt 0 view .LVU8
+  58              		.thumb
+  59              		.syntax unified
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 13
+
+
+  60              	.LBE19:
+  61              	.LBE18:
+ 173:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 174:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   DISABLE_IRQ();			/**< Disable all interrupts by setting PRIMASK bit on Cortex*/
+  62              		.loc 1 174 3 is_stmt 1 view .LVU9
+  63              	.LBB20:
+  64              	.LBI20:
+ 207:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+  65              		.loc 2 207 27 view .LVU10
+  66              	.LBB21:
+ 209:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+  67              		.loc 2 209 3 view .LVU11
+  68              		.syntax unified
+  69              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+  70 0008 72B6     		cpsid i
+  71              	@ 0 "" 2
+  72              		.thumb
+  73              		.syntax unified
+  74              	.LBE21:
+  75              	.LBE20:
+ 175:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   /* Remove element just sent to UART */
+ 176:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   CircularQueue_Remove(&MsgDbgTraceQueue,&bufSize);
+  76              		.loc 1 176 3 view .LVU12
+  77 000a 0D4C     		ldr	r4, .L5
+  78 000c 0DF10601 		add	r1, sp, #6
+  79 0010 2046     		mov	r0, r4
+  80 0012 FFF7FEFF 		bl	CircularQueue_Remove
+  81              	.LVL1:
+ 177:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 178:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   /* Sense if new data to be sent */
+ 179:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   buf=CircularQueue_Sense(&MsgDbgTraceQueue,&bufSize);
+  82              		.loc 1 179 3 view .LVU13
+  83              		.loc 1 179 7 is_stmt 0 view .LVU14
+  84 0016 0DF10601 		add	r1, sp, #6
+  85 001a 2046     		mov	r0, r4
+  86 001c FFF7FEFF 		bl	CircularQueue_Sense
+  87              	.LVL2:
+ 180:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 181:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 182:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   if ( buf != NULL) 
+  88              		.loc 1 182 3 is_stmt 1 view .LVU15
+  89              		.loc 1 182 6 is_stmt 0 view .LVU16
+  90 0020 40B1     		cbz	r0, .L2
+ 183:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   {
+ 184:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     RESTORE_PRIMASK();
+  91              		.loc 1 184 5 is_stmt 1 view .LVU17
+  92              	.LVL3:
+  93              	.LBB22:
+  94              	.LBI22:
+ 455:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 456:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 457:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 458:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 459:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 460:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Priority Mask (non-secure)
+ 461:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current state of the non-secure priority mask bit from the Priority Mask Reg
+ 462:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Priority Mask value
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 14
+
+
+ 463:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 464:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_PRIMASK_NS(void)
+ 465:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 466:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 467:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 468:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, primask_ns" : "=r" (result) :: "memory");
+ 469:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 470:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 471:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 472:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 473:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 474:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 475:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Priority Mask
+ 476:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Priority Mask Register.
+ 477:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    priMask  Priority Mask
+ 478:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 479:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_PRIMASK(uint32_t priMask)
+  95              		.loc 2 479 27 view .LVU18
+  96              	.LBB23:
+ 480:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 481:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR primask, %0" : : "r" (priMask) : "memory");
+  97              		.loc 2 481 3 view .LVU19
+  98              		.syntax unified
+  99              	@ 481 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 100 0022 85F31088 		MSR primask, r5
+ 101              	@ 0 "" 2
+ 102              	.LVL4:
+ 103              		.loc 2 481 3 is_stmt 0 view .LVU20
+ 104              		.thumb
+ 105              		.syntax unified
+ 106              	.LBE23:
+ 107              	.LBE22:
+ 185:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     DbgOutputTraces((uint8_t*)buf, bufSize, DbgTrace_TxCpltCallback);
+ 108              		.loc 1 185 5 is_stmt 1 view .LVU21
+ 109 0026 074A     		ldr	r2, .L5+4
+ 110 0028 BDF80610 		ldrh	r1, [sp, #6]
+ 111 002c FFF7FEFF 		bl	DbgOutputTraces
+ 112              	.LVL5:
+ 113              	.L1:
+ 186:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   } 
+ 187:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   else
+ 188:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   {
+ 189:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     DbgTracePeripheralReady = SET;
+ 190:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     RESTORE_PRIMASK();
+ 191:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   }
+ 192:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 193:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #else
+ 194:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   BACKUP_PRIMASK();
+ 195:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 196:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   DISABLE_IRQ();      /**< Disable all interrupts by setting PRIMASK bit on Cortex*/
+ 197:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 198:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   DbgTracePeripheralReady = SET;
+ 199:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 200:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   RESTORE_PRIMASK();
+ 201:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #endif
+ 202:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** }
+ 114              		.loc 1 202 1 is_stmt 0 view .LVU22
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 15
+
+
+ 115 0030 03B0     		add	sp, sp, #12
+ 116              	.LCFI2:
+ 117              		.cfi_remember_state
+ 118              		.cfi_def_cfa_offset 12
+ 119              		@ sp needed
+ 120 0032 30BD     		pop	{r4, r5, pc}
+ 121              	.LVL6:
+ 122              	.L2:
+ 123              	.LCFI3:
+ 124              		.cfi_restore_state
+ 189:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     RESTORE_PRIMASK();
+ 125              		.loc 1 189 5 is_stmt 1 view .LVU23
+ 189:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     RESTORE_PRIMASK();
+ 126              		.loc 1 189 29 is_stmt 0 view .LVU24
+ 127 0034 044B     		ldr	r3, .L5+8
+ 128 0036 0122     		movs	r2, #1
+ 129 0038 1A70     		strb	r2, [r3]
+ 190:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   }
+ 130              		.loc 1 190 5 is_stmt 1 view .LVU25
+ 131              	.LVL7:
+ 132              	.LBB24:
+ 133              	.LBI24:
+ 479:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 134              		.loc 2 479 27 view .LVU26
+ 135              	.LBB25:
+ 136              		.loc 2 481 3 view .LVU27
+ 137              		.syntax unified
+ 138              	@ 481 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 139 003a 85F31088 		MSR primask, r5
+ 140              	@ 0 "" 2
+ 141              	.LVL8:
+ 142              		.loc 2 481 3 is_stmt 0 view .LVU28
+ 143              		.thumb
+ 144              		.syntax unified
+ 145              	.LBE25:
+ 146              	.LBE24:
+ 147              		.loc 1 202 1 view .LVU29
+ 148 003e F7E7     		b	.L1
+ 149              	.L6:
+ 150              		.align	2
+ 151              	.L5:
+ 152 0040 00000000 		.word	.LANCHOR0
+ 153 0044 00000000 		.word	DbgTrace_TxCpltCallback
+ 154 0048 00000000 		.word	.LANCHOR1
+ 155              		.cfi_endproc
+ 156              	.LFE1263:
+ 158              		.section	.text.DbgTraceGetFileName,"ax",%progbits
+ 159              		.align	1
+ 160              		.global	DbgTraceGetFileName
+ 161              		.syntax unified
+ 162              		.thumb
+ 163              		.thumb_func
+ 164              		.fpu fpv4-sp-d16
+ 166              	DbgTraceGetFileName:
+ 167              	.LVL9:
+ 168              	.LFB1261:
+ 121:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   const char *ret = fullpath;
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 16
+
+
+ 169              		.loc 1 121 1 is_stmt 1 view -0
+ 170              		.cfi_startproc
+ 171              		@ args = 0, pretend = 0, frame = 0
+ 172              		@ frame_needed = 0, uses_anonymous_args = 0
+ 121:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   const char *ret = fullpath;
+ 173              		.loc 1 121 1 is_stmt 0 view .LVU31
+ 174 0000 10B5     		push	{r4, lr}
+ 175              	.LCFI4:
+ 176              		.cfi_def_cfa_offset 8
+ 177              		.cfi_offset 4, -8
+ 178              		.cfi_offset 14, -4
+ 179 0002 0446     		mov	r4, r0
+ 122:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 180              		.loc 1 122 3 is_stmt 1 view .LVU32
+ 181              	.LVL10:
+ 124:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   {
+ 182              		.loc 1 124 3 view .LVU33
+ 124:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   {
+ 183              		.loc 1 124 7 is_stmt 0 view .LVU34
+ 184 0004 5C21     		movs	r1, #92
+ 185 0006 FFF7FEFF 		bl	strrchr
+ 186              	.LVL11:
+ 124:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   {
+ 187              		.loc 1 124 6 view .LVU35
+ 188 000a 08B1     		cbz	r0, .L8
+ 126:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   }
+ 189              		.loc 1 126 5 is_stmt 1 view .LVU36
+ 126:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   }
+ 190              		.loc 1 126 9 is_stmt 0 view .LVU37
+ 191 000c 0130     		adds	r0, r0, #1
+ 192              	.LVL12:
+ 193              	.L7:
+ 134:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 194              		.loc 1 134 1 view .LVU38
+ 195 000e 10BD     		pop	{r4, pc}
+ 196              	.LVL13:
+ 197              	.L8:
+ 128:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   {
+ 198              		.loc 1 128 8 is_stmt 1 view .LVU39
+ 128:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   {
+ 199              		.loc 1 128 12 is_stmt 0 view .LVU40
+ 200 0010 2F21     		movs	r1, #47
+ 201 0012 2046     		mov	r0, r4
+ 202 0014 FFF7FEFF 		bl	strrchr
+ 203              	.LVL14:
+ 128:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   {
+ 204              		.loc 1 128 11 view .LVU41
+ 205 0018 08B1     		cbz	r0, .L10
+ 130:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   }
+ 206              		.loc 1 130 5 is_stmt 1 view .LVU42
+ 130:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   }
+ 207              		.loc 1 130 9 is_stmt 0 view .LVU43
+ 208 001a 0130     		adds	r0, r0, #1
+ 209              	.LVL15:
+ 130:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   }
+ 210              		.loc 1 130 9 view .LVU44
+ 211 001c F7E7     		b	.L7
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 17
+
+
+ 212              	.LVL16:
+ 213              	.L10:
+ 122:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 214              		.loc 1 122 15 view .LVU45
+ 215 001e 2046     		mov	r0, r4
+ 216              	.LVL17:
+ 133:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** }
+ 217              		.loc 1 133 3 is_stmt 1 view .LVU46
+ 133:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** }
+ 218              		.loc 1 133 10 is_stmt 0 view .LVU47
+ 219 0020 F5E7     		b	.L7
+ 220              		.cfi_endproc
+ 221              	.LFE1261:
+ 223              		.section	.rodata.DbgTraceBuffer.str1.4,"aMS",%progbits,1
+ 224              		.align	2
+ 225              	.LC0:
+ 226 0000 20253032 		.ascii	" %02X\000"
+ 226      5800
+ 227              		.section	.text.DbgTraceBuffer,"ax",%progbits
+ 228              		.align	1
+ 229              		.global	DbgTraceBuffer
+ 230              		.syntax unified
+ 231              		.thumb
+ 232              		.thumb_func
+ 233              		.fpu fpv4-sp-d16
+ 235              	DbgTraceBuffer:
+ 236              	.LVL18:
+ 237              	.LFB1262:
+ 146:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   va_list vaArgs;
+ 238              		.loc 1 146 1 is_stmt 1 view -0
+ 239              		.cfi_startproc
+ 240              		@ args = 4, pretend = 8, frame = 8
+ 241              		@ frame_needed = 0, uses_anonymous_args = 1
+ 146:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   va_list vaArgs;
+ 242              		.loc 1 146 1 is_stmt 0 view .LVU49
+ 243 0000 0CB4     		push	{r2, r3}
+ 244              	.LCFI5:
+ 245              		.cfi_def_cfa_offset 8
+ 246              		.cfi_offset 2, -8
+ 247              		.cfi_offset 3, -4
+ 248 0002 70B5     		push	{r4, r5, r6, lr}
+ 249              	.LCFI6:
+ 250              		.cfi_def_cfa_offset 24
+ 251              		.cfi_offset 4, -24
+ 252              		.cfi_offset 5, -20
+ 253              		.cfi_offset 6, -16
+ 254              		.cfi_offset 14, -12
+ 255 0004 82B0     		sub	sp, sp, #8
+ 256              	.LCFI7:
+ 257              		.cfi_def_cfa_offset 32
+ 258 0006 0646     		mov	r6, r0
+ 259 0008 0D46     		mov	r5, r1
+ 260 000a 06A9     		add	r1, sp, #24
+ 261              	.LVL19:
+ 146:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   va_list vaArgs;
+ 262              		.loc 1 146 1 view .LVU50
+ 263 000c 51F8040B 		ldr	r0, [r1], #4
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 18
+
+
+ 264              	.LVL20:
+ 147:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   uint32_t u32Index;
+ 265              		.loc 1 147 3 is_stmt 1 view .LVU51
+ 148:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   va_start(vaArgs, strFormat);
+ 266              		.loc 1 148 3 view .LVU52
+ 149:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   vprintf(strFormat, vaArgs);
+ 267              		.loc 1 149 3 view .LVU53
+ 268 0010 0191     		str	r1, [sp, #4]
+ 150:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   va_end(vaArgs);
+ 269              		.loc 1 150 3 view .LVU54
+ 270 0012 FFF7FEFF 		bl	vprintf
+ 271              	.LVL21:
+ 151:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   for (u32Index = 0; u32Index < u32Length; u32Index ++)
+ 272              		.loc 1 151 3 view .LVU55
+ 152:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   {
+ 273              		.loc 1 152 3 view .LVU56
+ 152:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   {
+ 274              		.loc 1 152 17 is_stmt 0 view .LVU57
+ 275 0016 0024     		movs	r4, #0
+ 276              	.LVL22:
+ 277              	.L13:
+ 152:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   {
+ 278              		.loc 1 152 22 is_stmt 1 discriminator 1 view .LVU58
+ 152:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   {
+ 279              		.loc 1 152 3 is_stmt 0 discriminator 1 view .LVU59
+ 280 0018 AC42     		cmp	r4, r5
+ 281 001a 05D2     		bcs	.L16
+ 154:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   }
+ 282              		.loc 1 154 5 is_stmt 1 discriminator 3 view .LVU60
+ 283 001c 315D     		ldrb	r1, [r6, r4]	@ zero_extendqisi2
+ 284 001e 0548     		ldr	r0, .L17
+ 285 0020 FFF7FEFF 		bl	printf
+ 286              	.LVL23:
+ 152:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   {
+ 287              		.loc 1 152 44 discriminator 3 view .LVU61
+ 152:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   {
+ 288              		.loc 1 152 53 is_stmt 0 discriminator 3 view .LVU62
+ 289 0024 0134     		adds	r4, r4, #1
+ 290              	.LVL24:
+ 152:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   {
+ 291              		.loc 1 152 53 discriminator 3 view .LVU63
+ 292 0026 F7E7     		b	.L13
+ 293              	.L16:
+ 156:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 294              		.loc 1 156 1 view .LVU64
+ 295 0028 02B0     		add	sp, sp, #8
+ 296              	.LCFI8:
+ 297              		.cfi_def_cfa_offset 24
+ 298              		@ sp needed
+ 299 002a BDE87040 		pop	{r4, r5, r6, lr}
+ 300              	.LCFI9:
+ 301              		.cfi_restore 14
+ 302              		.cfi_restore 6
+ 303              		.cfi_restore 5
+ 304              		.cfi_restore 4
+ 305              		.cfi_def_cfa_offset 8
+ 306              	.LVL25:
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 19
+
+
+ 156:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 307              		.loc 1 156 1 view .LVU65
+ 308 002e 02B0     		add	sp, sp, #8
+ 309              	.LCFI10:
+ 310              		.cfi_restore 3
+ 311              		.cfi_restore 2
+ 312              		.cfi_def_cfa_offset 0
+ 313 0030 7047     		bx	lr
+ 314              	.L18:
+ 315 0032 00BF     		.align	2
+ 316              	.L17:
+ 317 0034 00000000 		.word	.LC0
+ 318              		.cfi_endproc
+ 319              	.LFE1262:
+ 321              		.section	.text.DbgTraceInit,"ax",%progbits
+ 322              		.align	1
+ 323              		.global	DbgTraceInit
+ 324              		.syntax unified
+ 325              		.thumb
+ 326              		.thumb_func
+ 327              		.fpu fpv4-sp-d16
+ 329              	DbgTraceInit:
+ 330              	.LFB1264:
+ 203:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #endif
+ 204:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 205:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** void DbgTraceInit( void )
+ 206:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** {
+ 331              		.loc 1 206 1 is_stmt 1 view -0
+ 332              		.cfi_startproc
+ 333              		@ args = 0, pretend = 0, frame = 0
+ 334              		@ frame_needed = 0, uses_anonymous_args = 0
+ 335 0000 00B5     		push	{lr}
+ 336              	.LCFI11:
+ 337              		.cfi_def_cfa_offset 4
+ 338              		.cfi_offset 14, -4
+ 339 0002 83B0     		sub	sp, sp, #12
+ 340              	.LCFI12:
+ 341              		.cfi_def_cfa_offset 16
+ 207:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #if (( CFG_DEBUG_TRACE_FULL != 0 ) || ( CFG_DEBUG_TRACE_LIGHT != 0 ))
+ 208:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   DbgOutputInit();
+ 342              		.loc 1 208 3 view .LVU67
+ 343 0004 FFF7FEFF 		bl	DbgOutputInit
+ 344              	.LVL26:
+ 209:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #if (DBG_TRACE_USE_CIRCULAR_QUEUE != 0)
+ 210:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   CircularQueue_Init(&MsgDbgTraceQueue, MsgDbgTraceQueueBuff, DBG_TRACE_MSG_QUEUE_SIZE, 0, CIRCULAR
+ 345              		.loc 1 210 3 view .LVU68
+ 346 0008 0223     		movs	r3, #2
+ 347 000a 0093     		str	r3, [sp]
+ 348 000c 0023     		movs	r3, #0
+ 349 000e 4FF48052 		mov	r2, #4096
+ 350 0012 0349     		ldr	r1, .L21
+ 351 0014 0348     		ldr	r0, .L21+4
+ 352 0016 FFF7FEFF 		bl	CircularQueue_Init
+ 353              	.LVL27:
+ 211:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #endif 
+ 212:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #endif
+ 213:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   return;
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 20
+
+
+ 354              		.loc 1 213 3 view .LVU69
+ 214:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** }
+ 355              		.loc 1 214 1 is_stmt 0 view .LVU70
+ 356 001a 03B0     		add	sp, sp, #12
+ 357              	.LCFI13:
+ 358              		.cfi_def_cfa_offset 4
+ 359              		@ sp needed
+ 360 001c 5DF804FB 		ldr	pc, [sp], #4
+ 361              	.L22:
+ 362              		.align	2
+ 363              	.L21:
+ 364 0020 00000000 		.word	MsgDbgTraceQueueBuff
+ 365 0024 00000000 		.word	.LANCHOR0
+ 366              		.cfi_endproc
+ 367              	.LFE1264:
+ 369              		.section	.text.DbgTraceWrite,"ax",%progbits
+ 370              		.align	1
+ 371              		.global	DbgTraceWrite
+ 372              		.syntax unified
+ 373              		.thumb
+ 374              		.thumb_func
+ 375              		.fpu fpv4-sp-d16
+ 377              	DbgTraceWrite:
+ 378              	.LVL28:
+ 379              	.LFB1266:
+ 215:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 216:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 217:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #if (( CFG_DEBUG_TRACE_FULL != 0 ) || ( CFG_DEBUG_TRACE_LIGHT != 0 ))
+ 218:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #if defined(__GNUC__)  /* SW4STM32 (GCC) */
+ 219:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /**
+ 220:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @brief	_write: override the __write standard lib function to redirect printf to USART.
+ 221:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @param	handle output handle (STDIO, STDERR...)
+ 222:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @param	buf buffer to write
+ 223:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @param	bufsize buffer size
+ 224:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @param	...: arguments to be formatted in format string
+ 225:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @retval none
+ 226:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  */
+ 227:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** size_t _write(int handle, const unsigned char * buf, size_t bufSize)
+ 228:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** {
+ 229:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   return ( DbgTraceWrite(handle, buf, bufSize) );
+ 230:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** }
+ 231:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 232:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #else
+ 233:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /**
+ 234:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @brief __write: override the _write standard lib function to redirect printf to USART.
+ 235:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @param handle output handle (STDIO, STDERR...)
+ 236:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @param buf buffer to write
+ 237:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @param bufsize buffer size
+ 238:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @param ...: arguments to be formatted in format string
+ 239:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @retval none
+ 240:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  */
+ 241:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** size_t __write(int handle, const unsigned char * buf, size_t bufSize)
+ 242:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** {
+ 243:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   return ( DbgTraceWrite(handle, buf, bufSize) );
+ 244:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** }
+ 245:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #endif /* #if defined(__GNUC__)  */
+ 246:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 21
+
+
+ 247:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** /**
+ 248:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @brief Override the standard lib function to redirect printf to USART.
+ 249:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @param handle output handle (STDIO, STDERR...)
+ 250:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @param buf buffer to write
+ 251:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @param bufsize buffer size
+ 252:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  * @retval Number of elements written
+ 253:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****  */
+ 254:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** size_t DbgTraceWrite(int handle, const unsigned char * buf, size_t bufSize)
+ 255:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** {
+ 380              		.loc 1 255 1 is_stmt 1 view -0
+ 381              		.cfi_startproc
+ 382              		@ args = 0, pretend = 0, frame = 0
+ 383              		@ frame_needed = 0, uses_anonymous_args = 0
+ 384              		.loc 1 255 1 is_stmt 0 view .LVU72
+ 385 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 386              	.LCFI14:
+ 387              		.cfi_def_cfa_offset 24
+ 388              		.cfi_offset 3, -24
+ 389              		.cfi_offset 4, -20
+ 390              		.cfi_offset 5, -16
+ 391              		.cfi_offset 6, -12
+ 392              		.cfi_offset 7, -8
+ 393              		.cfi_offset 14, -4
+ 256:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   size_t chars_written = 0;
+ 394              		.loc 1 256 3 is_stmt 1 view .LVU73
+ 395              	.LVL29:
+ 257:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   uint8_t* buffer;
+ 396              		.loc 1 257 3 view .LVU74
+ 258:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 259:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   BACKUP_PRIMASK();
+ 397              		.loc 1 259 3 view .LVU75
+ 398              	.LBB26:
+ 399              	.LBI26:
+ 449:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 400              		.loc 2 449 31 view .LVU76
+ 401              	.LBB27:
+ 451:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 402              		.loc 2 451 3 view .LVU77
+ 453:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 403              		.loc 2 453 3 view .LVU78
+ 404              		.syntax unified
+ 405              	@ 453 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 406 0002 EFF31085 		MRS r5, primask
+ 407              	@ 0 "" 2
+ 408              	.LVL30:
+ 454:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 409              		.loc 2 454 3 view .LVU79
+ 454:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 410              		.loc 2 454 3 is_stmt 0 view .LVU80
+ 411              		.thumb
+ 412              		.syntax unified
+ 413              	.LBE27:
+ 414              	.LBE26:
+ 260:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 261:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   /* Ignore flushes */
+ 262:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   if ( handle == -1 )
+ 415              		.loc 1 262 3 is_stmt 1 view .LVU81
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 22
+
+
+ 416              		.loc 1 262 6 is_stmt 0 view .LVU82
+ 417 0006 B0F1FF3F 		cmp	r0, #-1
+ 418 000a 20D0     		beq	.L26
+ 419 000c 1446     		mov	r4, r2
+ 263:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   {
+ 264:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     chars_written = ( size_t ) 0;
+ 265:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   }
+ 266:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   /* Only allow stdout/stderr output */
+ 267:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   else if ( ( handle != 1 ) && ( handle != 2 ) )
+ 420              		.loc 1 267 8 is_stmt 1 view .LVU83
+ 421              		.loc 1 267 29 is_stmt 0 view .LVU84
+ 422 000e 0138     		subs	r0, r0, #1
+ 423              	.LVL31:
+ 424              		.loc 1 267 11 view .LVU85
+ 425 0010 0128     		cmp	r0, #1
+ 426 0012 1ED8     		bhi	.L27
+ 268:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   {
+ 269:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     chars_written = ( size_t ) - 1;
+ 270:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   }
+ 271:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   /* Parameters OK, call the low-level character output routine */
+ 272:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   else if (bufSize != 0)
+ 427              		.loc 1 272 8 is_stmt 1 view .LVU86
+ 428              		.loc 1 272 11 is_stmt 0 view .LVU87
+ 429 0014 0AB9     		cbnz	r2, .L30
+ 256:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   uint8_t* buffer;
+ 430              		.loc 1 256 10 view .LVU88
+ 431 0016 1046     		mov	r0, r2
+ 432              	.LVL32:
+ 273:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   {
+ 274:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     chars_written = bufSize;
+ 275:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     /* If queue emepty and TX free, send directly */
+ 276:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     /* CS Start */
+ 277:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 278:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #if (DBG_TRACE_USE_CIRCULAR_QUEUE != 0)
+ 279:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     DISABLE_IRQ();      /**< Disable all interrupts by setting PRIMASK bit on Cortex*/
+ 280:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     buffer=CircularQueue_Add(&MsgDbgTraceQueue,(uint8_t*)buf, bufSize,1);
+ 281:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     if (buffer && DbgTracePeripheralReady)
+ 282:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     {
+ 283:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****       DbgTracePeripheralReady = RESET;
+ 284:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****       RESTORE_PRIMASK();
+ 285:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****       DbgOutputTraces((uint8_t*)buffer, bufSize, DbgTrace_TxCpltCallback);
+ 286:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     }
+ 287:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     else
+ 288:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     {
+ 289:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****       RESTORE_PRIMASK();
+ 290:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     }
+ 291:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #else
+ 292:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     DISABLE_IRQ();      /**< Disable all interrupts by setting PRIMASK bit on Cortex*/
+ 293:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     DbgTracePeripheralReady = RESET;
+ 294:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     RESTORE_PRIMASK();
+ 295:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 296:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     DbgOutputTraces((uint8_t*)buf, bufSize, DbgTrace_TxCpltCallback);
+ 297:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     while (!DbgTracePeripheralReady);
+ 298:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** #endif
+ 299:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     /* CS END */
+ 300:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   }
+ 301:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   return ( chars_written );
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 23
+
+
+ 433              		.loc 1 301 3 is_stmt 1 view .LVU89
+ 434              		.loc 1 301 10 is_stmt 0 view .LVU90
+ 435 0018 1AE0     		b	.L23
+ 436              	.LVL33:
+ 437              	.L30:
+ 274:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     /* If queue emepty and TX free, send directly */
+ 438              		.loc 1 274 5 is_stmt 1 view .LVU91
+ 279:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     buffer=CircularQueue_Add(&MsgDbgTraceQueue,(uint8_t*)buf, bufSize,1);
+ 439              		.loc 1 279 5 view .LVU92
+ 440              	.LBB28:
+ 441              	.LBI28:
+ 207:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 442              		.loc 2 207 27 view .LVU93
+ 443              	.LBB29:
+ 209:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 444              		.loc 2 209 3 view .LVU94
+ 445              		.syntax unified
+ 446              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 447 001a 72B6     		cpsid i
+ 448              	@ 0 "" 2
+ 449              		.thumb
+ 450              		.syntax unified
+ 451              	.LBE29:
+ 452              	.LBE28:
+ 280:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     if (buffer && DbgTracePeripheralReady)
+ 453              		.loc 1 280 5 view .LVU95
+ 280:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     if (buffer && DbgTracePeripheralReady)
+ 454              		.loc 1 280 12 is_stmt 0 view .LVU96
+ 455 001c 96B2     		uxth	r6, r2
+ 456 001e 0123     		movs	r3, #1
+ 457 0020 3246     		mov	r2, r6
+ 458              	.LVL34:
+ 280:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     if (buffer && DbgTracePeripheralReady)
+ 459              		.loc 1 280 12 view .LVU97
+ 460 0022 0D48     		ldr	r0, .L32
+ 461 0024 FFF7FEFF 		bl	CircularQueue_Add
+ 462              	.LVL35:
+ 281:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     {
+ 463              		.loc 1 281 5 is_stmt 1 view .LVU98
+ 281:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     {
+ 464              		.loc 1 281 8 is_stmt 0 view .LVU99
+ 465 0028 10B1     		cbz	r0, .L25
+ 281:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     {
+ 466              		.loc 1 281 16 discriminator 1 view .LVU100
+ 467 002a 0C4B     		ldr	r3, .L32+4
+ 468 002c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 469 002e 1BB9     		cbnz	r3, .L31
+ 470              	.L25:
+ 289:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     }
+ 471              		.loc 1 289 7 is_stmt 1 view .LVU101
+ 472              	.LVL36:
+ 473              	.LBB30:
+ 474              	.LBI30:
+ 479:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 475              		.loc 2 479 27 view .LVU102
+ 476              	.LBB31:
+ 477              		.loc 2 481 3 view .LVU103
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 24
+
+
+ 478              		.syntax unified
+ 479              	@ 481 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 480 0030 85F31088 		MSR primask, r5
+ 481              	@ 0 "" 2
+ 482              		.thumb
+ 483              		.syntax unified
+ 484              	.LBE31:
+ 485              	.LBE30:
+ 274:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     /* If queue emepty and TX free, send directly */
+ 486              		.loc 1 274 19 is_stmt 0 view .LVU104
+ 487 0034 2046     		mov	r0, r4
+ 488              	.LVL37:
+ 489              	.LBB33:
+ 490              	.LBB32:
+ 482:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 491              		.loc 2 482 1 view .LVU105
+ 492 0036 0BE0     		b	.L23
+ 493              	.LVL38:
+ 494              	.L31:
+ 495              		.loc 2 482 1 view .LVU106
+ 496              	.LBE32:
+ 497              	.LBE33:
+ 283:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****       RESTORE_PRIMASK();
+ 498              		.loc 1 283 7 is_stmt 1 view .LVU107
+ 283:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****       RESTORE_PRIMASK();
+ 499              		.loc 1 283 31 is_stmt 0 view .LVU108
+ 500 0038 084B     		ldr	r3, .L32+4
+ 501 003a 0022     		movs	r2, #0
+ 502 003c 1A70     		strb	r2, [r3]
+ 284:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****       DbgOutputTraces((uint8_t*)buffer, bufSize, DbgTrace_TxCpltCallback);
+ 503              		.loc 1 284 7 is_stmt 1 view .LVU109
+ 504              	.LVL39:
+ 505              	.LBB34:
+ 506              	.LBI34:
+ 479:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 507              		.loc 2 479 27 view .LVU110
+ 508              	.LBB35:
+ 481:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 509              		.loc 2 481 3 view .LVU111
+ 510              		.syntax unified
+ 511              	@ 481 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 512 003e 85F31088 		MSR primask, r5
+ 513              	@ 0 "" 2
+ 514              	.LVL40:
+ 481:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 515              		.loc 2 481 3 is_stmt 0 view .LVU112
+ 516              		.thumb
+ 517              		.syntax unified
+ 518              	.LBE35:
+ 519              	.LBE34:
+ 285:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     }
+ 520              		.loc 1 285 7 is_stmt 1 view .LVU113
+ 521 0042 074A     		ldr	r2, .L32+8
+ 522 0044 3146     		mov	r1, r6
+ 523 0046 FFF7FEFF 		bl	DbgOutputTraces
+ 524              	.LVL41:
+ 274:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     /* If queue emepty and TX free, send directly */
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 25
+
+
+ 525              		.loc 1 274 19 is_stmt 0 view .LVU114
+ 526 004a 2046     		mov	r0, r4
+ 285:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****     }
+ 527              		.loc 1 285 7 view .LVU115
+ 528 004c 00E0     		b	.L23
+ 529              	.LVL42:
+ 530              	.L26:
+ 264:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   }
+ 531              		.loc 1 264 19 view .LVU116
+ 532 004e 0020     		movs	r0, #0
+ 533              	.LVL43:
+ 534              	.L23:
+ 302:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** }
+ 535              		.loc 1 302 1 view .LVU117
+ 536 0050 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 537              	.LVL44:
+ 538              	.L27:
+ 269:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   }
+ 539              		.loc 1 269 19 view .LVU118
+ 540 0052 4FF0FF30 		mov	r0, #-1
+ 541 0056 FBE7     		b	.L23
+ 542              	.L33:
+ 543              		.align	2
+ 544              	.L32:
+ 545 0058 00000000 		.word	.LANCHOR0
+ 546 005c 00000000 		.word	.LANCHOR1
+ 547 0060 00000000 		.word	DbgTrace_TxCpltCallback
+ 548              		.cfi_endproc
+ 549              	.LFE1266:
+ 551              		.section	.text._write,"ax",%progbits
+ 552              		.align	1
+ 553              		.global	_write
+ 554              		.syntax unified
+ 555              		.thumb
+ 556              		.thumb_func
+ 557              		.fpu fpv4-sp-d16
+ 559              	_write:
+ 560              	.LVL45:
+ 561              	.LFB1265:
+ 228:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   return ( DbgTraceWrite(handle, buf, bufSize) );
+ 562              		.loc 1 228 1 is_stmt 1 view -0
+ 563              		.cfi_startproc
+ 564              		@ args = 0, pretend = 0, frame = 0
+ 565              		@ frame_needed = 0, uses_anonymous_args = 0
+ 228:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c ****   return ( DbgTraceWrite(handle, buf, bufSize) );
+ 566              		.loc 1 228 1 is_stmt 0 view .LVU120
+ 567 0000 08B5     		push	{r3, lr}
+ 568              	.LCFI15:
+ 569              		.cfi_def_cfa_offset 8
+ 570              		.cfi_offset 3, -8
+ 571              		.cfi_offset 14, -4
+ 229:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** }
+ 572              		.loc 1 229 3 is_stmt 1 view .LVU121
+ 229:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** }
+ 573              		.loc 1 229 12 is_stmt 0 view .LVU122
+ 574 0002 FFF7FEFF 		bl	DbgTraceWrite
+ 575              	.LVL46:
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 26
+
+
+ 230:Middlewares/ST/STM32_WPAN/utilities/dbg_trace.c **** 
+ 576              		.loc 1 230 1 view .LVU123
+ 577 0006 08BD     		pop	{r3, pc}
+ 578              		.cfi_endproc
+ 579              	.LFE1265:
+ 581              		.global	DbgTracePeripheralReady
+ 582              		.section	.bss.MsgDbgTraceQueue,"aw",%nobits
+ 583              		.align	2
+ 584              		.set	.LANCHOR0,. + 0
+ 587              	MsgDbgTraceQueue:
+ 588 0000 00000000 		.space	32
+ 588      00000000 
+ 588      00000000 
+ 588      00000000 
+ 588      00000000 
+ 589              		.section	.bss.MsgDbgTraceQueueBuff,"aw",%nobits
+ 590              		.align	2
+ 593              	MsgDbgTraceQueueBuff:
+ 594 0000 00000000 		.space	4096
+ 594      00000000 
+ 594      00000000 
+ 594      00000000 
+ 594      00000000 
+ 595              		.section	.data.DbgTracePeripheralReady,"aw"
+ 596              		.set	.LANCHOR1,. + 0
+ 599              	DbgTracePeripheralReady:
+ 600 0000 01       		.byte	1
+ 601              		.text
+ 602              	.Letext0:
+ 603              		.file 3 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
+ 604              		.file 4 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
+ 605              		.file 5 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/inclu
+ 606              		.file 6 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/lock.h"
+ 607              		.file 7 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_types.
+ 608              		.file 8 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/reent.h
+ 609              		.file 9 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/inclu
+ 610              		.file 10 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdio.h"
+ 611              		.file 11 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
+ 612              		.file 12 "Drivers/CMSIS/Include/core_cm4.h"
+ 613              		.file 13 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/system_stm32wbxx.h"
+ 614              		.file 14 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wbxx.h"
+ 615              		.file 15 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_def.h"
+ 616              		.file 16 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_flash.h"
+ 617              		.file 17 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_uart.h"
+ 618              		.file 18 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h"
+ 619              		.file 19 "Core/Inc/app_conf.h"
+ 620              		.file 20 "Middlewares/ST/STM32_WPAN/utilities/stm_queue.h"
+ 621              		.file 21 "Middlewares/ST/STM32_WPAN/utilities/dbg_trace.h"
+ 622              		.file 22 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/string.h"
+ 623              		.file 23 "<built-in>"
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s 			page 27
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 dbg_trace.c
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s:18     .text.DbgTrace_TxCpltCallback:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s:25     .text.DbgTrace_TxCpltCallback:0000000000000000 DbgTrace_TxCpltCallback
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s:152    .text.DbgTrace_TxCpltCallback:0000000000000040 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s:159    .text.DbgTraceGetFileName:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s:166    .text.DbgTraceGetFileName:0000000000000000 DbgTraceGetFileName
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s:224    .rodata.DbgTraceBuffer.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s:228    .text.DbgTraceBuffer:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s:235    .text.DbgTraceBuffer:0000000000000000 DbgTraceBuffer
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s:317    .text.DbgTraceBuffer:0000000000000034 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s:322    .text.DbgTraceInit:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s:329    .text.DbgTraceInit:0000000000000000 DbgTraceInit
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s:364    .text.DbgTraceInit:0000000000000020 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s:593    .bss.MsgDbgTraceQueueBuff:0000000000000000 MsgDbgTraceQueueBuff
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s:370    .text.DbgTraceWrite:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s:377    .text.DbgTraceWrite:0000000000000000 DbgTraceWrite
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s:545    .text.DbgTraceWrite:0000000000000058 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s:552    .text._write:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s:559    .text._write:0000000000000000 _write
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s:599    .data.DbgTracePeripheralReady:0000000000000000 DbgTracePeripheralReady
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s:583    .bss.MsgDbgTraceQueue:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s:587    .bss.MsgDbgTraceQueue:0000000000000000 MsgDbgTraceQueue
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccSxZHak.s:590    .bss.MsgDbgTraceQueueBuff:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+CircularQueue_Remove
+CircularQueue_Sense
+DbgOutputTraces
+strrchr
+vprintf
+printf
+DbgOutputInit
+CircularQueue_Init
+CircularQueue_Add
