@@ -89,7 +89,7 @@ static void Init_Rtc( void );
 /* Functions Definition ------------------------------------------------------*/
 void MX_APPE_Config( void )
 {
-  APP_DBG_MSG("MX_APPE_CONFIG: HERE");
+  // APP_DBG_MSG("MX_APPE_CONFIG: HERE");
   /**
    * The OPTVERR flag is wrongly set at power on
    * It shall be cleared before using any HAL_FLASH_xxx() api

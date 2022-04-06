@@ -61,7 +61,7 @@ typedef struct{
 
 /* Private variables ---------------------------------------------------------*/
 static const uint8_t SizeRead_Write_Char=8;
-static const uint8_t SizeIndication_Char=1;
+static const uint8_t SizeIndication_Char=64;
 /**
  * START of Section BLE_DRIVER_CONTEXT
  */
@@ -145,23 +145,30 @@ static SVCCTL_EvtAckStatus_t Custom_STM_Event_Handler(void *Event)
 
           /* USER CODE END EVT_BLUE_GATT_ATTRIBUTE_MODIFIED_BEGIN */
           attribute_modified = (aci_gatt_attribute_modified_event_rp0*)blecore_evt->data;
+
+          APP_DBG_MSG("Attribute Modified: %d", attribute_modified->Attr_Handle);
+          APP_DBG_MSG("Indication Attribute: %d", CustomContext.CustomIndication_CharHdle);
+          APP_DBG_MSG("Read Write Attribute: %d",  CustomContext.CustomRead_Write_CharHdle);
+          APP_DBG_MSG("Char Descriptor Attribute offset = 2");
           if(attribute_modified->Attr_Handle == (CustomContext.CustomIndication_CharHdle + CHARACTERISTIC_DESCRIPTOR_ATTRIBUTE_OFFSET))
           {
             return_value = SVCCTL_EvtAckFlowEnable;
             /* USER CODE BEGIN CUSTOM_STM_Service_1_Char_2 */
-
+              
             /* USER CODE END CUSTOM_STM_Service_1_Char_2 */
 
             switch(attribute_modified->Attr_Data[0])
             {
               /* USER CODE BEGIN CUSTOM_STM_Service_1_Char_2_attribute_modified */
+              
 
               /* USER CODE END CUSTOM_STM_Service_1_Char_2_attribute_modified */
 
               /* Disabled Indication management */
-              case (!(COMSVC_Indication)):
+              // case (!(COMSVC_Indication)):
+              case (!(COMSVC_Notification)):
                 /* USER CODE BEGIN CUSTOM_STM_Service_1_Char_2_Disabled_BEGIN */
-
+                APP_DBG_MSG("Indications Disabled");
                 /* USER CODE END CUSTOM_STM_Service_1_Char_2_attribute_modified */
                 Notification.Custom_Evt_Opcode = CUSTOM_STM_INDICATION_CHAR_INDICATE_DISABLED_EVT;
                 Custom_STM_App_Notification(&Notification);
@@ -171,12 +178,13 @@ static SVCCTL_EvtAckStatus_t Custom_STM_Event_Handler(void *Event)
                 break;
 
                 /* Enabled Indication management */
-              case COMSVC_Indication:
+              // case COMSVC_Indication:
+              case COMSVC_Notification:
               /* USER CODE BEGIN CUSTOM_STM_Service_1_Char_2_COMSVC_Indication_BEGIN */
-
+                APP_DBG_MSG("Indications Enabled");
               /* USER CODE END CUSTOM_STM_Service_1_Char_2_COMSVC_Indication_BEGIN */
-              Notification.Custom_Evt_Opcode = CUSTOM_STM_INDICATION_CHAR_INDICATE_ENABLED_EVT;
-              Custom_STM_App_Notification(&Notification);
+                Notification.Custom_Evt_Opcode = CUSTOM_STM_INDICATION_CHAR_INDICATE_ENABLED_EVT;
+                Custom_STM_App_Notification(&Notification);
               /* USER CODE BEGIN CUSTOM_STM_Service_1_Char_2_COMSVC_Indication_END */
 
               /* USER CODE END CUSTOM_STM_Service_1_Char_2_COMSVC_Indication_END */
@@ -194,7 +202,11 @@ static SVCCTL_EvtAckStatus_t Custom_STM_Event_Handler(void *Event)
           {
             return_value = SVCCTL_EvtAckFlowEnable;
             /* USER CODE BEGIN CUSTOM_STM_Service_1_Char_1_ACI_GATT_ATTRIBUTE_MODIFIED_VSEVT_CODE */
-
+            APP_DBG_MSG("Write Request?");
+            Notification.Custom_Evt_Opcode = CUSTOM_STM_READ_WRITE_CHAR_WRITE_NO_RESP_EVT;
+            Notification.DataTransfered.Length=attribute_modified->Attr_Data_Length;
+            Notification.DataTransfered.pPayload=attribute_modified->Attr_Data;
+            Custom_STM_App_Notification(&Notification);
             /* USER CODE END CUSTOM_STM_Service_1_Char_1_ACI_GATT_ATTRIBUTE_MODIFIED_VSEVT_CODE */
           } /* if(attribute_modified->Attr_Handle == (CustomContext.CustomRead_Write_CharHdle + CHARACTERISTIC_VALUE_ATTRIBUTE_OFFSET))*/
           /* USER CODE BEGIN EVT_BLUE_GATT_ATTRIBUTE_MODIFIED_END */
@@ -211,7 +223,9 @@ static SVCCTL_EvtAckStatus_t Custom_STM_Event_Handler(void *Event)
           {
             return_value = SVCCTL_EvtAckFlowEnable;
             /*USER CODE BEGIN CUSTOM_STM_Service_1_Char_1_ACI_GATT_READ_PERMIT_REQ_VSEVT_CODE_1 */
-
+            APP_DBG_MSG("Read Request?");
+            Notification.Custom_Evt_Opcode = CUSTOM_STM_READ_WRITE_CHAR_READ_EVT;
+            Custom_STM_App_Notification(&Notification);
             /*USER CODE END CUSTOM_STM_Service_1_Char_1_ACI_GATT_READ_PERMIT_REQ_VSEVT_CODE_1*/
             aci_gatt_allow_read(read_req->Connection_Handle);
             /*USER CODE BEGIN CUSTOM_STM_Service_1_Char_1_ACI_GATT_READ_PERMIT_REQ_VSEVT_CODE_2 */
@@ -225,7 +239,7 @@ static SVCCTL_EvtAckStatus_t Custom_STM_Event_Handler(void *Event)
 
         case ACI_GATT_WRITE_PERMIT_REQ_VSEVT_CODE:
           /* USER CODE BEGIN EVT_BLUE_GATT_WRITE_PERMIT_REQ_BEGIN */
-
+          
           /* USER CODE END EVT_BLUE_GATT_WRITE_PERMIT_REQ_BEGIN */
           write_perm_req = (aci_gatt_write_permit_req_event_rp0*)blecore_evt->data;
           if(write_perm_req->Attribute_Handle == (CustomContext.CustomRead_Write_CharHdle + CHARACTERISTIC_VALUE_ATTRIBUTE_OFFSET))
@@ -303,14 +317,13 @@ void SVCCTL_InitCustomSvc(void)
    *                                1 for IULS_INDICATION_CHAR configuration descriptor +
    *                              = 6
    */
-
+ 
   COPY_IULS_BLE_SERVICE_UUID(uuid.Char_UUID_128);
   aci_gatt_add_service(UUID_TYPE_128,
                        (Service_UUID_t *) &uuid,
                        PRIMARY_SERVICE,
                        6,
                        &(CustomContext.CustomIuls_BleHdle));
-
   /**
    *  IULS_READ_WRITE_CHAR
    */
@@ -320,9 +333,9 @@ void SVCCTL_InitCustomSvc(void)
                     SizeRead_Write_Char,
                     CHAR_PROP_READ | CHAR_PROP_WRITE_WITHOUT_RESP,
                     ATTR_PERMISSION_NONE,
-                    GATT_NOTIFY_ATTRIBUTE_WRITE | GATT_NOTIFY_WRITE_REQ_AND_WAIT_FOR_APPL_RESP | GATT_NOTIFY_READ_REQ_AND_WAIT_FOR_APPL_RESP,
+                    GATT_NOTIFY_ATTRIBUTE_WRITE| GATT_NOTIFY_READ_REQ_AND_WAIT_FOR_APPL_RESP,
                     0x10,
-                    CHAR_VALUE_LEN_CONSTANT,
+                    8,
                     &(CustomContext.CustomRead_Write_CharHdle));
   /**
    *  IULS_INDICATION_CHAR
@@ -331,15 +344,16 @@ void SVCCTL_InitCustomSvc(void)
   aci_gatt_add_char(CustomContext.CustomIuls_BleHdle,
                     UUID_TYPE_128, &uuid,
                     SizeIndication_Char,
-                    CHAR_PROP_INDICATE,
+                    CHAR_PROP_NOTIFY,
                     ATTR_PERMISSION_NONE,
-                    GATT_NOTIFY_ATTRIBUTE_WRITE | GATT_NOTIFY_WRITE_REQ_AND_WAIT_FOR_APPL_RESP | GATT_NOTIFY_READ_REQ_AND_WAIT_FOR_APPL_RESP,
+                    GATT_NOTIFY_ATTRIBUTE_WRITE,
                     0x10,
                     CHAR_VALUE_LEN_VARIABLE,
                     &(CustomContext.CustomIndication_CharHdle));
 
   /* USER CODE BEGIN SVCCTL_InitCustomSvc_2 */
-
+  APP_DBG_MSG("Custom Service Created");
+  APP_DBG_MSG("Custom Characteristics Added");
   /* USER CODE END SVCCTL_InitCustomSvc_2 */
 
   return;
@@ -355,7 +369,7 @@ tBleStatus Custom_STM_App_Update_Char(Custom_STM_Char_Opcode_t CharOpcode, uint8
 {
   tBleStatus result = BLE_STATUS_INVALID_PARAMS;
   /* USER CODE BEGIN Custom_STM_App_Update_Char_1 */
-
+  APP_DBG_MSG("Characteristc Update");
   /* USER CODE END Custom_STM_App_Update_Char_1 */
 
   switch(CharOpcode)
@@ -368,7 +382,7 @@ tBleStatus Custom_STM_App_Update_Char(Custom_STM_Char_Opcode_t CharOpcode, uint8
                                           SizeRead_Write_Char, /* charValueLen */
                                           (uint8_t *)  pPayload);
       /* USER CODE BEGIN CUSTOM_STM_Service_1_Char_1*/
-
+      APP_DBG_MSG("Update Write Char");
       /* USER CODE END CUSTOM_STM_Service_1_Char_1*/
       break;
 
@@ -379,7 +393,7 @@ tBleStatus Custom_STM_App_Update_Char(Custom_STM_Char_Opcode_t CharOpcode, uint8
                                           SizeIndication_Char, /* charValueLen */
                                           (uint8_t *)  pPayload);
       /* USER CODE BEGIN CUSTOM_STM_Service_1_Char_2*/
-
+      APP_DBG_MSG("Update Indication Char");
       /* USER CODE END CUSTOM_STM_Service_1_Char_2*/
       break;
 

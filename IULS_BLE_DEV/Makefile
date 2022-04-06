@@ -88,7 +88,14 @@ Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl.c \
 Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/shci_tl_if.c \
 Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c \
 Utilities/lpm/tiny_lpm/stm32_lpm.c \
-Utilities/sequencer/stm32_seq.c  
+Utilities/sequencer/stm32_seq.c  \
+Core/Src/command.c \
+Core/Src/queue.c \
+Core/Src/retarget.c \
+Core/Src/interrupt.c \
+Core/Src/flash.c \
+Core/Src/sample.c \
+Core/Src/date_time_set.c
 
 # ASM sources
 ASM_SOURCES =  \

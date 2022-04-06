@@ -26,10 +26,14 @@
 #include "custom_app.h"
 #include "custom_stm.h"
 #include "stm32_seq.h"
+#include "flash.h"
+#include "sample.h"
+
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+uint8_t payload[8];
+extern flash_status_t flash_status;
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -90,36 +94,57 @@ static void Custom_Indication_char_Send_Indication(void);
 void Custom_STM_App_Notification(Custom_STM_App_Notification_evt_t *pNotification)
 {
   /* USER CODE BEGIN CUSTOM_STM_App_Notification_1 */
-
+  memset(payload, NULL, 8);
+  // strncpy(payload, pNotification->DataTransfered.pPayload, pNotification->DataTransfered.Length);
+  // payload = pNotification->DataTransfered.pPayload;
+  // payload[pNotification->DataTransfered.Length] = '\0';
+// /  strncpy()
+  
   /* USER CODE END CUSTOM_STM_App_Notification_1 */
   switch(pNotification->Custom_Evt_Opcode)
   {
     /* USER CODE BEGIN CUSTOM_STM_App_Notification_Custom_Evt_Opcode */
-
+    // memset(payload, NULL, 8);
+    // strncpy(payload, pNotification->DataTransfered.pPayload, pNotification->DataTransfered.Length);
+    // APP_DBG_MSG("Notifcation recieved: %s\r\n", payload);
     /* USER CODE END CUSTOM_STM_App_Notification_Custom_Evt_Opcode */
 
   /* IULS_BLE_Service */
     case CUSTOM_STM_READ_WRITE_CHAR_READ_EVT:
       /* USER CODE BEGIN CUSTOM_STM_READ_WRITE_CHAR_READ_EVT */
-
+      APP_DBG_MSG("Event: Read from characteristic");
       /* USER CODE END CUSTOM_STM_READ_WRITE_CHAR_READ_EVT */
       break;
 
     case CUSTOM_STM_READ_WRITE_CHAR_WRITE_NO_RESP_EVT:
       /* USER CODE BEGIN CUSTOM_STM_READ_WRITE_CHAR_WRITE_NO_RESP_EVT */
+      APP_DBG_MSG("Event recieved: %s\r\n", pNotification->DataTransfered.pPayload);
+      uint8_t * command = pNotification->DataTransfered.pPayload;
 
+      if(strncmp(command, "data", 4) == 0) {
+        read_data_records_ble(&flash_status);
+        APP_DBG_MSG("COMMAND: data");
+        APP_DBG_MSG("Turning on datasend");
+        // P2P_Send_Data()
+      }
+
+      // APP_DBG_MSG("Event: Write no response");
+      // APP_DBG_MSG("Notifcation recieved: %s\r\n", payload);
+      // if(strncmp(payload, "data", 4) == 0) {
+      //   send_data();
+      // }
       /* USER CODE END CUSTOM_STM_READ_WRITE_CHAR_WRITE_NO_RESP_EVT */
       break;
 
     case CUSTOM_STM_INDICATION_CHAR_INDICATE_ENABLED_EVT:
       /* USER CODE BEGIN CUSTOM_STM_INDICATION_CHAR_INDICATE_ENABLED_EVT */
-
+      APP_DBG_MSG("Event: Notifications enabled");
       /* USER CODE END CUSTOM_STM_INDICATION_CHAR_INDICATE_ENABLED_EVT */
       break;
 
     case CUSTOM_STM_INDICATION_CHAR_INDICATE_DISABLED_EVT:
       /* USER CODE BEGIN CUSTOM_STM_INDICATION_CHAR_INDICATE_DISABLED_EVT */
-
+      APP_DBG_MSG("Event: Notifications disabled");
       /* USER CODE END CUSTOM_STM_INDICATION_CHAR_INDICATE_DISABLED_EVT */
       break;
 
@@ -138,7 +163,7 @@ void Custom_STM_App_Notification(Custom_STM_App_Notification_evt_t *pNotificatio
 void Custom_APP_Notification(Custom_App_ConnHandle_Not_evt_t *pNotification)
 {
   /* USER CODE BEGIN CUSTOM_APP_Notification_1 */
-  APP_DBG_MSG("NEW CONNECTION");
+  APP_DBG_MSG("Connection handle event");
   /* USER CODE END CUSTOM_APP_Notification_1 */
 
   switch(pNotification->Custom_Evt_Opcode)
@@ -148,13 +173,13 @@ void Custom_APP_Notification(Custom_App_ConnHandle_Not_evt_t *pNotification)
     /* USER CODE END P2PS_CUSTOM_Notification_Custom_Evt_Opcode */
     case CUSTOM_CONN_HANDLE_EVT :
       /* USER CODE BEGIN CUSTOM_CONN_HANDLE_EVT */
-
+      APP_DBG_MSG("Device Connected");
       /* USER CODE END CUSTOM_CONN_HANDLE_EVT */
       break;
 
     case CUSTOM_DISCON_HANDLE_EVT :
       /* USER CODE BEGIN CUSTOM_DISCON_HANDLE_EVT */
-
+      APP_DBG_MSG("Device Disconnected");
       /* USER CODE END CUSTOM_DISCON_HANDLE_EVT */
       break;
 
@@ -189,7 +214,49 @@ void Custom_APP_Init(void)
  * LOCAL FUNCTIONS
  *
  *************************************************************/
+void send_data(void) {
+  // sensordata_t * temp = read_data_records_ble(&flash_status);
+  // flash_status
 
+
+}
+
+int read_data_records_ble(flash_status_t *fs) {
+  memset(NotifyCharData, 0, 247);
+  uint8_t samp[124];
+  sensordata_t * p;
+  int mon = 4;
+  int day = 6;
+  int year = 2022;
+  int hr = 10;
+  int min = 20;
+  int batt = 3;
+  int count = 1;
+  p = (sensordata_t *) fs->data_start;
+  while (p>((sensordata_t *)fs->next_address)) {
+    if (p->status==1) {
+      sprintf(samp, "D,%d,%d/%d/%d,%d:%d:%d,%d.%d,%d,%d\n", 
+            count, mon, day, year, hr, min, count,
+            p->battery_voltage/1000,
+            p->battery_voltage%1000,
+            p->temperature,
+            (int) p->sensor_period);
+      printf("\r\n%s\r\n", samp);
+      // UpdateCharData = samp;
+      memcpy(UpdateCharData, samp, 36);
+      Custom_Indication_char_Update_Char();
+      printf("%d b=%d.%d,t=%d,p=%d\n\r",
+             count,
+             p->battery_voltage/1000,
+             p->battery_voltage%1000,
+             p->temperature,
+             (int) p->sensor_period);
+      count++;
+    }
+    p--;
+  }
+  return(0);
+}
   /* IULS_BLE_Service */
 void Custom_Indication_char_Update_Char(void) /* Property Read */
 {

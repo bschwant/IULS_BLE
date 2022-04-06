@@ -1,17 +1,46 @@
 {
-    "configurations": [
-        {
-            "name": "STM Debug",
-            "includePath": [
-                "${workspaceFolder}/**"
-            ],
-            "defines": [],
-            "compilerPath": "/usr/local/bin/arm-none-eabi-gcc",
-            "cStandard": "c11",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "gcc-arm",
-            "configurationProvider": "ms-vscode.makefile-tools"
-        }
-    ],
-    "version": 4
+  "configurations": [
+    {
+      "name": "STM Debug",
+      "includePath": [
+        "${workspaceFolder}/**"
+      ],
+      "defines": [],
+      "compilerPath": "/usr/local/bin/arm-none-eabi-gcc",
+      "cStandard": "c11",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "gcc-arm",
+      "configurationProvider": "ms-vscode.makefile-tools"
+    },
+    {
+      "name": "STM32",
+      "includePath": [
+        "Core/Inc",
+        "Drivers/CMSIS/Device/ST/STM32WBxx/Include",
+        "Drivers/CMSIS/Include",
+        "Drivers/STM32WBxx_HAL_Driver/Inc",
+        "Drivers/STM32WBxx_HAL_Driver/Inc/Legacy",
+        "Middlewares/ST/STM32_WPAN",
+        "Middlewares/ST/STM32_WPAN/ble",
+        "Middlewares/ST/STM32_WPAN/ble/core",
+        "Middlewares/ST/STM32_WPAN/ble/core/auto",
+        "Middlewares/ST/STM32_WPAN/ble/core/template",
+        "Middlewares/ST/STM32_WPAN/ble/svc/Inc",
+        "Middlewares/ST/STM32_WPAN/ble/svc/Src",
+        "Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread",
+        "Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/shci",
+        "Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl",
+        "Middlewares/ST/STM32_WPAN/utilities",
+        "STM32_WPAN/App",
+        "Utilities/lpm/tiny_lpm",
+        "Utilities/sequencer"
+      ],
+      "defines": [
+        "STM32WB55xx",
+        "USE_HAL_DRIVER"
+      ],
+      "compilerPath": "/usr/local/bin/arm-none-eabi-gcc"
+    }
+  ],
+  "version": 4
 }

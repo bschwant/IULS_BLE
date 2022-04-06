@@ -22,6 +22,10 @@
 #include "stm32wbxx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "queue.h"
+#include <stdio.h>
+#include "app_debug.h"
+#include "dbg_trace.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -41,7 +45,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-
+extern queue_t rx_queue;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -62,7 +66,9 @@ extern UART_HandleTypeDef hlpuart1;
 extern UART_HandleTypeDef huart1;
 extern RTC_HandleTypeDef hrtc;
 /* USER CODE BEGIN EV */
-
+// extern UART_HandleTypeDef huart1;
+// extern UART_HandleTypeDef hlpuart1;
+extern queue_t rx_queue;
 /* USER CODE END EV */
 
 /******************************************************************************/
@@ -237,7 +243,34 @@ void DMA1_Channel4_IRQHandler(void)
 void USART1_IRQHandler(void)
 {
   /* USER CODE BEGIN USART1_IRQn 0 */
-
+  // uint8_t ch;
+  // printf("\r\nhere:%c", ch);
+  // ch = getchar();
+  // if (enqueue(&rx_queue,ch)) {
+  //   dequeue(&rx_queue);
+  //   enqueue(&rx_queue,ch);
+  // }
+ if(LL_USART_IsActiveFlag_RXNE(USART1) && LL_USART_IsEnabledIT_RXNE(USART1))
+  {
+    /* RXNE flag will be cleared by reading of RDR register (done in call) */
+    /* Call function in charge of handling Character reception */
+    UART_CharReception_Callback();
+    // uint8_t ch;
+    // ch = getchar();
+    // putchar(ch);
+    // uint8_t temp = LL_USART_ReceiveData8(USART1);
+    // putchar(temp);
+    // if (enqueue(&rx_queue,ch)) {
+    //   dequeue(&rx_queue);
+    //   enqueue(&rx_queue,ch);
+    // }
+  }
+  if(LL_USART_IsEnabledIT_ERROR(USART1) && LL_USART_IsActiveFlag_NE(USART1))
+  {
+    /* Call Error function */
+    UART_Error_Callback();
+  }
+   
   /* USER CODE END USART1_IRQn 0 */
   HAL_UART_IRQHandler(&huart1);
   /* USER CODE BEGIN USART1_IRQn 1 */
@@ -251,7 +284,7 @@ void USART1_IRQHandler(void)
 void LPUART1_IRQHandler(void)
 {
   /* USER CODE BEGIN LPUART1_IRQn 0 */
-
+  
   /* USER CODE END LPUART1_IRQn 0 */
   HAL_UART_IRQHandler(&hlpuart1);
   /* USER CODE BEGIN LPUART1_IRQn 1 */

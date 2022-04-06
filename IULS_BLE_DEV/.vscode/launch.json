@@ -5,12 +5,57 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Cortex Debug",
             "cwd": "${workspaceRoot}",
             "executable": "./build/IULS_BLE_DEV.elf",
+            "name": "BLE Debug",
             "request": "launch",
             "type": "cortex-debug",
+            "showDevDebugOutput": false,
             "servertype": "stlink"
-        }
+        },
+        
+        // {
+        //     "name": "Cortex Debug",
+        //     "cwd": "${workspaceRoot}",
+        //     "executable": "./build/IULS_BLE_DEV.elf",
+        //     "request": "launch",
+        //     "type": "cortex-debug",
+        //     "servertype": "stlink",
+        //     "showDevDebugOutput": "both"
+        // }
+        // {
+        //     // "osx": {
+        //     //     "searchDir": ["/Users/brianschwantes/Desktop/IULS_BLE openocd-2.1/scripts"]
+        //     // },
+        //     "name": "Cortex Debug",
+        //     "cwd": "${workspaceRoot}",
+        //     "executable": "./build/IULS_BLE_DEV.elf",
+        //     "request": "launch",
+        //     "type": "cortex-debug",
+        //     "servertype": "openocd",
+           
+        //     "gdbTarget": "xxx.xxx.xxx.xxx:50000",
+        //     //"showDevDebugOutput": "parsed"
+        //     "configFiles": [
+        //         "interface/stlink.cfg",
+        //         "target/stm32wbx.cfg"
+        //     ],
+        //     "showDevDebugOutput": "both"
+        // }
+          {
+            "showDevDebugOutput": true,
+            "cwd": "${workspaceRoot}",
+            "executable": "./build/IULS_BLE_DEV.elf",
+            "name": "Debug STM32",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            // "preLaunchTask": "Build STM",
+            "device": "stlink",
+            "configFiles": [
+              "interface/stlink.cfg",
+              "target/stm32wbx.cfg"
+            ]
+          }
     ]
 }

@@ -21,7 +21,7 @@
 /* Includes ------------------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "app_common.h"
-
+#include "main.h"
 #include "app_debug.h"
 #include "utilities_common.h"
 #include "shci.h"
@@ -209,9 +209,15 @@ void APPD_Init( void )
 
 #endif /* (CFG_DEBUGGER_SUPPORTED == 1) */
 
-#if(CFG_DEBUG_TRACE != 0)
+#if(CFG_DEBUG_TRACE != 0) // && PRINT_DEBUG_TEMP !=0)
   DbgTraceInit();
 #endif
+
+// #if(CFG_DEBUG_TRACE != 1 && PRINT_DEBUG_TEMP !=1)
+//  MX_LPUART1_UART_Init();
+//  MX_UART1_UART_Init();
+// #endif
+
 
   APPD_SetCPU2GpioConfig( );
   APPD_BleDtbCfg( );

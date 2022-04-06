@@ -21,7 +21,11 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "queue.h"
+#include "retarget.h"
+#include "command.h"
+#include "dbg_trace.h"
+// #include <stm32wbxx_ll_usart.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -31,6 +35,9 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+// #define MAX_COMMAND_LENGTH
+#define MAX_COMMAND_BUFF_LENGTH 20
+// #define PRINT_DEBUG_TEMP 0
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -50,8 +57,15 @@ RNG_HandleTypeDef hrng;
 
 RTC_HandleTypeDef hrtc;
 
-/* USER CODE BEGIN PV */
 
+
+/* USER CODE BEGIN PV */
+queue_t rx_queue;
+int complete_command_flag;
+uint8_t command_buffer[20];
+int command_index;
+
+flash_status_t flash_status;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -65,12 +79,15 @@ static void MX_IPCC_Init(void);
 static void MX_RNG_Init(void);
 /* USER CODE BEGIN PFP */
 
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
-/* USER CODE BEGIN 0 */
+
+// Flag for for complete command
 
 /* USER CODE END 0 */
+
 
 /**
   * @brief  The application entry point.
@@ -79,7 +96,12 @@ static void MX_RNG_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+  // Clear command_buff and set index to 0
+  // command_index = 0;
+  // memset(command_buff, 0, MAX_COMMAND_BUFF_LEN)
+  // Change to same size as RX_queue eventually
+  uint8_t command[20];
+  int command_length;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -113,18 +135,35 @@ int main(void)
   MX_RTC_Init();
   MX_RNG_Init();
   /* USER CODE BEGIN 2 */
+  // RetargetInit(&huart1);
+  // printf("\r\n\r\nIU Light Sensor System Running\r\n");
 
   /* USER CODE END 2 */
 
   /* Init code for STM32_WPAN */
   MX_APPE_Init();
   /* Infinite loop */
+
   /* USER CODE BEGIN WHILE */
+
+  // Send command bufferand command index to all 0
+  complete_command_flag = 0;
+  command_index = 0;
+  memset(command_buffer, 0, MAX_COMMAND_BUFF_LENGTH);
+
+  // Initalize flash;
+  flash_write_init(&flash_status);
+
+  // printf("\r\nSystem Up and Running\r\n");
+  prompt();
+
+  LL_USART_EnableIT_RXNE(USART1);
+  LL_USART_EnableIT_ERROR(USART1);
+
   while (1)
   {
     /* USER CODE END WHILE */
     MX_APPE_Process();
-
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -242,7 +281,9 @@ void MX_LPUART1_UART_Init(void)
   /* USER CODE END LPUART1_Init 0 */
 
   /* USER CODE BEGIN LPUART1_Init 1 */
+  LL_APB1_GRP2_EnableClock(LL_APB1_GRP2_PERIPH_LPUART1);
 
+  LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOC);
   /* USER CODE END LPUART1_Init 1 */
   hlpuart1.Instance = LPUART1;
   hlpuart1.Init.BaudRate = 115200;
@@ -272,7 +313,14 @@ void MX_LPUART1_UART_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN LPUART1_Init 2 */
-
+  // NVIC_SetPriority(LPUART1_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),0, 0));
+  // NVIC_EnableIRQ(LPUART1_IRQn);
+  // LL_LPUART_SetWKUPType(LPUART1, LL_LPUART_WAKEUP_ON_RXNE);
+  // LL_LPUART_Enable(LPUART1);
+  //   /* Polling LPUART1 initialisation */
+  // while((!(LL_LPUART_IsActiveFlag_TEACK(LPUART1))) || (!(LL_LPUART_IsActiveFlag_REACK(LPUART1))))
+  // {
+  // }
   /* USER CODE END LPUART1_Init 2 */
 
 }
@@ -320,6 +368,12 @@ void MX_USART1_UART_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN USART1_Init 2 */
+  // NVIC_EnableIRQ(USART1_IRQn); 
+  // LL_USART_EnableIR
+  // LL_USART_EnableIT_RXNE(USART1);  
+
+  // LL_USART_EnableIT_RXNE(&huart1);
+  // LL_USART_EnableIT_ERROR(&huart1);
 
   /* USER CODE END USART1_Init 2 */
 
@@ -409,7 +463,7 @@ static void MX_RTC_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN RTC_Init 2 */
-
+  
   /* USER CODE END RTC_Init 2 */
 
 }
@@ -447,10 +501,118 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
+  // LL_GPIO_InitTypeDef GPIO_InitStruct = {0};
+
+  // /* GPIO Ports Clock Enable */
+  // LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOC);
+  // LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOB);
+
+  // /**/
+  // LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
+
+  // /**/
+  // GPIO_InitStruct.Pin = LED2_Pin;
+  // GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
+  // GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
+  // GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+  // GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
+  // LL_GPIO_Init(LED2_GPIO_Port, &GPIO_InitStruct);
+
 
 }
 
 /* USER CODE BEGIN 4 */
+
+void UART_CharReception_Callback(void)
+{
+  uint8_t ch;
+  ch = LL_USART_ReceiveData8(USART1); // Recieve input char RX
+  LL_USART_TransmitData8(USART1, ch); // Echo char recieved on TX
+
+  // Execute command if new line or carriage return character is recieved.
+  if (ch == '\r' || ch == '\n') {
+    // complete_command_flag = 1;
+
+    execute_command(command_buffer);
+    // complete_command_flag = 0;
+    prompt();
+    command_index = 0;
+    memset(command_buffer, 0, MAX_COMMAND_BUFF_LENGTH);
+   
+    // UTIL_SEQ_RegTask( 1<<CFG_TASK_EXECUTE_COMAMND, UTIL_SEQ_RFU, ButtonTriggerReceived);
+  }
+  else if (ch==0x7f) {               // backspace functionality
+    if (command_index > 0) { 
+      printf("\b \b");
+      command_index--;
+      }
+  }
+
+  // Store new character otherwise
+  else {
+    command_buffer[command_index++] = ch; // Store in command buff
+  }
+
+
+
+
+  // if (enqueue(&rx_queue,ch)) {
+  //   dequeue(&rx_queue);
+  //   enqueue(&rx_queue,ch);
+  //   command_index++;
+  // }
+
+  // if (ch == '\n' || ch == '\r') {
+    
+  // }
+
+  // printf("\r\n%c", ch);
+
+
+  // /* Read Received character. RXNE flag is cleared by reading of RDR register */
+  // received_char = LL_USART_ReceiveData8(&huart1);
+  // printf("\r\n%c", received_char);
+
+  // /* Check if received value is corresponding to specific one : S or s */
+  // if ((received_char == 'S') || (received_char == 's'))
+  // {
+  //   /* Turn LED2 On : Expected character has been received */
+  //   // LED_On();
+  // }
+
+  /* Echo received character on TX */
+  // LL_USART_TransmitData8(&huart1, received_char);
+}
+
+/**
+  * @brief  Function called in case of error detected in USART IT Handler
+  * @param  None
+  * @retval None
+  */
+
+void UART_Error_Callback(void)
+{
+  __IO uint32_t isr_reg;
+
+  /* Disable USARTx_IRQn */
+  NVIC_DisableIRQ(USART1_IRQn);
+  
+  /* Error handling example :
+    - Read USART ISR register to identify flag that leads to IT raising
+    - Perform corresponding error handling treatment according to flag
+  */
+  isr_reg = LL_USART_ReadReg(USART1, ISR);
+  if (isr_reg & LL_USART_ISR_NE)
+  {
+    /* Turn LED3 on: Transfer error in reception/transmission process */
+    // BSP_LED_On(LED3);
+  }
+  else
+  {
+    /* Turn LED3 on: Transfer error in reception/transmission process */
+    // BSP_LED_On(LED3);
+  }
+}
 
 /* USER CODE END 4 */
 
