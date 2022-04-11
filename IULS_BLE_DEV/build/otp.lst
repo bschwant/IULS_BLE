@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccLv5Mgp.s 			page 1
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccEksSlW.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -27,7 +27,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccLv5Mgp.s 			page 1
   24              		.fpu fpv4-sp-d16
   26              	OTP_Read:
   27              	.LVL0:
-  28              	.LFB1669:
+  28              	.LFB1415:
   29              		.file 1 "Middlewares/ST/STM32_WPAN/utilities/otp.c"
    1:Middlewares/ST/STM32_WPAN/utilities/otp.c **** /**
    2:Middlewares/ST/STM32_WPAN/utilities/otp.c ****   ******************************************************************************
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccLv5Mgp.s 			page 1
   27:Middlewares/ST/STM32_WPAN/utilities/otp.c **** /* Private macros ------------------------------------------------------------*/
   28:Middlewares/ST/STM32_WPAN/utilities/otp.c **** /* Private variables ---------------------------------------------------------*/
   29:Middlewares/ST/STM32_WPAN/utilities/otp.c **** /* Global variables ----------------------------------------------------------*/
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccLv5Mgp.s 			page 2
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccEksSlW.s 			page 2
 
 
   30:Middlewares/ST/STM32_WPAN/utilities/otp.c **** /* Private function prototypes -----------------------------------------------*/
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccLv5Mgp.s 			page 1
   45:Middlewares/ST/STM32_WPAN/utilities/otp.c ****   {
   46:Middlewares/ST/STM32_WPAN/utilities/otp.c ****     p_id = 0 ;
   47:Middlewares/ST/STM32_WPAN/utilities/otp.c ****   }
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccLv5Mgp.s 			page 3
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccEksSlW.s 			page 3
 
 
   48:Middlewares/ST/STM32_WPAN/utilities/otp.c **** 
@@ -143,7 +143,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccLv5Mgp.s 			page 1
   81 0020 F873FF1F 		.word	536835064
   82 0024 0070FF1F 		.word	536834048
   83              		.cfi_endproc
-  84              	.LFE1669:
+  84              	.LFE1415:
   86              		.text
   87              	.Letext0:
   88              		.file 2 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
@@ -159,15 +159,13 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccLv5Mgp.s 			page 1
   98              		.file 12 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_flash.h"
   99              		.file 13 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_uart.h"
  100              		.file 14 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h"
- 101              		.file 15 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_usart.h"
- 102              		.file 16 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_lpuart.h"
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccLv5Mgp.s 			page 4
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccEksSlW.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 otp.c
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccLv5Mgp.s:18     .text.OTP_Read:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccLv5Mgp.s:26     .text.OTP_Read:0000000000000000 OTP_Read
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccLv5Mgp.s:81     .text.OTP_Read:0000000000000020 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccEksSlW.s:18     .text.OTP_Read:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccEksSlW.s:26     .text.OTP_Read:0000000000000000 OTP_Read
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccEksSlW.s:81     .text.OTP_Read:0000000000000020 $d
 
 NO UNDEFINED SYMBOLS

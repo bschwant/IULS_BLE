@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s 			page 1
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccCf2lTW.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -27,7 +27,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s 			page 1
   24              		.fpu fpv4-sp-d16
   26              	init_queue:
   27              	.LVL0:
-  28              	.LFB950:
+  28              	.LFB1104:
   29              		.file 1 "Core/Src/queue.c"
    1:Core/Src/queue.c **** /* queue.c --- 
    2:Core/Src/queue.c ****  * 
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s 			page 1
   27:Core/Src/queue.c ****  * 
   28:Core/Src/queue.c ****  */
   29:Core/Src/queue.c **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s 			page 2
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccCf2lTW.s 			page 2
 
 
   30:Core/Src/queue.c **** /* This program is free software; you can redistribute it and/or
@@ -118,11 +118,11 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s 			page 1
   56              		.loc 1 57 1 is_stmt 0 view .LVU10
   57 0012 10BD     		pop	{r4, pc}
   58              		.loc 1 57 1 view .LVU11
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s 			page 3
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccCf2lTW.s 			page 3
 
 
   59              		.cfi_endproc
-  60              	.LFE950:
+  60              	.LFE1104:
   62              		.section	.text.enqueue,"ax",%progbits
   63              		.align	1
   64              		.global	enqueue
@@ -132,7 +132,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s 			page 1
   68              		.fpu fpv4-sp-d16
   70              	enqueue:
   71              	.LVL3:
-  72              	.LFB951:
+  72              	.LFB1105:
   58:Core/Src/queue.c **** 
   59:Core/Src/queue.c **** int enqueue (queue_t *buf, uint8_t data) {
   73              		.loc 1 59 42 is_stmt 1 view -0
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s 			page 1
  109 0020 07D0     		beq	.L5
   64:Core/Src/queue.c ****     buf->buffer[buf->head]=data;   
  110              		.loc 1 64 5 is_stmt 1 view .LVU24
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s 			page 4
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccCf2lTW.s 			page 4
 
 
  111              		.loc 1 64 27 is_stmt 0 view .LVU25
@@ -218,7 +218,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s 			page 1
  134              		.loc 1 69 15 view .LVU34
  135 0036 F8E7     		b	.L4
  136              		.cfi_endproc
- 137              	.LFE951:
+ 137              	.LFE1105:
  139              		.section	.text.dequeue,"ax",%progbits
  140              		.align	1
  141              		.global	dequeue
@@ -228,7 +228,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s 			page 1
  145              		.fpu fpv4-sp-d16
  147              	dequeue:
  148              	.LVL10:
- 149              	.LFB952:
+ 149              	.LFB1106:
   74:Core/Src/queue.c **** 
   75:Core/Src/queue.c **** uint8_t dequeue (queue_t *buf) {
  150              		.loc 1 75 32 is_stmt 1 view -0
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s 			page 1
  154              		.loc 1 75 32 is_stmt 0 view .LVU36
  155 0000 38B5     		push	{r3, r4, r5, lr}
  156              	.LCFI2:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s 			page 5
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccCf2lTW.s 			page 5
 
 
  157              		.cfi_def_cfa_offset 16
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s 			page 1
  201 002a 2846     		mov	r0, r5
  202 002c 38BD     		pop	{r3, r4, r5, pc}
  203              	.LVL16:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s 			page 6
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccCf2lTW.s 			page 6
 
 
  204              	.L9:
@@ -307,7 +307,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s 			page 1
  206 002e 0025     		movs	r5, #0
  207 0030 F9E7     		b	.L8
  208              		.cfi_endproc
- 209              	.LFE952:
+ 209              	.LFE1106:
  211              		.section	.text.queue_empty,"ax",%progbits
  212              		.align	1
  213              		.global	queue_empty
@@ -317,7 +317,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s 			page 1
  217              		.fpu fpv4-sp-d16
  219              	queue_empty:
  220              	.LVL17:
- 221              	.LFB953:
+ 221              	.LFB1107:
   86:Core/Src/queue.c **** 
   87:Core/Src/queue.c **** int queue_empty(queue_t *buf) {
  222              		.loc 1 87 31 is_stmt 1 view -0
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s 			page 1
   92:Core/Src/queue.c ****     retval=1;
   93:Core/Src/queue.c ****   }
   94:Core/Src/queue.c ****   restore(mask);
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s 			page 7
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccCf2lTW.s 			page 7
 
 
  252              		.loc 1 94 3 is_stmt 1 view .LVU66
@@ -380,7 +380,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s 			page 1
  264              		.loc 1 92 11 view .LVU70
  265 001c F9E7     		b	.L12
  266              		.cfi_endproc
- 267              	.LFE953:
+ 267              	.LFE1107:
  269              		.text
  270              	.Letext0:
  271              		.file 2 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
@@ -393,19 +393,19 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s 			page 1
  278              		.file 9 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h"
  279              		.file 10 "Core/Inc/queue.h"
  280              		.file 11 "Core/Inc/interrupt.h"
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s 			page 8
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccCf2lTW.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 queue.c
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s:18     .text.init_queue:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s:26     .text.init_queue:0000000000000000 init_queue
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s:63     .text.enqueue:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s:70     .text.enqueue:0000000000000000 enqueue
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s:140    .text.dequeue:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s:147    .text.dequeue:0000000000000000 dequeue
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s:212    .text.queue_empty:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccTKRJbZ.s:219    .text.queue_empty:0000000000000000 queue_empty
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccCf2lTW.s:18     .text.init_queue:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccCf2lTW.s:26     .text.init_queue:0000000000000000 init_queue
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccCf2lTW.s:63     .text.enqueue:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccCf2lTW.s:70     .text.enqueue:0000000000000000 enqueue
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccCf2lTW.s:140    .text.dequeue:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccCf2lTW.s:147    .text.dequeue:0000000000000000 dequeue
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccCf2lTW.s:212    .text.queue_empty:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccCf2lTW.s:219    .text.queue_empty:0000000000000000 queue_empty
 
 UNDEFINED SYMBOLS
 disable

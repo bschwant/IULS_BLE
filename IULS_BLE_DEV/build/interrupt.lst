@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 1
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHG9hjh.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -26,7 +26,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 1
   23              		.thumb_func
   24              		.fpu fpv4-sp-d16
   26              	disable:
-  27              	.LFB1669:
+  27              	.LFB1823:
   28              		.file 1 "Core/Src/interrupt.c"
    1:Core/Src/interrupt.c **** /* interrupt.c
    2:Core/Src/interrupt.c ****  * Description: 
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 1
   39              		.file 2 "Drivers/CMSIS/Include/cmsis_gcc.h"
    1:Drivers/CMSIS/Include/cmsis_gcc.h **** /**************************************************************************//**
    2:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @file     cmsis_gcc.h
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 2
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHG9hjh.s 			page 2
 
 
    3:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @brief    CMSIS compiler GCC header file
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 1
   57:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   58:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __WEAK
   59:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __WEAK                                 __attribute__((weak))
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 3
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHG9hjh.s 			page 3
 
 
   60:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 1
  114:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __RESTRICT                             __restrict
  115:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  116:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __COMPILER_BARRIER
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 4
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHG9hjh.s 			page 4
 
 
  117:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __COMPILER_BARRIER()                   __ASM volatile("":::"memory")
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 1
  171:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  172:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  173:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __STACK_LIMIT
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 5
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHG9hjh.s 			page 5
 
 
  174:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __STACK_LIMIT             __StackLimit
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 1
  228:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  229:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Control Register (non-secure)
  230:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the non-secure Control Register when in secure mode.
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 6
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHG9hjh.s 			page 6
 
 
  231:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               non-secure Control Register value
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 1
  285:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  286:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_APSR(void)
  287:Drivers/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 7
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHG9hjh.s 			page 7
 
 
  288:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 1
  342:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfProcStack  Process Stack Pointer value to set
  343:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  344:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_PSP(uint32_t topOfProcStack)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 8
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHG9hjh.s 			page 8
 
 
  345:Drivers/CMSIS/Include/cmsis_gcc.h **** {
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 1
  399:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  400:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR msp, %0" : : "r" (topOfMainStack) : );
  401:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 9
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHG9hjh.s 			page 9
 
 
  402:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 1
  453:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, primask" : "=r" (result) :: "memory");
   43              		.loc 2 453 3 view .LVU5
   44              		.syntax unified
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 10
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHG9hjh.s 			page 10
 
 
   45              	@ 453 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
@@ -575,7 +575,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 1
   70              		.loc 1 20 1 is_stmt 0 view .LVU12
   71 0006 7047     		bx	lr
   72              		.cfi_endproc
-  73              	.LFE1669:
+  73              	.LFE1823:
   75              		.section	.text.restore,"ax",%progbits
   76              		.align	1
   77              		.global	restore
@@ -585,7 +585,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 1
   81              		.fpu fpv4-sp-d16
   83              	restore:
   84              	.LVL2:
-  85              	.LFB1670:
+  85              	.LFB1824:
   21:Core/Src/interrupt.c **** 
   22:Core/Src/interrupt.c **** void restore(uint32_t priority_mask) {
   86              		.loc 1 22 38 is_stmt 1 view -0
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 1
   92              	.LBB14:
   93              	.LBI14:
  455:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 11
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHG9hjh.s 			page 11
 
 
  456:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -644,7 +644,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 1
  107              		.loc 1 24 1 view .LVU18
  108 0004 7047     		bx	lr
  109              		.cfi_endproc
- 110              	.LFE1670:
+ 110              	.LFE1824:
  112              		.section	.text.enable,"ax",%progbits
  113              		.align	1
  114              		.global	enable
@@ -653,12 +653,12 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 1
  117              		.thumb_func
  118              		.fpu fpv4-sp-d16
  120              	enable:
- 121              	.LFB1671:
+ 121              	.LFB1825:
   25:Core/Src/interrupt.c **** 
   26:Core/Src/interrupt.c **** void enable(void) {
  122              		.loc 1 26 19 is_stmt 1 view -0
  123              		.cfi_startproc
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 12
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHG9hjh.s 			page 12
 
 
  124              		@ args = 0, pretend = 0, frame = 0
@@ -685,7 +685,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 1
  141              		.loc 1 28 1 is_stmt 0 view .LVU23
  142 0002 7047     		bx	lr
  143              		.cfi_endproc
- 144              	.LFE1671:
+ 144              	.LFE1825:
  146              		.text
  147              	.Letext0:
  148              		.file 3 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
@@ -703,16 +703,16 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 1
  160              		.file 15 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
  161              		.file 16 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_usart.h"
  162              		.file 17 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_lpuart.h"
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s 			page 13
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHG9hjh.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 interrupt.c
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s:18     .text.disable:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s:26     .text.disable:0000000000000000 disable
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s:76     .text.restore:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s:83     .text.restore:0000000000000000 restore
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s:113    .text.enable:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc2SI1mW.s:120    .text.enable:0000000000000000 enable
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHG9hjh.s:18     .text.disable:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHG9hjh.s:26     .text.disable:0000000000000000 disable
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHG9hjh.s:76     .text.restore:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHG9hjh.s:83     .text.restore:0000000000000000 restore
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHG9hjh.s:113    .text.enable:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccHG9hjh.s:120    .text.enable:0000000000000000 enable
 
 NO UNDEFINED SYMBOLS

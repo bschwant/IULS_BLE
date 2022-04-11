@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 1
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -26,7 +26,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 1
   23              		.thumb_func
   24              		.fpu fpv4-sp-d16
   26              	SystemInit:
-  27              	.LFB950:
+  27              	.LFB1104:
   28              		.file 1 "Core/Src/system_stm32wbxx.c"
    1:Core/Src/system_stm32wbxx.c **** /**
    2:Core/Src/system_stm32wbxx.c ****   ******************************************************************************
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 1
   28:Core/Src/system_stm32wbxx.c ****   *        System Clock source                    | MSI
   29:Core/Src/system_stm32wbxx.c ****   *-----------------------------------------------------------------------------
   30:Core/Src/system_stm32wbxx.c ****   *        SYSCLK(Hz)                             | 4000000
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 2
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s 			page 2
 
 
   31:Core/Src/system_stm32wbxx.c ****   *-----------------------------------------------------------------------------
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 1
   85:Core/Src/system_stm32wbxx.c **** #include "stm32wbxx.h"
   86:Core/Src/system_stm32wbxx.c **** 
   87:Core/Src/system_stm32wbxx.c **** #if !defined  (HSE_VALUE)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 3
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s 			page 3
 
 
   88:Core/Src/system_stm32wbxx.c ****   #define HSE_VALUE    (32000000UL) /*!< Value of the External oscillator in Hz */
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 1
  142:Core/Src/system_stm32wbxx.c ****                                                      This value must be a multiple of 0x200. */
  143:Core/Src/system_stm32wbxx.c **** #endif
  144:Core/Src/system_stm32wbxx.c **** #endif
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 4
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s 			page 4
 
 
  145:Core/Src/system_stm32wbxx.c **** 
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 1
  199:Core/Src/system_stm32wbxx.c ****   */
  200:Core/Src/system_stm32wbxx.c **** 
  201:Core/Src/system_stm32wbxx.c **** /**
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 5
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s 			page 5
 
 
  202:Core/Src/system_stm32wbxx.c ****   * @brief  Setup the microcontroller system.
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 1
  228:Core/Src/system_stm32wbxx.c ****   /*!< Reset LSI1 and LSI2 bits */
  229:Core/Src/system_stm32wbxx.c ****   RCC->CSR &= (uint32_t)0xFFFFFFFAU;
   57              		.loc 1 229 3 is_stmt 1 view .LVU9
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 6
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s 			page 6
 
 
   58              		.loc 1 229 12 is_stmt 0 view .LVU10
@@ -352,19 +352,19 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 1
   88 005c 00ED00E0 		.word	-536810240
   89 0060 00100422 		.word	570691584
   90              		.cfi_endproc
-  91              	.LFE950:
+  91              	.LFE1104:
   93              		.section	.text.SystemCoreClockUpdate,"ax",%progbits
   94              		.align	1
   95              		.global	SystemCoreClockUpdate
   96              		.syntax unified
   97              		.thumb
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 7
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s 			page 7
 
 
   98              		.thumb_func
   99              		.fpu fpv4-sp-d16
  101              	SystemCoreClockUpdate:
- 102              	.LFB951:
+ 102              	.LFB1105:
  248:Core/Src/system_stm32wbxx.c **** 
  249:Core/Src/system_stm32wbxx.c **** /**
  250:Core/Src/system_stm32wbxx.c ****   * @brief  Update SystemCoreClock variable according to Clock Register Values.
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 1
  293:Core/Src/system_stm32wbxx.c ****   uint32_t tmp, msirange, pllvco, pllr, pllsource , pllm;
  108              		.loc 1 293 3 view .LVU23
  294:Core/Src/system_stm32wbxx.c **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 8
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s 			page 8
 
 
  295:Core/Src/system_stm32wbxx.c ****   /* Get MSI Range frequency--------------------------------------------------*/
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 1
  308:Core/Src/system_stm32wbxx.c ****       /* HSI used as system clock source */
  309:Core/Src/system_stm32wbxx.c ****         SystemCoreClock = HSI_VALUE;
  310:Core/Src/system_stm32wbxx.c ****       break;
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 9
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s 			page 9
 
 
  311:Core/Src/system_stm32wbxx.c **** 
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 1
  163 0042 1368     		ldr	r3, [r2]
  164 0044 B3FBF1F3 		udiv	r3, r3, r1
  165              		.loc 1 351 19 view .LVU40
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 10
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s 			page 10
 
 
  166 0048 1360     		str	r3, [r2]
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 1
  203              		.loc 1 323 9 is_stmt 0 view .LVU56
  204 006e 022A     		cmp	r2, #2
  205 0070 12D0     		beq	.L15
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 11
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s 			page 11
 
 
  327:Core/Src/system_stm32wbxx.c ****       {
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 1
  340:Core/Src/system_stm32wbxx.c **** 
  243              		.loc 1 340 7 is_stmt 1 view .LVU74
  244 0096 CBE7     		b	.L11
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 12
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s 			page 12
 
 
  245              	.LVL12:
@@ -711,14 +711,14 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 1
  281 00bc 0024F400 		.word	16000000
  282 00c0 0048E801 		.word	32000000
  283              		.cfi_endproc
- 284              	.LFE951:
+ 284              	.LFE1105:
  286              		.global	SmpsPrescalerTable
  287              		.global	MSIRangeTable
  288              		.global	APBPrescTable
  289              		.global	AHBPrescTable
  290              		.global	SystemCoreClock
  291              		.section	.data.SystemCoreClock,"aw"
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 13
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s 			page 13
 
 
  292              		.align	2
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 1
  354 003c 00000000 		.word	0
  355              		.section	.rodata.SmpsPrescalerTable,"a"
  356              		.align	2
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 14
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s 			page 14
 
 
  359              	SmpsPrescalerTable:
@@ -817,29 +817,29 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 1
  392              		.file 8 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_flash.h"
  393              		.file 9 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_uart.h"
  394              		.file 10 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h"
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s 			page 15
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 system_stm32wbxx.c
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s:18     .text.SystemInit:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s:26     .text.SystemInit:0000000000000000 SystemInit
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s:88     .text.SystemInit:000000000000005c $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s:94     .text.SystemCoreClockUpdate:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s:101    .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s:128    .text.SystemCoreClockUpdate:000000000000001e $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s:278    .text.SystemCoreClockUpdate:00000000000000b0 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s:359    .rodata.SmpsPrescalerTable:0000000000000000 SmpsPrescalerTable
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s:338    .rodata.MSIRangeTable:0000000000000000 MSIRangeTable
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s:324    .rodata.APBPrescTable:0000000000000000 APBPrescTable
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s:303    .rodata.AHBPrescTable:0000000000000000 AHBPrescTable
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s:296    .data.SystemCoreClock:0000000000000000 SystemCoreClock
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s:292    .data.SystemCoreClock:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s:299    .rodata.AHBPrescTable:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s:321    .rodata.APBPrescTable:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s:334    .rodata.MSIRangeTable:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s:356    .rodata.SmpsPrescalerTable:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s:141    .text.SystemCoreClockUpdate:000000000000002b $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccI9lipo.s:141    .text.SystemCoreClockUpdate:000000000000002c $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s:18     .text.SystemInit:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s:26     .text.SystemInit:0000000000000000 SystemInit
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s:88     .text.SystemInit:000000000000005c $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s:94     .text.SystemCoreClockUpdate:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s:101    .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s:128    .text.SystemCoreClockUpdate:000000000000001e $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s:278    .text.SystemCoreClockUpdate:00000000000000b0 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s:359    .rodata.SmpsPrescalerTable:0000000000000000 SmpsPrescalerTable
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s:338    .rodata.MSIRangeTable:0000000000000000 MSIRangeTable
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s:324    .rodata.APBPrescTable:0000000000000000 APBPrescTable
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s:303    .rodata.AHBPrescTable:0000000000000000 AHBPrescTable
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s:296    .data.SystemCoreClock:0000000000000000 SystemCoreClock
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s:292    .data.SystemCoreClock:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s:299    .rodata.AHBPrescTable:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s:321    .rodata.APBPrescTable:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s:334    .rodata.MSIRangeTable:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s:356    .rodata.SmpsPrescalerTable:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s:141    .text.SystemCoreClockUpdate:000000000000002b $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccQTXrSP.s:141    .text.SystemCoreClockUpdate:000000000000002c $t
 
 NO UNDEFINED SYMBOLS

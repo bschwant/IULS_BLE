@@ -60,9 +60,9 @@ command_t commands[] = {
   {"test",test_command},
   {"ts",ts_command},
   {"ds",ds_command},
-  {"ls",help_command},
+  // {"ls",help_command},
   {"temp",temp_command},
-  {"battery",batt_command},
+  {"batt",batt_command},
   {"tsl237",tsl237_command},
   {"ef",ef_command},
   {"sample",sample_command},
@@ -190,14 +190,19 @@ int execute_command(uint8_t * line) {
     }
     p++;
   }
+
+  fflush(stdout);
+  
   if (success) {
     // printf("OK: execute_command\r\n");
     // prompt();
+    fflush(stdout);
     return (0);
   }
   else {
     // printf("NOK: execute_command\r\n");
     // prompt();
+    fflush(stdout);
     return (-1);
   }
 }

@@ -39,6 +39,8 @@ extern "C" {
 #include "stm32wbxx_ll_gpio.h"
 #include "stm32wbxx_hal_flash.h"
 #include "flash.h"
+#include "temperature.h"
+#include "battery.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -70,6 +72,7 @@ void Error_Handler(void);
 /* USER CODE BEGIN EFP */
 /* IRQ Handler treatment functions */
 // void LPUART_CharReception_Callback(void);
+void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *);
 void Uart_Error_Callback(void);
 void UART_CharReception_Callback(void);
 /* USER CODE END EFP */

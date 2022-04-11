@@ -13,6 +13,9 @@ build/stm32wbxx_it.o: Core/Src/stm32wbxx_it.c Core/Inc/main.h \
  Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_dma.h \
  Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_dmamux.h \
  Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_dma_ex.h \
+ Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_adc.h \
+ Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h \
+ Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_adc_ex.h \
  Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_cortex.h \
  Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_exti.h \
  Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_flash.h \
@@ -33,6 +36,8 @@ build/stm32wbxx_it.o: Core/Src/stm32wbxx_it.c Core/Inc/main.h \
  Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_rng.h \
  Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_rtc.h \
  Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_rtc_ex.h \
+ Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_tim.h \
+ Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_tim_ex.h \
  Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_uart.h \
  Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_uart_ex.h \
  Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_system.h \
@@ -50,11 +55,12 @@ build/stm32wbxx_it.o: Core/Src/stm32wbxx_it.c Core/Inc/main.h \
  Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_hsem.h \
  Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_gpio.h \
  Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rtc.h \
- Middlewares/ST/STM32_WPAN/ble/core/ble_bufsize.h Core/Inc/main.h \
- Core/Inc/app_entry.h Core/Inc/app_common.h \
+ Middlewares/ST/STM32_WPAN/ble/core/ble_bufsize.h Core/Inc/app_entry.h \
+ Core/Inc/app_common.h \
  Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_usart.h \
  Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_lpuart.h Core/Inc/flash.h \
- Core/Inc/stm32wbxx_it.h Core/Inc/queue.h Core/Inc/app_debug.h \
+ Core/Inc/temperature.h Core/Inc/battery.h Core/Inc/stm32wbxx_it.h \
+ Core/Inc/queue.h Core/Inc/app_debug.h \
  Middlewares/ST/STM32_WPAN/utilities/dbg_trace.h
 
 Core/Inc/main.h:
@@ -90,6 +96,12 @@ Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_dma.h:
 Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_dmamux.h:
 
 Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_dma_ex.h:
+
+Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_adc.h:
+
+Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h:
+
+Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_adc_ex.h:
 
 Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_cortex.h:
 
@@ -131,6 +143,10 @@ Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_rtc.h:
 
 Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_rtc_ex.h:
 
+Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_tim.h:
+
+Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_tim_ex.h:
+
 Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_uart.h:
 
 Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_uart_ex.h:
@@ -169,8 +185,6 @@ Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_rtc.h:
 
 Middlewares/ST/STM32_WPAN/ble/core/ble_bufsize.h:
 
-Core/Inc/main.h:
-
 Core/Inc/app_entry.h:
 
 Core/Inc/app_common.h:
@@ -180,6 +194,10 @@ Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_usart.h:
 Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_lpuart.h:
 
 Core/Inc/flash.h:
+
+Core/Inc/temperature.h:
+
+Core/Inc/battery.h:
 
 Core/Inc/stm32wbxx_it.h:
 

@@ -1,0 +1,391 @@
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cch8TZZQ.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"temperature.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.read_temp,"ax",%progbits
+  18              		.align	1
+  19              		.global	read_temp
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv4-sp-d16
+  26              	read_temp:
+  27              	.LFB1824:
+  28              		.file 1 "Core/Src/temperature.c"
+   1:Core/Src/temperature.c **** /* temperature.c
+   2:Core/Src/temperature.c ****  * Description: STM32WB55 device temperature read function
+   3:Core/Src/temperature.c ****  *
+   4:Core/Src/temperature.c ****  * Author: Brian Schwantes
+   5:Core/Src/temperature.c ****  * Contact: bschwant@iu.edu
+   6:Core/Src/temperature.c ****  * Date: 04.11.22
+   7:Core/Src/temperature.c ****  *
+   8:Core/Src/temperature.c ****  */
+   9:Core/Src/temperature.c **** 
+  10:Core/Src/temperature.c **** #include "main.h"
+  11:Core/Src/temperature.c **** #include <string.h>
+  12:Core/Src/temperature.c **** #include <stdio.h>
+  13:Core/Src/temperature.c **** #include "temperature.h"
+  14:Core/Src/temperature.c **** #include "battery.h"
+  15:Core/Src/temperature.c **** 
+  16:Core/Src/temperature.c **** extern ADC_HandleTypeDef hadc1;
+  17:Core/Src/temperature.c **** 
+  18:Core/Src/temperature.c **** void temp_command(char *arguments) {
+  19:Core/Src/temperature.c ****   if (arguments) {
+  20:Core/Src/temperature.c ****     printf("NOK\n\r");
+  21:Core/Src/temperature.c ****   }
+  22:Core/Src/temperature.c ****   else {
+  23:Core/Src/temperature.c ****     printf("%d c\n\r",(int)read_temp());
+  24:Core/Src/temperature.c ****     printf("OK\n\r");
+  25:Core/Src/temperature.c ****   }
+  26:Core/Src/temperature.c **** }
+  27:Core/Src/temperature.c **** 
+  28:Core/Src/temperature.c **** uint32_t read_temp(void) {
+  29              		.loc 1 28 26 view -0
+  30              		.cfi_startproc
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cch8TZZQ.s 			page 2
+
+
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 38B5     		push	{r3, r4, r5, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 16
+  36              		.cfi_offset 3, -16
+  37              		.cfi_offset 4, -12
+  38              		.cfi_offset 5, -8
+  39              		.cfi_offset 14, -4
+  29:Core/Src/temperature.c ****   static uint32_t first_time_up = 1;
+  40              		.loc 1 29 3 view .LVU1
+  30:Core/Src/temperature.c ****   static ADC_ChannelConfTypeDef sConfig = {0};
+  41              		.loc 1 30 3 view .LVU2
+  31:Core/Src/temperature.c ****   uint32_t rawTemp;
+  42              		.loc 1 31 3 view .LVU3
+  32:Core/Src/temperature.c ****   uint32_t vref;
+  43              		.loc 1 32 3 view .LVU4
+  33:Core/Src/temperature.c ****   
+  34:Core/Src/temperature.c ****     
+  35:Core/Src/temperature.c ****   if (first_time_up) {
+  44              		.loc 1 35 3 view .LVU5
+  45              		.loc 1 35 7 is_stmt 0 view .LVU6
+  46 0002 224B     		ldr	r3, .L7
+  47 0004 1B68     		ldr	r3, [r3]
+  48              		.loc 1 35 6 view .LVU7
+  49 0006 5BB1     		cbz	r3, .L2
+  36:Core/Src/temperature.c ****     sConfig.Channel = ADC_CHANNEL_TEMPSENSOR;
+  50              		.loc 1 36 5 is_stmt 1 view .LVU8
+  51              		.loc 1 36 21 is_stmt 0 view .LVU9
+  52 0008 214B     		ldr	r3, .L7+4
+  53 000a 224A     		ldr	r2, .L7+8
+  54 000c 1A60     		str	r2, [r3]
+  37:Core/Src/temperature.c ****     sConfig.Rank = ADC_REGULAR_RANK_1;
+  55              		.loc 1 37 5 is_stmt 1 view .LVU10
+  38:Core/Src/temperature.c ****     sConfig.SamplingTime = ADC_SAMPLETIME_47CYCLES_5;
+  56              		.loc 1 38 5 view .LVU11
+  57              		.loc 1 38 26 is_stmt 0 view .LVU12
+  58 000e 0422     		movs	r2, #4
+  59 0010 9A60     		str	r2, [r3, #8]
+  39:Core/Src/temperature.c ****     sConfig.SingleDiff = ADC_SINGLE_ENDED;
+  60              		.loc 1 39 5 is_stmt 1 view .LVU13
+  61              		.loc 1 39 24 is_stmt 0 view .LVU14
+  62 0012 7F21     		movs	r1, #127
+  63 0014 D960     		str	r1, [r3, #12]
+  40:Core/Src/temperature.c ****     sConfig.OffsetNumber = ADC_OFFSET_NONE;
+  64              		.loc 1 40 5 is_stmt 1 view .LVU15
+  65              		.loc 1 40 26 is_stmt 0 view .LVU16
+  66 0016 1A61     		str	r2, [r3, #16]
+  41:Core/Src/temperature.c ****     sConfig.Offset = 0;
+  67              		.loc 1 41 5 is_stmt 1 view .LVU17
+  68              		.loc 1 41 20 is_stmt 0 view .LVU18
+  69 0018 0022     		movs	r2, #0
+  70 001a 5A61     		str	r2, [r3, #20]
+  42:Core/Src/temperature.c ****     first_time_up = 0;
+  71              		.loc 1 42 5 is_stmt 1 view .LVU19
+  72              		.loc 1 42 19 is_stmt 0 view .LVU20
+  73 001c 1B4B     		ldr	r3, .L7
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cch8TZZQ.s 			page 3
+
+
+  74 001e 1A60     		str	r2, [r3]
+  75              	.L2:
+  43:Core/Src/temperature.c ****   }
+  44:Core/Src/temperature.c ****   sConfig.Rank = ADC_REGULAR_RANK_1;
+  76              		.loc 1 44 3 is_stmt 1 view .LVU21
+  77              		.loc 1 44 16 is_stmt 0 view .LVU22
+  78 0020 1B49     		ldr	r1, .L7+4
+  79 0022 0623     		movs	r3, #6
+  80 0024 4B60     		str	r3, [r1, #4]
+  45:Core/Src/temperature.c ****   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK) {
+  81              		.loc 1 45 3 is_stmt 1 view .LVU23
+  82              		.loc 1 45 7 is_stmt 0 view .LVU24
+  83 0026 1C48     		ldr	r0, .L7+12
+  84 0028 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+  85              	.LVL0:
+  86              		.loc 1 45 6 view .LVU25
+  87 002c 50BB     		cbnz	r0, .L6
+  88              	.L4:
+  46:Core/Src/temperature.c ****       Error_Handler();
+  47:Core/Src/temperature.c ****   }
+  48:Core/Src/temperature.c ****   while (HAL_ADCEx_Calibration_Start(&hadc1,ADC_SINGLE_ENDED) != HAL_OK);   // Calibrate the A2D
+  89              		.loc 1 48 73 is_stmt 1 discriminator 1 view .LVU26
+  90              		.loc 1 48 9 discriminator 1 view .LVU27
+  91              		.loc 1 48 10 is_stmt 0 discriminator 1 view .LVU28
+  92 002e 7F21     		movs	r1, #127
+  93 0030 1948     		ldr	r0, .L7+12
+  94 0032 FFF7FEFF 		bl	HAL_ADCEx_Calibration_Start
+  95              	.LVL1:
+  96              		.loc 1 48 9 discriminator 1 view .LVU29
+  97 0036 0028     		cmp	r0, #0
+  98 0038 F9D1     		bne	.L4
+  49:Core/Src/temperature.c ****   HAL_ADC_Start(&hadc1); 
+  99              		.loc 1 49 3 is_stmt 1 view .LVU30
+ 100 003a 174C     		ldr	r4, .L7+12
+ 101 003c 2046     		mov	r0, r4
+ 102 003e FFF7FEFF 		bl	HAL_ADC_Start
+ 103              	.LVL2:
+  50:Core/Src/temperature.c ****   HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+ 104              		.loc 1 50 3 view .LVU31
+ 105 0042 4FF0FF31 		mov	r1, #-1
+ 106 0046 2046     		mov	r0, r4
+ 107 0048 FFF7FEFF 		bl	HAL_ADC_PollForConversion
+ 108              	.LVL3:
+  51:Core/Src/temperature.c ****   rawTemp = HAL_ADC_GetValue(&hadc1);
+ 109              		.loc 1 51 3 view .LVU32
+ 110              		.loc 1 51 13 is_stmt 0 view .LVU33
+ 111 004c 2046     		mov	r0, r4
+ 112 004e FFF7FEFF 		bl	HAL_ADC_GetValue
+ 113              	.LVL4:
+ 114 0052 0546     		mov	r5, r0
+ 115              	.LVL5:
+  52:Core/Src/temperature.c ****   HAL_ADC_Stop(&hadc1);
+ 116              		.loc 1 52 3 is_stmt 1 view .LVU34
+ 117 0054 2046     		mov	r0, r4
+ 118              	.LVL6:
+ 119              		.loc 1 52 3 is_stmt 0 view .LVU35
+ 120 0056 FFF7FEFF 		bl	HAL_ADC_Stop
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cch8TZZQ.s 			page 4
+
+
+ 121              	.LVL7:
+  53:Core/Src/temperature.c ****   vref = read_vrefint();
+ 122              		.loc 1 53 3 is_stmt 1 view .LVU36
+ 123              		.loc 1 53 10 is_stmt 0 view .LVU37
+ 124 005a FFF7FEFF 		bl	read_vrefint
+ 125              	.LVL8:
+  54:Core/Src/temperature.c ****   return (__HAL_ADC_CALC_TEMPERATURE(vref,
+ 126              		.loc 1 54 3 is_stmt 1 view .LVU38
+ 127              		.loc 1 54 11 is_stmt 0 view .LVU39
+ 128 005e 00FB05F0 		mul	r0, r0, r5
+ 129              	.LVL9:
+ 130              		.loc 1 54 11 view .LVU40
+ 131 0062 0E4B     		ldr	r3, .L7+16
+ 132 0064 A3FB0030 		umull	r3, r0, r3, r0
+ 133 0068 0D4B     		ldr	r3, .L7+20
+ 134 006a 1A88     		ldrh	r2, [r3]
+ 135 006c C2EB9010 		rsb	r0, r2, r0, lsr #6
+ 136 0070 6423     		movs	r3, #100
+ 137 0072 03FB00F0 		mul	r0, r3, r0
+ 138 0076 0B4B     		ldr	r3, .L7+24
+ 139 0078 1B88     		ldrh	r3, [r3]
+ 140 007a 9B1A     		subs	r3, r3, r2
+ 141 007c 90FBF3F0 		sdiv	r0, r0, r3
+  55:Core/Src/temperature.c ****                                      rawTemp,
+  56:Core/Src/temperature.c ****                                      ADC_RESOLUTION_12B));
+  57:Core/Src/temperature.c **** }...
+ 142              		.loc 1 57 1 view .LVU41
+ 143 0080 1E30     		adds	r0, r0, #30
+ 144 0082 38BD     		pop	{r3, r4, r5, pc}
+ 145              	.LVL10:
+ 146              	.L6:
+  46:Core/Src/temperature.c ****       Error_Handler();
+ 147              		.loc 1 46 7 is_stmt 1 view .LVU42
+ 148 0084 FFF7FEFF 		bl	Error_Handler
+ 149              	.LVL11:
+ 150 0088 D1E7     		b	.L4
+ 151              	.L8:
+ 152 008a 00BF     		.align	2
+ 153              	.L7:
+ 154 008c 00000000 		.word	.LANCHOR0
+ 155 0090 00000000 		.word	.LANCHOR1
+ 156 0094 000052C7 		.word	-950927360
+ 157 0098 00000000 		.word	hadc1
+ 158 009c F1197605 		.word	91625969
+ 159 00a0 A875FF1F 		.word	536835496
+ 160 00a4 CA75FF1F 		.word	536835530
+ 161              		.cfi_endproc
+ 162              	.LFE1824:
+ 164              		.section	.rodata.temp_command.str1.4,"aMS",%progbits,1
+ 165              		.align	2
+ 166              	.LC0:
+ 167 0000 4E4F4B0A 		.ascii	"NOK\012\015\000"
+ 167      0D00
+ 168 0006 0000     		.align	2
+ 169              	.LC1:
+ 170 0008 25642063 		.ascii	"%d c\012\015\000"
+ 170      0A0D00
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cch8TZZQ.s 			page 5
+
+
+ 171 000f 00       		.align	2
+ 172              	.LC2:
+ 173 0010 4F4B0A0D 		.ascii	"OK\012\015\000"
+ 173      00
+ 174              		.section	.text.temp_command,"ax",%progbits
+ 175              		.align	1
+ 176              		.global	temp_command
+ 177              		.syntax unified
+ 178              		.thumb
+ 179              		.thumb_func
+ 180              		.fpu fpv4-sp-d16
+ 182              	temp_command:
+ 183              	.LVL12:
+ 184              	.LFB1823:
+  18:Core/Src/temperature.c **** void temp_command(char *arguments) {
+ 185              		.loc 1 18 36 view -0
+ 186              		.cfi_startproc
+ 187              		@ args = 0, pretend = 0, frame = 0
+ 188              		@ frame_needed = 0, uses_anonymous_args = 0
+  18:Core/Src/temperature.c **** void temp_command(char *arguments) {
+ 189              		.loc 1 18 36 is_stmt 0 view .LVU44
+ 190 0000 08B5     		push	{r3, lr}
+ 191              	.LCFI1:
+ 192              		.cfi_def_cfa_offset 8
+ 193              		.cfi_offset 3, -8
+ 194              		.cfi_offset 14, -4
+  19:Core/Src/temperature.c ****   if (arguments) {
+ 195              		.loc 1 19 3 is_stmt 1 view .LVU45
+  19:Core/Src/temperature.c ****   if (arguments) {
+ 196              		.loc 1 19 6 is_stmt 0 view .LVU46
+ 197 0002 18B1     		cbz	r0, .L10
+  20:Core/Src/temperature.c ****     printf("NOK\n\r");
+ 198              		.loc 1 20 5 is_stmt 1 view .LVU47
+ 199 0004 0648     		ldr	r0, .L13
+ 200              	.LVL13:
+  20:Core/Src/temperature.c ****     printf("NOK\n\r");
+ 201              		.loc 1 20 5 is_stmt 0 view .LVU48
+ 202 0006 FFF7FEFF 		bl	printf
+ 203              	.LVL14:
+ 204              	.L9:
+  26:Core/Src/temperature.c **** }
+ 205              		.loc 1 26 1 view .LVU49
+ 206 000a 08BD     		pop	{r3, pc}
+ 207              	.LVL15:
+ 208              	.L10:
+  23:Core/Src/temperature.c ****     printf("%d c\n\r",(int)read_temp());
+ 209              		.loc 1 23 5 is_stmt 1 view .LVU50
+  23:Core/Src/temperature.c ****     printf("%d c\n\r",(int)read_temp());
+ 210              		.loc 1 23 28 is_stmt 0 view .LVU51
+ 211 000c FFF7FEFF 		bl	read_temp
+ 212              	.LVL16:
+  23:Core/Src/temperature.c ****     printf("%d c\n\r",(int)read_temp());
+ 213              		.loc 1 23 28 view .LVU52
+ 214 0010 0146     		mov	r1, r0
+  23:Core/Src/temperature.c ****     printf("%d c\n\r",(int)read_temp());
+ 215              		.loc 1 23 5 view .LVU53
+ 216 0012 0448     		ldr	r0, .L13+4
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cch8TZZQ.s 			page 6
+
+
+ 217 0014 FFF7FEFF 		bl	printf
+ 218              	.LVL17:
+  24:Core/Src/temperature.c ****     printf("OK\n\r");
+ 219              		.loc 1 24 5 is_stmt 1 view .LVU54
+ 220 0018 0348     		ldr	r0, .L13+8
+ 221 001a FFF7FEFF 		bl	printf
+ 222              	.LVL18:
+  26:Core/Src/temperature.c **** }
+ 223              		.loc 1 26 1 is_stmt 0 view .LVU55
+ 224 001e F4E7     		b	.L9
+ 225              	.L14:
+ 226              		.align	2
+ 227              	.L13:
+ 228 0020 00000000 		.word	.LC0
+ 229 0024 08000000 		.word	.LC1
+ 230 0028 10000000 		.word	.LC2
+ 231              		.cfi_endproc
+ 232              	.LFE1823:
+ 234              		.section	.bss.sConfig.16967,"aw",%nobits
+ 235              		.align	2
+ 236              		.set	.LANCHOR1,. + 0
+ 239              	sConfig.16967:
+ 240 0000 00000000 		.space	24
+ 240      00000000 
+ 240      00000000 
+ 240      00000000 
+ 240      00000000 
+ 241              		.section	.data.first_time_up.16966,"aw"
+ 242              		.align	2
+ 243              		.set	.LANCHOR0,. + 0
+ 246              	first_time_up.16966:
+ 247 0000 01000000 		.word	1
+ 248              		.text
+ 249              	.Letext0:
+ 250              		.file 2 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
+ 251              		.file 3 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
+ 252              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
+ 253              		.file 5 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/system_stm32wbxx.h"
+ 254              		.file 6 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wb55xx.h"
+ 255              		.file 7 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wbxx.h"
+ 256              		.file 8 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_def.h"
+ 257              		.file 9 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_dma.h"
+ 258              		.file 10 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_adc.h"
+ 259              		.file 11 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_flash.h"
+ 260              		.file 12 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_uart.h"
+ 261              		.file 13 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h"
+ 262              		.file 14 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/lock.h
+ 263              		.file 15 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_types
+ 264              		.file 16 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
+ 265              		.file 17 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/reent.
+ 266              		.file 18 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
+ 267              		.file 19 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_usart.h"
+ 268              		.file 20 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_lpuart.h"
+ 269              		.file 21 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_adc_ex.h"
+ 270              		.file 22 "Core/Inc/battery.h"
+ 271              		.file 23 "Core/Inc/main.h"
+ 272              		.file 24 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdio.h"
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cch8TZZQ.s 			page 7
+
+
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cch8TZZQ.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 temperature.c
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cch8TZZQ.s:18     .text.read_temp:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cch8TZZQ.s:26     .text.read_temp:0000000000000000 read_temp
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cch8TZZQ.s:154    .text.read_temp:000000000000008c $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cch8TZZQ.s:165    .rodata.temp_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cch8TZZQ.s:175    .text.temp_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cch8TZZQ.s:182    .text.temp_command:0000000000000000 temp_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cch8TZZQ.s:228    .text.temp_command:0000000000000020 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cch8TZZQ.s:235    .bss.sConfig.16967:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cch8TZZQ.s:239    .bss.sConfig.16967:0000000000000000 sConfig.16967
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cch8TZZQ.s:242    .data.first_time_up.16966:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cch8TZZQ.s:246    .data.first_time_up.16966:0000000000000000 first_time_up.16966
+
+UNDEFINED SYMBOLS
+HAL_ADC_ConfigChannel
+HAL_ADCEx_Calibration_Start
+HAL_ADC_Start
+HAL_ADC_PollForConversion
+HAL_ADC_GetValue
+HAL_ADC_Stop
+read_vrefint
+Error_Handler
+hadc1
+printf

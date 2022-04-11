@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -26,7 +26,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
   23              		.thumb_func
   24              		.fpu fpv4-sp-d16
   26              	BAS_Init:
-  27              	.LFB1669:
+  27              	.LFB1415:
   28              		.file 1 "Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c"
    1:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** /**
    2:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c ****  ******************************************************************************
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
   28:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** SVC_CTL_p_EvtHandler_t SVCCTL__SvcHandlerTab[BLE_CFG_SVC_MAX_NBR_CB];
   29:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** #endif
   30:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** uint8_t NbreOfRegisteredHandler;
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 2
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s 			page 2
 
 
   31:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** } SVCCTL_EvtHandler_t;
@@ -106,7 +106,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
   35              		.loc 1 66 1 is_stmt 0 view .LVU2
   36 0000 7047     		bx	lr
   37              		.cfi_endproc
-  38              	.LFE1669:
+  38              	.LFE1415:
   40              		.section	.text.BLS_Init,"ax",%progbits
   41              		.align	1
   42              		.weak	BLS_Init
@@ -115,10 +115,10 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
   45              		.thumb_func
   46              		.fpu fpv4-sp-d16
   48              	BLS_Init:
-  49              	.LFB1670:
+  49              	.LFB1416:
   67:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** 
   68:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** __WEAK void BLS_Init( void )
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 3
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s 			page 3
 
 
   69:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** {
@@ -133,7 +133,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
   56              		.loc 1 71 1 is_stmt 0 view .LVU5
   57 0000 7047     		bx	lr
   58              		.cfi_endproc
-  59              	.LFE1670:
+  59              	.LFE1416:
   61              		.section	.text.CRS_STM_Init,"ax",%progbits
   62              		.align	1
   63              		.weak	CRS_STM_Init
@@ -142,7 +142,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
   66              		.thumb_func
   67              		.fpu fpv4-sp-d16
   69              	CRS_STM_Init:
-  70              	.LFB1671:
+  70              	.LFB1417:
   72:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** __WEAK void CRS_STM_Init( void )
   73:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** {
   71              		.loc 1 73 1 is_stmt 1 view -0
@@ -156,7 +156,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
   77              		.loc 1 75 1 is_stmt 0 view .LVU8
   78 0000 7047     		bx	lr
   79              		.cfi_endproc
-  80              	.LFE1671:
+  80              	.LFE1417:
   82              		.section	.text.DIS_Init,"ax",%progbits
   83              		.align	1
   84              		.weak	DIS_Init
@@ -165,7 +165,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
   87              		.thumb_func
   88              		.fpu fpv4-sp-d16
   90              	DIS_Init:
-  91              	.LFB1672:
+  91              	.LFB1418:
   76:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** __WEAK void DIS_Init( void )
   77:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** {
   92              		.loc 1 77 1 is_stmt 1 view -0
@@ -178,11 +178,11 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
   79:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** }
   98              		.loc 1 79 1 is_stmt 0 view .LVU11
   99 0000 7047     		bx	lr
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 4
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s 			page 4
 
 
  100              		.cfi_endproc
- 101              	.LFE1672:
+ 101              	.LFE1418:
  103              		.section	.text.EDS_STM_Init,"ax",%progbits
  104              		.align	1
  105              		.weak	EDS_STM_Init
@@ -191,7 +191,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  108              		.thumb_func
  109              		.fpu fpv4-sp-d16
  111              	EDS_STM_Init:
- 112              	.LFB1673:
+ 112              	.LFB1419:
   80:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** __WEAK void EDS_STM_Init( void )
   81:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** {
  113              		.loc 1 81 1 is_stmt 1 view -0
@@ -205,7 +205,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  119              		.loc 1 83 1 is_stmt 0 view .LVU14
  120 0000 7047     		bx	lr
  121              		.cfi_endproc
- 122              	.LFE1673:
+ 122              	.LFE1419:
  124              		.section	.text.HIDS_Init,"ax",%progbits
  125              		.align	1
  126              		.weak	HIDS_Init
@@ -214,7 +214,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  129              		.thumb_func
  130              		.fpu fpv4-sp-d16
  132              	HIDS_Init:
- 133              	.LFB1674:
+ 133              	.LFB1420:
   84:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** __WEAK void HIDS_Init( void )
   85:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** {
  134              		.loc 1 85 1 is_stmt 1 view -0
@@ -228,7 +228,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  140              		.loc 1 87 1 is_stmt 0 view .LVU17
  141 0000 7047     		bx	lr
  142              		.cfi_endproc
- 143              	.LFE1674:
+ 143              	.LFE1420:
  145              		.section	.text.HRS_Init,"ax",%progbits
  146              		.align	1
  147              		.weak	HRS_Init
@@ -237,8 +237,8 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  150              		.thumb_func
  151              		.fpu fpv4-sp-d16
  153              	HRS_Init:
- 154              	.LFB1675:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 5
+ 154              	.LFB1421:
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s 			page 5
 
 
   88:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** __WEAK void HRS_Init( void )
@@ -254,7 +254,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  161              		.loc 1 91 1 is_stmt 0 view .LVU20
  162 0000 7047     		bx	lr
  163              		.cfi_endproc
- 164              	.LFE1675:
+ 164              	.LFE1421:
  166              		.section	.text.HTS_Init,"ax",%progbits
  167              		.align	1
  168              		.weak	HTS_Init
@@ -263,7 +263,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  171              		.thumb_func
  172              		.fpu fpv4-sp-d16
  174              	HTS_Init:
- 175              	.LFB1676:
+ 175              	.LFB1422:
   92:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** __WEAK void HTS_Init( void )
   93:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** {
  176              		.loc 1 93 1 is_stmt 1 view -0
@@ -277,7 +277,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  182              		.loc 1 95 1 is_stmt 0 view .LVU23
  183 0000 7047     		bx	lr
  184              		.cfi_endproc
- 185              	.LFE1676:
+ 185              	.LFE1422:
  187              		.section	.text.IAS_Init,"ax",%progbits
  188              		.align	1
  189              		.weak	IAS_Init
@@ -286,7 +286,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  192              		.thumb_func
  193              		.fpu fpv4-sp-d16
  195              	IAS_Init:
- 196              	.LFB1677:
+ 196              	.LFB1423:
   96:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** __WEAK void IAS_Init( void )
   97:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** {
  197              		.loc 1 97 1 is_stmt 1 view -0
@@ -298,12 +298,12 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  202              		.loc 1 98 3 view .LVU25
   99:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** }
  203              		.loc 1 99 1 is_stmt 0 view .LVU26
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 6
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s 			page 6
 
 
  204 0000 7047     		bx	lr
  205              		.cfi_endproc
- 206              	.LFE1677:
+ 206              	.LFE1423:
  208              		.section	.text.LLS_Init,"ax",%progbits
  209              		.align	1
  210              		.weak	LLS_Init
@@ -312,7 +312,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  213              		.thumb_func
  214              		.fpu fpv4-sp-d16
  216              	LLS_Init:
- 217              	.LFB1678:
+ 217              	.LFB1424:
  100:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** __WEAK void LLS_Init( void )
  101:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** {
  218              		.loc 1 101 1 is_stmt 1 view -0
@@ -326,7 +326,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  224              		.loc 1 103 1 is_stmt 0 view .LVU29
  225 0000 7047     		bx	lr
  226              		.cfi_endproc
- 227              	.LFE1678:
+ 227              	.LFE1424:
  229              		.section	.text.TPS_Init,"ax",%progbits
  230              		.align	1
  231              		.weak	TPS_Init
@@ -335,7 +335,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  234              		.thumb_func
  235              		.fpu fpv4-sp-d16
  237              	TPS_Init:
- 238              	.LFB1679:
+ 238              	.LFB1425:
  104:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** __WEAK void TPS_Init( void )
  105:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** {
  239              		.loc 1 105 1 is_stmt 1 view -0
@@ -349,7 +349,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  245              		.loc 1 107 1 is_stmt 0 view .LVU32
  246 0000 7047     		bx	lr
  247              		.cfi_endproc
- 248              	.LFE1679:
+ 248              	.LFE1425:
  250              		.section	.text.MOTENV_STM_Init,"ax",%progbits
  251              		.align	1
  252              		.weak	MOTENV_STM_Init
@@ -358,10 +358,10 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  255              		.thumb_func
  256              		.fpu fpv4-sp-d16
  258              	MOTENV_STM_Init:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 7
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s 			page 7
 
 
- 259              	.LFB1680:
+ 259              	.LFB1426:
  108:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** __WEAK void MOTENV_STM_Init( void )
  109:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** {
  260              		.loc 1 109 1 is_stmt 1 view -0
@@ -375,7 +375,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  266              		.loc 1 111 1 is_stmt 0 view .LVU35
  267 0000 7047     		bx	lr
  268              		.cfi_endproc
- 269              	.LFE1680:
+ 269              	.LFE1426:
  271              		.section	.text.P2PS_STM_Init,"ax",%progbits
  272              		.align	1
  273              		.weak	P2PS_STM_Init
@@ -384,7 +384,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  276              		.thumb_func
  277              		.fpu fpv4-sp-d16
  279              	P2PS_STM_Init:
- 280              	.LFB1681:
+ 280              	.LFB1427:
  112:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** __WEAK void P2PS_STM_Init( void )
  113:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** {
  281              		.loc 1 113 1 is_stmt 1 view -0
@@ -398,7 +398,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  287              		.loc 1 115 1 is_stmt 0 view .LVU38
  288 0000 7047     		bx	lr
  289              		.cfi_endproc
- 290              	.LFE1681:
+ 290              	.LFE1427:
  292              		.section	.text.ZDD_STM_Init,"ax",%progbits
  293              		.align	1
  294              		.weak	ZDD_STM_Init
@@ -407,7 +407,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  297              		.thumb_func
  298              		.fpu fpv4-sp-d16
  300              	ZDD_STM_Init:
- 301              	.LFB1682:
+ 301              	.LFB1428:
  116:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** __WEAK void ZDD_STM_Init( void )
  117:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** {
  302              		.loc 1 117 1 is_stmt 1 view -0
@@ -418,13 +418,13 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  118:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c ****   return;
  307              		.loc 1 118 3 view .LVU40
  119:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** }
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 8
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s 			page 8
 
 
  308              		.loc 1 119 1 is_stmt 0 view .LVU41
  309 0000 7047     		bx	lr
  310              		.cfi_endproc
- 311              	.LFE1682:
+ 311              	.LFE1428:
  313              		.section	.text.OTAS_STM_Init,"ax",%progbits
  314              		.align	1
  315              		.weak	OTAS_STM_Init
@@ -433,7 +433,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  318              		.thumb_func
  319              		.fpu fpv4-sp-d16
  321              	OTAS_STM_Init:
- 322              	.LFB1683:
+ 322              	.LFB1429:
  120:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** __WEAK void OTAS_STM_Init( void )
  121:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** {
  323              		.loc 1 121 1 is_stmt 1 view -0
@@ -447,7 +447,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  329              		.loc 1 123 1 is_stmt 0 view .LVU44
  330 0000 7047     		bx	lr
  331              		.cfi_endproc
- 332              	.LFE1683:
+ 332              	.LFE1429:
  334              		.section	.text.MESH_Init,"ax",%progbits
  335              		.align	1
  336              		.weak	MESH_Init
@@ -456,7 +456,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  339              		.thumb_func
  340              		.fpu fpv4-sp-d16
  342              	MESH_Init:
- 343              	.LFB1684:
+ 343              	.LFB1430:
  124:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** __WEAK void MESH_Init( void )
  125:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** {
  344              		.loc 1 125 1 is_stmt 1 view -0
@@ -470,7 +470,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  350              		.loc 1 127 1 is_stmt 0 view .LVU47
  351 0000 7047     		bx	lr
  352              		.cfi_endproc
- 353              	.LFE1684:
+ 353              	.LFE1430:
  355              		.section	.text.BVOPUS_STM_Init,"ax",%progbits
  356              		.align	1
  357              		.weak	BVOPUS_STM_Init
@@ -478,11 +478,11 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  359              		.thumb
  360              		.thumb_func
  361              		.fpu fpv4-sp-d16
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 9
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s 			page 9
 
 
  363              	BVOPUS_STM_Init:
- 364              	.LFB1685:
+ 364              	.LFB1431:
  128:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** __WEAK void BVOPUS_STM_Init( void )
  129:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** {
  365              		.loc 1 129 1 is_stmt 1 view -0
@@ -496,7 +496,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  371              		.loc 1 131 1 is_stmt 0 view .LVU50
  372 0000 7047     		bx	lr
  373              		.cfi_endproc
- 374              	.LFE1685:
+ 374              	.LFE1431:
  376              		.section	.text.SVCCTL_InitCustomSvc,"ax",%progbits
  377              		.align	1
  378              		.weak	SVCCTL_InitCustomSvc
@@ -505,7 +505,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  381              		.thumb_func
  382              		.fpu fpv4-sp-d16
  384              	SVCCTL_InitCustomSvc:
- 385              	.LFB1686:
+ 385              	.LFB1432:
  132:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** __WEAK void SVCCTL_InitCustomSvc( void )
  133:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** {
  386              		.loc 1 133 1 is_stmt 1 view -0
@@ -519,7 +519,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  392              		.loc 1 135 1 is_stmt 0 view .LVU53
  393 0000 7047     		bx	lr
  394              		.cfi_endproc
- 395              	.LFE1686:
+ 395              	.LFE1432:
  397              		.section	.text.SVCCTL_SvcInit,"ax",%progbits
  398              		.align	1
  399              		.weak	SVCCTL_SvcInit
@@ -528,7 +528,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  402              		.thumb_func
  403              		.fpu fpv4-sp-d16
  405              	SVCCTL_SvcInit:
- 406              	.LFB1688:
+ 406              	.LFB1434:
  136:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** 
  137:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** /* Functions Definition ------------------------------------------------------*/
  138:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** 
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  142:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c ****   /**
  143:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c ****    * Initialize the number of registered Handler
  144:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c ****    */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 10
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s 			page 10
 
 
  145:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c ****   SVCCTL_EvtHandler.NbreOfRegisteredHandler = 0;
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  435 001a FFF7FEFF 		bl	HRS_Init
  436              	.LVL6:
  171:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 11
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s 			page 11
 
 
  172:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c ****   HTS_Init();
@@ -658,14 +658,14 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  193:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c ****   
  194:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c ****   return;
  470              		.loc 1 194 3 view .LVU73
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 12
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s 			page 12
 
 
  195:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** }
  471              		.loc 1 195 1 is_stmt 0 view .LVU74
  472 004a 08BD     		pop	{r3, pc}
  473              		.cfi_endproc
- 474              	.LFE1688:
+ 474              	.LFE1434:
  476              		.section	.text.SVCCTL_Init,"ax",%progbits
  477              		.align	1
  478              		.global	SVCCTL_Init
@@ -674,7 +674,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  481              		.thumb_func
  482              		.fpu fpv4-sp-d16
  484              	SVCCTL_Init:
- 485              	.LFB1687:
+ 485              	.LFB1433:
  140:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c ****  
  486              		.loc 1 140 1 is_stmt 1 view -0
  487              		.cfi_startproc
@@ -711,20 +711,20 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  511              	.L23:
  512 0010 00000000 		.word	.LANCHOR0
  513              		.cfi_endproc
- 514              	.LFE1687:
+ 514              	.LFE1433:
  516              		.section	.text.SVCCTL_RegisterSvcHandler,"ax",%progbits
  517              		.align	1
  518              		.global	SVCCTL_RegisterSvcHandler
  519              		.syntax unified
  520              		.thumb
  521              		.thumb_func
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 13
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s 			page 13
 
 
  522              		.fpu fpv4-sp-d16
  524              	SVCCTL_RegisterSvcHandler:
  525              	.LVL19:
- 526              	.LFB1689:
+ 526              	.LFB1435:
  196:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** 
  197:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** /**
  198:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c ****  * @brief  BLE Controller initialization
@@ -765,7 +765,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  547              	.L26:
  548 0010 00000000 		.word	.LANCHOR0
  549              		.cfi_endproc
- 550              	.LFE1689:
+ 550              	.LFE1435:
  552              		.section	.text.SVCCTL_RegisterCltHandler,"ax",%progbits
  553              		.align	1
  554              		.global	SVCCTL_RegisterCltHandler
@@ -775,10 +775,10 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  558              		.fpu fpv4-sp-d16
  560              	SVCCTL_RegisterCltHandler:
  561              	.LVL20:
- 562              	.LFB1690:
+ 562              	.LFB1436:
  213:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** 
  214:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** /**
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 14
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s 			page 14
 
 
  215:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c ****  * @brief  BLE Controller initialization
@@ -806,7 +806,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  570              		.loc 1 229 1 is_stmt 0 view .LVU94
  571 0000 7047     		bx	lr
  572              		.cfi_endproc
- 573              	.LFE1690:
+ 573              	.LFE1436:
  575              		.section	.text.SVCCTL_UserEvtRx,"ax",%progbits
  576              		.align	1
  577              		.weak	SVCCTL_UserEvtRx
@@ -816,7 +816,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  581              		.fpu fpv4-sp-d16
  583              	SVCCTL_UserEvtRx:
  584              	.LVL21:
- 585              	.LFB1691:
+ 585              	.LFB1437:
  230:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** 
  231:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** __WEAK SVCCTL_UserEvtFlowStatus_t SVCCTL_UserEvtRx( void *pckt )
  232:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** {
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  234:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c ****   evt_blecore_aci *blecore_evt;
  600              		.loc 1 234 3 view .LVU98
  235:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c ****   SVCCTL_EvtAckStatus_t event_notification_status;
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 15
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s 			page 15
 
 
  601              		.loc 1 235 3 view .LVU99
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  268:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** #endif
  269:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** #if (BLE_CFG_CLT_MAX_NBR_CB > 0)
  270:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c ****           /* For Client event handler */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 16
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s 			page 16
 
 
  271:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c ****           event_notification_status = SVCCTL_EvtNotAck;
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  318:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c ****     case SVCCTL_EvtAckFlowDisable:
  319:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c ****       return_status = SVCCTL_UserEvtFlowDisable;
  320:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c ****       break;
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 17
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s 			page 17
 
 
  321:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c **** 
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  253:Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c ****           {
  664              		.loc 1 253 83 discriminator 2 view .LVU127
  665 003c E4B2     		uxtb	r4, r4
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 18
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s 			page 18
 
 
  666              	.LVL30:
@@ -1047,7 +1047,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  685              	.L39:
  686 0050 00000000 		.word	.LANCHOR0
  687              		.cfi_endproc
- 688              	.LFE1691:
+ 688              	.LFE1437:
  690              		.global	SVCCTL_CltHandler
  691              		.global	SVCCTL_EvtHandler
  692              		.section	BLE_DRIVER_CONTEXT,"aw"
@@ -1073,75 +1073,70 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 1
  715              		.file 12 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_flash.h"
  716              		.file 13 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_uart.h"
  717              		.file 14 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h"
- 718              		.file 15 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_usart.h"
- 719              		.file 16 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_lpuart.h"
- 720              		.file 17 "Core/Inc/app_conf.h"
- 721              		.file 18 "Middlewares/ST/STM32_WPAN/ble/core/auto/ble_events.h"
- 722              		.file 19 "Middlewares/ST/STM32_WPAN/ble/core/ble_legacy.h"
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 19
-
-
- 723              		.file 20 "Middlewares/ST/STM32_WPAN/ble/svc/Inc/svc_ctl.h"
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 20
+ 718              		.file 15 "Core/Inc/app_conf.h"
+ 719              		.file 16 "Middlewares/ST/STM32_WPAN/ble/core/auto/ble_events.h"
+ 720              		.file 17 "Middlewares/ST/STM32_WPAN/ble/core/ble_legacy.h"
+ 721              		.file 18 "Middlewares/ST/STM32_WPAN/ble/svc/Inc/svc_ctl.h"
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s 			page 19
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 svc_ctl.c
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:18     .text.BAS_Init:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:26     .text.BAS_Init:0000000000000000 BAS_Init
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:41     .text.BLS_Init:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:48     .text.BLS_Init:0000000000000000 BLS_Init
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:62     .text.CRS_STM_Init:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:69     .text.CRS_STM_Init:0000000000000000 CRS_STM_Init
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:83     .text.DIS_Init:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:90     .text.DIS_Init:0000000000000000 DIS_Init
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:104    .text.EDS_STM_Init:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:111    .text.EDS_STM_Init:0000000000000000 EDS_STM_Init
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:125    .text.HIDS_Init:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:132    .text.HIDS_Init:0000000000000000 HIDS_Init
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:146    .text.HRS_Init:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:153    .text.HRS_Init:0000000000000000 HRS_Init
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:167    .text.HTS_Init:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:174    .text.HTS_Init:0000000000000000 HTS_Init
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:188    .text.IAS_Init:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:195    .text.IAS_Init:0000000000000000 IAS_Init
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:209    .text.LLS_Init:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:216    .text.LLS_Init:0000000000000000 LLS_Init
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:230    .text.TPS_Init:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:237    .text.TPS_Init:0000000000000000 TPS_Init
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:251    .text.MOTENV_STM_Init:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:258    .text.MOTENV_STM_Init:0000000000000000 MOTENV_STM_Init
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:272    .text.P2PS_STM_Init:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:279    .text.P2PS_STM_Init:0000000000000000 P2PS_STM_Init
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:293    .text.ZDD_STM_Init:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:300    .text.ZDD_STM_Init:0000000000000000 ZDD_STM_Init
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:314    .text.OTAS_STM_Init:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:321    .text.OTAS_STM_Init:0000000000000000 OTAS_STM_Init
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:335    .text.MESH_Init:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:342    .text.MESH_Init:0000000000000000 MESH_Init
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:356    .text.BVOPUS_STM_Init:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:363    .text.BVOPUS_STM_Init:0000000000000000 BVOPUS_STM_Init
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:377    .text.SVCCTL_InitCustomSvc:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:384    .text.SVCCTL_InitCustomSvc:0000000000000000 SVCCTL_InitCustomSvc
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:398    .text.SVCCTL_SvcInit:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:405    .text.SVCCTL_SvcInit:0000000000000000 SVCCTL_SvcInit
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:477    .text.SVCCTL_Init:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:484    .text.SVCCTL_Init:0000000000000000 SVCCTL_Init
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:512    .text.SVCCTL_Init:0000000000000010 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:517    .text.SVCCTL_RegisterSvcHandler:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:524    .text.SVCCTL_RegisterSvcHandler:0000000000000000 SVCCTL_RegisterSvcHandler
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:548    .text.SVCCTL_RegisterSvcHandler:0000000000000010 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:553    .text.SVCCTL_RegisterCltHandler:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:560    .text.SVCCTL_RegisterCltHandler:0000000000000000 SVCCTL_RegisterCltHandler
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:576    .text.SVCCTL_UserEvtRx:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:583    .text.SVCCTL_UserEvtRx:0000000000000000 SVCCTL_UserEvtRx
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:686    .text.SVCCTL_UserEvtRx:0000000000000050 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:701    BLE_DRIVER_CONTEXT:0000000000000008 SVCCTL_CltHandler
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:697    BLE_DRIVER_CONTEXT:0000000000000000 SVCCTL_EvtHandler
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s:693    BLE_DRIVER_CONTEXT:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:18     .text.BAS_Init:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:26     .text.BAS_Init:0000000000000000 BAS_Init
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:41     .text.BLS_Init:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:48     .text.BLS_Init:0000000000000000 BLS_Init
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:62     .text.CRS_STM_Init:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:69     .text.CRS_STM_Init:0000000000000000 CRS_STM_Init
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:83     .text.DIS_Init:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:90     .text.DIS_Init:0000000000000000 DIS_Init
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:104    .text.EDS_STM_Init:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:111    .text.EDS_STM_Init:0000000000000000 EDS_STM_Init
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:125    .text.HIDS_Init:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:132    .text.HIDS_Init:0000000000000000 HIDS_Init
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:146    .text.HRS_Init:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:153    .text.HRS_Init:0000000000000000 HRS_Init
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:167    .text.HTS_Init:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:174    .text.HTS_Init:0000000000000000 HTS_Init
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:188    .text.IAS_Init:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:195    .text.IAS_Init:0000000000000000 IAS_Init
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:209    .text.LLS_Init:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:216    .text.LLS_Init:0000000000000000 LLS_Init
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:230    .text.TPS_Init:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:237    .text.TPS_Init:0000000000000000 TPS_Init
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:251    .text.MOTENV_STM_Init:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:258    .text.MOTENV_STM_Init:0000000000000000 MOTENV_STM_Init
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:272    .text.P2PS_STM_Init:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:279    .text.P2PS_STM_Init:0000000000000000 P2PS_STM_Init
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:293    .text.ZDD_STM_Init:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:300    .text.ZDD_STM_Init:0000000000000000 ZDD_STM_Init
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:314    .text.OTAS_STM_Init:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:321    .text.OTAS_STM_Init:0000000000000000 OTAS_STM_Init
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:335    .text.MESH_Init:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:342    .text.MESH_Init:0000000000000000 MESH_Init
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:356    .text.BVOPUS_STM_Init:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:363    .text.BVOPUS_STM_Init:0000000000000000 BVOPUS_STM_Init
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:377    .text.SVCCTL_InitCustomSvc:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:384    .text.SVCCTL_InitCustomSvc:0000000000000000 SVCCTL_InitCustomSvc
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:398    .text.SVCCTL_SvcInit:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:405    .text.SVCCTL_SvcInit:0000000000000000 SVCCTL_SvcInit
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:477    .text.SVCCTL_Init:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:484    .text.SVCCTL_Init:0000000000000000 SVCCTL_Init
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:512    .text.SVCCTL_Init:0000000000000010 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:517    .text.SVCCTL_RegisterSvcHandler:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:524    .text.SVCCTL_RegisterSvcHandler:0000000000000000 SVCCTL_RegisterSvcHandler
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:548    .text.SVCCTL_RegisterSvcHandler:0000000000000010 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:553    .text.SVCCTL_RegisterCltHandler:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:560    .text.SVCCTL_RegisterCltHandler:0000000000000000 SVCCTL_RegisterCltHandler
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:576    .text.SVCCTL_UserEvtRx:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:583    .text.SVCCTL_UserEvtRx:0000000000000000 SVCCTL_UserEvtRx
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:686    .text.SVCCTL_UserEvtRx:0000000000000050 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:701    BLE_DRIVER_CONTEXT:0000000000000008 SVCCTL_CltHandler
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:697    BLE_DRIVER_CONTEXT:0000000000000000 SVCCTL_EvtHandler
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s:693    BLE_DRIVER_CONTEXT:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 SVCCTL_App_Notification
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc33Lsbk.s 			page 21
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccAy7sJ0.s 			page 20
 
 

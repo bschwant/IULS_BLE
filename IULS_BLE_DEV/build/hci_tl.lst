@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -26,7 +26,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
   23              		.fpu fpv4-sp-d16
   25              	NotifyCmdStatus:
   26              	.LVL0:
-  27              	.LFB1675:
+  27              	.LFB1421:
   28              		.file 1 "Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c"
    1:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c **** /**
    2:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****  ******************************************************************************
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
   28:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c **** /* Private typedef -----------------------------------------------------------*/
   29:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c **** typedef enum
   30:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c **** {
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 2
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 2
 
 
   31:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****   HCI_TL_CMD_RESP_RELEASE,
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
   85:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****   /**
   86:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****    * Up to release version v1.2.0, a while loop was implemented to read out events from the queue a
   87:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****    * it is not empty. However, in a bare metal implementation, this leads to calling in a "blocking
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 3
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 3
 
 
   88:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****    * hci_user_evt_proc() as long as events are received without giving the opportunity to run other
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  142:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****   /**
  143:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****    * It is better to go through the background process as it is not sure from which context this AP
  144:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****    * be called
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 4
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 4
 
 
  145:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****    */
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  199:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****         }
  200:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c **** 
  201:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****         if(pcommand_complete_event->numcmd != 0)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 5
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 5
 
 
  202:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****         {
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
   30              		.cfi_startproc
   31              		@ args = 0, pretend = 0, frame = 0
   32              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 6
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 6
 
 
   33              		.loc 1 254 1 is_stmt 0 view .LVU1
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  266:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****     }
   66              		.loc 1 266 7 is_stmt 0 view .LVU13
   67 0018 9847     		blx	r3
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 7
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 7
 
 
   68              	.LVL4:
@@ -370,7 +370,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
   73              	.L5:
   74 001c 00000000 		.word	.LANCHOR0
   75              		.cfi_endproc
-  76              	.LFE1675:
+  76              	.LFE1421:
   78              		.section	.text.TlInit,"ax",%progbits
   79              		.align	1
   80              		.syntax unified
@@ -379,7 +379,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
   83              		.fpu fpv4-sp-d16
   85              	TlInit:
   86              	.LVL5:
-  87              	.LFB1673:
+  87              	.LFB1419:
  216:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****   TL_BLE_InitConf_t Conf;
   88              		.loc 1 216 1 view -0
   89              		.cfi_startproc
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  115              		.loc 1 226 3 is_stmt 1 view .LVU22
  116 0014 FFF7FEFF 		bl	LST_init_head
  117              	.LVL8:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 8
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 8
 
 
  228:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c **** 
@@ -473,19 +473,19 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  154 0038 00000000 		.word	.LANCHOR3
  155 003c 00000000 		.word	TlEvtReceived
  156              		.cfi_endproc
- 157              	.LFE1673:
+ 157              	.LFE1419:
  159              		.section	.text.SendCmd,"ax",%progbits
  160              		.align	1
  161              		.syntax unified
  162              		.thumb
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 9
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 9
 
 
  163              		.thumb_func
  164              		.fpu fpv4-sp-d16
  166              	SendCmd:
  167              	.LVL11:
- 168              	.LFB1674:
+ 168              	.LFB1420:
  243:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****   pCmdBuffer->cmdserial.cmd.cmdcode = opcode;
  169              		.loc 1 243 1 is_stmt 1 view -0
  170              		.cfi_startproc
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  205 001e 0021     		movs	r1, #0
  206 0020 0846     		mov	r0, r1
  207 0022 9847     		blx	r3
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 10
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 10
 
 
  208              	.LVL16:
@@ -553,7 +553,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  215 0028 00000000 		.word	.LANCHOR2
  216 002c 00000000 		.word	.LANCHOR3
  217              		.cfi_endproc
- 218              	.LFE1674:
+ 218              	.LFE1420:
  220              		.section	.text.hci_init,"ax",%progbits
  221              		.align	1
  222              		.global	hci_init
@@ -563,7 +563,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  226              		.fpu fpv4-sp-d16
  228              	hci_init:
  229              	.LVL17:
- 230              	.LFB1669:
+ 230              	.LFB1415:
   69:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****   StatusNotCallBackFunction = ((HCI_TL_HciInitConf_t *)pConf)->StatusNotCallBack;
  231              		.loc 1 69 1 is_stmt 1 view -0
  232              		.cfi_startproc
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  254              	.LVL18:
   73:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c **** 
  255              		.loc 1 73 3 is_stmt 0 view .LVU59
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 11
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 11
 
 
  256 0010 FFF7FEFF 		bl	hci_register_io_bus
@@ -622,7 +622,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  270 001c 00000000 		.word	.LANCHOR0
  271 0020 00000000 		.word	.LANCHOR3
  272              		.cfi_endproc
- 273              	.LFE1669:
+ 273              	.LFE1415:
  275              		.section	.text.hci_user_evt_proc,"ax",%progbits
  276              		.align	1
  277              		.global	hci_user_evt_proc
@@ -631,7 +631,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  280              		.thumb_func
  281              		.fpu fpv4-sp-d16
  283              	hci_user_evt_proc:
- 284              	.LFB1670:
+ 284              	.LFB1416:
   81:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****   TL_EvtPacket_t *phcievtbuffer;
  285              		.loc 1 81 1 is_stmt 1 view -0
  286              		.cfi_startproc
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  100:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****   {
  303              		.loc 1 100 5 view .LVU69
  304 000a 10B9     		cbnz	r0, .L21
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 12
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 12
 
 
  100:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****   {
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  106:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****       UserEvtRxParam.status = HCI_TL_UserEventFlow_Enable;
  346              		.loc 1 106 27 is_stmt 0 view .LVU83
  347 0034 039A     		ldr	r2, [sp, #12]
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 13
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 13
 
 
  348 0036 0292     		str	r2, [sp, #8]
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  389              	.L28:
  131:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****   }
  390              		.loc 1 131 5 view .LVU97
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 14
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 14
 
 
  391 006a 0248     		ldr	r0, .L29
@@ -794,7 +794,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  400 0078 00000000 		.word	.LANCHOR2
  401 007c 00000000 		.word	.LANCHOR3
  402              		.cfi_endproc
- 403              	.LFE1670:
+ 403              	.LFE1416:
  405              		.section	.text.hci_resume_flow,"ax",%progbits
  406              		.align	1
  407              		.global	hci_resume_flow
@@ -803,7 +803,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  410              		.thumb_func
  411              		.fpu fpv4-sp-d16
  413              	hci_resume_flow:
- 414              	.LFB1671:
+ 414              	.LFB1417:
  139:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****   UserEventFlow = HCI_TL_UserEventFlow_Enable;
  415              		.loc 1 139 1 view -0
  416              		.cfi_startproc
@@ -836,9 +836,9 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  438              	.L33:
  439 0010 00000000 		.word	.LANCHOR2
  440              		.cfi_endproc
- 441              	.LFE1671:
+ 441              	.LFE1417:
  443              		.section	.text.hci_cmd_resp_wait,"ax",%progbits
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 15
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 15
 
 
  444              		.align	1
@@ -849,7 +849,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  449              		.fpu fpv4-sp-d16
  451              	hci_cmd_resp_wait:
  452              	.LVL30:
- 453              	.LFB1677:
+ 453              	.LFB1423:
  272:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c **** 
  273:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c **** static void TlEvtReceived(TL_EvtPacket_t *hcievt)
  274:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c **** {
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  296:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c **** 
  297:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****   return;
  298:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c **** }
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 16
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 16
 
 
  475              		.loc 1 298 1 view .LVU114
@@ -908,7 +908,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  479              	.L37:
  480 0010 00000000 		.word	.LANCHOR4
  481              		.cfi_endproc
- 482              	.LFE1677:
+ 482              	.LFE1423:
  484              		.section	.text.hci_send_req,"ax",%progbits
  485              		.align	1
  486              		.global	hci_send_req
@@ -918,7 +918,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  490              		.fpu fpv4-sp-d16
  492              	hci_send_req:
  493              	.LVL31:
- 494              	.LFB1672:
+ 494              	.LFB1418:
  152:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****   (void)(async);
  495              		.loc 1 152 1 is_stmt 1 view -0
  496              		.cfi_startproc
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  521              	.LVL32:
  161:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****   local_cmd_status = HCI_TL_CmdBusy;
  522              		.loc 1 161 3 is_stmt 0 view .LVU125
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 17
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 17
 
 
  523 0008 FFF7FEFF 		bl	NotifyCmdStatus
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  180:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****         {
  562              		.loc 1 180 9 view .LVU141
  180:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****         {
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 18
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 18
 
 
  563              		.loc 1 180 33 is_stmt 0 view .LVU142
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  194:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****         {
  602              		.loc 1 194 11 view .LVU158
  603 005e AB42     		cmp	r3, r5
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 19
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 19
 
 
  604 0060 08D0     		beq	.L54
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  643              		.loc 1 197 23 view .LVU173
  644 0082 7A61     		str	r2, [r7, #20]
  645              	.LVL48:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 20
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 20
 
 
  198:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****         }
@@ -1182,7 +1182,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  677              	.L55:
  678 00a0 00000000 		.word	.LANCHOR1
  679              		.cfi_endproc
- 680              	.LFE1672:
+ 680              	.LFE1418:
  682              		.section	.text.hci_cmd_resp_release,"ax",%progbits
  683              		.align	1
  684              		.weak	hci_cmd_resp_release
@@ -1192,13 +1192,13 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  688              		.fpu fpv4-sp-d16
  690              	hci_cmd_resp_release:
  691              	.LVL55:
- 692              	.LFB1678:
+ 692              	.LFB1424:
  299:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c **** 
  300:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c **** __WEAK void hci_cmd_resp_release(uint32_t flag)
  301:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c **** {
  693              		.loc 1 301 1 is_stmt 1 view -0
  694              		.cfi_startproc
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 21
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 21
 
 
  695              		@ args = 0, pretend = 0, frame = 0
@@ -1224,7 +1224,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  709              	.L58:
  710 0008 00000000 		.word	.LANCHOR4
  711              		.cfi_endproc
- 712              	.LFE1678:
+ 712              	.LFE1424:
  714              		.section	.text.TlEvtReceived,"ax",%progbits
  715              		.align	1
  716              		.syntax unified
@@ -1233,7 +1233,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  719              		.fpu fpv4-sp-d16
  721              	TlEvtReceived:
  722              	.LVL56:
- 723              	.LFB1676:
+ 723              	.LFB1422:
  274:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****   if ( ((hcievt->evtserial.evt.evtcode) == TL_BLEEVT_CS_OPCODE) || ((hcievt->evtserial.evt.evtcode)
  724              		.loc 1 274 1 is_stmt 1 view -0
  725              		.cfi_startproc
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  740 0008 DBB2     		uxtb	r3, r3
  275:Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.c ****   {
  741              		.loc 1 275 6 view .LVU192
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 22
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 22
 
 
  742 000a 012B     		cmp	r3, #1
@@ -1305,7 +1305,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  775 002c 04000000 		.word	.LANCHOR2+4
  776 0030 00000000 		.word	.LANCHOR1
  777              		.cfi_endproc
- 778              	.LFE1676:
+ 778              	.LFE1422:
  780              		.global	UserEventFlow
  781              		.section	.bss.CmdRspStatusFlag,"aw",%nobits
  782              		.set	.LANCHOR4,. + 0
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  793 0000 00000000 		.space	8
  793      00000000 
  794              		.section	.bss.StatusNotCallBackFunction,"aw",%nobits
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 23
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 23
 
 
  795              		.align	2
@@ -1361,62 +1361,60 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 1
  839              		.file 12 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_flash.h"
  840              		.file 13 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_uart.h"
  841              		.file 14 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h"
- 842              		.file 15 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_usart.h"
- 843              		.file 16 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_lpuart.h"
- 844              		.file 17 "Core/Inc/app_conf.h"
- 845              		.file 18 "Middlewares/ST/STM32_WPAN/ble/core/template/ble_const.h"
- 846              		.file 19 "Middlewares/ST/STM32_WPAN/utilities/stm_list.h"
- 847              		.file 20 "Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/tl.h"
- 848              		.file 21 "Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.h"
- 849              		.file 22 "<built-in>"
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s 			page 24
+ 842              		.file 15 "Core/Inc/app_conf.h"
+ 843              		.file 16 "Middlewares/ST/STM32_WPAN/ble/core/template/ble_const.h"
+ 844              		.file 17 "Middlewares/ST/STM32_WPAN/utilities/stm_list.h"
+ 845              		.file 18 "Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/tl.h"
+ 846              		.file 19 "Middlewares/ST/STM32_WPAN/interface/patterns/ble_thread/tl/hci_tl.h"
+ 847              		.file 20 "<built-in>"
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s 			page 24
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 hci_tl.c
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:18     .text.NotifyCmdStatus:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:25     .text.NotifyCmdStatus:0000000000000000 NotifyCmdStatus
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:74     .text.NotifyCmdStatus:000000000000001c $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:79     .text.TlInit:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:85     .text.TlInit:0000000000000000 TlInit
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:152    .text.TlInit:0000000000000030 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:721    .text.TlEvtReceived:0000000000000000 TlEvtReceived
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:160    .text.SendCmd:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:166    .text.SendCmd:0000000000000000 SendCmd
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:215    .text.SendCmd:0000000000000028 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:221    .text.hci_init:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:228    .text.hci_init:0000000000000000 hci_init
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:270    .text.hci_init:000000000000001c $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:276    .text.hci_user_evt_proc:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:283    .text.hci_user_evt_proc:0000000000000000 hci_user_evt_proc
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:399    .text.hci_user_evt_proc:0000000000000074 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:406    .text.hci_resume_flow:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:413    .text.hci_resume_flow:0000000000000000 hci_resume_flow
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:439    .text.hci_resume_flow:0000000000000010 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:444    .text.hci_cmd_resp_wait:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:451    .text.hci_cmd_resp_wait:0000000000000000 hci_cmd_resp_wait
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:480    .text.hci_cmd_resp_wait:0000000000000010 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:485    .text.hci_send_req:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:492    .text.hci_send_req:0000000000000000 hci_send_req
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:678    .text.hci_send_req:00000000000000a0 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:683    .text.hci_cmd_resp_release:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:690    .text.hci_cmd_resp_release:0000000000000000 hci_cmd_resp_release
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:710    .text.hci_cmd_resp_release:0000000000000008 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:715    .text.TlEvtReceived:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:775    .text.TlEvtReceived:000000000000002c $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:821    BLE_DRIVER_CONTEXT:000000000000000c UserEventFlow
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:785    .bss.CmdRspStatusFlag:0000000000000000 CmdRspStatusFlag
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:786    .bss.CmdRspStatusFlag:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:788    .bss.HciCmdEventQueue:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:792    .bss.HciCmdEventQueue:0000000000000000 HciCmdEventQueue
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:795    .bss.StatusNotCallBackFunction:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:799    .bss.StatusNotCallBackFunction:0000000000000000 StatusNotCallBackFunction
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:802    .bss.hciContext:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:806    .bss.hciContext:0000000000000000 hciContext
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:809    BLE_DRIVER_CONTEXT:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:813    BLE_DRIVER_CONTEXT:0000000000000000 pCmdBuffer
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:817    BLE_DRIVER_CONTEXT:0000000000000004 HciAsynchEventQueue
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccbTcfAc.s:825    BLE_DRIVER_CONTEXT:000000000000000d hci_timer_id
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:18     .text.NotifyCmdStatus:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:25     .text.NotifyCmdStatus:0000000000000000 NotifyCmdStatus
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:74     .text.NotifyCmdStatus:000000000000001c $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:79     .text.TlInit:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:85     .text.TlInit:0000000000000000 TlInit
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:152    .text.TlInit:0000000000000030 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:721    .text.TlEvtReceived:0000000000000000 TlEvtReceived
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:160    .text.SendCmd:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:166    .text.SendCmd:0000000000000000 SendCmd
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:215    .text.SendCmd:0000000000000028 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:221    .text.hci_init:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:228    .text.hci_init:0000000000000000 hci_init
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:270    .text.hci_init:000000000000001c $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:276    .text.hci_user_evt_proc:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:283    .text.hci_user_evt_proc:0000000000000000 hci_user_evt_proc
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:399    .text.hci_user_evt_proc:0000000000000074 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:406    .text.hci_resume_flow:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:413    .text.hci_resume_flow:0000000000000000 hci_resume_flow
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:439    .text.hci_resume_flow:0000000000000010 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:444    .text.hci_cmd_resp_wait:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:451    .text.hci_cmd_resp_wait:0000000000000000 hci_cmd_resp_wait
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:480    .text.hci_cmd_resp_wait:0000000000000010 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:485    .text.hci_send_req:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:492    .text.hci_send_req:0000000000000000 hci_send_req
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:678    .text.hci_send_req:00000000000000a0 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:683    .text.hci_cmd_resp_release:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:690    .text.hci_cmd_resp_release:0000000000000000 hci_cmd_resp_release
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:710    .text.hci_cmd_resp_release:0000000000000008 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:715    .text.TlEvtReceived:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:775    .text.TlEvtReceived:000000000000002c $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:821    BLE_DRIVER_CONTEXT:000000000000000c UserEventFlow
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:785    .bss.CmdRspStatusFlag:0000000000000000 CmdRspStatusFlag
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:786    .bss.CmdRspStatusFlag:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:788    .bss.HciCmdEventQueue:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:792    .bss.HciCmdEventQueue:0000000000000000 HciCmdEventQueue
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:795    .bss.StatusNotCallBackFunction:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:799    .bss.StatusNotCallBackFunction:0000000000000000 StatusNotCallBackFunction
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:802    .bss.hciContext:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:806    .bss.hciContext:0000000000000000 hciContext
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:809    BLE_DRIVER_CONTEXT:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:813    BLE_DRIVER_CONTEXT:0000000000000000 pCmdBuffer
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:817    BLE_DRIVER_CONTEXT:0000000000000004 HciAsynchEventQueue
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXS5m63.s:825    BLE_DRIVER_CONTEXT:000000000000000d hci_timer_id
 
 UNDEFINED SYMBOLS
 LST_init_head

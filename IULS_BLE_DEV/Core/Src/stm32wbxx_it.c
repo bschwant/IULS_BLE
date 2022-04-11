@@ -65,6 +65,7 @@ extern DMA_HandleTypeDef hdma_usart1_tx;
 extern UART_HandleTypeDef hlpuart1;
 extern UART_HandleTypeDef huart1;
 extern RTC_HandleTypeDef hrtc;
+extern TIM_HandleTypeDef htim2;
 /* USER CODE BEGIN EV */
 // extern UART_HandleTypeDef huart1;
 // extern UART_HandleTypeDef hlpuart1;
@@ -238,37 +239,33 @@ void DMA1_Channel4_IRQHandler(void)
 }
 
 /**
+  * @brief This function handles TIM2 global interrupt.
+  */
+void TIM2_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM2_IRQn 0 */
+
+  /* USER CODE END TIM2_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim2);
+  /* USER CODE BEGIN TIM2_IRQn 1 */
+
+  /* USER CODE END TIM2_IRQn 1 */
+}
+
+/**
   * @brief This function handles USART1 global interrupt.
   */
 void USART1_IRQHandler(void)
 {
   /* USER CODE BEGIN USART1_IRQn 0 */
-  // uint8_t ch;
-  // printf("\r\nhere:%c", ch);
-  // ch = getchar();
-  // if (enqueue(&rx_queue,ch)) {
-  //   dequeue(&rx_queue);
-  //   enqueue(&rx_queue,ch);
-  // }
- if(LL_USART_IsActiveFlag_RXNE(USART1) && LL_USART_IsEnabledIT_RXNE(USART1))
-  {
-    /* RXNE flag will be cleared by reading of RDR register (done in call) */
-    /* Call function in charge of handling Character reception */
-    UART_CharReception_Callback();
-    // uint8_t ch;
-    // ch = getchar();
-    // putchar(ch);
-    // uint8_t temp = LL_USART_ReceiveData8(USART1);
-    // putchar(temp);
-    // if (enqueue(&rx_queue,ch)) {
-    //   dequeue(&rx_queue);
-    //   enqueue(&rx_queue,ch);
-    // }
+  if(LL_USART_IsActiveFlag_RXNE(USART1) && LL_USART_IsEnabledIT_RXNE(USART1)){
+      /* RXNE flag will be cleared by reading of RDR register (done in call) */
+      /* Call function in charge of handling Character reception */
+      UART_CharReception_Callback();
   }
-  if(LL_USART_IsEnabledIT_ERROR(USART1) && LL_USART_IsActiveFlag_NE(USART1))
-  {
-    /* Call Error function */
-    UART_Error_Callback();
+  if(LL_USART_IsEnabledIT_ERROR(USART1) && LL_USART_IsActiveFlag_NE(USART1)){
+      /* Call Error function */
+      UART_Error_Callback();
   }
    
   /* USER CODE END USART1_IRQn 0 */

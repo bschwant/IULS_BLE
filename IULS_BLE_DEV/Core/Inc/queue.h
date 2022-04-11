@@ -57,7 +57,7 @@ typedef struct queue {
   uint8_t buffer[QUEUE_SIZE];
 } queue_t;
 
-#endif
+// #endif
 
 
 void init_queue(queue_t *);
@@ -65,4 +65,5 @@ int enqueue(queue_t *, uint8_t );
 uint8_t dequeue(queue_t *);            
 int queue_empty(queue_t *);            
 
+#endif
 /* queue.h ends here */

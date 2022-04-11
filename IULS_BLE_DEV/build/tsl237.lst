@@ -1,0 +1,221 @@
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccpIzTad.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"tsl237.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.rodata.tsl237_command.str1.4,"aMS",%progbits,1
+  18              		.align	2
+  19              	.LC0:
+  20 0000 4E4F4B0A 		.ascii	"NOK\012\015\000"
+  20      0D00
+  21              		.global	__aeabi_f2d
+  22 0006 0000     		.align	2
+  23              	.LC1:
+  24 0008 25302E33 		.ascii	"%0.3f hz\012\015\000"
+  24      6620687A 
+  24      0A0D00
+  25 0013 00       		.align	2
+  26              	.LC2:
+  27 0014 4F4B0A0D 		.ascii	"OK\012\015\000"
+  27      00
+  28              		.section	.text.tsl237_command,"ax",%progbits
+  29              		.align	1
+  30              		.global	tsl237_command
+  31              		.arch armv7e-m
+  32              		.syntax unified
+  33              		.thumb
+  34              		.thumb_func
+  35              		.fpu fpv4-sp-d16
+  37              	tsl237_command:
+  38              	.LVL0:
+  39              	.LFB1823:
+  40              		.file 1 "Core/Src/tsl237.c"
+   1:Core/Src/tsl237.c **** /* tsl237.c
+   2:Core/Src/tsl237.c ****  * Description: Function to capture the period of the tsl237 light sensor
+   3:Core/Src/tsl237.c ****  *
+   4:Core/Src/tsl237.c ****  * Author: Bryce Himebaugh and Brian Schwantes
+   5:Core/Src/tsl237.c ****  * Contact: bhimebau@indiana.edu | bschwant@iu.edu
+   6:Core/Src/tsl237.c ****  *
+   7:Core/Src/tsl237.c ****  */
+   8:Core/Src/tsl237.c **** 
+   9:Core/Src/tsl237.c **** #include "main.h"
+  10:Core/Src/tsl237.c **** #include <string.h>
+  11:Core/Src/tsl237.c **** #include <stdio.h>
+  12:Core/Src/tsl237.c **** #include "tsl237.h"
+  13:Core/Src/tsl237.c **** 
+  14:Core/Src/tsl237.c **** extern uint32_t period;
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccpIzTad.s 			page 2
+
+
+  15:Core/Src/tsl237.c **** extern TIM_HandleTypeDef htim2;
+  16:Core/Src/tsl237.c **** 
+  17:Core/Src/tsl237.c **** void tsl237_command(char *arguments) {
+  41              		.loc 1 17 38 view -0
+  42              		.cfi_startproc
+  43              		@ args = 0, pretend = 0, frame = 0
+  44              		@ frame_needed = 0, uses_anonymous_args = 0
+  45              		.loc 1 17 38 is_stmt 0 view .LVU1
+  46 0000 08B5     		push	{r3, lr}
+  47              	.LCFI0:
+  48              		.cfi_def_cfa_offset 8
+  49              		.cfi_offset 3, -8
+  50              		.cfi_offset 14, -4
+  18:Core/Src/tsl237.c **** 
+  19:Core/Src/tsl237.c ****   // HAL_TIM_Base_Start_IT(&htim2);   // Turn on the IRQ in the timer
+  20:Core/Src/tsl237.c ****   // HAL_TIM_IC_Start_IT(&htim2,TIM_CHANNEL_1); // Turn on the IRQ for CH1 input capture
+  21:Core/Src/tsl237.c ****   // HAL_TIM_IC_Start_IT(&htim2,TIM_CHANNEL_1); // Turn on the IRQ for CH1 input capture
+  22:Core/Src/tsl237.c ****   float clock_period;
+  51              		.loc 1 22 3 is_stmt 1 view .LVU2
+  23:Core/Src/tsl237.c ****   float sensor_period;
+  52              		.loc 1 23 3 view .LVU3
+  24:Core/Src/tsl237.c ****   float sensor_frequency;
+  53              		.loc 1 24 3 view .LVU4
+  25:Core/Src/tsl237.c ****   
+  26:Core/Src/tsl237.c ****   if (arguments) {
+  54              		.loc 1 26 3 view .LVU5
+  55              		.loc 1 26 6 is_stmt 0 view .LVU6
+  56 0002 18B1     		cbz	r0, .L2
+  27:Core/Src/tsl237.c ****     printf("NOK\n\r");
+  57              		.loc 1 27 5 is_stmt 1 view .LVU7
+  58 0004 1148     		ldr	r0, .L5
+  59              	.LVL1:
+  60              		.loc 1 27 5 is_stmt 0 view .LVU8
+  61 0006 FFF7FEFF 		bl	printf
+  62              	.LVL2:
+  63              	.L1:
+  28:Core/Src/tsl237.c ****   }
+  29:Core/Src/tsl237.c ****   else {
+  30:Core/Src/tsl237.c ****     clock_period = SystemCoreClock;
+  31:Core/Src/tsl237.c ****     clock_period = 1/clock_period;
+  32:Core/Src/tsl237.c ****     sensor_period = clock_period * (float) period;
+  33:Core/Src/tsl237.c ****     sensor_frequency = 1/sensor_period;
+  34:Core/Src/tsl237.c ****     printf("%0.3f hz\n\r", sensor_frequency);
+  35:Core/Src/tsl237.c ****     printf("OK\n\r");
+  36:Core/Src/tsl237.c ****   }
+  37:Core/Src/tsl237.c **** 
+  38:Core/Src/tsl237.c ****   // HAL_TIM_IC_Stop_IT(&htim2, TIM_CHANNEL_1);
+  39:Core/Src/tsl237.c **** }...
+  64              		.loc 1 39 1 view .LVU9
+  65 000a 08BD     		pop	{r3, pc}
+  66              	.LVL3:
+  67              	.L2:
+  30:Core/Src/tsl237.c ****     clock_period = SystemCoreClock;
+  68              		.loc 1 30 5 is_stmt 1 view .LVU10
+  30:Core/Src/tsl237.c ****     clock_period = SystemCoreClock;
+  69              		.loc 1 30 18 is_stmt 0 view .LVU11
+  70 000c 104B     		ldr	r3, .L5+4
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccpIzTad.s 			page 3
+
+
+  71 000e 93ED007A 		vldr.32	s14, [r3]	@ int
+  72 0012 B8EE477A 		vcvt.f32.u32	s14, s14
+  73              	.LVL4:
+  31:Core/Src/tsl237.c ****     clock_period = 1/clock_period;
+  74              		.loc 1 31 5 is_stmt 1 view .LVU12
+  31:Core/Src/tsl237.c ****     clock_period = 1/clock_period;
+  75              		.loc 1 31 18 is_stmt 0 view .LVU13
+  76 0016 F7EE006A 		vmov.f32	s13, #1.0e+0
+  77 001a 86EE876A 		vdiv.f32	s12, s13, s14
+  78              	.LVL5:
+  32:Core/Src/tsl237.c ****     sensor_period = clock_period * (float) period;
+  79              		.loc 1 32 5 is_stmt 1 view .LVU14
+  32:Core/Src/tsl237.c ****     sensor_period = clock_period * (float) period;
+  80              		.loc 1 32 36 is_stmt 0 view .LVU15
+  81 001e 0D4B     		ldr	r3, .L5+8
+  82 0020 D3ED007A 		vldr.32	s15, [r3]	@ int
+  83 0024 F8EE677A 		vcvt.f32.u32	s15, s15
+  32:Core/Src/tsl237.c ****     sensor_period = clock_period * (float) period;
+  84              		.loc 1 32 19 view .LVU16
+  85 0028 67EE867A 		vmul.f32	s15, s15, s12
+  86              	.LVL6:
+  33:Core/Src/tsl237.c ****     sensor_frequency = 1/sensor_period;
+  87              		.loc 1 33 5 is_stmt 1 view .LVU17
+  34:Core/Src/tsl237.c ****     printf("%0.3f hz\n\r", sensor_frequency);
+  88              		.loc 1 34 5 view .LVU18
+  89 002c C6EEA77A 		vdiv.f32	s15, s13, s15
+  90              	.LVL7:
+  34:Core/Src/tsl237.c ****     printf("%0.3f hz\n\r", sensor_frequency);
+  91              		.loc 1 34 5 is_stmt 0 view .LVU19
+  92 0030 17EE900A 		vmov	r0, s15
+  93              	.LVL8:
+  34:Core/Src/tsl237.c ****     printf("%0.3f hz\n\r", sensor_frequency);
+  94              		.loc 1 34 5 view .LVU20
+  95 0034 FFF7FEFF 		bl	__aeabi_f2d
+  96              	.LVL9:
+  34:Core/Src/tsl237.c ****     printf("%0.3f hz\n\r", sensor_frequency);
+  97              		.loc 1 34 5 view .LVU21
+  98 0038 0246     		mov	r2, r0
+  99 003a 0B46     		mov	r3, r1
+ 100 003c 0648     		ldr	r0, .L5+12
+ 101 003e FFF7FEFF 		bl	printf
+ 102              	.LVL10:
+  35:Core/Src/tsl237.c ****     printf("OK\n\r");
+ 103              		.loc 1 35 5 is_stmt 1 view .LVU22
+ 104 0042 0648     		ldr	r0, .L5+16
+ 105 0044 FFF7FEFF 		bl	printf
+ 106              	.LVL11:
+ 107              		.loc 1 39 1 is_stmt 0 view .LVU23
+ 108 0048 DFE7     		b	.L1
+ 109              	.L6:
+ 110 004a 00BF     		.align	2
+ 111              	.L5:
+ 112 004c 00000000 		.word	.LC0
+ 113 0050 00000000 		.word	SystemCoreClock
+ 114 0054 00000000 		.word	period
+ 115 0058 08000000 		.word	.LC1
+ 116 005c 14000000 		.word	.LC2
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccpIzTad.s 			page 4
+
+
+ 117              		.cfi_endproc
+ 118              	.LFE1823:
+ 120              		.text
+ 121              	.Letext0:
+ 122              		.file 2 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
+ 123              		.file 3 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
+ 124              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
+ 125              		.file 5 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/system_stm32wbxx.h"
+ 126              		.file 6 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wb55xx.h"
+ 127              		.file 7 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_def.h"
+ 128              		.file 8 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_dma.h"
+ 129              		.file 9 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_flash.h"
+ 130              		.file 10 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_tim.h"
+ 131              		.file 11 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_uart.h"
+ 132              		.file 12 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h"
+ 133              		.file 13 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/lock.h
+ 134              		.file 14 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_types
+ 135              		.file 15 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
+ 136              		.file 16 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/reent.
+ 137              		.file 17 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
+ 138              		.file 18 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_usart.h"
+ 139              		.file 19 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_lpuart.h"
+ 140              		.file 20 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdio.h"
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccpIzTad.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 tsl237.c
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccpIzTad.s:18     .rodata.tsl237_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccpIzTad.s:29     .text.tsl237_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccpIzTad.s:37     .text.tsl237_command:0000000000000000 tsl237_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccpIzTad.s:112    .text.tsl237_command:000000000000004c $d
+
+UNDEFINED SYMBOLS
+__aeabi_f2d
+printf
+SystemCoreClock
+period
