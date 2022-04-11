@@ -69,6 +69,7 @@ command_t commands[] = {
   {"data",data_command},
   {"time",time_command},
   {"flash_info",flash_info_command},
+  {"st", create_sample_time},
   {0,0}
 };
 
@@ -190,12 +191,12 @@ int execute_command(uint8_t * line) {
     p++;
   }
   if (success) {
-    printf("OK: execute_command\r\n");
+    // printf("OK: execute_command\r\n");
     // prompt();
     return (0);
   }
   else {
-    printf("NOK: execute_command\r\n");
+    // printf("NOK: execute_command\r\n");
     // prompt();
     return (-1);
   }

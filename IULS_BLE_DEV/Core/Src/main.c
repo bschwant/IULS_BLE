@@ -25,7 +25,8 @@
 #include "retarget.h"
 #include "command.h"
 #include "dbg_trace.h"
-// #include <stm32wbxx_ll_usart.h>
+#include <stm32wbxx_ll_usart.h>
+#include "retarget.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -57,8 +58,6 @@ RNG_HandleTypeDef hrng;
 
 RTC_HandleTypeDef hrtc;
 
-
-
 /* USER CODE BEGIN PV */
 queue_t rx_queue;
 int complete_command_flag;
@@ -83,11 +82,9 @@ static void MX_RNG_Init(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
-
-// Flag for for complete command
+/* USER CODE BEGIN 0 */
 
 /* USER CODE END 0 */
-
 
 /**
   * @brief  The application entry point.
@@ -135,6 +132,22 @@ int main(void)
   MX_RTC_Init();
   MX_RNG_Init();
   /* USER CODE BEGIN 2 */
+  /*
+   Check if debug messages are set to 1, defined in main.h
+
+   Retarget UART if not and call init function
+  */
+  if(USER_PRINT_DEBUG_MSG == 0) {
+    MX_USART1_UART_Init();
+    // RetargetInit(&huart1);
+    LL_USART_EnableIT_RXNE(&huart1);
+
+    // RetargetInit
+  }
+  // else {
+  //   LL_USART_EnableIT_RXNE(USART1);
+  //   LL_USART_EnableIT_ERROR(USART1);
+  // }
   // RetargetInit(&huart1);
   // printf("\r\n\r\nIU Light Sensor System Running\r\n");
 
@@ -143,7 +156,6 @@ int main(void)
   /* Init code for STM32_WPAN */
   MX_APPE_Init();
   /* Infinite loop */
-
   /* USER CODE BEGIN WHILE */
 
   // Send command bufferand command index to all 0
@@ -164,6 +176,7 @@ int main(void)
   {
     /* USER CODE END WHILE */
     MX_APPE_Process();
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -230,7 +243,7 @@ void PeriphCommonClock_Config(void)
   */
   PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_SMPS|RCC_PERIPHCLK_RFWAKEUP;
   PeriphClkInitStruct.RFWakeUpClockSelection = RCC_RFWKPCLKSOURCE_LSE;
-  PeriphClkInitStruct.SmpsClockSelection = RCC_SMPSCLKSOURCE_HSE;
+  PeriphClkInitStruct.SmpsClockSelection = RCC_SMPSCLKSOURCE_HSI;
   PeriphClkInitStruct.SmpsDivSelection = RCC_SMPSCLKDIV_RANGE1;
 
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
@@ -439,6 +452,10 @@ static void MX_RTC_Init(void)
 
   /* USER CODE END RTC_Init 0 */
 
+  RTC_TimeTypeDef sTime = {0};
+  RTC_DateTypeDef sDate = {0};
+  RTC_AlarmTypeDef sAlarm = {0};
+
   /* USER CODE BEGIN RTC_Init 1 */
 
   /* USER CODE END RTC_Init 1 */
@@ -453,6 +470,49 @@ static void MX_RTC_Init(void)
   hrtc.Init.OutPutType = RTC_OUTPUT_TYPE_OPENDRAIN;
   hrtc.Init.OutPutRemap = RTC_OUTPUT_REMAP_NONE;
   if (HAL_RTC_Init(&hrtc) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /* USER CODE BEGIN Check_RTC_BKUP */
+
+  /* USER CODE END Check_RTC_BKUP */
+
+  /** Initialize RTC and set the Time and Date
+  */
+  sTime.Hours = 0x0;
+  sTime.Minutes = 0x0;
+  sTime.Seconds = 0x0;
+  sTime.SubSeconds = 0x0;
+  sTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
+  sTime.StoreOperation = RTC_STOREOPERATION_RESET;
+  if (HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BCD) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sDate.WeekDay = RTC_WEEKDAY_MONDAY;
+  sDate.Month = RTC_MONTH_JANUARY;
+  sDate.Date = 0x1;
+  sDate.Year = 0x0;
+  if (HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BCD) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /** Enable the Alarm A
+  */
+  sAlarm.AlarmTime.Hours = 0x0;
+  sAlarm.AlarmTime.Minutes = 0x0;
+  sAlarm.AlarmTime.Seconds = 0x30;
+  sAlarm.AlarmTime.SubSeconds = 0x0;
+  sAlarm.AlarmTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
+  sAlarm.AlarmTime.StoreOperation = RTC_STOREOPERATION_RESET;
+  sAlarm.AlarmMask = RTC_ALARMMASK_DATEWEEKDAY|RTC_ALARMMASK_HOURS
+                              |RTC_ALARMMASK_MINUTES;
+  sAlarm.AlarmSubSecondMask = RTC_ALARMSUBSECONDMASK_ALL;
+  sAlarm.AlarmDateWeekDaySel = RTC_ALARMDATEWEEKDAYSEL_DATE;
+  sAlarm.AlarmDateWeekDay = 0x1;
+  sAlarm.Alarm = RTC_ALARM_A;
+  if (HAL_RTC_SetAlarm_IT(&hrtc, &sAlarm, RTC_FORMAT_BCD) != HAL_OK)
   {
     Error_Handler();
   }
@@ -501,23 +561,6 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
-  // LL_GPIO_InitTypeDef GPIO_InitStruct = {0};
-
-  // /* GPIO Ports Clock Enable */
-  // LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOC);
-  // LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOB);
-
-  // /**/
-  // LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
-
-  // /**/
-  // GPIO_InitStruct.Pin = LED2_Pin;
-  // GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
-  // GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
-  // GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
-  // GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
-  // LL_GPIO_Init(LED2_GPIO_Port, &GPIO_InitStruct);
-
 
 }
 
@@ -541,7 +584,7 @@ void UART_CharReception_Callback(void)
    
     // UTIL_SEQ_RegTask( 1<<CFG_TASK_EXECUTE_COMAMND, UTIL_SEQ_RFU, ButtonTriggerReceived);
   }
-  else if (ch==0x7f) {               // backspace functionality
+  else if (ch==0x0f) {               // backspace functionality
     if (command_index > 0) { 
       printf("\b \b");
       command_index--;

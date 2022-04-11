@@ -69,6 +69,7 @@ typedef struct
   void Custom_APP_Notification( Custom_App_ConnHandle_Not_evt_t *pNotification );
 /* USER CODE BEGIN EF */
   void send_data(void);
+  int read_data_records_ble(flash_status_t *);
 /* USER CODE END EF */
 
 #ifdef __cplusplus

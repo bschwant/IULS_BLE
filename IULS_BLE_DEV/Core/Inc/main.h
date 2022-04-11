@@ -31,20 +31,27 @@ extern "C" {
 #include "app_conf.h"
 #include "app_entry.h"
 #include "app_common.h"
+
+/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
 #include "stm32wbxx_ll_usart.h"
 #include "stm32wbxx_ll_lpuart.h"
 #include "stm32wbxx_ll_gpio.h"
 #include "stm32wbxx_hal_flash.h"
-
-
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
 #include "flash.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-
+/*****
+ * 
+ * 
+ *      CUSTOM DEBUG MESSAGE TOGGLE
+ * 
+ * 
+ */
+#define USER_PRINT_DEBUG_MSG        1
+/**
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
@@ -76,7 +83,7 @@ void   MX_USART1_UART_Init(void);
 /**
  * Variable to print debug messages or not
  **/
-#define PRINT_DEBUG_TEMP           1
+// #define USER_PRINT_DEBUG_MSG         1
 /* Size of Reception buffer */
 #define RXBUFFERSIZE                      10
 #define LED2_Pin LL_GPIO_PIN_0
@@ -92,11 +99,6 @@ void   MX_USART1_UART_Init(void);
                                                                  1 bit  for subpriority */
 #define NVIC_PRIORITYGROUP_4         ((uint32_t)0x00000003) /*!< 4 bits for pre-emption priority,
                                                                  0 bit  for subpriority */
-#endif
-/* USER CODE END Private defines */
-
-#ifdef __cplusplus
-}
 #endif
 #define ADDR_FLASH_PAGE_0     ((uint32_t)0x08000000) /* Base @ of Page 0, 2 Kbytes */
 #define ADDR_FLASH_PAGE_1     ((uint32_t)0x08000800) /* Base @ of Page 1, 2 Kbytes */
@@ -258,6 +260,10 @@ void   MX_USART1_UART_Init(void);
 #define ADDR_FLASH_PAGE_157   ((uint32_t)0x0804E800) /* Base @ of Page 157, 2 Kbytes */
 #define ADDR_FLASH_PAGE_158   ((uint32_t)0x0804F000) /* Base @ of Page 158, 2 Kbytes */
 #define ADDR_FLASH_PAGE_159   ((uint32_t)0x0804F800) /* Base @ of Page 159, 2 Kbytes */
-    
+/* USER CODE END Private defines */
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* __MAIN_H */

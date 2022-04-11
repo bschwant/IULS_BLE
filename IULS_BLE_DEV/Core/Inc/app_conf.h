@@ -26,6 +26,7 @@
 #include "hw_conf.h"
 #include "hw_if.h"
 #include "ble_bufsize.h"
+#include "main.h"
 
 /******************************************************************************
  * Application Config
@@ -492,6 +493,15 @@ typedef enum
  */
 #define CFG_HW_RESET_BY_FW         1
 
+
+// /*****
+//  * 
+//  * 
+//  *      CUSTOM DEBUG MESSAGE TOGGLE
+//  * 
+//  * 
+//  */
+// #define USER_PRINT_DEBUG_MSG        1
 /**
  * keep debugger enabled while in any low power mode when set to 1
  * should be set to 0 in production
@@ -501,7 +511,7 @@ typedef enum
 /**
  * When set to 1, the traces are enabled in the BLE services
  */
-#define CFG_DEBUG_BLE_TRACE     1
+#define CFG_DEBUG_BLE_TRACE     0
 
 /**
  * Enable or Disable traces in application
@@ -516,6 +526,8 @@ typedef enum
 
 #if ( (CFG_DEBUG_BLE_TRACE != 0) || (CFG_DEBUG_APP_TRACE != 0) )
 #define CFG_DEBUG_TRACE             1
+// #define CFG_DEBUG_TRACE             USER_PRINT_DEBUG_MSG
+
 #endif
 
 #if (CFG_DEBUG_TRACE != 0)
@@ -532,8 +544,8 @@ typedef enum
  * When both are set to 0, no trace are output
  * When both are set to 1,  CFG_DEBUG_TRACE_FULL is selected
  */
-#define CFG_DEBUG_TRACE_LIGHT     1
-#define CFG_DEBUG_TRACE_FULL      1
+#define CFG_DEBUG_TRACE_LIGHT     0
+#define CFG_DEBUG_TRACE_FULL      0
 
 #if (( CFG_DEBUG_TRACE != 0 ) && ( CFG_DEBUG_TRACE_LIGHT == 0 ) && (CFG_DEBUG_TRACE_FULL == 0))
 #undef CFG_DEBUG_TRACE_FULL

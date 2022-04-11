@@ -1,0 +1,1021 @@
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"custom_app.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.Custom_Indication_char_Update_Char,"ax",%progbits
+  18              		.align	1
+  19              		.arch armv7e-m
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu fpv4-sp-d16
+  25              	Custom_Indication_char_Update_Char:
+  26              	.LFB1672:
+  27              		.file 1 "STM32_WPAN/App/custom_app.c"
+   1:STM32_WPAN/App/custom_app.c **** /* USER CODE BEGIN Header */
+   2:STM32_WPAN/App/custom_app.c **** /**
+   3:STM32_WPAN/App/custom_app.c ****   ******************************************************************************
+   4:STM32_WPAN/App/custom_app.c ****   * @file    App/custom_app.c
+   5:STM32_WPAN/App/custom_app.c ****   * @author  MCD Application Team
+   6:STM32_WPAN/App/custom_app.c ****   * @brief   Custom Example Application (Server)
+   7:STM32_WPAN/App/custom_app.c ****   ******************************************************************************
+   8:STM32_WPAN/App/custom_app.c ****   * @attention
+   9:STM32_WPAN/App/custom_app.c ****   *
+  10:STM32_WPAN/App/custom_app.c ****   * Copyright (c) 2022 STMicroelectronics.
+  11:STM32_WPAN/App/custom_app.c ****   * All rights reserved.
+  12:STM32_WPAN/App/custom_app.c ****   *
+  13:STM32_WPAN/App/custom_app.c ****   * This software is licensed under terms that can be found in the LICENSE file
+  14:STM32_WPAN/App/custom_app.c ****   * in the root directory of this software component.
+  15:STM32_WPAN/App/custom_app.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  16:STM32_WPAN/App/custom_app.c ****   *
+  17:STM32_WPAN/App/custom_app.c ****   ******************************************************************************
+  18:STM32_WPAN/App/custom_app.c ****   */
+  19:STM32_WPAN/App/custom_app.c **** /* USER CODE END Header */
+  20:STM32_WPAN/App/custom_app.c **** 
+  21:STM32_WPAN/App/custom_app.c **** /* Includes ------------------------------------------------------------------*/
+  22:STM32_WPAN/App/custom_app.c **** #include "main.h"
+  23:STM32_WPAN/App/custom_app.c **** #include "app_common.h"
+  24:STM32_WPAN/App/custom_app.c **** #include "dbg_trace.h"
+  25:STM32_WPAN/App/custom_app.c **** #include "ble.h"
+  26:STM32_WPAN/App/custom_app.c **** #include "custom_app.h"
+  27:STM32_WPAN/App/custom_app.c **** #include "custom_stm.h"
+  28:STM32_WPAN/App/custom_app.c **** #include "stm32_seq.h"
+  29:STM32_WPAN/App/custom_app.c **** 
+  30:STM32_WPAN/App/custom_app.c **** /* Private includes ----------------------------------------------------------*/
+  31:STM32_WPAN/App/custom_app.c **** /* USER CODE BEGIN Includes */
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s 			page 2
+
+
+  32:STM32_WPAN/App/custom_app.c **** #include <time.h>
+  33:STM32_WPAN/App/custom_app.c **** #include <string.h>
+  34:STM32_WPAN/App/custom_app.c **** 
+  35:STM32_WPAN/App/custom_app.c **** uint8_t payload[8];
+  36:STM32_WPAN/App/custom_app.c **** extern flash_status_t flash_status;
+  37:STM32_WPAN/App/custom_app.c **** /* USER CODE END Includes */
+  38:STM32_WPAN/App/custom_app.c **** 
+  39:STM32_WPAN/App/custom_app.c **** /* Private typedef -----------------------------------------------------------*/
+  40:STM32_WPAN/App/custom_app.c **** typedef struct
+  41:STM32_WPAN/App/custom_app.c **** {
+  42:STM32_WPAN/App/custom_app.c ****   /* IULS_BLE_Service */
+  43:STM32_WPAN/App/custom_app.c ****   uint8_t               Indication_char_Indication_Status;
+  44:STM32_WPAN/App/custom_app.c ****   /* USER CODE BEGIN CUSTOM_APP_Context_t */
+  45:STM32_WPAN/App/custom_app.c **** 
+  46:STM32_WPAN/App/custom_app.c ****   /* USER CODE END CUSTOM_APP_Context_t */
+  47:STM32_WPAN/App/custom_app.c **** 
+  48:STM32_WPAN/App/custom_app.c ****   uint16_t              ConnectionHandle;
+  49:STM32_WPAN/App/custom_app.c **** } Custom_App_Context_t;
+  50:STM32_WPAN/App/custom_app.c **** 
+  51:STM32_WPAN/App/custom_app.c **** /* USER CODE BEGIN PTD */
+  52:STM32_WPAN/App/custom_app.c **** 
+  53:STM32_WPAN/App/custom_app.c **** /* USER CODE END PTD */
+  54:STM32_WPAN/App/custom_app.c **** 
+  55:STM32_WPAN/App/custom_app.c **** /* Private defines ------------------------------------------------------------*/
+  56:STM32_WPAN/App/custom_app.c **** /* USER CODE BEGIN PD */
+  57:STM32_WPAN/App/custom_app.c **** 
+  58:STM32_WPAN/App/custom_app.c **** /* USER CODE END PD */
+  59:STM32_WPAN/App/custom_app.c **** 
+  60:STM32_WPAN/App/custom_app.c **** /* Private macros -------------------------------------------------------------*/
+  61:STM32_WPAN/App/custom_app.c **** /* USER CODE BEGIN PM */
+  62:STM32_WPAN/App/custom_app.c **** 
+  63:STM32_WPAN/App/custom_app.c **** /* USER CODE END PM */
+  64:STM32_WPAN/App/custom_app.c **** 
+  65:STM32_WPAN/App/custom_app.c **** /* Private variables ---------------------------------------------------------*/
+  66:STM32_WPAN/App/custom_app.c **** /**
+  67:STM32_WPAN/App/custom_app.c ****  * START of Section BLE_APP_CONTEXT
+  68:STM32_WPAN/App/custom_app.c ****  */
+  69:STM32_WPAN/App/custom_app.c **** 
+  70:STM32_WPAN/App/custom_app.c **** PLACE_IN_SECTION("BLE_APP_CONTEXT") static Custom_App_Context_t Custom_App_Context;
+  71:STM32_WPAN/App/custom_app.c **** 
+  72:STM32_WPAN/App/custom_app.c **** /**
+  73:STM32_WPAN/App/custom_app.c ****  * END of Section BLE_APP_CONTEXT
+  74:STM32_WPAN/App/custom_app.c ****  */
+  75:STM32_WPAN/App/custom_app.c **** 
+  76:STM32_WPAN/App/custom_app.c **** /* USER CODE BEGIN PV */
+  77:STM32_WPAN/App/custom_app.c **** uint8_t UpdateCharData[247];
+  78:STM32_WPAN/App/custom_app.c **** uint8_t NotifyCharData[247];
+  79:STM32_WPAN/App/custom_app.c **** 
+  80:STM32_WPAN/App/custom_app.c **** uint8_t SecureReadData;
+  81:STM32_WPAN/App/custom_app.c **** 
+  82:STM32_WPAN/App/custom_app.c **** /* USER CODE END PV */
+  83:STM32_WPAN/App/custom_app.c **** 
+  84:STM32_WPAN/App/custom_app.c **** /* Private function prototypes -----------------------------------------------*/
+  85:STM32_WPAN/App/custom_app.c ****   /* IULS_BLE_Service */
+  86:STM32_WPAN/App/custom_app.c **** static void Custom_Indication_char_Update_Char(void);
+  87:STM32_WPAN/App/custom_app.c **** static void Custom_Indication_char_Send_Indication(void);
+  88:STM32_WPAN/App/custom_app.c **** 
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s 			page 3
+
+
+  89:STM32_WPAN/App/custom_app.c **** /* USER CODE BEGIN PFP */
+  90:STM32_WPAN/App/custom_app.c **** 
+  91:STM32_WPAN/App/custom_app.c **** /* USER CODE END PFP */
+  92:STM32_WPAN/App/custom_app.c **** 
+  93:STM32_WPAN/App/custom_app.c **** /* Functions Definition ------------------------------------------------------*/
+  94:STM32_WPAN/App/custom_app.c **** void Custom_STM_App_Notification(Custom_STM_App_Notification_evt_t *pNotification)
+  95:STM32_WPAN/App/custom_app.c **** {
+  96:STM32_WPAN/App/custom_app.c ****   /* USER CODE BEGIN CUSTOM_STM_App_Notification_1 */
+  97:STM32_WPAN/App/custom_app.c ****   memset(payload, NULL, 8);
+  98:STM32_WPAN/App/custom_app.c ****   // strncpy(payload, pNotification->DataTransfered.pPayload, pNotification->DataTransfered.Length)
+  99:STM32_WPAN/App/custom_app.c ****   // payload = pNotification->DataTransfered.pPayload;
+ 100:STM32_WPAN/App/custom_app.c ****   // payload[pNotification->DataTransfered.Length] = '\0';
+ 101:STM32_WPAN/App/custom_app.c **** // /  strncpy()
+ 102:STM32_WPAN/App/custom_app.c ****   
+ 103:STM32_WPAN/App/custom_app.c ****   /* USER CODE END CUSTOM_STM_App_Notification_1 */
+ 104:STM32_WPAN/App/custom_app.c ****   switch(pNotification->Custom_Evt_Opcode)
+ 105:STM32_WPAN/App/custom_app.c ****   {
+ 106:STM32_WPAN/App/custom_app.c ****     APP_DBG_MSG("pNotifcation: in switch");
+ 107:STM32_WPAN/App/custom_app.c ****     /* USER CODE BEGIN CUSTOM_STM_App_Notification_Custom_Evt_Opcode */
+ 108:STM32_WPAN/App/custom_app.c ****     // memset(payload, NULL, 8);
+ 109:STM32_WPAN/App/custom_app.c ****     // strncpy(payload, pNotification->DataTransfered.pPayload, pNotification->DataTransfered.Lengt
+ 110:STM32_WPAN/App/custom_app.c ****     // APP_DBG_MSG("Notifcation recieved: %s\r\n", payload);
+ 111:STM32_WPAN/App/custom_app.c ****     /* USER CODE END CUSTOM_STM_App_Notification_Custom_Evt_Opcode */
+ 112:STM32_WPAN/App/custom_app.c **** 
+ 113:STM32_WPAN/App/custom_app.c ****   /* IULS_BLE_Service */
+ 114:STM32_WPAN/App/custom_app.c ****     case CUSTOM_STM_READ_WRITE_CHAR_READ_EVT:
+ 115:STM32_WPAN/App/custom_app.c ****       /* USER CODE BEGIN CUSTOM_STM_READ_WRITE_CHAR_READ_EVT */
+ 116:STM32_WPAN/App/custom_app.c ****       APP_DBG_MSG("Event: Read from characteristic");
+ 117:STM32_WPAN/App/custom_app.c ****       /* USER CODE END CUSTOM_STM_READ_WRITE_CHAR_READ_EVT */
+ 118:STM32_WPAN/App/custom_app.c ****       break;
+ 119:STM32_WPAN/App/custom_app.c **** 
+ 120:STM32_WPAN/App/custom_app.c ****     case CUSTOM_STM_READ_WRITE_CHAR_WRITE_NO_RESP_EVT:
+ 121:STM32_WPAN/App/custom_app.c ****       /* USER CODE BEGIN CUSTOM_STM_READ_WRITE_CHAR_WRITE_NO_RESP_EVT */
+ 122:STM32_WPAN/App/custom_app.c ****       APP_DBG_MSG("Event recieved: %s\r\n", pNotification->DataTransfered.pPayload);
+ 123:STM32_WPAN/App/custom_app.c ****       uint8_t * command = pNotification->DataTransfered.pPayload;
+ 124:STM32_WPAN/App/custom_app.c **** 
+ 125:STM32_WPAN/App/custom_app.c ****       if(strncmp(command, "data", 4) == 0) {
+ 126:STM32_WPAN/App/custom_app.c ****         read_data_records_ble(&flash_status);
+ 127:STM32_WPAN/App/custom_app.c ****         APP_DBG_MSG("COMMAND: data");
+ 128:STM32_WPAN/App/custom_app.c ****         APP_DBG_MSG("Turning on datasend");
+ 129:STM32_WPAN/App/custom_app.c ****         // P2P_Send_Data()
+ 130:STM32_WPAN/App/custom_app.c ****       }
+ 131:STM32_WPAN/App/custom_app.c **** 
+ 132:STM32_WPAN/App/custom_app.c ****       // APP_DBG_MSG("Event: Write no response");
+ 133:STM32_WPAN/App/custom_app.c ****       // APP_DBG_MSG("Notifcation recieved: %s\r\n", payload);
+ 134:STM32_WPAN/App/custom_app.c ****       // if(strncmp(payload, "data", 4) == 0) {
+ 135:STM32_WPAN/App/custom_app.c ****       //   send_data();
+ 136:STM32_WPAN/App/custom_app.c ****       // }
+ 137:STM32_WPAN/App/custom_app.c ****       /* USER CODE END CUSTOM_STM_READ_WRITE_CHAR_WRITE_NO_RESP_EVT */
+ 138:STM32_WPAN/App/custom_app.c ****       break;
+ 139:STM32_WPAN/App/custom_app.c **** 
+ 140:STM32_WPAN/App/custom_app.c ****     case CUSTOM_STM_INDICATION_CHAR_INDICATE_ENABLED_EVT:
+ 141:STM32_WPAN/App/custom_app.c ****       /* USER CODE BEGIN CUSTOM_STM_INDICATION_CHAR_INDICATE_ENABLED_EVT */
+ 142:STM32_WPAN/App/custom_app.c ****       APP_DBG_MSG("Event: Notifications enabled");
+ 143:STM32_WPAN/App/custom_app.c ****       /* USER CODE END CUSTOM_STM_INDICATION_CHAR_INDICATE_ENABLED_EVT */
+ 144:STM32_WPAN/App/custom_app.c ****       break;
+ 145:STM32_WPAN/App/custom_app.c **** 
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s 			page 4
+
+
+ 146:STM32_WPAN/App/custom_app.c ****     case CUSTOM_STM_INDICATION_CHAR_INDICATE_DISABLED_EVT:
+ 147:STM32_WPAN/App/custom_app.c ****       /* USER CODE BEGIN CUSTOM_STM_INDICATION_CHAR_INDICATE_DISABLED_EVT */
+ 148:STM32_WPAN/App/custom_app.c ****       APP_DBG_MSG("Event: Notifications disabled");
+ 149:STM32_WPAN/App/custom_app.c ****       /* USER CODE END CUSTOM_STM_INDICATION_CHAR_INDICATE_DISABLED_EVT */
+ 150:STM32_WPAN/App/custom_app.c ****       break;
+ 151:STM32_WPAN/App/custom_app.c **** 
+ 152:STM32_WPAN/App/custom_app.c ****     default:
+ 153:STM32_WPAN/App/custom_app.c ****       /* USER CODE BEGIN CUSTOM_STM_App_Notification_default */
+ 154:STM32_WPAN/App/custom_app.c **** 
+ 155:STM32_WPAN/App/custom_app.c ****       /* USER CODE END CUSTOM_STM_App_Notification_default */
+ 156:STM32_WPAN/App/custom_app.c ****       break;
+ 157:STM32_WPAN/App/custom_app.c ****   }
+ 158:STM32_WPAN/App/custom_app.c ****   /* USER CODE BEGIN CUSTOM_STM_App_Notification_2 */
+ 159:STM32_WPAN/App/custom_app.c **** 
+ 160:STM32_WPAN/App/custom_app.c ****   /* USER CODE END CUSTOM_STM_App_Notification_2 */
+ 161:STM32_WPAN/App/custom_app.c ****   return;
+ 162:STM32_WPAN/App/custom_app.c **** }
+ 163:STM32_WPAN/App/custom_app.c **** 
+ 164:STM32_WPAN/App/custom_app.c **** void Custom_APP_Notification(Custom_App_ConnHandle_Not_evt_t *pNotification)
+ 165:STM32_WPAN/App/custom_app.c **** {
+ 166:STM32_WPAN/App/custom_app.c ****   /* USER CODE BEGIN CUSTOM_APP_Notification_1 */
+ 167:STM32_WPAN/App/custom_app.c ****   APP_DBG_MSG("Connection handle event");
+ 168:STM32_WPAN/App/custom_app.c ****   /* USER CODE END CUSTOM_APP_Notification_1 */
+ 169:STM32_WPAN/App/custom_app.c **** 
+ 170:STM32_WPAN/App/custom_app.c ****   switch(pNotification->Custom_Evt_Opcode)
+ 171:STM32_WPAN/App/custom_app.c ****   {
+ 172:STM32_WPAN/App/custom_app.c ****     /* USER CODE BEGIN CUSTOM_APP_Notification_Custom_Evt_Opcode */
+ 173:STM32_WPAN/App/custom_app.c **** 
+ 174:STM32_WPAN/App/custom_app.c ****     /* USER CODE END P2PS_CUSTOM_Notification_Custom_Evt_Opcode */
+ 175:STM32_WPAN/App/custom_app.c ****     case CUSTOM_CONN_HANDLE_EVT :
+ 176:STM32_WPAN/App/custom_app.c ****       /* USER CODE BEGIN CUSTOM_CONN_HANDLE_EVT */
+ 177:STM32_WPAN/App/custom_app.c ****       APP_DBG_MSG("Device Connected");
+ 178:STM32_WPAN/App/custom_app.c ****       /* USER CODE END CUSTOM_CONN_HANDLE_EVT */
+ 179:STM32_WPAN/App/custom_app.c ****       break;
+ 180:STM32_WPAN/App/custom_app.c **** 
+ 181:STM32_WPAN/App/custom_app.c ****     case CUSTOM_DISCON_HANDLE_EVT :
+ 182:STM32_WPAN/App/custom_app.c ****       /* USER CODE BEGIN CUSTOM_DISCON_HANDLE_EVT */
+ 183:STM32_WPAN/App/custom_app.c ****       APP_DBG_MSG("Device Disconnected");
+ 184:STM32_WPAN/App/custom_app.c ****       /* USER CODE END CUSTOM_DISCON_HANDLE_EVT */
+ 185:STM32_WPAN/App/custom_app.c ****       break;
+ 186:STM32_WPAN/App/custom_app.c **** 
+ 187:STM32_WPAN/App/custom_app.c ****     default:
+ 188:STM32_WPAN/App/custom_app.c ****       /* USER CODE BEGIN CUSTOM_APP_Notification_default */
+ 189:STM32_WPAN/App/custom_app.c **** 
+ 190:STM32_WPAN/App/custom_app.c ****       /* USER CODE END CUSTOM_APP_Notification_default */
+ 191:STM32_WPAN/App/custom_app.c ****       break;
+ 192:STM32_WPAN/App/custom_app.c ****   }
+ 193:STM32_WPAN/App/custom_app.c **** 
+ 194:STM32_WPAN/App/custom_app.c ****   /* USER CODE BEGIN CUSTOM_APP_Notification_2 */
+ 195:STM32_WPAN/App/custom_app.c **** 
+ 196:STM32_WPAN/App/custom_app.c ****   /* USER CODE END CUSTOM_APP_Notification_2 */
+ 197:STM32_WPAN/App/custom_app.c **** 
+ 198:STM32_WPAN/App/custom_app.c ****   return;
+ 199:STM32_WPAN/App/custom_app.c **** }
+ 200:STM32_WPAN/App/custom_app.c **** 
+ 201:STM32_WPAN/App/custom_app.c **** void Custom_APP_Init(void)
+ 202:STM32_WPAN/App/custom_app.c **** {
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s 			page 5
+
+
+ 203:STM32_WPAN/App/custom_app.c ****   /* USER CODE BEGIN CUSTOM_APP_Init */
+ 204:STM32_WPAN/App/custom_app.c **** 
+ 205:STM32_WPAN/App/custom_app.c ****   /* USER CODE END CUSTOM_APP_Init */
+ 206:STM32_WPAN/App/custom_app.c ****   return;
+ 207:STM32_WPAN/App/custom_app.c **** }
+ 208:STM32_WPAN/App/custom_app.c **** 
+ 209:STM32_WPAN/App/custom_app.c **** /* USER CODE BEGIN FD */
+ 210:STM32_WPAN/App/custom_app.c **** 
+ 211:STM32_WPAN/App/custom_app.c **** /* USER CODE END FD */
+ 212:STM32_WPAN/App/custom_app.c **** 
+ 213:STM32_WPAN/App/custom_app.c **** /*************************************************************
+ 214:STM32_WPAN/App/custom_app.c ****  *
+ 215:STM32_WPAN/App/custom_app.c ****  * LOCAL FUNCTIONS
+ 216:STM32_WPAN/App/custom_app.c ****  *
+ 217:STM32_WPAN/App/custom_app.c ****  *************************************************************/
+ 218:STM32_WPAN/App/custom_app.c **** 
+ 219:STM32_WPAN/App/custom_app.c ****   /* IULS_BLE_Service */
+ 220:STM32_WPAN/App/custom_app.c **** void Custom_Indication_char_Update_Char(void) /* Property Read */
+ 221:STM32_WPAN/App/custom_app.c **** {
+  28              		.loc 1 221 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              	.LCFI0:
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 3, -8
+  36              		.cfi_offset 14, -4
+ 222:STM32_WPAN/App/custom_app.c ****   Custom_STM_App_Update_Char(CUSTOM_STM_INDICATION_CHAR, (uint8_t *)UpdateCharData);
+  37              		.loc 1 222 3 view .LVU1
+  38 0002 0249     		ldr	r1, .L3
+  39 0004 0120     		movs	r0, #1
+  40 0006 FFF7FEFF 		bl	Custom_STM_App_Update_Char
+  41              	.LVL0:
+ 223:STM32_WPAN/App/custom_app.c ****   /* USER CODE BEGIN Indication_char_UC*/
+ 224:STM32_WPAN/App/custom_app.c **** 
+ 225:STM32_WPAN/App/custom_app.c ****   /* USER CODE END Indication_char_UC*/
+ 226:STM32_WPAN/App/custom_app.c ****   return;
+  42              		.loc 1 226 3 view .LVU2
+ 227:STM32_WPAN/App/custom_app.c **** }
+  43              		.loc 1 227 1 is_stmt 0 view .LVU3
+  44 000a 08BD     		pop	{r3, pc}
+  45              	.L4:
+  46              		.align	2
+  47              	.L3:
+  48 000c 00000000 		.word	UpdateCharData
+  49              		.cfi_endproc
+  50              	.LFE1672:
+  52              		.section	.rodata.Custom_APP_Notification.str1.4,"aMS",%progbits,1
+  53              		.align	2
+  54              	.LC0:
+  55 0000 436F6E6E 		.ascii	"Connection handle event\000"
+  55      65637469 
+  55      6F6E2068 
+  55      616E646C 
+  55      65206576 
+  56              		.align	2
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s 			page 6
+
+
+  57              	.LC1:
+  58 0018 44657669 		.ascii	"Device Connected\000"
+  58      63652043 
+  58      6F6E6E65 
+  58      63746564 
+  58      00
+  59 0029 000000   		.align	2
+  60              	.LC2:
+  61 002c 44657669 		.ascii	"Device Disconnected\000"
+  61      63652044 
+  61      6973636F 
+  61      6E6E6563 
+  61      74656400 
+  62              		.section	.text.Custom_APP_Notification,"ax",%progbits
+  63              		.align	1
+  64              		.global	Custom_APP_Notification
+  65              		.syntax unified
+  66              		.thumb
+  67              		.thumb_func
+  68              		.fpu fpv4-sp-d16
+  70              	Custom_APP_Notification:
+  71              	.LVL1:
+  72              	.LFB1670:
+ 165:STM32_WPAN/App/custom_app.c ****   /* USER CODE BEGIN CUSTOM_APP_Notification_1 */
+  73              		.loc 1 165 1 is_stmt 1 view -0
+  74              		.cfi_startproc
+  75              		@ args = 0, pretend = 0, frame = 0
+  76              		@ frame_needed = 0, uses_anonymous_args = 0
+ 165:STM32_WPAN/App/custom_app.c ****   /* USER CODE BEGIN CUSTOM_APP_Notification_1 */
+  77              		.loc 1 165 1 is_stmt 0 view .LVU5
+  78 0000 10B5     		push	{r4, lr}
+  79              	.LCFI1:
+  80              		.cfi_def_cfa_offset 8
+  81              		.cfi_offset 4, -8
+  82              		.cfi_offset 14, -4
+  83 0002 0446     		mov	r4, r0
+ 167:STM32_WPAN/App/custom_app.c ****   /* USER CODE END CUSTOM_APP_Notification_1 */
+  84              		.loc 1 167 3 is_stmt 1 view .LVU6
+  85 0004 0748     		ldr	r0, .L10
+  86              	.LVL2:
+ 167:STM32_WPAN/App/custom_app.c ****   /* USER CODE END CUSTOM_APP_Notification_1 */
+  87              		.loc 1 167 3 is_stmt 0 view .LVU7
+  88 0006 FFF7FEFF 		bl	printf
+  89              	.LVL3:
+ 170:STM32_WPAN/App/custom_app.c ****   {
+  90              		.loc 1 170 3 is_stmt 1 view .LVU8
+ 170:STM32_WPAN/App/custom_app.c ****   {
+  91              		.loc 1 170 23 is_stmt 0 view .LVU9
+  92 000a 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 170:STM32_WPAN/App/custom_app.c ****   {
+  93              		.loc 1 170 3 view .LVU10
+  94 000c 13B1     		cbz	r3, .L6
+  95 000e 012B     		cmp	r3, #1
+  96 0010 04D0     		beq	.L7
+  97              	.L5:
+ 199:STM32_WPAN/App/custom_app.c **** 
+  98              		.loc 1 199 1 view .LVU11
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s 			page 7
+
+
+  99 0012 10BD     		pop	{r4, pc}
+ 100              	.LVL4:
+ 101              	.L6:
+ 177:STM32_WPAN/App/custom_app.c ****       /* USER CODE END CUSTOM_CONN_HANDLE_EVT */
+ 102              		.loc 1 177 7 is_stmt 1 view .LVU12
+ 103 0014 0448     		ldr	r0, .L10+4
+ 104 0016 FFF7FEFF 		bl	printf
+ 105              	.LVL5:
+ 179:STM32_WPAN/App/custom_app.c **** 
+ 106              		.loc 1 179 7 view .LVU13
+ 107 001a FAE7     		b	.L5
+ 108              	.L7:
+ 183:STM32_WPAN/App/custom_app.c ****       /* USER CODE END CUSTOM_DISCON_HANDLE_EVT */
+ 109              		.loc 1 183 7 view .LVU14
+ 110 001c 0348     		ldr	r0, .L10+8
+ 111 001e FFF7FEFF 		bl	printf
+ 112              	.LVL6:
+ 185:STM32_WPAN/App/custom_app.c **** 
+ 113              		.loc 1 185 7 view .LVU15
+ 198:STM32_WPAN/App/custom_app.c **** }
+ 114              		.loc 1 198 3 view .LVU16
+ 115 0022 F6E7     		b	.L5
+ 116              	.L11:
+ 117              		.align	2
+ 118              	.L10:
+ 119 0024 00000000 		.word	.LC0
+ 120 0028 18000000 		.word	.LC1
+ 121 002c 2C000000 		.word	.LC2
+ 122              		.cfi_endproc
+ 123              	.LFE1670:
+ 125              		.section	.text.Custom_APP_Init,"ax",%progbits
+ 126              		.align	1
+ 127              		.global	Custom_APP_Init
+ 128              		.syntax unified
+ 129              		.thumb
+ 130              		.thumb_func
+ 131              		.fpu fpv4-sp-d16
+ 133              	Custom_APP_Init:
+ 134              	.LFB1671:
+ 202:STM32_WPAN/App/custom_app.c ****   /* USER CODE BEGIN CUSTOM_APP_Init */
+ 135              		.loc 1 202 1 view -0
+ 136              		.cfi_startproc
+ 137              		@ args = 0, pretend = 0, frame = 0
+ 138              		@ frame_needed = 0, uses_anonymous_args = 0
+ 139              		@ link register save eliminated.
+ 206:STM32_WPAN/App/custom_app.c **** }
+ 140              		.loc 1 206 3 view .LVU18
+ 207:STM32_WPAN/App/custom_app.c **** 
+ 141              		.loc 1 207 1 is_stmt 0 view .LVU19
+ 142 0000 7047     		bx	lr
+ 143              		.cfi_endproc
+ 144              	.LFE1671:
+ 146              		.section	.text.send_data,"ax",%progbits
+ 147              		.align	1
+ 148              		.global	send_data
+ 149              		.syntax unified
+ 150              		.thumb
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s 			page 8
+
+
+ 151              		.thumb_func
+ 152              		.fpu fpv4-sp-d16
+ 154              	send_data:
+ 155              	.LFB1674:
+ 228:STM32_WPAN/App/custom_app.c **** 
+ 229:STM32_WPAN/App/custom_app.c **** void Custom_Indication_char_Send_Indication(void) /* Property Indication */
+ 230:STM32_WPAN/App/custom_app.c **** {
+ 231:STM32_WPAN/App/custom_app.c ****   if(Custom_App_Context.Indication_char_Indication_Status)
+ 232:STM32_WPAN/App/custom_app.c ****   {
+ 233:STM32_WPAN/App/custom_app.c ****     Custom_STM_App_Update_Char(CUSTOM_STM_INDICATION_CHAR, (uint8_t *)NotifyCharData);
+ 234:STM32_WPAN/App/custom_app.c ****     /* USER CODE BEGIN Indication_char_IS*/
+ 235:STM32_WPAN/App/custom_app.c **** 
+ 236:STM32_WPAN/App/custom_app.c ****     /* USER CODE END Indication_char_IS*/
+ 237:STM32_WPAN/App/custom_app.c ****   }
+ 238:STM32_WPAN/App/custom_app.c ****   else
+ 239:STM32_WPAN/App/custom_app.c ****   {
+ 240:STM32_WPAN/App/custom_app.c ****     APP_DBG_MSG("-- CUSTOM APPLICATION : CAN'T INFORM CLIENT -  INDICATION DISABLED\n ");
+ 241:STM32_WPAN/App/custom_app.c ****   }
+ 242:STM32_WPAN/App/custom_app.c ****   return;
+ 243:STM32_WPAN/App/custom_app.c **** }
+ 244:STM32_WPAN/App/custom_app.c **** 
+ 245:STM32_WPAN/App/custom_app.c **** /* USER CODE BEGIN FD_LOCAL_FUNCTIONS*/
+ 246:STM32_WPAN/App/custom_app.c **** void send_data(void) {
+ 156              		.loc 1 246 22 is_stmt 1 view -0
+ 157              		.cfi_startproc
+ 158              		@ args = 0, pretend = 0, frame = 0
+ 159              		@ frame_needed = 0, uses_anonymous_args = 0
+ 160              		@ link register save eliminated.
+ 247:STM32_WPAN/App/custom_app.c ****   // sensordata_t * temp = read_data_records_ble(&flash_status);
+ 248:STM32_WPAN/App/custom_app.c ****   // flash_status
+ 249:STM32_WPAN/App/custom_app.c **** 
+ 250:STM32_WPAN/App/custom_app.c **** 
+ 251:STM32_WPAN/App/custom_app.c **** }
+ 161              		.loc 1 251 1 view .LVU21
+ 162 0000 7047     		bx	lr
+ 163              		.cfi_endproc
+ 164              	.LFE1674:
+ 166              		.section	.rodata.read_data_records_ble.str1.4,"aMS",%progbits,1
+ 167              		.align	2
+ 168              	.LC3:
+ 169 0000 25303264 		.ascii	"%02d/%02d/%02d,%02d:%02d:%02d\000"
+ 169      2F253032 
+ 169      642F2530 
+ 169      32642C25 
+ 169      3032643A 
+ 170 001e 0000     		.align	2
+ 171              	.LC4:
+ 172 0020 442C2564 		.ascii	"D,%d,%s,%d.%d,%d,%d\000"
+ 172      2C25732C 
+ 172      25642E25 
+ 172      642C2564 
+ 172      2C256400 
+ 173              		.align	2
+ 174              	.LC5:
+ 175 0034 25730D0A 		.ascii	"%s\015\012\000"
+ 175      00
+ 176              		.section	.text.read_data_records_ble,"ax",%progbits
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s 			page 9
+
+
+ 177              		.align	1
+ 178              		.global	read_data_records_ble
+ 179              		.syntax unified
+ 180              		.thumb
+ 181              		.thumb_func
+ 182              		.fpu fpv4-sp-d16
+ 184              	read_data_records_ble:
+ 185              	.LVL7:
+ 186              	.LFB1675:
+ 252:STM32_WPAN/App/custom_app.c **** 
+ 253:STM32_WPAN/App/custom_app.c **** int read_data_records_ble(flash_status_t *fs) {
+ 187              		.loc 1 253 47 view -0
+ 188              		.cfi_startproc
+ 189              		@ args = 0, pretend = 0, frame = 168
+ 190              		@ frame_needed = 0, uses_anonymous_args = 0
+ 191              		.loc 1 253 47 is_stmt 0 view .LVU23
+ 192 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 193              	.LCFI2:
+ 194              		.cfi_def_cfa_offset 20
+ 195              		.cfi_offset 4, -20
+ 196              		.cfi_offset 5, -16
+ 197              		.cfi_offset 6, -12
+ 198              		.cfi_offset 7, -8
+ 199              		.cfi_offset 14, -4
+ 200 0002 AFB0     		sub	sp, sp, #188
+ 201              	.LCFI3:
+ 202              		.cfi_def_cfa_offset 208
+ 203 0004 0546     		mov	r5, r0
+ 254:STM32_WPAN/App/custom_app.c ****   sensordata_t * p;
+ 204              		.loc 1 254 3 is_stmt 1 view .LVU24
+ 255:STM32_WPAN/App/custom_app.c ****   char samp[124];
+ 205              		.loc 1 255 3 view .LVU25
+ 256:STM32_WPAN/App/custom_app.c ****   struct tm * recover;
+ 206              		.loc 1 256 3 view .LVU26
+ 257:STM32_WPAN/App/custom_app.c ****   struct tm * temp;
+ 207              		.loc 1 257 3 view .LVU27
+ 258:STM32_WPAN/App/custom_app.c ****   int count = 1;
+ 208              		.loc 1 258 3 view .LVU28
+ 209              	.LVL8:
+ 259:STM32_WPAN/App/custom_app.c ****   p = (sensordata_t *) fs->data_start;
+ 210              		.loc 1 259 3 view .LVU29
+ 211              		.loc 1 259 5 is_stmt 0 view .LVU30
+ 212 0006 0468     		ldr	r4, [r0]
+ 213              	.LVL9:
+ 260:STM32_WPAN/App/custom_app.c **** 
+ 261:STM32_WPAN/App/custom_app.c ****   uint32_t epoch_time;
+ 214              		.loc 1 261 3 is_stmt 1 view .LVU31
+ 262:STM32_WPAN/App/custom_app.c ****   char date_time[32];
+ 215              		.loc 1 262 3 view .LVU32
+ 263:STM32_WPAN/App/custom_app.c ****   char * test;
+ 216              		.loc 1 263 3 view .LVU33
+ 264:STM32_WPAN/App/custom_app.c ****   time_t t_of_day;
+ 217              		.loc 1 264 3 view .LVU34
+ 265:STM32_WPAN/App/custom_app.c **** 
+ 266:STM32_WPAN/App/custom_app.c ****   while (p>((sensordata_t *)fs->next_address)) {
+ 218              		.loc 1 266 3 view .LVU35
+ 258:STM32_WPAN/App/custom_app.c ****   p = (sensordata_t *) fs->data_start;
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s 			page 10
+
+
+ 219              		.loc 1 258 7 is_stmt 0 view .LVU36
+ 220 0008 0126     		movs	r6, #1
+ 221              		.loc 1 266 9 view .LVU37
+ 222 000a 43E0     		b	.L15
+ 223              	.LVL10:
+ 224              	.L20:
+ 225              	.LBB2:
+ 267:STM32_WPAN/App/custom_app.c ****     if (p->status==1) {
+ 268:STM32_WPAN/App/custom_app.c ****       memset(date_time, 0 , 32);
+ 226              		.loc 1 268 7 is_stmt 1 view .LVU38
+ 227 000c 2022     		movs	r2, #32
+ 228 000e 0021     		movs	r1, #0
+ 229 0010 07A8     		add	r0, sp, #28
+ 230 0012 FFF7FEFF 		bl	memset
+ 231              	.LVL11:
+ 269:STM32_WPAN/App/custom_app.c ****       t_of_day = p->timestamp;
+ 232              		.loc 1 269 7 view .LVU39
+ 233              		.loc 1 269 19 is_stmt 0 view .LVU40
+ 234 0016 6368     		ldr	r3, [r4, #4]
+ 235              		.loc 1 269 16 view .LVU41
+ 236 0018 0493     		str	r3, [sp, #16]
+ 237 001a 0023     		movs	r3, #0
+ 238 001c 0593     		str	r3, [sp, #20]
+ 270:STM32_WPAN/App/custom_app.c **** 
+ 271:STM32_WPAN/App/custom_app.c ****       struct tm * recover;
+ 239              		.loc 1 271 7 is_stmt 1 view .LVU42
+ 272:STM32_WPAN/App/custom_app.c ****       recover = localtime(&t_of_day);
+ 240              		.loc 1 272 7 view .LVU43
+ 241              		.loc 1 272 17 is_stmt 0 view .LVU44
+ 242 001e 04A8     		add	r0, sp, #16
+ 243 0020 FFF7FEFF 		bl	localtime
+ 244              	.LVL12:
+ 273:STM32_WPAN/App/custom_app.c **** 
+ 274:STM32_WPAN/App/custom_app.c ****       sprintf(date_time,
+ 245              		.loc 1 274 7 is_stmt 1 view .LVU45
+ 275:STM32_WPAN/App/custom_app.c ****             "%02d/%02d/%02d,%02d:%02d:%02d",
+ 276:STM32_WPAN/App/custom_app.c ****             // Weekdays[curDate->tm_wday],
+ 277:STM32_WPAN/App/custom_app.c ****             recover->tm_mday,
+ 278:STM32_WPAN/App/custom_app.c ****             recover->tm_mon+1,
+ 246              		.loc 1 278 20 is_stmt 0 view .LVU46
+ 247 0024 0369     		ldr	r3, [r0, #16]
+ 279:STM32_WPAN/App/custom_app.c ****             recover->tm_year+1900,
+ 248              		.loc 1 279 20 view .LVU47
+ 249 0026 4169     		ldr	r1, [r0, #20]
+ 274:STM32_WPAN/App/custom_app.c ****             "%02d/%02d/%02d,%02d:%02d:%02d",
+ 250              		.loc 1 274 7 view .LVU48
+ 251 0028 C268     		ldr	r2, [r0, #12]
+ 252 002a 0768     		ldr	r7, [r0]
+ 253 002c 0397     		str	r7, [sp, #12]
+ 254 002e 4768     		ldr	r7, [r0, #4]
+ 255 0030 0297     		str	r7, [sp, #8]
+ 256 0032 8068     		ldr	r0, [r0, #8]
+ 257              	.LVL13:
+ 274:STM32_WPAN/App/custom_app.c ****             "%02d/%02d/%02d,%02d:%02d:%02d",
+ 258              		.loc 1 274 7 view .LVU49
+ 259 0034 0190     		str	r0, [sp, #4]
+ 260 0036 01F26C71 		addw	r1, r1, #1900
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s 			page 11
+
+
+ 261 003a 0091     		str	r1, [sp]
+ 262 003c 0133     		adds	r3, r3, #1
+ 263 003e 1C49     		ldr	r1, .L21
+ 264 0040 07A8     		add	r0, sp, #28
+ 265 0042 FFF7FEFF 		bl	sprintf
+ 266              	.LVL14:
+ 280:STM32_WPAN/App/custom_app.c ****             recover->tm_hour,
+ 281:STM32_WPAN/App/custom_app.c ****             recover->tm_min,
+ 282:STM32_WPAN/App/custom_app.c ****             recover->tm_sec);
+ 283:STM32_WPAN/App/custom_app.c **** 
+ 284:STM32_WPAN/App/custom_app.c ****       sprintf(samp, "D,%d,%s,%d.%d,%d,%d", 
+ 267              		.loc 1 284 7 is_stmt 1 view .LVU50
+ 285:STM32_WPAN/App/custom_app.c ****             count, 
+ 286:STM32_WPAN/App/custom_app.c ****             date_time,
+ 287:STM32_WPAN/App/custom_app.c ****             p->battery_voltage/1000,
+ 268              		.loc 1 287 14 is_stmt 0 view .LVU51
+ 269 0046 2189     		ldrh	r1, [r4, #8]
+ 288:STM32_WPAN/App/custom_app.c ****             p->battery_voltage%1000,
+ 289:STM32_WPAN/App/custom_app.c ****             p->temperature,
+ 270              		.loc 1 289 14 view .LVU52
+ 271 0048 B4F90A30 		ldrsh	r3, [r4, #10]
+ 290:STM32_WPAN/App/custom_app.c ****             (int) p->sensor_period);
+ 272              		.loc 1 290 20 view .LVU53
+ 273 004c E268     		ldr	r2, [r4, #12]
+ 284:STM32_WPAN/App/custom_app.c ****             count, 
+ 274              		.loc 1 284 7 view .LVU54
+ 275 004e 0392     		str	r2, [sp, #12]
+ 276 0050 0293     		str	r3, [sp, #8]
+ 277 0052 184B     		ldr	r3, .L21+4
+ 278 0054 A3FB0123 		umull	r2, r3, r3, r1
+ 279 0058 9B09     		lsrs	r3, r3, #6
+ 280 005a 4FF47A72 		mov	r2, #1000
+ 281 005e 02FB1312 		mls	r2, r2, r3, r1
+ 282 0062 92B2     		uxth	r2, r2
+ 283 0064 0192     		str	r2, [sp, #4]
+ 284 0066 0093     		str	r3, [sp]
+ 285 0068 07AB     		add	r3, sp, #28
+ 286 006a 3246     		mov	r2, r6
+ 287 006c 1249     		ldr	r1, .L21+8
+ 288 006e 0FA8     		add	r0, sp, #60
+ 289 0070 FFF7FEFF 		bl	sprintf
+ 290              	.LVL15:
+ 291:STM32_WPAN/App/custom_app.c ****   
+ 292:STM32_WPAN/App/custom_app.c ****       printf("%s\r\n", samp);
+ 291              		.loc 1 292 7 is_stmt 1 view .LVU55
+ 292 0074 0FA9     		add	r1, sp, #60
+ 293 0076 1148     		ldr	r0, .L21+12
+ 294 0078 FFF7FEFF 		bl	printf
+ 295              	.LVL16:
+ 293:STM32_WPAN/App/custom_app.c ****       int len = strlen(samp);
+ 296              		.loc 1 293 7 view .LVU56
+ 297              		.loc 1 293 17 is_stmt 0 view .LVU57
+ 298 007c 0FA8     		add	r0, sp, #60
+ 299 007e FFF7FEFF 		bl	strlen
+ 300              	.LVL17:
+ 301 0082 0246     		mov	r2, r0
+ 302              	.LVL18:
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s 			page 12
+
+
+ 294:STM32_WPAN/App/custom_app.c ****       memcpy(UpdateCharData, samp, len);
+ 303              		.loc 1 294 7 is_stmt 1 view .LVU58
+ 304 0084 0FA9     		add	r1, sp, #60
+ 305 0086 0E48     		ldr	r0, .L21+16
+ 306              	.LVL19:
+ 307              		.loc 1 294 7 is_stmt 0 view .LVU59
+ 308 0088 FFF7FEFF 		bl	memcpy
+ 309              	.LVL20:
+ 295:STM32_WPAN/App/custom_app.c ****       Custom_Indication_char_Update_Char();
+ 310              		.loc 1 295 7 is_stmt 1 view .LVU60
+ 311 008c FFF7FEFF 		bl	Custom_Indication_char_Update_Char
+ 312              	.LVL21:
+ 296:STM32_WPAN/App/custom_app.c ****       fflush;
+ 313              		.loc 1 296 7 view .LVU61
+ 297:STM32_WPAN/App/custom_app.c ****       count++;
+ 314              		.loc 1 297 7 view .LVU62
+ 315              		.loc 1 297 12 is_stmt 0 view .LVU63
+ 316 0090 0136     		adds	r6, r6, #1
+ 317              	.LVL22:
+ 318              	.L16:
+ 319              		.loc 1 297 12 view .LVU64
+ 320              	.LBE2:
+ 298:STM32_WPAN/App/custom_app.c ****     }
+ 299:STM32_WPAN/App/custom_app.c ****     p--;
+ 321              		.loc 1 299 5 is_stmt 1 view .LVU65
+ 322              		.loc 1 299 6 is_stmt 0 view .LVU66
+ 323 0092 103C     		subs	r4, r4, #16
+ 324              	.LVL23:
+ 325              	.L15:
+ 266:STM32_WPAN/App/custom_app.c ****     if (p->status==1) {
+ 326              		.loc 1 266 9 is_stmt 1 view .LVU67
+ 266:STM32_WPAN/App/custom_app.c ****     if (p->status==1) {
+ 327              		.loc 1 266 31 is_stmt 0 view .LVU68
+ 328 0094 AB68     		ldr	r3, [r5, #8]
+ 266:STM32_WPAN/App/custom_app.c ****     if (p->status==1) {
+ 329              		.loc 1 266 9 view .LVU69
+ 330 0096 A342     		cmp	r3, r4
+ 331 0098 03D2     		bcs	.L19
+ 267:STM32_WPAN/App/custom_app.c ****       memset(date_time, 0 , 32);
+ 332              		.loc 1 267 5 is_stmt 1 view .LVU70
+ 267:STM32_WPAN/App/custom_app.c ****       memset(date_time, 0 , 32);
+ 333              		.loc 1 267 10 is_stmt 0 view .LVU71
+ 334 009a 6378     		ldrb	r3, [r4, #1]	@ zero_extendqisi2
+ 267:STM32_WPAN/App/custom_app.c ****       memset(date_time, 0 , 32);
+ 335              		.loc 1 267 8 view .LVU72
+ 336 009c 012B     		cmp	r3, #1
+ 337 009e F8D1     		bne	.L16
+ 338 00a0 B4E7     		b	.L20
+ 339              	.L19:
+ 300:STM32_WPAN/App/custom_app.c ****   }
+ 301:STM32_WPAN/App/custom_app.c ****   free(recover);
+ 340              		.loc 1 301 3 is_stmt 1 view .LVU73
+ 341 00a2 0020     		movs	r0, #0
+ 342 00a4 FFF7FEFF 		bl	free
+ 343              	.LVL24:
+ 302:STM32_WPAN/App/custom_app.c ****   return(0);
+ 344              		.loc 1 302 3 view .LVU74
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s 			page 13
+
+
+ 303:STM32_WPAN/App/custom_app.c **** }
+ 345              		.loc 1 303 1 is_stmt 0 view .LVU75
+ 346 00a8 0020     		movs	r0, #0
+ 347 00aa 2FB0     		add	sp, sp, #188
+ 348              	.LCFI4:
+ 349              		.cfi_def_cfa_offset 20
+ 350              		@ sp needed
+ 351 00ac F0BD     		pop	{r4, r5, r6, r7, pc}
+ 352              	.LVL25:
+ 353              	.L22:
+ 354              		.loc 1 303 1 view .LVU76
+ 355 00ae 00BF     		.align	2
+ 356              	.L21:
+ 357 00b0 00000000 		.word	.LC3
+ 358 00b4 D34D6210 		.word	274877907
+ 359 00b8 20000000 		.word	.LC4
+ 360 00bc 34000000 		.word	.LC5
+ 361 00c0 00000000 		.word	UpdateCharData
+ 362              		.cfi_endproc
+ 363              	.LFE1675:
+ 365              		.section	.rodata.Custom_STM_App_Notification.str1.4,"aMS",%progbits,1
+ 366              		.align	2
+ 367              	.LC6:
+ 368 0000 4576656E 		.ascii	"Event: Read from characteristic\000"
+ 368      743A2052 
+ 368      65616420 
+ 368      66726F6D 
+ 368      20636861 
+ 369              		.align	2
+ 370              	.LC7:
+ 371 0020 4576656E 		.ascii	"Event recieved: %s\015\012\000"
+ 371      74207265 
+ 371      63696576 
+ 371      65643A20 
+ 371      25730D0A 
+ 372 0035 000000   		.align	2
+ 373              	.LC8:
+ 374 0038 64617461 		.ascii	"data\000"
+ 374      00
+ 375 003d 000000   		.align	2
+ 376              	.LC9:
+ 377 0040 434F4D4D 		.ascii	"COMMAND: data\000"
+ 377      414E443A 
+ 377      20646174 
+ 377      6100
+ 378 004e 0000     		.align	2
+ 379              	.LC10:
+ 380 0050 5475726E 		.ascii	"Turning on datasend\000"
+ 380      696E6720 
+ 380      6F6E2064 
+ 380      61746173 
+ 380      656E6400 
+ 381              		.align	2
+ 382              	.LC11:
+ 383 0064 4576656E 		.ascii	"Event: Notifications enabled\000"
+ 383      743A204E 
+ 383      6F746966 
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s 			page 14
+
+
+ 383      69636174 
+ 383      696F6E73 
+ 384 0081 000000   		.align	2
+ 385              	.LC12:
+ 386 0084 4576656E 		.ascii	"Event: Notifications disabled\000"
+ 386      743A204E 
+ 386      6F746966 
+ 386      69636174 
+ 386      696F6E73 
+ 387              		.section	.text.Custom_STM_App_Notification,"ax",%progbits
+ 388              		.align	1
+ 389              		.global	Custom_STM_App_Notification
+ 390              		.syntax unified
+ 391              		.thumb
+ 392              		.thumb_func
+ 393              		.fpu fpv4-sp-d16
+ 395              	Custom_STM_App_Notification:
+ 396              	.LVL26:
+ 397              	.LFB1669:
+  95:STM32_WPAN/App/custom_app.c ****   /* USER CODE BEGIN CUSTOM_STM_App_Notification_1 */
+ 398              		.loc 1 95 1 is_stmt 1 view -0
+ 399              		.cfi_startproc
+ 400              		@ args = 0, pretend = 0, frame = 0
+ 401              		@ frame_needed = 0, uses_anonymous_args = 0
+  95:STM32_WPAN/App/custom_app.c ****   /* USER CODE BEGIN CUSTOM_STM_App_Notification_1 */
+ 402              		.loc 1 95 1 is_stmt 0 view .LVU78
+ 403 0000 10B5     		push	{r4, lr}
+ 404              	.LCFI5:
+ 405              		.cfi_def_cfa_offset 8
+ 406              		.cfi_offset 4, -8
+ 407              		.cfi_offset 14, -4
+  97:STM32_WPAN/App/custom_app.c ****   // strncpy(payload, pNotification->DataTransfered.pPayload, pNotification->DataTransfered.Length)
+ 408              		.loc 1 97 3 is_stmt 1 view .LVU79
+ 409 0002 164B     		ldr	r3, .L31
+ 410 0004 0022     		movs	r2, #0
+ 411 0006 1A60     		str	r2, [r3]	@ unaligned
+ 412 0008 5A60     		str	r2, [r3, #4]	@ unaligned
+ 104:STM32_WPAN/App/custom_app.c ****   {
+ 413              		.loc 1 104 3 view .LVU80
+ 104:STM32_WPAN/App/custom_app.c ****   {
+ 414              		.loc 1 104 23 is_stmt 0 view .LVU81
+ 415 000a 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+ 416 000c 032B     		cmp	r3, #3
+ 417 000e 06D8     		bhi	.L23
+ 418 0010 DFE803F0 		tbb	[pc, r3]
+ 419              	.L26:
+ 420 0014 02       		.byte	(.L29-.L26)/2
+ 421 0015 06       		.byte	(.L28-.L26)/2
+ 422 0016 1C       		.byte	(.L27-.L26)/2
+ 423 0017 20       		.byte	(.L25-.L26)/2
+ 424              		.p2align 1
+ 425              	.L29:
+ 426              	.LBB3:
+ 116:STM32_WPAN/App/custom_app.c ****       /* USER CODE END CUSTOM_STM_READ_WRITE_CHAR_READ_EVT */
+ 427              		.loc 1 116 7 is_stmt 1 view .LVU82
+ 428 0018 1148     		ldr	r0, .L31+4
+ 429              	.LVL27:
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s 			page 15
+
+
+ 116:STM32_WPAN/App/custom_app.c ****       /* USER CODE END CUSTOM_STM_READ_WRITE_CHAR_READ_EVT */
+ 430              		.loc 1 116 7 is_stmt 0 view .LVU83
+ 431 001a FFF7FEFF 		bl	printf
+ 432              	.LVL28:
+ 118:STM32_WPAN/App/custom_app.c **** 
+ 433              		.loc 1 118 7 is_stmt 1 view .LVU84
+ 434              	.L23:
+ 435              	.LBE3:
+ 162:STM32_WPAN/App/custom_app.c **** 
+ 436              		.loc 1 162 1 is_stmt 0 view .LVU85
+ 437 001e 10BD     		pop	{r4, pc}
+ 438              	.LVL29:
+ 439              	.L28:
+ 162:STM32_WPAN/App/custom_app.c **** 
+ 440              		.loc 1 162 1 view .LVU86
+ 441 0020 0446     		mov	r4, r0
+ 442              	.LBB4:
+ 122:STM32_WPAN/App/custom_app.c ****       uint8_t * command = pNotification->DataTransfered.pPayload;
+ 443              		.loc 1 122 7 is_stmt 1 view .LVU87
+ 444 0022 4168     		ldr	r1, [r0, #4]
+ 445 0024 0F48     		ldr	r0, .L31+8
+ 446              	.LVL30:
+ 122:STM32_WPAN/App/custom_app.c ****       uint8_t * command = pNotification->DataTransfered.pPayload;
+ 447              		.loc 1 122 7 is_stmt 0 view .LVU88
+ 448 0026 FFF7FEFF 		bl	printf
+ 449              	.LVL31:
+ 123:STM32_WPAN/App/custom_app.c **** 
+ 450              		.loc 1 123 7 is_stmt 1 view .LVU89
+ 125:STM32_WPAN/App/custom_app.c ****         read_data_records_ble(&flash_status);
+ 451              		.loc 1 125 7 view .LVU90
+ 125:STM32_WPAN/App/custom_app.c ****         read_data_records_ble(&flash_status);
+ 452              		.loc 1 125 10 is_stmt 0 view .LVU91
+ 453 002a 0422     		movs	r2, #4
+ 454 002c 0E49     		ldr	r1, .L31+12
+ 455 002e 6068     		ldr	r0, [r4, #4]
+ 456 0030 FFF7FEFF 		bl	strncmp
+ 457              	.LVL32:
+ 125:STM32_WPAN/App/custom_app.c ****         read_data_records_ble(&flash_status);
+ 458              		.loc 1 125 9 view .LVU92
+ 459 0034 0028     		cmp	r0, #0
+ 460 0036 F2D1     		bne	.L23
+ 126:STM32_WPAN/App/custom_app.c ****         APP_DBG_MSG("COMMAND: data");
+ 461              		.loc 1 126 9 is_stmt 1 view .LVU93
+ 462 0038 0C48     		ldr	r0, .L31+16
+ 463 003a FFF7FEFF 		bl	read_data_records_ble
+ 464              	.LVL33:
+ 127:STM32_WPAN/App/custom_app.c ****         APP_DBG_MSG("Turning on datasend");
+ 465              		.loc 1 127 9 view .LVU94
+ 466 003e 0C48     		ldr	r0, .L31+20
+ 467 0040 FFF7FEFF 		bl	printf
+ 468              	.LVL34:
+ 128:STM32_WPAN/App/custom_app.c ****         // P2P_Send_Data()
+ 469              		.loc 1 128 9 view .LVU95
+ 470 0044 0B48     		ldr	r0, .L31+24
+ 471 0046 FFF7FEFF 		bl	printf
+ 472              	.LVL35:
+ 473 004a E8E7     		b	.L23
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s 			page 16
+
+
+ 474              	.LVL36:
+ 475              	.L27:
+ 142:STM32_WPAN/App/custom_app.c ****       /* USER CODE END CUSTOM_STM_INDICATION_CHAR_INDICATE_ENABLED_EVT */
+ 476              		.loc 1 142 7 view .LVU96
+ 477 004c 0A48     		ldr	r0, .L31+28
+ 478              	.LVL37:
+ 142:STM32_WPAN/App/custom_app.c ****       /* USER CODE END CUSTOM_STM_INDICATION_CHAR_INDICATE_ENABLED_EVT */
+ 479              		.loc 1 142 7 is_stmt 0 view .LVU97
+ 480 004e FFF7FEFF 		bl	printf
+ 481              	.LVL38:
+ 144:STM32_WPAN/App/custom_app.c **** 
+ 482              		.loc 1 144 7 is_stmt 1 view .LVU98
+ 483 0052 E4E7     		b	.L23
+ 484              	.LVL39:
+ 485              	.L25:
+ 148:STM32_WPAN/App/custom_app.c ****       /* USER CODE END CUSTOM_STM_INDICATION_CHAR_INDICATE_DISABLED_EVT */
+ 486              		.loc 1 148 7 view .LVU99
+ 487 0054 0948     		ldr	r0, .L31+32
+ 488              	.LVL40:
+ 148:STM32_WPAN/App/custom_app.c ****       /* USER CODE END CUSTOM_STM_INDICATION_CHAR_INDICATE_DISABLED_EVT */
+ 489              		.loc 1 148 7 is_stmt 0 view .LVU100
+ 490 0056 FFF7FEFF 		bl	printf
+ 491              	.LVL41:
+ 150:STM32_WPAN/App/custom_app.c **** 
+ 492              		.loc 1 150 7 is_stmt 1 view .LVU101
+ 493              	.LBE4:
+ 161:STM32_WPAN/App/custom_app.c **** }
+ 494              		.loc 1 161 3 view .LVU102
+ 495 005a E0E7     		b	.L23
+ 496              	.L32:
+ 497              		.align	2
+ 498              	.L31:
+ 499 005c 00000000 		.word	payload
+ 500 0060 00000000 		.word	.LC6
+ 501 0064 20000000 		.word	.LC7
+ 502 0068 38000000 		.word	.LC8
+ 503 006c 00000000 		.word	flash_status
+ 504 0070 40000000 		.word	.LC9
+ 505 0074 50000000 		.word	.LC10
+ 506 0078 64000000 		.word	.LC11
+ 507 007c 84000000 		.word	.LC12
+ 508              		.cfi_endproc
+ 509              	.LFE1669:
+ 511              		.comm	SecureReadData,1,1
+ 512              		.comm	NotifyCharData,247,4
+ 513              		.comm	UpdateCharData,247,4
+ 514              		.comm	payload,8,4
+ 515              		.text
+ 516              	.Letext0:
+ 517              		.file 2 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
+ 518              		.file 3 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
+ 519              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
+ 520              		.file 5 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/system_stm32wbxx.h"
+ 521              		.file 6 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_def.h"
+ 522              		.file 7 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_flash.h"
+ 523              		.file 8 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_uart.h"
+ 524              		.file 9 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h"
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s 			page 17
+
+
+ 525              		.file 10 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/lock.h
+ 526              		.file 11 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_types
+ 527              		.file 12 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
+ 528              		.file 13 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/reent.
+ 529              		.file 14 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_timev
+ 530              		.file 15 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
+ 531              		.file 16 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_usart.h"
+ 532              		.file 17 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_lpuart.h"
+ 533              		.file 18 "Core/Inc/flash.h"
+ 534              		.file 19 "Middlewares/ST/STM32_WPAN/ble/core/auto/ble_events.h"
+ 535              		.file 20 "STM32_WPAN/App/custom_app.h"
+ 536              		.file 21 "STM32_WPAN/App/custom_stm.h"
+ 537              		.file 22 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/time.h"
+ 538              		.file 23 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdio.h"
+ 539              		.file 24 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/string.h"
+ 540              		.file 25 "<built-in>"
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s 			page 18
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 custom_app.c
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s:18     .text.Custom_Indication_char_Update_Char:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s:25     .text.Custom_Indication_char_Update_Char:0000000000000000 Custom_Indication_char_Update_Char
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s:48     .text.Custom_Indication_char_Update_Char:000000000000000c $d
+                            *COM*:00000000000000f7 UpdateCharData
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s:53     .rodata.Custom_APP_Notification.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s:63     .text.Custom_APP_Notification:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s:70     .text.Custom_APP_Notification:0000000000000000 Custom_APP_Notification
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s:119    .text.Custom_APP_Notification:0000000000000024 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s:126    .text.Custom_APP_Init:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s:133    .text.Custom_APP_Init:0000000000000000 Custom_APP_Init
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s:147    .text.send_data:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s:154    .text.send_data:0000000000000000 send_data
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s:167    .rodata.read_data_records_ble.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s:177    .text.read_data_records_ble:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s:184    .text.read_data_records_ble:0000000000000000 read_data_records_ble
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s:357    .text.read_data_records_ble:00000000000000b0 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s:366    .rodata.Custom_STM_App_Notification.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s:388    .text.Custom_STM_App_Notification:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s:395    .text.Custom_STM_App_Notification:0000000000000000 Custom_STM_App_Notification
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s:420    .text.Custom_STM_App_Notification:0000000000000014 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s:424    .text.Custom_STM_App_Notification:0000000000000018 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccVetPTS.s:499    .text.Custom_STM_App_Notification:000000000000005c $d
+                            *COM*:0000000000000008 payload
+                            *COM*:0000000000000001 SecureReadData
+                            *COM*:00000000000000f7 NotifyCharData
+
+UNDEFINED SYMBOLS
+Custom_STM_App_Update_Char
+printf
+memset
+localtime
+sprintf
+strlen
+memcpy
+free
+strncmp
+flash_status

@@ -26,12 +26,12 @@
 #include "custom_app.h"
 #include "custom_stm.h"
 #include "stm32_seq.h"
-#include "flash.h"
-#include "sample.h"
-
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <time.h>
+#include <string.h>
+
 uint8_t payload[8];
 extern flash_status_t flash_status;
 /* USER CODE END Includes */
@@ -103,6 +103,7 @@ void Custom_STM_App_Notification(Custom_STM_App_Notification_evt_t *pNotificatio
   /* USER CODE END CUSTOM_STM_App_Notification_1 */
   switch(pNotification->Custom_Evt_Opcode)
   {
+    APP_DBG_MSG("pNotifcation: in switch");
     /* USER CODE BEGIN CUSTOM_STM_App_Notification_Custom_Evt_Opcode */
     // memset(payload, NULL, 8);
     // strncpy(payload, pNotification->DataTransfered.pPayload, pNotification->DataTransfered.Length);
@@ -214,49 +215,7 @@ void Custom_APP_Init(void)
  * LOCAL FUNCTIONS
  *
  *************************************************************/
-void send_data(void) {
-  // sensordata_t * temp = read_data_records_ble(&flash_status);
-  // flash_status
 
-
-}
-
-int read_data_records_ble(flash_status_t *fs) {
-  memset(NotifyCharData, 0, 247);
-  uint8_t samp[124];
-  sensordata_t * p;
-  int mon = 4;
-  int day = 6;
-  int year = 2022;
-  int hr = 10;
-  int min = 20;
-  int batt = 3;
-  int count = 1;
-  p = (sensordata_t *) fs->data_start;
-  while (p>((sensordata_t *)fs->next_address)) {
-    if (p->status==1) {
-      sprintf(samp, "D,%d,%d/%d/%d,%d:%d:%d,%d.%d,%d,%d\n", 
-            count, mon, day, year, hr, min, count,
-            p->battery_voltage/1000,
-            p->battery_voltage%1000,
-            p->temperature,
-            (int) p->sensor_period);
-      printf("\r\n%s\r\n", samp);
-      // UpdateCharData = samp;
-      memcpy(UpdateCharData, samp, 36);
-      Custom_Indication_char_Update_Char();
-      printf("%d b=%d.%d,t=%d,p=%d\n\r",
-             count,
-             p->battery_voltage/1000,
-             p->battery_voltage%1000,
-             p->temperature,
-             (int) p->sensor_period);
-      count++;
-    }
-    p--;
-  }
-  return(0);
-}
   /* IULS_BLE_Service */
 void Custom_Indication_char_Update_Char(void) /* Property Read */
 {
@@ -284,5 +243,62 @@ void Custom_Indication_char_Send_Indication(void) /* Property Indication */
 }
 
 /* USER CODE BEGIN FD_LOCAL_FUNCTIONS*/
+void send_data(void) {
+  // sensordata_t * temp = read_data_records_ble(&flash_status);
+  // flash_status
 
+
+}
+
+int read_data_records_ble(flash_status_t *fs) {
+  sensordata_t * p;
+  char samp[124];
+  struct tm * recover;
+  struct tm * temp;
+  int count = 1;
+  p = (sensordata_t *) fs->data_start;
+
+  uint32_t epoch_time;
+  char date_time[32];
+  char * test;
+  time_t t_of_day;
+
+  while (p>((sensordata_t *)fs->next_address)) {
+    if (p->status==1) {
+      memset(date_time, 0 , 32);
+      t_of_day = p->timestamp;
+
+      struct tm * recover;
+      recover = localtime(&t_of_day);
+
+      sprintf(date_time,
+            "%02d/%02d/%02d,%02d:%02d:%02d",
+            // Weekdays[curDate->tm_wday],
+            recover->tm_mday,
+            recover->tm_mon+1,
+            recover->tm_year+1900,
+            recover->tm_hour,
+            recover->tm_min,
+            recover->tm_sec);
+
+      sprintf(samp, "D,%d,%s,%d.%d,%d,%d", 
+            count, 
+            date_time,
+            p->battery_voltage/1000,
+            p->battery_voltage%1000,
+            p->temperature,
+            (int) p->sensor_period);
+  
+      printf("%s\r\n", samp);
+      int len = strlen(samp);
+      memcpy(UpdateCharData, samp, len);
+      Custom_Indication_char_Update_Char();
+      fflush;
+      count++;
+    }
+    p--;
+  }
+  free(recover);
+  return(0);
+}
 /* USER CODE END FD_LOCAL_FUNCTIONS*/

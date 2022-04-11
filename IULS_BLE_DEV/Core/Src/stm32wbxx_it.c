@@ -293,6 +293,20 @@ void LPUART1_IRQHandler(void)
 }
 
 /**
+  * @brief This function handles RTC A and B alarm interrupt through EXTI line 17.
+  */
+void RTC_Alarm_IRQHandler(void)
+{
+  /* USER CODE BEGIN RTC_Alarm_IRQn 0 */
+
+  /* USER CODE END RTC_Alarm_IRQn 0 */
+  HAL_RTC_AlarmIRQHandler(&hrtc);
+  /* USER CODE BEGIN RTC_Alarm_IRQn 1 */
+
+  /* USER CODE END RTC_Alarm_IRQn 1 */
+}
+
+/**
   * @brief This function handles IPCC RX occupied interrupt.
   */
 void IPCC_C1_RX_IRQHandler(void)

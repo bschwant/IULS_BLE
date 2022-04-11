@@ -1,6 +1,7 @@
 {
     "cortex-debug.armToolchainPath": "/usr/local/bin",
     "cortex-debug.openocdPath": "/usr/local/bin/openocd",
+    "C_Cpp.errorSquiggles": "Disabled",
     // "cortex-debug.": "/usr/local/bin/arm-none-eabi-gdb"
     // "cortex-debug.openocdPath": "~/Users/brianschwantes/Desktop/IULS_BLE/openocd"
     

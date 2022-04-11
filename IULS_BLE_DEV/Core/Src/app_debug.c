@@ -416,8 +416,6 @@ else if (CFG_DEBUG_TRACE_UART == hw_uart1)
 void DbgOutputTraces(  uint8_t *p_data, uint16_t size, void (*cb)(void) )
 {
 /* USER CODE END DbgOutputTraces */
-// CFG_HW_LPUART1_DMA_TX_SUPPORTED;
-  // HAL_UART_Receive(CFG_DEBUG_TRACE_UART, p_data, size, CFG_HW_TS_RTC_HANDLER_MAX_DELAY);
   HW_UART_Transmit_DMA(CFG_DEBUG_TRACE_UART, p_data, size, cb);
 
 /* USER CODE END DbgOutputTraces */
