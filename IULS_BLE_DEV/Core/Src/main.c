@@ -108,6 +108,7 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
     period = htim->Instance->ARR - last + current;
   }
   last = current;
+  // printf("%ld\r\n", period);
 }
 
 
@@ -204,10 +205,24 @@ int main(void)
   // HAL_TIM_Base_Start_IT(&htim2);   // Turn on the IRQ in the timer
   // HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_1); // Turn on the IRQ for CH1 input capture
   // int r = 0;
+    /*## Start the Input Capture in interrupt mode ##########################*/
+  HAL_TIM_Base_Start_IT(&htim2);
+  if(HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_1) != HAL_OK)
+  {
+    /* Starting Error */
+    Error_Handler();
+  }
+  if(HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_2) != HAL_OK)
+  {
+    /* Starting Error */
+    Error_Handler();
+  }
+
   while (1)
   {
     /* USER CODE END WHILE */
     MX_APPE_Process();
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -312,7 +327,7 @@ static void MX_ADC1_Init(void)
   /** Common config
   */
   hadc1.Instance = ADC1;
-  hadc1.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV256;
+  hadc1.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV128;
   hadc1.Init.Resolution = ADC_RESOLUTION_12B;
   hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
   hadc1.Init.ScanConvMode = ADC_SCAN_DISABLE;
@@ -611,13 +626,17 @@ static void MX_RTC_Init(void)
   }
   /** Enable the WakeUp
   */
-  // VALUE CHANGED FROM 0 TO OXFFFF BASED ON ST FORUM RECOMMENDATION
-  // https://community.st.com/s/question/0D53W00001K2koYSAR/hwtimerserver-hangs-on-stm32wb-w-ble?t=1645623930307
   if (HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, 0xFFFF, RTC_WAKEUPCLOCK_RTCCLK_DIV16) != HAL_OK)
   {
     Error_Handler();
   }
   /* USER CODE BEGIN RTC_Init 2 */
+  // sAlarm.AlarmMask = RTC_ALARMMASK_ALL;
+  if (HAL_RTC_SetAlarm_IT(&hrtc, &sAlarm, RTC_FORMAT_BIN) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
   // added from https://community.st.com/s/question/0D53W00001K2koYSAR/hwtimerserver-hangs-on-stm32wb-w-ble?t=1645623930307
    __HAL_RTC_WAKEUPTIMER_DISABLE(&hrtc);
   /* USER CODE END RTC_Init 2 */
@@ -666,13 +685,17 @@ static void MX_TIM2_Init(void)
   {
     Error_Handler();
   }
-  /* USER CODE BEGIN TIM2_Init 2 */
-  HAL_TIM_Base_Start_IT(&htim2);   // Turn on the IRQ in the timer
-  // HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_1); // Turn on the IRQ for CH1 input capture
-  if(HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_1) != HAL_OK){
-    /* Starting Error */ 
+  if (HAL_TIM_IC_ConfigChannel(&htim2, &sConfigIC, TIM_CHANNEL_2) != HAL_OK)
+  {
     Error_Handler();
   }
+  /* USER CODE BEGIN TIM2_Init 2 */
+  // HAL_TIM_Base_Start_IT(&htim2);   // Turn on the IRQ in the timer
+  // HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_1); // Turn on the IRQ for CH1 input capture
+  // if(HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_1) != HAL_OK){
+  //   /* Starting Error */ 
+  //   Error_Handler();
+  // }
   /* USER CODE END TIM2_Init 2 */
 
 }

@@ -294,6 +294,7 @@ void LPUART1_IRQHandler(void)
   */
 void RTC_Alarm_IRQHandler(void)
 {
+  printf("alarm\r\n");
   /* USER CODE BEGIN RTC_Alarm_IRQn 0 */
 
   /* USER CODE END RTC_Alarm_IRQn 0 */

@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
   27:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****                   ##### How to use this driver #####
   28:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   ==============================================================================
   29:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   [..]
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 2
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 2
 
 
   30:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****     (+) Enable the RTC domain access.
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
   84:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****         or Level according to the Tamper filter (if equal to 0 Edge else Level)
   85:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****         value, sampling frequency, NoErase, MaskFlag,  precharge or discharge and
   86:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****         Pull-UP using the HAL_RTCEx_SetTamper() function. You can configure RTC Tamper
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 3
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 3
 
 
   87:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****         with interrupt mode using HAL_RTCEx_SetTamper_IT() function.
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  141:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****                                        (uint32_t)RTC_TAMPCR_TAMP3IE   | (uint32_t)RTC_TAMPCR_TAMP3N
  142:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** #else
  143:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** #define RTC_TAMPCR_MASK               ((uint32_t)RTC_TAMPCR_TAMPTS    |\
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 4
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 4
 
 
  144:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****                                        (uint32_t)RTC_TAMPCR_TAMPFREQ  | (uint32_t)RTC_TAMPCR_TAMPFL
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
   32              		@ args = 0, pretend = 0, frame = 0
   33              		@ frame_needed = 0, uses_anonymous_args = 0
   34              		@ link register save eliminated.
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 5
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 5
 
 
  196:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   uint32_t tmpreg;
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  213:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   __HAL_RTC_WRITEPROTECTION_DISABLE(hrtc);
   71              		.loc 1 213 3 is_stmt 1 discriminator 2 view .LVU18
   72              		.loc 1 213 3 discriminator 2 view .LVU19
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 6
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 6
 
 
   73 0024 CA23     		movs	r3, #202
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  229:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   /* Change RTC state */
  230:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   hrtc->State = HAL_RTC_STATE_READY;
  112              		.loc 1 230 3 discriminator 2 view .LVU33
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 7
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 7
 
 
  113              		.loc 1 230 15 is_stmt 0 discriminator 2 view .LVU34
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  248:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   *                                         falling edge of the related pin.
  249:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   * @param RTC_TimeStampPin Specifies the RTC TimeStamp Pin.
  250:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   *          This parameter can be one of the following values:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 8
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 8
 
 
  251:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   *             @arg RTC_TIMESTAMPPIN_DEFAULT: PC13 is selected as RTC TimeStamp Pin.
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  184 001a 23F40063 		bic	r3, r3, #2048
  185 001e 23F00803 		bic	r3, r3, #8
  186              	.LVL11:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 9
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 9
 
 
  271:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  222              		.loc 1 289 3 discriminator 2 view .LVU70
  223 0054 0268     		ldr	r2, [r0]
  224 0056 9368     		ldr	r3, [r2, #8]
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 10
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 10
 
 
  225 0058 43F40043 		orr	r3, r3, #32768
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  262              		.loc 1 265 3 view .LVU84
  263 008c 0220     		movs	r0, #2
  264              	.LVL15:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 11
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 11
 
 
  265              		.loc 1 305 1 view .LVU85
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  304              		.loc 1 322 3 is_stmt 1 discriminator 2 view .LVU94
  305              		.loc 1 322 3 discriminator 2 view .LVU95
  306 0014 0368     		ldr	r3, [r0]
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 12
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 12
 
 
  307 0016 CA21     		movs	r1, #202
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  344              		.loc 1 339 3 is_stmt 1 discriminator 2 view .LVU112
  345              		.loc 1 339 3 discriminator 2 view .LVU113
  346 0042 0023     		movs	r3, #0
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 13
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 13
 
 
  347 0044 80F82030 		strb	r3, [r0, #32]
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  353:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   /* Process Locked */
  386              		.loc 1 353 1 is_stmt 0 discriminator 2 view .LVU123
  387 0008 10B4     		push	{r4}
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 14
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 14
 
 
  388              	.LCFI4:
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  371:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   /* Change RTC state */
  372:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   hrtc->State = HAL_RTC_STATE_READY;
  427              		.loc 1 372 3 discriminator 2 view .LVU137
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 15
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 15
 
 
  428              		.loc 1 372 15 is_stmt 0 discriminator 2 view .LVU138
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  386:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** HAL_StatusTypeDef HAL_RTCEx_DeactivateInternalTimeStamp(RTC_HandleTypeDef *hrtc)
  387:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** {
  470              		.loc 1 387 1 is_stmt 1 view -0
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 16
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 16
 
 
  471              		.cfi_startproc
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  510              		.loc 1 402 15 is_stmt 0 discriminator 2 view .LVU163
  511 0030 80F82120 		strb	r2, [r0, #33]
  403:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 17
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 17
 
 
  404:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   /* Process Unlocked */
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  546              		@ args = 0, pretend = 0, frame = 0
  547              		@ frame_needed = 0, uses_anonymous_args = 0
  548              		.loc 1 424 1 is_stmt 0 view .LVU173
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 18
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 18
 
 
  549 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  590              	.LVL36:
  591              		.loc 1 437 23 view .LVU190
  592 0022 A270     		strb	r2, [r4, #2]
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 19
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 19
 
 
  438:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   sTimeStamp->TimeFormat = (uint8_t)((tmptime & (RTC_TR_PM)) >> 16U);
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  455:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****     /* Convert the DateTimeStamp structure parameters to Binary format */
  456:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****     sTimeStampDate->Month = (uint8_t)RTC_Bcd2ToByte(sTimeStampDate->Month);
  457:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****     sTimeStampDate->Date = (uint8_t)RTC_Bcd2ToByte(sTimeStampDate->Date);
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 20
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 20
 
 
  458:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****     sTimeStampDate->WeekDay = (uint8_t)RTC_Bcd2ToByte(sTimeStampDate->WeekDay);
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  664              		.loc 1 453 36 is_stmt 0 view .LVU222
  665 0074 A078     		ldrb	r0, [r4, #2]	@ zero_extendqisi2
  666 0076 FFF7FEFF 		bl	RTC_Bcd2ToByte
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 21
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 21
 
 
  667              	.LVL42:
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  473:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   * @note   By calling this API we disable the tamper interrupt for all tampers.
  474:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   * @param hrtc RTC handle
  475:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   * @param sTamper Pointer to Tamper Structure.
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 22
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 22
 
 
  476:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   * @retval HAL status
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  742 0010 0223     		movs	r3, #2
  743 0012 80F82130 		strb	r3, [r0, #33]
  497:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 23
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 23
 
 
  498:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   /* Configure the tamper trigger */
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  515:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****       sTamper->NoErase |= RTC_TAMPCR_TAMP2NOERASE;
  781              		.loc 1 515 7 is_stmt 1 view .LVU270
  782              		.loc 1 515 24 is_stmt 0 view .LVU271
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 24
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 24
 
 
  783 003c CA68     		ldr	r2, [r1, #12]
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  818              		.loc 1 534 8 is_stmt 0 view .LVU287
  819 0068 13F0080F 		tst	r3, #8
  820 006c 03D0     		beq	.L46
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 25
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 25
 
 
  535:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****     {
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  549:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****                       (uint32_t)sTamper->PrechargeDuration | (uint32_t)sTamper->TamperPullUp | (uin
  860              		.loc 1 549 40 view .LVU306
  861 009a CC69     		ldr	r4, [r1, #28]
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 26
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 26
 
 
  548:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****                       (uint32_t)sTamper->MaskFlag | (uint32_t)sTamper->Filter | (uint32_t)sTamper->
@@ -1558,7 +1558,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  559:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
  560:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   return HAL_OK;
  905              		.loc 1 560 3 view .LVU327
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 27
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 27
 
 
  906              		.loc 1 560 10 is_stmt 0 view .LVU328
@@ -1618,7 +1618,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  575:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   assert_param(IS_RTC_TAMPER(sTamper->Tamper));
  947              		.loc 1 575 3 view .LVU334
  576:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   assert_param(IS_RTC_TAMPER_INTERRUPT(sTamper->Interrupt));
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 28
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 28
 
 
  948              		.loc 1 576 3 view .LVU335
@@ -1678,7 +1678,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  983 001a 0B68     		ldr	r3, [r1]
  984              		.loc 1 594 51 view .LVU356
  985 001c 5B00     		lsls	r3, r3, #1
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 29
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 29
 
 
  986              		.loc 1 594 22 view .LVU357
@@ -1738,7 +1738,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  612:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****     {
  613:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****       sTamper->NoErase |= RTC_TAMPCR_TAMP3NOERASE;
  1023              		.loc 1 613 7 is_stmt 1 view .LVU374
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 30
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 30
 
 
  1024              		.loc 1 613 24 is_stmt 0 view .LVU375
@@ -1798,7 +1798,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  1059              		.loc 1 632 5 is_stmt 1 view .LVU390
  1060              		.loc 1 632 8 is_stmt 0 view .LVU391
  1061 0076 13F0200F 		tst	r3, #32
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 31
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 31
 
 
  1062 007a 03D0     		beq	.L60
@@ -1858,7 +1858,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  1103 00a4 2343     		orrs	r3, r3, r4
  1104              		.loc 1 643 113 view .LVU412
  1105 00a6 496A     		ldr	r1, [r1, #36]
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 32
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 32
 
 
  1106              	.LVL54:
@@ -1918,7 +1918,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  1145              		.loc 1 657 3 is_stmt 1 view .LVU428
  1146              		.loc 1 657 3 view .LVU429
  1147 00e0 0023     		movs	r3, #0
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 33
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 33
 
 
  1148 00e2 80F82030 		strb	r3, [r0, #32]
@@ -1978,7 +1978,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  1190              		@ frame_needed = 0, uses_anonymous_args = 0
  1191              		@ link register save eliminated.
  671:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   assert_param(IS_RTC_TAMPER(Tamper));
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 34
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 34
 
 
  1192              		.loc 1 671 3 view .LVU437
@@ -2038,7 +2038,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  1229 0036 06D0     		beq	.L73
  689:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   {
  690:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****     /* Disable the Tamper2 interrupt */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 35
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 35
 
 
  691:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****     hrtc->Instance->TAMPCR &= ((uint32_t)~(RTC_IT_TAMP | RTC_IT_TAMP2));
@@ -2098,7 +2098,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  1267              	.LVL62:
  1268              	.L75:
  674:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 36
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 36
 
 
  1269              		.loc 1 674 3 view .LVU470
@@ -2158,7 +2158,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  745:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** #else
  746:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****       HAL_RTCEx_Tamper1EventCallback(hrtc);
  747:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** #endif /* USE_HAL_RTC_REGISTER_CALLBACKS */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 37
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 37
 
 
  748:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
@@ -2218,7 +2218,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  802:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   * @brief  TimeStamp callback.
  803:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   * @param hrtc RTC handle
  804:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   * @retval None
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 38
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 38
 
 
  805:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   */
@@ -2278,7 +2278,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  1318              		.cfi_endproc
  1319              	.LFE1115:
  1321              		.section	.text.HAL_RTCEx_Tamper2EventCallback,"ax",%progbits
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 39
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 39
 
 
  1322              		.align	1
@@ -2338,7 +2338,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  1354              		.loc 1 855 1 is_stmt 1 view -0
  1355              		.cfi_startproc
  1356              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 40
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 40
 
 
  1357              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -2398,7 +2398,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  1398 0010 13F4006F 		tst	r3, #2048
  1399 0014 22D1     		bne	.L86
  1400              	.LVL69:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 41
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 41
 
 
  1401              	.L81:
@@ -2458,7 +2458,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  779:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****     {
  1440              		.loc 1 779 5 is_stmt 1 view .LVU507
  779:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****     {
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 42
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 42
 
 
  1441              		.loc 1 779 9 is_stmt 0 view .LVU508
@@ -2518,7 +2518,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  1485              	.LVL73:
  770:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****     }
  1486              		.loc 1 770 7 view .LVU519
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 43
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 43
 
 
  1487 0088 2268     		ldr	r2, [r4]
@@ -2578,7 +2578,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  1531              		@ args = 0, pretend = 0, frame = 0
  1532              		@ frame_needed = 0, uses_anonymous_args = 0
  1533              		.loc 1 872 1 is_stmt 0 view .LVU523
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 44
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 44
 
 
  1534 0000 70B5     		push	{r4, r5, r6, lr}
@@ -2638,7 +2638,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  1570              		.loc 1 890 13 is_stmt 0 view .LVU537
  1571 0024 FFF7FEFF 		bl	HAL_GetTick
  1572              	.LVL78:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 45
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 45
 
 
  1573              		.loc 1 890 27 view .LVU538
@@ -2698,7 +2698,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  1611              	.L95:
  902:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** }
  1612              		.loc 1 902 1 view .LVU554
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 46
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 46
 
 
  1613 0056 70BD     		pop	{r4, r5, r6, pc}
@@ -2758,7 +2758,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  1655 000e DA68     		ldr	r2, [r3, #12]
  1656              		.loc 1 916 9 view .LVU564
  1657 0010 12F4005F 		tst	r2, #8192
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 47
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 47
 
 
  1658 0014 0DD1     		bne	.L109
@@ -2818,7 +2818,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  1694              		.loc 1 934 10 is_stmt 0 view .LVU580
  1695 0042 0020     		movs	r0, #0
  1696              	.L106:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 48
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 48
 
 
  935:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** }
@@ -2878,7 +2878,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  1738              		.loc 1 949 10 is_stmt 0 view .LVU590
  1739 000c 2368     		ldr	r3, [r4]
  1740 000e DA68     		ldr	r2, [r3, #12]
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 49
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 49
 
 
  1741              		.loc 1 949 9 view .LVU591
@@ -2938,7 +2938,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  967:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   return HAL_OK;
  1778              		.loc 1 967 3 is_stmt 1 view .LVU606
  1779              		.loc 1 967 10 is_stmt 0 view .LVU607
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 50
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 50
 
 
  1780 0042 0020     		movs	r0, #0
@@ -2998,7 +2998,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  1821              	.L120:
  1822              		.loc 1 982 9 view .LVU616
  1823              		.loc 1 982 10 is_stmt 0 view .LVU617
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 51
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 51
 
 
  1824 000c 2368     		ldr	r3, [r4]
@@ -3058,7 +3058,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  1862              		.loc 1 998 3 view .LVU631
  1863              		.loc 1 998 15 is_stmt 0 view .LVU632
  1864 0048 0123     		movs	r3, #1
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 52
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 52
 
 
  1865 004a 84F82130 		strb	r3, [r4, #33]
@@ -3118,7 +3118,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  1889              		@ args = 0, pretend = 0, frame = 0
  1890              		@ frame_needed = 0, uses_anonymous_args = 0
  1891              		.loc 1 1030 1 is_stmt 0 view .LVU638
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 53
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 53
 
 
  1892 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
@@ -3178,7 +3178,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
 1045:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   /*Check RTC WUTWF flag is reset only when wake up timer enabled*/
 1046:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   if ((hrtc->Instance->CR & RTC_CR_WUTE) != 0U)
  1932              		.loc 1 1046 3 discriminator 2 view .LVU653
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 54
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 54
 
 
  1933              		.loc 1 1046 12 is_stmt 0 discriminator 2 view .LVU654
@@ -3238,7 +3238,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
 1059:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
 1060:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****         /* Process Unlocked */
 1061:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****         __HAL_UNLOCK(hrtc);
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 55
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 55
 
 
  1975              		.loc 1 1061 9 is_stmt 1 view .LVU673
@@ -3298,7 +3298,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
 1077:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****       /* Enable the write protection for RTC registers */
 1078:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****       __HAL_RTC_WRITEPROTECTION_ENABLE(hrtc);
  2014              		.loc 1 1078 7 is_stmt 1 view .LVU689
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 56
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 56
 
 
  2015              		.loc 1 1078 7 view .LVU690
@@ -3358,7 +3358,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  2051 00ae 5D61     		str	r5, [r3, #20]
 1097:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
 1098:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   /* Enable the Wakeup Timer */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 57
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 57
 
 
 1099:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   __HAL_RTC_WAKEUPTIMER_ENABLE(hrtc);
@@ -3418,7 +3418,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  2093              		.fpu fpv4-sp-d16
  2095              	HAL_RTCEx_SetWakeUpTimer_IT:
  2096              	.LVL104:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 58
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 58
 
 
  2097              	.LFB1123:
@@ -3478,7 +3478,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
 1131:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
 1132:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   /* Disable the write protection for RTC registers */
 1133:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   __HAL_RTC_WRITEPROTECTION_DISABLE(hrtc);
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 59
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 59
 
 
  2131              		.loc 1 1133 3 is_stmt 1 discriminator 2 view .LVU732
@@ -3538,7 +3538,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  2175 004c F4D9     		bls	.L139
 1144:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****       {
 1145:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****         /* Enable the write protection for RTC registers */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 60
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 60
 
 
 1146:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****         __HAL_RTC_WRITEPROTECTION_ENABLE(hrtc);
@@ -3598,7 +3598,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  2212              	.LVL111:
 1164:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
 1165:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   /* Wait till RTC WUTWF flag is set and if Time out is reached exit */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 61
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 61
 
 
 1166:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   while (__HAL_RTC_WAKEUPTIMER_GET_FLAG(hrtc, RTC_FLAG_WUTWF) == 0U)
@@ -3658,7 +3658,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
 1183:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   hrtc->Instance->WUTR = (uint32_t)WakeUpCounter;
  2250              		.loc 1 1183 3 is_stmt 1 view .LVU784
  2251              		.loc 1 1183 24 is_stmt 0 view .LVU785
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 62
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 62
 
 
  2252 00a8 5E61     		str	r6, [r3, #20]
@@ -3718,7 +3718,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
 1202:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   /* Enable the write protection for RTC registers */
 1203:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   __HAL_RTC_WRITEPROTECTION_ENABLE(hrtc);
  2288              		.loc 1 1203 3 view .LVU797
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 63
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 63
 
 
  2289              		.loc 1 1203 3 view .LVU798
@@ -3778,7 +3778,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
 1214:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   * @brief  Deactivate wake up timer counter.
 1215:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   * @param hrtc RTC handle
 1216:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   * @retval HAL status
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 64
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 64
 
 
 1217:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   */
@@ -3838,7 +3838,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  2372 0026 9368     		ldr	r3, [r2, #8]
  2373 0028 23F48063 		bic	r3, r3, #1024
  2374 002c 9360     		str	r3, [r2, #8]
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 65
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 65
 
 
 1232:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
@@ -3898,7 +3898,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
 1246:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
 1247:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****       /* Process Unlocked */
 1248:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****       __HAL_UNLOCK(hrtc);
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 66
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 66
 
 
  2415              		.loc 1 1248 7 is_stmt 1 view .LVU840
@@ -3958,7 +3958,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  2453              		.section	.text.HAL_RTCEx_GetWakeUpTimer,"ax",%progbits
  2454              		.align	1
  2455              		.global	HAL_RTCEx_GetWakeUpTimer
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 67
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 67
 
 
  2456              		.syntax unified
@@ -4018,7 +4018,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
 1285:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   {
 1286:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****     /* WAKEUPTIMER callback */
 1287:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** #if (USE_HAL_RTC_REGISTER_CALLBACKS == 1)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 68
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 68
 
 
 1288:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****     hrtc->WakeUpTimerEventCallback(hrtc);
@@ -4078,7 +4078,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  2517              		@ frame_needed = 0, uses_anonymous_args = 0
 1282:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   /* Get the pending status of the WAKEUPTIMER Interrupt */
  2518              		.loc 1 1282 1 is_stmt 0 view .LVU866
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 69
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 69
 
 
  2519 0000 10B5     		push	{r4, lr}
@@ -4138,7 +4138,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  2565              		.global	HAL_RTCEx_PollForWakeUpTimerEvent
  2566              		.syntax unified
  2567              		.thumb
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 70
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 70
 
 
  2568              		.thumb_func
@@ -4198,7 +4198,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
 1333:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****     {
 1334:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****       if (((HAL_GetTick() - tickstart) > Timeout) || (Timeout == 0U))
  2608              		.loc 1 1334 7 is_stmt 1 view .LVU887
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 71
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 71
 
 
  2609              		.loc 1 1334 13 is_stmt 0 view .LVU888
@@ -4258,7 +4258,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  2648              		.section	.text.HAL_RTCEx_BKUPWrite,"ax",%progbits
  2649              		.align	1
  2650              		.global	HAL_RTCEx_BKUPWrite
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 72
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 72
 
 
  2651              		.syntax unified
@@ -4318,7 +4318,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  2663              		@ link register save eliminated.
 1394:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   uint32_t tmp;
  2664              		.loc 1 1394 3 view .LVU904
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 73
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 73
 
 
 1395:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
@@ -4378,7 +4378,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
 1418:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   /* Check the parameters */
 1419:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   assert_param(IS_RTC_BKP(BackupRegister));
  2698              		.loc 1 1419 3 view .LVU915
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 74
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 74
 
 
 1420:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
@@ -4438,7 +4438,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
 1449:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** {
  2726              		.loc 1 1449 1 is_stmt 1 view -0
  2727              		.cfi_startproc
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 75
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 75
 
 
  2728              		@ args = 0, pretend = 0, frame = 0
@@ -4498,7 +4498,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  2768 0022 CA22     		movs	r2, #202
  2769              	.LVL142:
  2770              		.loc 1 1463 3 is_stmt 0 discriminator 2 view .LVU938
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 76
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 76
 
 
  2771 0024 5A62     		str	r2, [r3, #36]
@@ -4558,7 +4558,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
 1491:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
 1492:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   /* Enable the write protection for RTC registers */
 1493:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   __HAL_RTC_WRITEPROTECTION_ENABLE(hrtc);
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 77
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 77
 
 
  2798              		.loc 1 1493 3 is_stmt 1 view .LVU950
@@ -4618,7 +4618,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  2835 0060 16F4803F 		tst	r6, #65536
  2836 0064 E7D0     		beq	.L175
 1473:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****       {
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 78
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 78
 
 
  2837              		.loc 1 1473 7 is_stmt 1 view .LVU968
@@ -4678,7 +4678,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  2877              		.syntax unified
  2878              		.thumb
  2879              		.thumb_func
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 79
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 79
 
 
  2880              		.fpu fpv4-sp-d16
@@ -4738,7 +4738,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  2911 0012 0123     		movs	r3, #1
  2912 0014 80F82030 		strb	r3, [r0, #32]
  2913              		.loc 1 1525 3 discriminator 2 view .LVU992
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 80
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 80
 
 
 1526:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
@@ -4798,7 +4798,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
 1538:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****     {
 1539:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****       /* Enable the write protection for RTC registers */
 1540:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****       __HAL_RTC_WRITEPROTECTION_ENABLE(hrtc);
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 81
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 81
 
 
  2956              		.loc 1 1540 7 is_stmt 1 view .LVU1012
@@ -4858,7 +4858,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
 1577:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****     __HAL_RTC_WRITEPROTECTION_ENABLE(hrtc);
 1578:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
 1579:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****     /* Change RTC state */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 82
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 82
 
 
 1580:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****     hrtc->State = HAL_RTC_STATE_ERROR;
@@ -4918,7 +4918,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
 1589:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
  2999              		.loc 1 1589 3 is_stmt 1 view .LVU1032
 1589:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 83
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 83
 
 
  3000              		.loc 1 1589 3 view .LVU1033
@@ -4978,7 +4978,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
 1568:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
  3037              		.loc 1 1568 9 view .LVU1051
  3038 009e 0023     		movs	r3, #0
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 84
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 84
 
 
  3039 00a0 84F82030 		strb	r3, [r4, #32]
@@ -5038,7 +5038,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  3079 00be 7047     		bx	lr
  3080              		.cfi_endproc
  3081              	.LFE1132:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 85
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 85
 
 
  3083              		.section	.text.HAL_RTCEx_SetCalibrationOutPut,"ax",%progbits
@@ -5098,7 +5098,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
 1618:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
 1619:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   /* Disable the write protection for RTC registers */
 1620:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   __HAL_RTC_WRITEPROTECTION_DISABLE(hrtc);
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 86
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 86
 
 
  3118              		.loc 1 1620 3 is_stmt 1 discriminator 2 view .LVU1076
@@ -5158,7 +5158,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
 1635:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
 1636:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   /* Process Unlocked */
 1637:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   __HAL_UNLOCK(hrtc);
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 87
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 87
 
 
  3158              		.loc 1 1637 3 is_stmt 1 discriminator 2 view .LVU1093
@@ -5218,7 +5218,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  3200              		.loc 1 1650 3 view .LVU1103
  3201 0000 90F82030 		ldrb	r3, [r0, #32]	@ zero_extendqisi2
  3202 0004 012B     		cmp	r3, #1
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 88
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 88
 
 
  3203 0006 1AD0     		beq	.L203
@@ -5278,7 +5278,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
 1667:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
 1668:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   return HAL_OK;
  3241              		.loc 1 1668 3 discriminator 2 view .LVU1121
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 89
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 89
 
 
  3242              		.loc 1 1668 10 is_stmt 0 discriminator 2 view .LVU1122
@@ -5338,7 +5338,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  3285 000c 0123     		movs	r3, #1
  3286 000e 80F82030 		strb	r3, [r0, #32]
  3287              		.loc 1 1679 3 discriminator 2 view .LVU1131
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 90
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 90
 
 
 1680:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
@@ -5398,7 +5398,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  3316              		.loc 1 1705 25 view .LVU1144
  3317 0036 D368     		ldr	r3, [r2, #12]
  3318 0038 23F08003 		bic	r3, r3, #128
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 91
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 91
 
 
  3319 003c D360     		str	r3, [r2, #12]
@@ -5458,7 +5458,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  3353 005e 0023     		movs	r3, #0
  3354 0060 84F82030 		strb	r3, [r4, #32]
 1696:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 92
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 92
 
 
  3355              		.loc 1 1696 5 view .LVU1162
@@ -5518,7 +5518,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  3397              		.cfi_def_cfa_offset 8
  3398              		.cfi_offset 4, -8
  3399              		.cfi_offset 14, -4
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 93
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 93
 
 
  3400 000a 0446     		mov	r4, r0
@@ -5578,7 +5578,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
 1753:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****     /* Exit Initialization mode */
 1754:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****     hrtc->Instance->ISR &= (uint32_t)~RTC_ISR_INIT;
  3430              		.loc 1 1754 5 view .LVU1183
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 94
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 94
 
 
  3431              		.loc 1 1754 9 is_stmt 0 view .LVU1184
@@ -5638,7 +5638,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  3467 005a 84F82130 		strb	r3, [r4, #33]
 1745:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
  3468              		.loc 1 1745 5 is_stmt 1 view .LVU1201
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 95
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 95
 
 
 1745:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
@@ -5698,7 +5698,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  3508              		.loc 1 1779 3 view .LVU1210
  3509 0000 90F82030 		ldrb	r3, [r0, #32]	@ zero_extendqisi2
  3510 0004 012B     		cmp	r3, #1
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 96
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 96
 
 
  3511 0006 1AD0     		beq	.L224
@@ -5758,7 +5758,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  3548 0034 0023     		movs	r3, #0
  3549 0036 80F82030 		strb	r3, [r0, #32]
  3550              		.loc 1 1796 3 discriminator 2 view .LVU1229
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 97
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 97
 
 
 1797:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
@@ -5818,7 +5818,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  3591              		.loc 1 1811 3 discriminator 2 view .LVU1239
 1812:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
 1813:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   hrtc->State = HAL_RTC_STATE_BUSY;
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 98
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 98
 
 
  3592              		.loc 1 1813 3 discriminator 2 view .LVU1240
@@ -5878,7 +5878,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  3629 003a 1846     		mov	r0, r3
  3630              	.LVL189:
  3631              		.loc 1 1830 10 discriminator 2 view .LVU1259
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 99
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 99
 
 
  3632 003c 7047     		bx	lr
@@ -5938,7 +5938,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
 1859:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   /* Prevent unused argument(s) compilation warning */
 1860:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   UNUSED(hrtc);
  3659              		.loc 1 1860 3 view .LVU1263
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 100
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 100
 
 
 1861:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
@@ -5998,7 +5998,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  3699              		.loc 1 1877 9 view .LVU1271
  3700              		.loc 1 1877 10 is_stmt 0 view .LVU1272
  3701 000c 2368     		ldr	r3, [r4]
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 101
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 101
 
 
  3702 000e DA68     		ldr	r2, [r3, #12]
@@ -6058,7 +6058,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
 1894:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c **** 
 1895:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rtc_ex.c ****   return HAL_OK;
  3740              		.loc 1 1895 3 is_stmt 1 view .LVU1288
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 102
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 102
 
 
  3741              		.loc 1 1895 10 is_stmt 0 view .LVU1289
@@ -6083,96 +6083,96 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 1
  3760              		.file 10 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_rtc_ex.h"
  3761              		.file 11 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_uart.h"
  3762              		.file 12 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h"
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 103
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 103
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32wbxx_hal_rtc_ex.c
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:18     .text.HAL_RTCEx_SetTimeStamp:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:26     .text.HAL_RTCEx_SetTimeStamp:0000000000000000 HAL_RTCEx_SetTimeStamp
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:141    .text.HAL_RTCEx_SetTimeStamp_IT:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:148    .text.HAL_RTCEx_SetTimeStamp_IT:0000000000000000 HAL_RTCEx_SetTimeStamp_IT
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:270    .text.HAL_RTCEx_SetTimeStamp_IT:0000000000000090 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:275    .text.HAL_RTCEx_DeactivateTimeStamp:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:282    .text.HAL_RTCEx_DeactivateTimeStamp:0000000000000000 HAL_RTCEx_DeactivateTimeStamp
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:366    .text.HAL_RTCEx_SetInternalTimeStamp:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:373    .text.HAL_RTCEx_SetInternalTimeStamp:0000000000000000 HAL_RTCEx_SetInternalTimeStamp
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:455    .text.HAL_RTCEx_SetInternalTimeStamp:0000000000000054 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:460    .text.HAL_RTCEx_DeactivateInternalTimeStamp:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:467    .text.HAL_RTCEx_DeactivateInternalTimeStamp:0000000000000000 HAL_RTCEx_DeactivateInternalTimeStamp
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:534    .text.HAL_RTCEx_GetTimeStamp:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:541    .text.HAL_RTCEx_GetTimeStamp:0000000000000000 HAL_RTCEx_GetTimeStamp
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:695    .text.HAL_RTCEx_GetTimeStamp:0000000000000098 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:700    .text.HAL_RTCEx_SetTamper:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:707    .text.HAL_RTCEx_SetTamper:0000000000000000 HAL_RTCEx_SetTamper
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:926    .text.HAL_RTCEx_SetTamper:00000000000000d8 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:931    .text.HAL_RTCEx_SetTamper_IT:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:938    .text.HAL_RTCEx_SetTamper_IT:0000000000000000 HAL_RTCEx_SetTamper_IT
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1171   .text.HAL_RTCEx_SetTamper_IT:00000000000000f0 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1177   .text.HAL_RTCEx_DeactivateTamper:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1184   .text.HAL_RTCEx_DeactivateTamper:0000000000000000 HAL_RTCEx_DeactivateTamper
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1278   .text.HAL_RTCEx_TimeStampEventCallback:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1285   .text.HAL_RTCEx_TimeStampEventCallback:0000000000000000 HAL_RTCEx_TimeStampEventCallback
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1300   .text.HAL_RTCEx_Tamper1EventCallback:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1307   .text.HAL_RTCEx_Tamper1EventCallback:0000000000000000 HAL_RTCEx_Tamper1EventCallback
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1322   .text.HAL_RTCEx_Tamper2EventCallback:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1329   .text.HAL_RTCEx_Tamper2EventCallback:0000000000000000 HAL_RTCEx_Tamper2EventCallback
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1344   .text.HAL_RTCEx_Tamper3EventCallback:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1351   .text.HAL_RTCEx_Tamper3EventCallback:0000000000000000 HAL_RTCEx_Tamper3EventCallback
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1366   .text.HAL_RTCEx_TamperTimeStampIRQHandler:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1373   .text.HAL_RTCEx_TamperTimeStampIRQHandler:0000000000000000 HAL_RTCEx_TamperTimeStampIRQHandler
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1511   .text.HAL_RTCEx_TamperTimeStampIRQHandler:00000000000000b8 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1519   .text.HAL_RTCEx_PollForTimeStampEvent:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1526   .text.HAL_RTCEx_PollForTimeStampEvent:0000000000000000 HAL_RTCEx_PollForTimeStampEvent
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1619   .text.HAL_RTCEx_PollForTamper1Event:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1626   .text.HAL_RTCEx_PollForTamper1Event:0000000000000000 HAL_RTCEx_PollForTamper1Event
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1704   .text.HAL_RTCEx_PollForTamper2Event:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1711   .text.HAL_RTCEx_PollForTamper2Event:0000000000000000 HAL_RTCEx_PollForTamper2Event
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1789   .text.HAL_RTCEx_PollForTamper3Event:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1796   .text.HAL_RTCEx_PollForTamper3Event:0000000000000000 HAL_RTCEx_PollForTamper3Event
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1877   .text.HAL_RTCEx_SetWakeUpTimer:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:1884   .text.HAL_RTCEx_SetWakeUpTimer:0000000000000000 HAL_RTCEx_SetWakeUpTimer
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:2088   .text.HAL_RTCEx_SetWakeUpTimer_IT:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:2095   .text.HAL_RTCEx_SetWakeUpTimer_IT:0000000000000000 HAL_RTCEx_SetWakeUpTimer_IT
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:2318   .text.HAL_RTCEx_SetWakeUpTimer_IT:0000000000000100 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:2323   .text.HAL_RTCEx_DeactivateWakeUpTimer:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:2330   .text.HAL_RTCEx_DeactivateWakeUpTimer:0000000000000000 HAL_RTCEx_DeactivateWakeUpTimer
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:2454   .text.HAL_RTCEx_GetWakeUpTimer:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:2461   .text.HAL_RTCEx_GetWakeUpTimer:0000000000000000 HAL_RTCEx_GetWakeUpTimer
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:2482   .text.HAL_RTCEx_WakeUpTimerEventCallback:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:2489   .text.HAL_RTCEx_WakeUpTimerEventCallback:0000000000000000 HAL_RTCEx_WakeUpTimerEventCallback
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:2504   .text.HAL_RTCEx_WakeUpTimerIRQHandler:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:2511   .text.HAL_RTCEx_WakeUpTimerIRQHandler:0000000000000000 HAL_RTCEx_WakeUpTimerIRQHandler
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s 			page 104
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:18     .text.HAL_RTCEx_SetTimeStamp:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:26     .text.HAL_RTCEx_SetTimeStamp:0000000000000000 HAL_RTCEx_SetTimeStamp
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:141    .text.HAL_RTCEx_SetTimeStamp_IT:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:148    .text.HAL_RTCEx_SetTimeStamp_IT:0000000000000000 HAL_RTCEx_SetTimeStamp_IT
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:270    .text.HAL_RTCEx_SetTimeStamp_IT:0000000000000090 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:275    .text.HAL_RTCEx_DeactivateTimeStamp:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:282    .text.HAL_RTCEx_DeactivateTimeStamp:0000000000000000 HAL_RTCEx_DeactivateTimeStamp
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:366    .text.HAL_RTCEx_SetInternalTimeStamp:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:373    .text.HAL_RTCEx_SetInternalTimeStamp:0000000000000000 HAL_RTCEx_SetInternalTimeStamp
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:455    .text.HAL_RTCEx_SetInternalTimeStamp:0000000000000054 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:460    .text.HAL_RTCEx_DeactivateInternalTimeStamp:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:467    .text.HAL_RTCEx_DeactivateInternalTimeStamp:0000000000000000 HAL_RTCEx_DeactivateInternalTimeStamp
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:534    .text.HAL_RTCEx_GetTimeStamp:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:541    .text.HAL_RTCEx_GetTimeStamp:0000000000000000 HAL_RTCEx_GetTimeStamp
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:695    .text.HAL_RTCEx_GetTimeStamp:0000000000000098 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:700    .text.HAL_RTCEx_SetTamper:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:707    .text.HAL_RTCEx_SetTamper:0000000000000000 HAL_RTCEx_SetTamper
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:926    .text.HAL_RTCEx_SetTamper:00000000000000d8 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:931    .text.HAL_RTCEx_SetTamper_IT:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:938    .text.HAL_RTCEx_SetTamper_IT:0000000000000000 HAL_RTCEx_SetTamper_IT
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1171   .text.HAL_RTCEx_SetTamper_IT:00000000000000f0 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1177   .text.HAL_RTCEx_DeactivateTamper:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1184   .text.HAL_RTCEx_DeactivateTamper:0000000000000000 HAL_RTCEx_DeactivateTamper
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1278   .text.HAL_RTCEx_TimeStampEventCallback:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1285   .text.HAL_RTCEx_TimeStampEventCallback:0000000000000000 HAL_RTCEx_TimeStampEventCallback
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1300   .text.HAL_RTCEx_Tamper1EventCallback:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1307   .text.HAL_RTCEx_Tamper1EventCallback:0000000000000000 HAL_RTCEx_Tamper1EventCallback
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1322   .text.HAL_RTCEx_Tamper2EventCallback:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1329   .text.HAL_RTCEx_Tamper2EventCallback:0000000000000000 HAL_RTCEx_Tamper2EventCallback
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1344   .text.HAL_RTCEx_Tamper3EventCallback:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1351   .text.HAL_RTCEx_Tamper3EventCallback:0000000000000000 HAL_RTCEx_Tamper3EventCallback
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1366   .text.HAL_RTCEx_TamperTimeStampIRQHandler:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1373   .text.HAL_RTCEx_TamperTimeStampIRQHandler:0000000000000000 HAL_RTCEx_TamperTimeStampIRQHandler
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1511   .text.HAL_RTCEx_TamperTimeStampIRQHandler:00000000000000b8 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1519   .text.HAL_RTCEx_PollForTimeStampEvent:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1526   .text.HAL_RTCEx_PollForTimeStampEvent:0000000000000000 HAL_RTCEx_PollForTimeStampEvent
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1619   .text.HAL_RTCEx_PollForTamper1Event:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1626   .text.HAL_RTCEx_PollForTamper1Event:0000000000000000 HAL_RTCEx_PollForTamper1Event
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1704   .text.HAL_RTCEx_PollForTamper2Event:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1711   .text.HAL_RTCEx_PollForTamper2Event:0000000000000000 HAL_RTCEx_PollForTamper2Event
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1789   .text.HAL_RTCEx_PollForTamper3Event:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1796   .text.HAL_RTCEx_PollForTamper3Event:0000000000000000 HAL_RTCEx_PollForTamper3Event
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1877   .text.HAL_RTCEx_SetWakeUpTimer:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:1884   .text.HAL_RTCEx_SetWakeUpTimer:0000000000000000 HAL_RTCEx_SetWakeUpTimer
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:2088   .text.HAL_RTCEx_SetWakeUpTimer_IT:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:2095   .text.HAL_RTCEx_SetWakeUpTimer_IT:0000000000000000 HAL_RTCEx_SetWakeUpTimer_IT
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:2318   .text.HAL_RTCEx_SetWakeUpTimer_IT:0000000000000100 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:2323   .text.HAL_RTCEx_DeactivateWakeUpTimer:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:2330   .text.HAL_RTCEx_DeactivateWakeUpTimer:0000000000000000 HAL_RTCEx_DeactivateWakeUpTimer
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:2454   .text.HAL_RTCEx_GetWakeUpTimer:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:2461   .text.HAL_RTCEx_GetWakeUpTimer:0000000000000000 HAL_RTCEx_GetWakeUpTimer
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:2482   .text.HAL_RTCEx_WakeUpTimerEventCallback:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:2489   .text.HAL_RTCEx_WakeUpTimerEventCallback:0000000000000000 HAL_RTCEx_WakeUpTimerEventCallback
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:2504   .text.HAL_RTCEx_WakeUpTimerIRQHandler:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:2511   .text.HAL_RTCEx_WakeUpTimerIRQHandler:0000000000000000 HAL_RTCEx_WakeUpTimerIRQHandler
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s 			page 104
 
 
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:2559   .text.HAL_RTCEx_WakeUpTimerIRQHandler:0000000000000030 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:2564   .text.HAL_RTCEx_PollForWakeUpTimerEvent:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:2571   .text.HAL_RTCEx_PollForWakeUpTimerEvent:0000000000000000 HAL_RTCEx_PollForWakeUpTimerEvent
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:2649   .text.HAL_RTCEx_BKUPWrite:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:2656   .text.HAL_RTCEx_BKUPWrite:0000000000000000 HAL_RTCEx_BKUPWrite
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:2682   .text.HAL_RTCEx_BKUPRead:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:2689   .text.HAL_RTCEx_BKUPRead:0000000000000000 HAL_RTCEx_BKUPRead
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:2716   .text.HAL_RTCEx_SetSmoothCalib:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:2723   .text.HAL_RTCEx_SetSmoothCalib:0000000000000000 HAL_RTCEx_SetSmoothCalib
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:2875   .text.HAL_RTCEx_SetSynchroShift:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:2882   .text.HAL_RTCEx_SetSynchroShift:0000000000000000 HAL_RTCEx_SetSynchroShift
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:3084   .text.HAL_RTCEx_SetCalibrationOutPut:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:3091   .text.HAL_RTCEx_SetCalibrationOutPut:0000000000000000 HAL_RTCEx_SetCalibrationOutPut
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:3184   .text.HAL_RTCEx_DeactivateCalibrationOutPut:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:3191   .text.HAL_RTCEx_DeactivateCalibrationOutPut:0000000000000000 HAL_RTCEx_DeactivateCalibrationOutPut
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:3258   .text.HAL_RTCEx_SetRefClock:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:3265   .text.HAL_RTCEx_SetRefClock:0000000000000000 HAL_RTCEx_SetRefClock
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:3375   .text.HAL_RTCEx_DeactivateRefClock:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:3382   .text.HAL_RTCEx_DeactivateRefClock:0000000000000000 HAL_RTCEx_DeactivateRefClock
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:3492   .text.HAL_RTCEx_EnableBypassShadow:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:3499   .text.HAL_RTCEx_EnableBypassShadow:0000000000000000 HAL_RTCEx_EnableBypassShadow
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:3568   .text.HAL_RTCEx_DisableBypassShadow:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:3575   .text.HAL_RTCEx_DisableBypassShadow:0000000000000000 HAL_RTCEx_DisableBypassShadow
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:3644   .text.HAL_RTCEx_AlarmBEventCallback:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:3651   .text.HAL_RTCEx_AlarmBEventCallback:0000000000000000 HAL_RTCEx_AlarmBEventCallback
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:3666   .text.HAL_RTCEx_PollForAlarmBEvent:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccWnGnJI.s:3673   .text.HAL_RTCEx_PollForAlarmBEvent:0000000000000000 HAL_RTCEx_PollForAlarmBEvent
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:2559   .text.HAL_RTCEx_WakeUpTimerIRQHandler:0000000000000030 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:2564   .text.HAL_RTCEx_PollForWakeUpTimerEvent:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:2571   .text.HAL_RTCEx_PollForWakeUpTimerEvent:0000000000000000 HAL_RTCEx_PollForWakeUpTimerEvent
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:2649   .text.HAL_RTCEx_BKUPWrite:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:2656   .text.HAL_RTCEx_BKUPWrite:0000000000000000 HAL_RTCEx_BKUPWrite
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:2682   .text.HAL_RTCEx_BKUPRead:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:2689   .text.HAL_RTCEx_BKUPRead:0000000000000000 HAL_RTCEx_BKUPRead
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:2716   .text.HAL_RTCEx_SetSmoothCalib:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:2723   .text.HAL_RTCEx_SetSmoothCalib:0000000000000000 HAL_RTCEx_SetSmoothCalib
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:2875   .text.HAL_RTCEx_SetSynchroShift:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:2882   .text.HAL_RTCEx_SetSynchroShift:0000000000000000 HAL_RTCEx_SetSynchroShift
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:3084   .text.HAL_RTCEx_SetCalibrationOutPut:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:3091   .text.HAL_RTCEx_SetCalibrationOutPut:0000000000000000 HAL_RTCEx_SetCalibrationOutPut
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:3184   .text.HAL_RTCEx_DeactivateCalibrationOutPut:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:3191   .text.HAL_RTCEx_DeactivateCalibrationOutPut:0000000000000000 HAL_RTCEx_DeactivateCalibrationOutPut
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:3258   .text.HAL_RTCEx_SetRefClock:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:3265   .text.HAL_RTCEx_SetRefClock:0000000000000000 HAL_RTCEx_SetRefClock
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:3375   .text.HAL_RTCEx_DeactivateRefClock:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:3382   .text.HAL_RTCEx_DeactivateRefClock:0000000000000000 HAL_RTCEx_DeactivateRefClock
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:3492   .text.HAL_RTCEx_EnableBypassShadow:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:3499   .text.HAL_RTCEx_EnableBypassShadow:0000000000000000 HAL_RTCEx_EnableBypassShadow
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:3568   .text.HAL_RTCEx_DisableBypassShadow:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:3575   .text.HAL_RTCEx_DisableBypassShadow:0000000000000000 HAL_RTCEx_DisableBypassShadow
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:3644   .text.HAL_RTCEx_AlarmBEventCallback:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:3651   .text.HAL_RTCEx_AlarmBEventCallback:0000000000000000 HAL_RTCEx_AlarmBEventCallback
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:3666   .text.HAL_RTCEx_PollForAlarmBEvent:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxi0VaQ.s:3673   .text.HAL_RTCEx_PollForAlarmBEvent:0000000000000000 HAL_RTCEx_PollForAlarmBEvent
 
 UNDEFINED SYMBOLS
 RTC_Bcd2ToByte

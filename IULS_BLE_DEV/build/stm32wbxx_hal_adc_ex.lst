@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
   27:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   * in the root directory of this software component.
   28:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
   29:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   *
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 2
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 2
 
 
   30:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   ******************************************************************************
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
   84:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** /** @defgroup ADCEx_Exported_Functions ADC Extended Exported Functions
   85:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   * @{
   86:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 3
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 3
 
 
   87:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** 
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  127:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** #if defined (ADC_SUPPORT_2_5_MSPS)
  128:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   UNUSED(SingleDiff);
  129:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 4
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 4
 
 
  130:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   uint32_t calibration_index;
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
   69              		.loc 1 158 5 is_stmt 1 view .LVU15
   70 0020 636D     		ldr	r3, [r4, #84]
   71 0022 23F48853 		bic	r3, r3, #4352
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 5
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 5
 
 
   72 0026 23F00203 		bic	r3, r3, #2
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
   31:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @{
   32:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   */
   33:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 6
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 6
 
 
   34:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #if defined (ADC1)
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
   88:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define ADC_REG_RANK_9_SQRX_BITOFFSET_POS  (24UL) /* Value equivalent to bitfield "ADC_SQR2_SQ9" po
   89:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define ADC_REG_RANK_10_SQRX_BITOFFSET_POS ( 0UL) /* Value equivalent to bitfield "ADC_SQR3_SQ10" p
   90:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define ADC_REG_RANK_11_SQRX_BITOFFSET_POS ( 6UL) /* Value equivalent to bitfield "ADC_SQR3_SQ11" p
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 7
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 7
 
 
   91:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define ADC_REG_RANK_12_SQRX_BITOFFSET_POS (12UL) /* Value equivalent to bitfield "ADC_SQR3_SQ12" p
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  145:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****                                              ((ADC_REG_TRIG_EXT_EDGE_DEFAULT)             << (4U * 
  146:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** 
  147:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /* Definition of ADC group regular trigger bits information.                  */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 8
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 8
 
 
  148:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define ADC_REG_TRIG_EXTSEL_BITOFFSET_POS  ( 6UL) /* Value equivalent to bitfield "ADC_CFGR_EXTSEL"
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  202:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define ADC_CHANNEL_ID_MASK                (ADC_CHANNEL_ID_NUMBER_MASK | ADC_CHANNEL_ID_BITFIELD_MA
  203:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /* Equivalent mask of ADC_CHANNEL_NUMBER_MASK aligned on register LSB (bit 0) */
  204:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define ADC_CHANNEL_ID_NUMBER_MASK_POSBIT0 (0x0000001FUL) /* Equivalent to shift: (ADC_CHANNEL_NUMB
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 9
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 9
 
 
  205:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** 
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  259:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define ADC_CHANNEL_13_BITFIELD            (ADC_CHSELR_CHSEL13)
  260:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define ADC_CHANNEL_14_BITFIELD            (ADC_CHSELR_CHSEL14)
  261:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define ADC_CHANNEL_15_BITFIELD            (ADC_CHSELR_CHSEL15)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 10
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 10
 
 
  262:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define ADC_CHANNEL_16_BITFIELD            (ADC_CHSELR_CHSEL16)
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  316:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /*   on one of the common sampling time available.                            */
  317:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /* - ADC channels common sampling time: set a sampling time into one of the   */
  318:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /*   common sampling time available.                                          */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 11
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 11
 
 
  319:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define ADC_SAMPLING_TIME_CH_MASK          (ADC_CHANNEL_ID_BITFIELD_MASK << ADC_SMPR_SMPSEL0_BITOFF
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  373:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define ADC_AWD_TR2_REGOFFSET              (ADC_AWD_CR2_REGOFFSET)
  374:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define ADC_AWD_TR3_REGOFFSET              (ADC_AWD_CR3_REGOFFSET)
  375:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define ADC_AWD_TRX_REGOFFSET_MASK         (ADC_AWD_TR1_REGOFFSET | ADC_AWD_TR2_REGOFFSET | ADC_AWD
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 12
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 12
 
 
  376:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define ADC_AWD_TRX_REGOFFSET_POS          (ADC_AWD_CRX_REGOFFSET_POS)     /* Position of bits ADC_
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  430:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define ADC_CR_BITS_PROPERTY_RS            (ADC_CR_ADCAL | ADC_CR_ADSTP | ADC_CR_ADSTART | ADC_CR_A
  431:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #else
  432:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define ADC_CR_BITS_PROPERTY_RS            (ADC_CR_ADCAL | ADC_CR_JADSTP | ADC_CR_ADSTP | ADC_CR_JA
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 13
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 13
 
 
  433:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #endif
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  487:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         All ADC instances sharing the same ADC common instance must be
  488:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         disabled.
  489:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 14
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 14
 
 
  490:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** typedef struct
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  544:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** 
  545:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   uint32_t LowPowerMode;                /*!< Set ADC low power mode.
  546:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****                                              This parameter can be a value of @ref ADC_LL_EC_LP_MOD
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 15
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 15
 
 
  547:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** 
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  601:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** 
  602:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****                                              This feature can be modified afterwards using unitary 
  603:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 16
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 16
 
 
  604:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   uint32_t Overrun;                     /*!< Set ADC group regular behavior in case of overrun:
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  658:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****                                              Note: This parameter must be set to set to independent
  659:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** 
  660:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****                                              This feature can be modified afterwards using unitary 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 17
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 17
 
 
  661:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** 
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  715:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_IT_JEOS                     ADC_IER_JEOSIE     /*!< ADC interruption ADC group injec
  716:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_IT_JQOVF                    ADC_IER_JQOVFIE    /*!< ADC interruption ADC group injec
  717:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_IT_AWD1                     ADC_IER_AWD1IE     /*!< ADC interruption ADC analog watc
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 18
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 18
 
 
  718:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_IT_AWD2                     ADC_IER_AWD2IE     /*!< ADC interruption ADC analog watc
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  772:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_PATH_INTERNAL_TEMPSENSOR    (ADC_CCR_TSEN)         /*!< ADC measurement path to inte
  773:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_PATH_INTERNAL_VBAT          (ADC_CCR_VBATEN)       /*!< ADC measurement path to inte
  774:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /**
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 19
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 19
 
 
  775:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @}
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  829:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_TRIGGER_FREQ_HIGH           (0x00000000UL)            /*!< ADC trigger frequency mod
  830:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_TRIGGER_FREQ_LOW            (ADC_CFGR2_LFTRIG)        /*!< ADC trigger frequency mod
  831:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /**
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 20
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 20
 
 
  832:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @}
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  886:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_CHANNEL_4                   (ADC_CHANNEL_4_NUMBER  | ADC_CHANNEL_4_BITFIELD ) /*!< A
  887:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_CHANNEL_5                   (ADC_CHANNEL_5_NUMBER  | ADC_CHANNEL_5_BITFIELD ) /*!< A
  888:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_CHANNEL_6                   (ADC_CHANNEL_6_NUMBER  | ADC_CHANNEL_6_BITFIELD ) /*!< A
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 21
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 21
 
 
  889:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_CHANNEL_7                   (ADC_CHANNEL_7_NUMBER  | ADC_CHANNEL_7_BITFIELD ) /*!< A
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  943:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_REG_TRIG_EXT_EXTI_LINE11    (ADC_CFGR1_EXTSEL_2 | ADC_CFGR1_EXTSEL_1 | ADC_CFGR1_EXT
  944:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #else
  945:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_REG_TRIG_SOFTWARE           (0x00000000UL)                                          
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 22
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 22
 
 
  946:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_REG_TRIG_EXT_TIM1_TRGO      (ADC_CFGR_EXTSEL_3 | ADC_CFGR_EXTSEL_0 | ADC_REG_TRIG_EX
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1000:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /** @defgroup ADC_LL_EC_REG_SEQ_MODE  ADC group regular - Sequencer configuration flexibility
 1001:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** * @{
 1002:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 23
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 23
 
 
 1003:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_REG_SEQ_FIXED               (0x00000000UL)         /*!< Sequencer configured to full
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1057:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   */
 1058:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_REG_SEQ_DISCONT_DISABLE     (0x00000000UL)                                          
 1059:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #if defined (ADC_SUPPORT_2_5_MSPS)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 24
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 24
 
 
 1060:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_REG_SEQ_DISCONT_1RANK       (ADC_CFGR1_DISCEN)                                      
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1114:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   */
 1115:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_INJ_TRIG_SOFTWARE           (0x00000000UL)                                          
 1116:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_INJ_TRIG_EXT_TIM1_TRGO      (ADC_INJ_TRIG_EXT_EDGE_DEFAULT)                         
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 25
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 25
 
 
 1117:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_INJ_TRIG_EXT_TIM1_TRGO2     (ADC_JSQR_JEXTSEL_3 | ADC_INJ_TRIG_EXT_EDGE_DEFAULT)    
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1171:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /**
 1172:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @}
 1173:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 26
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 26
 
 
 1174:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** 
@@ -1558,7 +1558,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1228:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @{
 1229:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   */
 1230:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_AWD1                        (ADC_AWD_CR1_CHANNEL_MASK  | ADC_AWD_CR1_REGOFFSET) /*!<
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 27
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 27
 
 
 1231:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #if defined (ADC_SUPPORT_2_5_MSPS)
@@ -1618,7 +1618,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1285:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_AWD_CHANNEL_3_REG_INJ       ((LL_ADC_CHANNEL_3  & ADC_CHANNEL_ID_MASK) | ADC_CFGR_JA
 1286:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_AWD_CHANNEL_4_REG           ((LL_ADC_CHANNEL_4  & ADC_CHANNEL_ID_MASK)              
 1287:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_AWD_CHANNEL_4_INJ           ((LL_ADC_CHANNEL_4  & ADC_CHANNEL_ID_MASK) | ADC_CFGR_JA
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 28
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 28
 
 
 1288:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_AWD_CHANNEL_4_REG_INJ       ((LL_ADC_CHANNEL_4  & ADC_CHANNEL_ID_MASK) | ADC_CFGR_JA
@@ -1678,7 +1678,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1342:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @}
 1343:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   */
 1344:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 29
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 29
 
 
 1345:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /** @defgroup ADC_LL_EC_AWD_THRESHOLDS  Analog watchdog - Thresholds
@@ -1738,7 +1738,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1399:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** 
 1400:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /** @defgroup ADC_LL_EC_OVS_SHIFT  Oversampling - Data shift
 1401:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @{
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 30
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 30
 
 
 1402:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   */
@@ -1798,7 +1798,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1456:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /* Literal set to maximum value (refer to device datasheet,                   */
 1457:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /* parameter "tSTART").                                                       */
 1458:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /* Unit: us                                                                   */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 31
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 31
 
 
 1459:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define LL_ADC_DELAY_TEMPSENSOR_STAB_US        (120UL)  /*!< Delay for temperature sensor stabiliza
@@ -1858,7 +1858,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1513:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /**
 1514:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @brief  Helper macro to get ADC channel number in decimal format
 1515:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         from literals LL_ADC_CHANNEL_x.
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 32
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 32
 
 
 1516:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @note   Example:
@@ -1918,7 +1918,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1570:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_1            (7)
 1571:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_2            (7)
 1572:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_3            (7)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 33
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 33
 
 
 1573:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_4            (7)
@@ -1978,7 +1978,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1627:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         - ADC external channel (channel connected to a GPIO pin):
 1628:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *           LL_ADC_CHANNEL_1, LL_ADC_CHANNEL_2, ...
 1629:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @note   The channel parameter must be a value defined from literal
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 34
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 34
 
 
 1630:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         definition of a ADC internal channel (LL_ADC_CHANNEL_VREFINT,
@@ -2038,7 +2038,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1684:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_0
 1685:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_1            (7)
 1686:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_2            (7)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 35
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 35
 
 
 1687:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_3            (7)
@@ -2098,7 +2098,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1741:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         or a value from functions where a channel number is
 1742:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         returned from ADC registers,
 1743:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         because internal and external channels share the same channel
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 36
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 36
 
 
 1744:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         number in ADC registers. The differentiation is made only with
@@ -2158,7 +2158,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1798:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *             comparison with internal channel parameter to be done
 1799:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *             using helper macro @ref __LL_ADC_CHANNEL_INTERNAL_TO_EXTERNAL().
 1800:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @param  __GROUP__ This parameter can be one of the following values:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 37
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 37
 
 
 1801:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_GROUP_REGULAR
@@ -2218,7 +2218,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1855:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_12
 1856:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_13
 1857:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_14
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 38
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 38
 
 
 1858:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_15
@@ -2278,7 +2278,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1912:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_10_REG_INJ         (1)
 1913:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_11_REG          (0)
 1914:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_11_INJ          (0)(1)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 39
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 39
 
 
 1915:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_11_REG_INJ         (1)
@@ -2338,7 +2338,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1969:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *           LL_ADC_SetAnalogWDThresholds
 1970:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *            (< ADCx param >,
 1971:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *             __LL_ADC_ANALOGWD_SET_THRESHOLD_RESOLUTION(LL_ADC_RESOLUTION_8B, <threshold_value_8
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 40
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 40
 
 
 1972:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *            );
@@ -2398,7 +2398,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 2026:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         and differential ended to 0x2A:
 2027:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *           LL_ADC_SetCalibrationFactor(
 2028:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *             ADC1,
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 41
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 41
 
 
 2029:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *             __LL_ADC_CALIB_FACTOR_SINGLE_DIFF(0x55, 0x2A))
@@ -2458,7 +2458,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 2083:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****    LL_ADC_IsEnabled(ADC2)  )
 2084:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #else
 2085:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #define __LL_ADC_IS_ENABLED_ALL_COMMON_INSTANCE(__ADCXY_COMMON__)              \
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 42
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 42
 
 
 2086:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   (LL_ADC_IsEnabled(ADC1))
@@ -2518,7 +2518,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 2140:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @param  __ADC_RESOLUTION__ This parameter can be one of the following values:
 2141:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_RESOLUTION_12B
 2142:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_RESOLUTION_10B
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 43
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 43
 
 
 2143:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_RESOLUTION_8B
@@ -2578,7 +2578,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 2197:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *                            / (TS_CAL2_TEMP - TS_CAL1_TEMP)
 2198:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *                TS_CAL1   = equivalent TS_ADC_DATA at temperature
 2199:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *                            TEMP_DEGC_CAL1 (calibrated in factory)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 44
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 44
 
 
 2200:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *                TS_CAL2   = equivalent TS_ADC_DATA at temperature
@@ -2638,7 +2638,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 2254:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *                                   (unit: digital value)
 2255:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *                Avg_Slope        = temperature sensor slope
 2256:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *                                   (unit: uV/Degree Celsius)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 45
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 45
 
 
 2257:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *                TS_TYP_CALx_VOLT = temperature sensor digital value at
@@ -2698,7 +2698,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 2311:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /**
 2312:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @}
 2313:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 46
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 46
 
 
 2314:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** 
@@ -2758,7 +2758,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 2368:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   */
 2369:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** 
 2370:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /**
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 47
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 47
 
 
 2371:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @brief  Set parameter common to several ADC: Clock source and prescaler.
@@ -2818,7 +2818,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 2425:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @retval Returned value can be one of the following values:
 2426:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CLOCK_SYNC_PCLK_DIV1 (*)
 2427:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CLOCK_SYNC_PCLK_DIV2 (*)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 48
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 48
 
 
 2428:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CLOCK_SYNC_PCLK_DIV4 (*)
@@ -2878,7 +2878,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 2482:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         (can be set directly from CMSIS definition or by using helper macro @ref __LL_ADC_COMMO
 2483:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @param  PathInternal This parameter can be a combination of the following values:
 2484:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_PATH_INTERNAL_NONE
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 49
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 49
 
 
 2485:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_PATH_INTERNAL_VREFINT
@@ -2938,7 +2938,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 2539:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         Remove paths to the current configuration.
 2540:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @note   One or several values can be selected.
 2541:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         Example: (LL_ADC_PATH_INTERNAL_VREFINT |
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 50
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 50
 
 
 2542:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *                   LL_ADC_PATH_INTERNAL_TEMPSENSOR)
@@ -2998,7 +2998,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 2596:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #if defined (ADC_SUPPORT_2_5_MSPS)
 2597:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /**
 2598:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @brief  Set ADC instance clock source and prescaler.
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 51
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 51
 
 
 2599:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @note   On this STM32 serie, setting of this feature is conditioned to
@@ -3058,7 +3058,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 2653:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         or differential (for devices with differential mode available).
 2654:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @note   This function is intended to set calibration parameters
 2655:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         without having to perform a new calibration using
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 52
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 52
 
 
 2656:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @ref LL_ADC_StartCalibration().
@@ -3118,7 +3118,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 2710:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_SINGLE_ENDED
 2711:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_DIFFERENTIAL_ENDED     (1)
 2712:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_BOTH_SINGLE_DIFF_ENDED (1)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 53
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 53
 
 
 2713:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *
@@ -3178,7 +3178,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 2767:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   return (uint32_t)(READ_BIT(ADCx->CALFACT, (SingleDiff & ADC_SINGLEDIFF_CALIB_FACTOR_MASK)) >> ((S
 2768:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** }
 2769:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #endif /* ADC_SUPPORT_2_5_MSPS */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 54
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 54
 
 
 2770:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /**
@@ -3238,7 +3238,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 2824:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         on either groups regular or injected.
 2825:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @rmtoll CFGR     ALIGN          LL_ADC_SetDataAlignment
 2826:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @param  ADCx ADC instance
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 55
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 55
 
 
 2827:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @param  DataAlignment This parameter can be one of the following values:
@@ -3298,7 +3298,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 2881:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *             its intended benefit (except specific case of high load of CPU
 2882:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *             or DMA transfers which can justify usage of auto wait).
 2883:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *           - Do use with polling: 1. Start conversion,
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 56
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 56
 
 
 2884:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *             2. Later on, when conversion data is needed: poll for end of
@@ -3358,7 +3358,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 2938:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *           Moreover, this avoids risk of overrun for low frequency
 2939:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *           applications.
 2940:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *           How to use this low power mode:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 57
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 57
 
 
 2941:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *           - It is not recommended to use with interruption or DMA
@@ -3418,7 +3418,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 2995:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         - Low power mode auto wait: Only the first ADC conversion
 2996:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *           start trigger inserts the rearm delay.
 2997:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @note   On this STM32 serie, setting of this feature is conditioned to
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 58
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 58
 
 
 2998:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         ADC state:
@@ -3478,7 +3478,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 3052:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @note   On this STM32 serie, setting of this feature is conditioned to
 3053:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         ADC state:
 3054:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         ADC must be disabled or enabled without conversion on going
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 59
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 59
 
 
 3055:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         on either groups regular or injected.
@@ -3538,7 +3538,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 3109:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** __STATIC_INLINE uint32_t LL_ADC_GetSamplingTimeCommonChannels(ADC_TypeDef *ADCx, uint32_t SamplingT
 3110:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** {
 3111:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   return (uint32_t)((READ_BIT(ADCx->SMPR, ADC_SMPR_SMP1 << (SamplingTimeY & ADC_SAMPLING_TIME_SMP_S
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 60
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 60
 
 
 3112:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****                     >> (SamplingTimeY & ADC_SAMPLING_TIME_SMP_SHIFT_MASK));
@@ -3598,7 +3598,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 3166:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_6
 3167:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_7
 3168:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_8
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 61
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 61
 
 
 3169:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_9
@@ -3658,7 +3658,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 3223:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_OFFSET_3
 3224:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_OFFSET_4
 3225:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @retval Returned value can be one of the following values:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 62
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 62
 
 
 3226:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_0
@@ -3718,7 +3718,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 3280:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   */
 3281:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** __STATIC_INLINE uint32_t LL_ADC_GetOffsetLevel(ADC_TypeDef *ADCx, uint32_t Offsety)
 3282:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** {
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 63
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 63
 
 
 3283:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   const __IO uint32_t *preg = __ADC_PTR_REG_OFFSET(ADCx->OFR1, Offsety);
@@ -3778,7 +3778,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 3337:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_OFFSET_DISABLE
 3338:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_OFFSET_ENABLE
 3339:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 64
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 64
 
 
 3340:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** __STATIC_INLINE uint32_t LL_ADC_GetOffsetState(ADC_TypeDef *ADCx, uint32_t Offsety)
@@ -3838,7 +3838,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 3394:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         (1) On STM32WB serie, parameter not available on devices: STM32WB10xx, STM32WB15xx.
 3395:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         (2) On STM32WB serie, parameter available only devices: STM32WB10xx, STM32WB15xx.
 3396:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @retval None
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 65
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 65
 
 
 3397:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   */
@@ -3898,7 +3898,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 3451:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****            & (ADC_REG_TRIG_SOURCE_MASK >> ShiftExten) & ADC_CFGR1_EXTSEL)
 3452:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****           | ((ADC_REG_TRIG_EDGE_MASK >> ShiftExten) & ADC_CFGR1_EXTEN)
 3453:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****          );
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 66
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 66
 
 
 3454:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #else
@@ -3958,7 +3958,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 3508:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   MODIFY_REG(ADCx->CFGR1, ADC_CFGR1_EXTEN, ExternalTriggerEdge);
 3509:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #else
 3510:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   MODIFY_REG(ADCx->CFGR, ADC_CFGR_EXTEN, ExternalTriggerEdge);
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 67
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 67
 
 
 3511:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #endif
@@ -4018,7 +4018,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 3565:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /**
 3566:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @brief  Get ADC group regular sequencer configuration flexibility.
 3567:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @note   On this STM32 serie, ADC group regular sequencer both modes
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 68
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 68
 
 
 3568:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         "fully configurable" or "not fully configurable" are
@@ -4078,7 +4078,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 3622:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @ref LL_ADC_REG_SetSequencerLength()
 3623:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         or @ref LL_ADC_REG_SetSequencerRanks(),
 3624:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         it is mandatory to wait for the assertion of CCRDY flag
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 69
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 69
 
 
 3625:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         using "LL_ADC_IsActiveFlag_CCRDY()".
@@ -4138,7 +4138,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 3679:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *           sequencer length and each rank affectation to a channel
 3680:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *           are configurable.
 3681:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *           This function retrieves:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 70
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 70
 
 
 3682:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *           - Sequence length: Number of ranks in the scan sequence.
@@ -4198,7 +4198,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 3736:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #if defined (ADC_SUPPORT_2_5_MSPS)
 3737:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   __IO uint32_t ChannelsRanks = READ_BIT(ADCx->CHSELR, ADC_CHSELR_SQ_ALL);
 3738:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   uint32_t SequencerLength = LL_ADC_REG_SEQ_SCAN_ENABLE_8RANKS;
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 71
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 71
 
 
 3739:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   uint32_t RankIndex;
@@ -4258,7 +4258,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 3793:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   return (uint32_t)(READ_BIT(ADCx->CFGR1, ADC_CFGR1_SCANDIR));
 3794:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** }
 3795:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 72
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 72
 
 
 3796:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #endif
@@ -4318,7 +4318,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 3850:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_REG_SEQ_DISCONT_7RANKS (1)
 3851:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_REG_SEQ_DISCONT_8RANKS (1)
 3852:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 73
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 73
 
 
 3853:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         (1) On STM32WB serie, parameter not available on devices: STM32WB10xx, STM32WB15xx.
@@ -4378,7 +4378,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 3907:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         SQR4     SQ16           LL_ADC_REG_SetSequencerRanks
 3908:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @param  ADCx ADC instance
 3909:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @param  Rank This parameter can be one of the following values:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 74
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 74
 
 
 3910:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_REG_RANK_1
@@ -4438,7 +4438,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 3964:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****              ADC_CHSELR_SQ1 << (Rank & ADC_REG_RANK_ID_SQRX_MASK),
 3965:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****              ((Channel & ADC_CHANNEL_ID_NUMBER_MASK_SEQ) >> ADC_CHANNEL_ID_NUMBER_BITOFFSET_POS) <<
 3966:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #else
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 75
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 75
 
 
 3967:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   /* Set bits with content of parameter "Channel" with bits position          */
@@ -4498,7 +4498,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 4021:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_REG_RANK_5
 4022:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_REG_RANK_6
 4023:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_REG_RANK_7
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 76
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 76
 
 
 4024:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_REG_RANK_8
@@ -4558,7 +4558,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 4078:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****                      >> (Rank & ADC_REG_RANK_ID_SQRX_MASK)) << ADC_CHANNEL_ID_NUMBER_BITOFFSET_POS
 4079:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****                    );
 4080:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #endif
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 77
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 77
 
 
 4081:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** }
@@ -4618,7 +4618,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 4135:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_0
 4136:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_1            (7)
 4137:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_2            (7)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 78
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 78
 
 
 4138:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_3            (7)
@@ -4678,7 +4678,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 4192:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         coming from GPIO pads (ADC_IN1..5).
 4193:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @note   On this STM32 serie, setting of this feature is conditioned to
 4194:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         ADC state:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 79
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 79
 
 
 4195:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         ADC must be disabled or enabled without conversion on going
@@ -4738,7 +4738,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 4249:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   /* Parameter "Channel" is used with masks because containing                */
 4250:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   /* other bits reserved for other purpose.                                   */
 4251:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   SET_BIT(ADCx->CHSELR, (Channel & ADC_CHANNEL_ID_BITFIELD_MASK));
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 80
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 80
 
 
 4252:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** }
@@ -4798,7 +4798,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 4306:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_1            (7)
 4307:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_2            (7)
 4308:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_3            (7)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 81
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 81
 
 
 4309:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_4            (7)
@@ -4858,7 +4858,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 4363:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         ADC must be disabled or enabled without conversion on going
 4364:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         on group regular.
 4365:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @note   One or several values can be retrieved.
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 82
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 82
 
 
 4366:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         Example: (LL_ADC_CHANNEL_4 | LL_ADC_CHANNEL_12 | ...)
@@ -4918,7 +4918,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 4420:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****            | (((ChannelsBitfield & ADC_CHSELR_CHSEL2) >> ADC_CHSELR_CHSEL2_BITOFFSET_POS) * LL_ADC_
 4421:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****            | (((ChannelsBitfield & ADC_CHSELR_CHSEL3) >> ADC_CHSELR_CHSEL3_BITOFFSET_POS) * LL_ADC_
 4422:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****            | (((ChannelsBitfield & ADC_CHSELR_CHSEL4) >> ADC_CHSELR_CHSEL4_BITOFFSET_POS) * LL_ADC_
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 83
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 83
 
 
 4423:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****            | (((ChannelsBitfield & ADC_CHSELR_CHSEL5) >> ADC_CHSELR_CHSEL5_BITOFFSET_POS) * LL_ADC_
@@ -4978,7 +4978,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 4477:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_REG_CONV_SINGLE
 4478:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_REG_CONV_CONTINUOUS
 4479:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 84
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 84
 
 
 4480:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** __STATIC_INLINE uint32_t LL_ADC_REG_GetContinuousMode(ADC_TypeDef *ADCx)
@@ -5038,7 +5038,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 4534:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @note   If transfer by DMA selected, specifies the DMA requests
 4535:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         mode:
 4536:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         - Limited mode (One shot mode): DMA transfer requests are stopped
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 85
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 85
 
 
 4537:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *           when number of DMA data transfers (number of
@@ -5098,7 +5098,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 4591:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #if defined (ADC_SUPPORT_2_5_MSPS)
 4592:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   MODIFY_REG(ADCx->CFGR1, ADC_CFGR1_OVRMOD, Overrun);
 4593:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #else
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 86
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 86
 
 
 4594:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   MODIFY_REG(ADCx->CFGR, ADC_CFGR_OVRMOD, Overrun);
@@ -5158,7 +5158,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 4648:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_INJ_TRIG_EXT_TIM1_TRGO
 4649:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_INJ_TRIG_EXT_TIM1_TRGO2
 4650:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_INJ_TRIG_EXT_TIM1_CH4
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 87
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 87
 
 
 4651:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_INJ_TRIG_EXT_TIM2_TRGO
@@ -5218,7 +5218,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 4705:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         to determine which peripheral is selected as external trigger,
 4706:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         use function @ref LL_ADC_INJ_GetTriggerSource.
 4707:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @rmtoll JSQR     JEXTEN         LL_ADC_INJ_IsTriggerSourceSWStart
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 88
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 88
 
 
 4708:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @param  ADCx ADC instance
@@ -5278,7 +5278,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 4762:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         ADC must not be disabled. Can be enabled with or without conversion
 4763:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         on going on either groups regular or injected.
 4764:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @rmtoll JSQR     JL             LL_ADC_INJ_SetSequencerLength
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 89
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 89
 
 
 4765:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @param  ADCx ADC instance
@@ -5338,7 +5338,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 4819:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         sequence subdivided and scan conversions interrupted every selected
 4820:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         number of ranks.
 4821:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @rmtoll CFGR     JDISCEN        LL_ADC_INJ_GetSequencerDiscont
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 90
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 90
 
 
 4822:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @param  ADCx ADC instance
@@ -5398,7 +5398,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 4876:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_18
 4877:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_VREFINT
 4878:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_TEMPSENSOR
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 91
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 91
 
 
 4879:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_VBAT
@@ -5458,7 +5458,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 4933:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_10
 4934:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_11
 4935:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_12
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 92
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 92
 
 
 4936:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_13
@@ -5518,7 +5518,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 4990:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** __STATIC_INLINE void LL_ADC_INJ_SetTrigAuto(ADC_TypeDef *ADCx, uint32_t TrigAuto)
 4991:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** {
 4992:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   MODIFY_REG(ADCx->CFGR, ADC_CFGR_JAUTO, TrigAuto);
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 93
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 93
 
 
 4993:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** }
@@ -5578,7 +5578,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 5047:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_INJ_QUEUE_2CONTEXTS_END_EMPTY
 5048:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @retval None
 5049:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 94
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 94
 
 
 5050:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** __STATIC_INLINE void LL_ADC_INJ_SetQueueMode(ADC_TypeDef *ADCx, uint32_t QueueMode)
@@ -5638,7 +5638,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 5104:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @param  ADCx ADC instance
 5105:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @param  TriggerSource This parameter can be one of the following values:
 5106:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_INJ_TRIG_SOFTWARE
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 95
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 95
 
 
 5107:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_INJ_TRIG_EXT_TIM1_TRGO
@@ -5698,7 +5698,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 5161:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_9
 5162:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_10
 5163:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_11
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 96
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 96
 
 
 5164:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_12
@@ -5758,7 +5758,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 5218:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_14
 5219:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_15
 5220:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_16
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 97
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 97
 
 
 5221:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_17
@@ -5818,7 +5818,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 5275:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /**
 5276:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @brief  Set sampling time of the selected ADC channel
 5277:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         Unit: ADC clock cycles.
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 98
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 98
 
 
 5278:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @note   On this device, sampling time is on channel scope: independently
@@ -5878,7 +5878,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 5332:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_10
 5333:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_11
 5334:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_12
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 99
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 99
 
 
 5335:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_13
@@ -5938,7 +5938,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 5389:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         SMPR1    SMP1           LL_ADC_SetChannelSamplingTime\n
 5390:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         SMPR1    SMP2           LL_ADC_SetChannelSamplingTime\n
 5391:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         SMPR1    SMP3           LL_ADC_SetChannelSamplingTime\n
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 100
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 100
 
 
 5392:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         SMPR1    SMP4           LL_ADC_SetChannelSamplingTime\n
@@ -5998,7 +5998,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 5446:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** {
 5447:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #if defined (ADC_SUPPORT_2_5_MSPS)
 5448:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   /* Parameter "Channel" is used with masks because containing                */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 101
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 101
 
 
 5449:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   /* other bits reserved for other purpose.                                   */
@@ -6058,7 +6058,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 5503:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_2            (7)
 5504:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_3            (7)
 5505:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_4            (7)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 102
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 102
 
 
 5506:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_5            (7)
@@ -6118,7 +6118,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 5560:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         SMPR1    SMP5           LL_ADC_GetChannelSamplingTime\n
 5561:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         SMPR1    SMP6           LL_ADC_GetChannelSamplingTime\n
 5562:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         SMPR1    SMP7           LL_ADC_GetChannelSamplingTime\n
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 103
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 103
 
 
 5563:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         SMPR1    SMP8           LL_ADC_GetChannelSamplingTime\n
@@ -6178,7 +6178,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 5617:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   /* and shift it to position 0.                                                 */ 
 5618:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   uint32_t smp_channel_posbit0 = ((smpr & ADC_SAMPLING_TIME_CH_MASK)
 5619:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****                                            >> ((((Channel & ADC_CHANNEL_ID_NUMBER_MASK) >> ADC_CHAN
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 104
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 104
 
 
 5620:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   
@@ -6238,7 +6238,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 5674:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_9
 5675:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_10
 5676:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_11
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 105
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 105
 
 
 5677:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_12
@@ -6298,7 +6298,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 5731:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_13
 5732:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_14
 5733:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_15
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 106
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 106
 
 
 5734:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @retval 0: channel in single-ended mode, else: channel in differential mode
@@ -6358,7 +6358,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 5788:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         AWD2CR   AWD2CH         LL_ADC_SetAnalogWDMonitChannels\n
 5789:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         AWD3CR   AWD3CH         LL_ADC_SetAnalogWDMonitChannels
 5790:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @param  ADCx ADC instance
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 107
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 107
 
 
 5791:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @param  AWDy This parameter can be one of the following values:
@@ -6418,7 +6418,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 5845:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_15_REG          (0)
 5846:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_15_INJ          (0)(1)
 5847:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_15_REG_INJ         (1)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 108
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 108
 
 
 5848:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_16_REG          (0)
@@ -6478,7 +6478,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 5902:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *           Then the selected literal LL_ADC_CHANNEL_x can be used
 5903:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *           as parameter for another function.
 5904:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         - To get the channel number in decimal format:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 109
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 109
 
 
 5905:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *           process the returned value with the helper macro
@@ -6538,7 +6538,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 5959:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_0_REG_INJ          (1)
 5960:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_1_REG           (0)
 5961:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_1_INJ           (0)(1)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 110
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 110
 
 
 5962:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_1_REG_INJ          (1)
@@ -6598,7 +6598,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 6016:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         (1) On STM32WB serie, parameter not available on devices: STM32WB10xx, STM32WB15xx.
 6017:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   */
 6018:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** __STATIC_INLINE uint32_t LL_ADC_GetAnalogWDMonitChannels(ADC_TypeDef *ADCx, uint32_t AWDy)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 111
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 111
 
 
 6019:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** {
@@ -6658,7 +6658,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 6073:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****       {
 6074:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****         /* AWD monitoring a single channel */
 6075:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****         AnalogWDMonitChannels = (AnalogWDMonitChannels
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 112
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 112
 
 
 6076:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****                                  | (ADC_AWD2CR_AWD2CH_0 << (AnalogWDMonitChannels >> ADC_CFGR_AWD1C
@@ -6718,7 +6718,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 6130:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *             LL_ADC_AWD_CHANNELxx_REG and LL_ADC_AWD_CHANNELxx_INJ)
 6131:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *           - resolution: resolution is limited to 8 bits: if ADC resolution is
 6132:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *             12 bits the 4 LSB are ignored, if ADC resolution is 10 bits
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 113
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 113
 
 
 6133:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *             the 2 LSB are ignored.
@@ -6778,7 +6778,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 6187:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         use function @ref LL_ADC_ConfigAnalogWDThresholds().
 6188:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @note   In case of ADC resolution different of 12 bits,
 6189:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         analog watchdog thresholds data require a specific shift.
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 114
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 114
 
 
 6190:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         Use helper macro @ref __LL_ADC_ANALOGWD_SET_THRESHOLD_RESOLUTION().
@@ -6838,7 +6838,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 6244:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   /* "AWDThresholdsHighLow" and "AWDy".                                       */
 6245:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   /* Parameters "AWDy" and "AWDThresholdValue" are used with masks because    */
 6246:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   /* containing other bits reserved for other purpose.                        */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 115
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 115
 
 
 6247:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #if defined (ADC_SUPPORT_2_5_MSPS)
@@ -6898,7 +6898,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 6301:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****                     >> (((AWDThresholdsHighLow & ADC_AWD_TRX_BIT_HIGH_MASK) >> ADC_AWD_TRX_BIT_HIGH
 6302:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****                    );
 6303:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #else
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 116
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 116
 
 
 6304:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   const __IO uint32_t *preg = __ADC_PTR_REG_OFFSET(ADCx->TR1, ((AWDy & ADC_AWD_TRX_REGOFFSET_MASK) 
@@ -6958,7 +6958,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 6358:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** }
 6359:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** 
 6360:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /**
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 117
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 117
 
 
 6361:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @brief  Get ADC oversampling scope: ADC groups regular and-or injected
@@ -7018,7 +7018,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 6415:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #if defined (ADC_SUPPORT_2_5_MSPS)
 6416:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   MODIFY_REG(ADCx->CFGR2, ADC_CFGR2_TOVS, OverSamplingDiscont);
 6417:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #else
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 118
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 118
 
 
 6418:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   MODIFY_REG(ADCx->CFGR2, ADC_CFGR2_TROVS, OverSamplingDiscont);
@@ -7078,7 +7078,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 6472:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_OVS_SHIFT_RIGHT_4
 6473:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_OVS_SHIFT_RIGHT_5
 6474:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_OVS_SHIFT_RIGHT_6
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 119
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 119
 
 
 6475:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         @arg @ref LL_ADC_OVS_SHIFT_RIGHT_7
@@ -7138,7 +7138,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 6529:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #endif /* ADC_SUPPORT_2_5_MSPS */
 6530:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /** @defgroup ADC_LL_EF_Operation_ADC_Instance Operation on ADC hierarchical scope: ADC instance
 6531:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @{
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 120
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 120
 
 
 6532:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   */
@@ -7198,7 +7198,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 6586:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   */
 6587:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** __STATIC_INLINE uint32_t LL_ADC_IsDeepPowerDownEnabled(ADC_TypeDef *ADCx)
 6588:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** {
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 121
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 121
 
 
 6589:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   return ((READ_BIT(ADCx->CR, ADC_CR_DEEPPWD) == (ADC_CR_DEEPPWD)) ? 1UL : 0UL);
@@ -7258,7 +7258,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 6643:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @brief  Enable the selected ADC instance.
 6644:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @note   On this STM32 serie, after ADC enable, a delay for
 6645:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         ADC internal analog stabilization is required before performing a
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 122
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 122
 
 
 6646:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         ADC conversion start.
@@ -7318,7 +7318,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 6700:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** }
 6701:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** 
 6702:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** /**
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 123
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 123
 
 
 6703:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @brief  Get the selected ADC instance disable state.
@@ -7378,7 +7378,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 6757:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         ADC state:
 6758:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         ADC must be ADC disabled.
 6759:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @rmtoll CR       ADCAL          LL_ADC_StartCalibration\n
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 124
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 124
 
 
 6760:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         CR       ADCALDIF       LL_ADC_StartCalibration
@@ -7438,7 +7438,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 6785:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** {
 6786:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   return ((READ_BIT(ADCx->CR, ADC_CR_ADCAL) == (ADC_CR_ADCAL)) ? 1UL : 0UL);
  106              		.loc 2 6786 3 view .LVU24
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 125
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 125
 
 
  107              		.loc 2 6786 12 is_stmt 0 view .LVU25
@@ -7498,7 +7498,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  130              		.loc 1 180 7 is_stmt 1 view .LVU31
  180:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       {
  131              		.loc 1 180 27 is_stmt 0 view .LVU32
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 126
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 126
 
 
  132 0064 019A     		ldr	r2, [sp, #4]
@@ -7558,7 +7558,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  165              		.loc 1 218 3 view .LVU44
  219:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** 
  220:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   /* Return function status */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 127
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 127
 
 
  221:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   return tmp_hal_status;
@@ -7618,7 +7618,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  205              		@ args = 0, pretend = 0, frame = 0
  206              		@ frame_needed = 0, uses_anonymous_args = 0
  207              		@ link register save eliminated.
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 128
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 128
 
 
  236:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** #if defined (ADC_SUPPORT_2_5_MSPS)
@@ -7678,7 +7678,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  241              		.align	1
  242              		.global	HAL_ADCEx_Calibration_SetValue
  243              		.syntax unified
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 129
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 129
 
 
  244              		.thumb
@@ -7738,7 +7738,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  265              		.loc 1 284 3 view .LVU70
  266              		.loc 1 284 3 view .LVU71
  267 0002 90F85000 		ldrb	r0, [r0, #80]	@ zero_extendqisi2
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 130
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 130
 
 
  268              	.LVL22:
@@ -7798,7 +7798,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 6815:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** __STATIC_INLINE void LL_ADC_REG_StartConversion(ADC_TypeDef *ADCx)
 6816:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** {
 6817:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   /* Note: Write register with some additional bits forced to state reset     */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 131
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 131
 
 
 6818:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   /*       instead of modifying only the selected bit for this function,      */
@@ -7858,7 +7858,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  292:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   tmp_adc_is_conversion_on_going_injected = LL_ADC_INJ_IsConversionOngoing(hadc->Instance);
  304              		.loc 1 292 3 is_stmt 1 view .LVU84
  305              	.LBB246:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 132
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 132
 
 
  306              	.LBI246:
@@ -7918,7 +7918,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 6907:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** {
 6908:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   return (uint16_t)(READ_BIT(ADCx->DR, ADC_DR_RDATA));
 6909:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** }
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 133
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 133
 
 
 6910:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** 
@@ -7978,7 +7978,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 6964:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         without conversion stop command on going on group injected,
 6965:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   *         without ADC disable command on going.
 6966:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @rmtoll CR       JADSTART       LL_ADC_INJ_StartConversion
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 134
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 134
 
 
 6967:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****   * @param  ADCx ADC instance
@@ -8038,7 +8038,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  319              	.LBE247:
  320              	.LBE246:
  293:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** #endif /* ADC_SUPPORT_2_5_MSPS */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 135
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 135
 
 
  294:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** 
@@ -8098,7 +8098,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 2720:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****              SingleDiff & ADC_SINGLEDIFF_CALIB_FACTOR_MASK,
  352              		.loc 2 2720 3 view .LVU102
  353 003c 24EA0004 		bic	r4, r4, r0
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 136
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 136
 
 
  354 0040 01F07F00 		and	r0, r1, #127
@@ -8158,7 +8158,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  392              	.LVL35:
  393              	.L19:
  320:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   }
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 137
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 137
 
 
  321:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** 
@@ -8218,7 +8218,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  430              		@ args = 0, pretend = 0, frame = 0
  431              		@ frame_needed = 0, uses_anonymous_args = 0
  340:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   HAL_StatusTypeDef tmp_hal_status;
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 138
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 138
 
 
  432              		.loc 1 340 3 view .LVU121
@@ -8278,7 +8278,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  463              		.loc 1 361 5 is_stmt 1 view .LVU133
  464              		.loc 1 361 10 is_stmt 0 view .LVU134
  465 0010 DB6C     		ldr	r3, [r3, #76]
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 139
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 139
 
 
  466              		.loc 1 361 8 view .LVU135
@@ -8338,7 +8338,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  499 003a A36D     		ldr	r3, [r4, #88]
  500 003c 23F00803 		bic	r3, r3, #8
  501 0040 A365     		str	r3, [r4, #88]
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 140
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 140
 
 
  502              	.L30:
@@ -8398,7 +8398,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 5006:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** }
  526              		.loc 2 5006 3 view .LVU158
 5006:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** }
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 141
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 141
 
 
  527              		.loc 2 5006 21 is_stmt 0 view .LVU159
@@ -8458,7 +8458,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  568 0086 0023     		movs	r3, #0
  569 0088 A365     		str	r3, [r4, #88]
  570 008a DAE7     		b	.L30
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 142
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 142
 
 
  571              	.L28:
@@ -8518,7 +8518,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  612              		.thumb_func
  613              		.fpu fpv4-sp-d16
  615              	HAL_ADCEx_InjectedStop:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 143
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 143
 
 
  616              	.LVL53:
@@ -8578,7 +8578,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  451:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** 
  452:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   /* Disable ADC peripheral if injected conversions are effectively stopped   */
  453:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   /* and if no conversion on regular group is on-going                       */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 144
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 144
 
 
  454:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   if (tmp_hal_status == HAL_OK)
@@ -8638,7 +8638,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  476:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****     }
  477:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   }
  478:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 145
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 145
 
 
  479:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   /* Process unlocked */
@@ -8698,7 +8698,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  714              		.section	.text.HAL_ADCEx_InjectedPollForConversion,"ax",%progbits
  715              		.align	1
  716              		.global	HAL_ADCEx_InjectedPollForConversion
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 146
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 146
 
 
  717              		.syntax unified
@@ -8758,7 +8758,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  750              		.loc 1 506 6 view .LVU225
  751 0008 082B     		cmp	r3, #8
  752 000a 1ED0     		beq	.L65
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 147
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 147
 
 
  507:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   {
@@ -8818,7 +8818,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  789 002e F1D1     		bne	.L51
  790              	.L52:
  525:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       {
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 148
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 148
 
 
  526:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****         /* New check to avoid false timeout detection in case of preemption */
@@ -8878,7 +8878,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 4714:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** }
  825              		.loc 2 4714 12 is_stmt 0 view .LVU256
  826 004e DA6C     		ldr	r2, [r3, #76]
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 149
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 149
 
 
 4714:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** }
@@ -8938,7 +8938,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  864              		.loc 1 552 66 discriminator 1 view .LVU270
  865 006e 10F0007F 		tst	r0, #33554432
  866 0072 17D1     		bne	.L58
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 150
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 150
 
 
  553:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       ((READ_BIT(tmp_cfgr, ADC_CFGR_JAUTO) == 0UL)      &&
@@ -8998,7 +8998,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  574:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****         }
  575:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       }
  576:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****     }
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 151
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 151
 
 
  577:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   }
@@ -9058,7 +9058,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  929              	.LVL76:
 3486:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** #endif
  930              		.loc 2 3486 103 view .LVU292
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 152
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 152
 
 
  931 00b6 D4E7     		b	.L56
@@ -9118,7 +9118,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  605:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   * @retval HAL status.
  606:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   */
  607:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** HAL_StatusTypeDef HAL_ADCEx_InjectedStart_IT(ADC_HandleTypeDef *hadc)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 153
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 153
 
 
  608:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** {
@@ -9178,7 +9178,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  1003              		.loc 1 628 5 is_stmt 1 view .LVU313
  1004              		.loc 1 628 33 is_stmt 0 view .LVU314
  1005 000e DA68     		ldr	r2, [r3, #12]
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 154
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 154
 
 
  1006              	.LVL84:
@@ -9238,7 +9238,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  1040              		.loc 1 648 10 view .LVU330
  1041 0036 13F4807F 		tst	r3, #256
  1042 003a 3BD0     		beq	.L72
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 155
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 155
 
 
  649:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       {
@@ -9298,7 +9298,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  1068              		.loc 1 677 10 view .LVU340
  1069 0064 12F4001F 		tst	r2, #2097152
  1070 0068 03D0     		beq	.L74
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 156
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 156
 
 
  678:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       {
@@ -9358,7 +9358,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  1100              		.loc 2 5004 26 is_stmt 1 view .LVU350
  1101              	.LBB273:
 5006:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** }
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 157
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 157
 
 
  1102              		.loc 2 5006 3 view .LVU351
@@ -9418,7 +9418,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  656:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       }
  1143              		.loc 1 656 9 is_stmt 1 view .LVU364
  1144 00b4 0023     		movs	r3, #0
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 158
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 158
 
 
  1145 00b6 A365     		str	r3, [r4, #88]
@@ -9478,7 +9478,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  1183              		.cfi_def_cfa_offset 8
  1184              		.cfi_offset 4, -8
  1185              		.cfi_offset 14, -4
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 159
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 159
 
 
  639:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** 
@@ -9538,7 +9538,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  732:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   HAL_StatusTypeDef tmp_hal_status;
  1218              		.loc 1 732 1 is_stmt 0 discriminator 2 view .LVU383
  1219 0008 10B5     		push	{r4, lr}
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 160
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 160
 
 
  1220              	.LCFI15:
@@ -9598,7 +9598,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  1257              	.LVL101:
 6853:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** }
  1258              		.loc 2 6853 74 view .LVU397
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 161
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 161
 
 
  1259              	.LBE277:
@@ -9658,7 +9658,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  1282              	.LVL104:
  758:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       {
  1283              		.loc 1 758 7 is_stmt 1 view .LVU407
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 162
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 162
 
 
  758:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       {
@@ -9718,7 +9718,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  799:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   *         it would not be compliant with low power features
  800:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   *         (feature low power auto-wait, not available on all STM32 families).
  801:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   *         To clear this flag, either use function:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 163
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 163
 
 
  802:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   *         in programming model IT: @ref HAL_ADC_IRQHandler(), in programming
@@ -9778,7 +9778,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  1338              		.loc 1 836 15 view .LVU419
  1339 0016 D3F88000 		ldr	r0, [r3, #128]
  1340              	.LVL108:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 164
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 164
 
 
  837:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       break;
@@ -9838,7 +9838,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  1378              		.section	.text.HAL_ADCEx_InjectedConvCpltCallback,"ax",%progbits
  1379              		.align	1
  1380              		.weak	HAL_ADCEx_InjectedConvCpltCallback
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 165
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 165
 
 
  1381              		.syntax unified
@@ -9898,7 +9898,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  1411              		.loc 1 869 1 is_stmt 1 view -0
  1412              		.cfi_startproc
  1413              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 166
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 166
 
 
  1414              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -9958,7 +9958,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  1448              		.thumb
  1449              		.thumb_func
  1450              		.fpu fpv4-sp-d16
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 167
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 167
 
 
  1452              	HAL_ADCEx_LevelOutOfWindow3Callback:
@@ -10018,7 +10018,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  1482              		.loc 1 918 3 view .LVU448
  919:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** 
  920:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   /* NOTE : This function should not be modified. When the callback is needed,
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 168
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 168
 
 
  921:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****             function HAL_ADCEx_EndOfSamplingCallback must be implemented in the user file.
@@ -10078,7 +10078,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  1515              		.cfi_offset 14, -4
  1516 000a 0446     		mov	r4, r0
  1517              		.loc 1 943 3 is_stmt 1 discriminator 2 view .LVU456
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 169
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 169
 
 
  1518 000c 0121     		movs	r1, #1
@@ -10138,7 +10138,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  964:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****         ADC_STATE_CLR_SET(hadc->State,
  965:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****                           HAL_ADC_STATE_INJ_BUSY,
  966:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****                           HAL_ADC_STATE_READY);
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 170
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 170
 
 
  967:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       }
@@ -10198,7 +10198,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  1583 0054 EDE7     		b	.L110
  1584              	.LVL128:
  1585              	.L112:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 171
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 171
 
 
  1586              	.LCFI18:
@@ -10258,7 +10258,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  1621 0008 10B5     		push	{r4, lr}
  1622              	.LCFI19:
  1623              		.cfi_def_cfa_offset 8
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 172
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 172
 
 
  1624              		.cfi_offset 4, -8
@@ -10318,7 +10318,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  1661 0032 07D0     		beq	.L120
  1662              	.LVL134:
  1663              		.loc 2 7008 76 view .LVU504
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 173
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 173
 
 
  1664              	.LBE281:
@@ -10378,7 +10378,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  1690 004a 0028     		cmp	r0, #0
  1691 004c F6D1     		bne	.L119
 1024:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****                           HAL_ADC_STATE_INJ_BUSY,
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 174
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 174
 
 
  1692              		.loc 1 1024 9 is_stmt 1 view .LVU516
@@ -10438,7 +10438,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1052:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   HAL_StatusTypeDef tmp_hal_status;
  1736              		.loc 1 1052 3 is_stmt 1 view .LVU521
 1053:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 175
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 175
 
 
 1054:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   /* Check the parameters */
@@ -10498,7 +10498,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1087:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****     /* 2. Disable the ADC peripheral */
 1088:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****     /* Update "tmp_hal_status" only if DMA channel disabling passed,          */
 1089:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****     /* to keep in memory a potential failing status.                          */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 176
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 176
 
 
 1090:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****     if (LL_ADC_INJ_IsConversionOngoing(hadc->Instance) == 0UL)
@@ -10558,7 +10558,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  1778 0030 23F00103 		bic	r3, r3, #1
  1779 0034 D360     		str	r3, [r2, #12]
 1075:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 177
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 177
 
 
  1780              		.loc 1 1075 5 view .LVU538
@@ -10618,7 +10618,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  1824 0064 D9E7     		b	.L128
  1825              	.LVL150:
  1826              	.L130:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 178
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 178
 
 
 1092:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       {
@@ -10678,7 +10678,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  1870              		.align	1
  1871              		.global	HAL_ADCEx_InjectedConfigChannel
  1872              		.syntax unified
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 179
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 179
 
 
  1873              		.thumb
@@ -10738,7 +10738,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1170:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   *    it would start a new context into context queue.
 1171:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   *  - Example 2: If 2 contexts are intended to be used and each of them contains
 1172:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   *    3 injected ranks (InjectedNbrOfConversion = 3),
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 180
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 180
 
 
 1173:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   *    HAL_ADCEx_InjectedConfigChannel() must be called once for each channel and
@@ -10798,7 +10798,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1196:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   assert_param(IS_ADC_SINGLE_DIFFERENTIAL(sConfigInjected->InjectedSingleDiff));
  1911              		.loc 1 1196 3 view .LVU577
 1197:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   assert_param(IS_FUNCTIONAL_STATE(sConfigInjected->AutoInjectedConv));
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 181
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 181
 
 
  1912              		.loc 1 1197 3 view .LVU578
@@ -10858,7 +10858,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1233:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   /* Process locked */
 1234:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   __HAL_LOCK(hadc);
  1931              		.loc 1 1234 3 view .LVU595
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 182
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 182
 
 
  1932              		.loc 1 1234 3 view .LVU596
@@ -10918,7 +10918,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1272:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       /*       ExternalTrigInjecConvEdge "trigger edge none" equivalent to    */
 1273:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       /*       software start.                                                */
 1274:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       if (sConfigInjected->ExternalTrigInjecConv != ADC_INJECTED_SOFTWARE_START)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 183
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 183
 
 
 1275:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       {
@@ -10978,7 +10978,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1316:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       /*  - external trigger to start conversion                              */
 1317:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       /*  - external trigger polarity                                         */
 1318:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 184
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 184
 
 
 1319:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       /* Enable external trigger if trigger selection is different of         */
@@ -11038,7 +11038,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1336:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****     }
 1337:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** 
 1338:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****     /* 2. Continue setting of context under definition with parameter       */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 185
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 185
 
 
 1339:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****     /*    related to each channel: channel rank sequence                    */
@@ -11098,7 +11098,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  2012              		.loc 1 1372 24 is_stmt 0 view .LVU632
  2013 005a 487F     		ldrb	r0, [r1, #29]	@ zero_extendqisi2
  2014              		.loc 1 1372 8 view .LVU633
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 186
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 186
 
 
  2015 005c 0028     		cmp	r0, #0
@@ -11158,7 +11158,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  2040 007e 00D0     		beq	.L147
  2041 0080 0122     		movs	r2, #1
  2042              	.L147:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 187
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 187
 
 
  2043              	.LVL168:
@@ -11218,7 +11218,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  2083              		.loc 1 1409 7 is_stmt 1 view .LVU656
  2084              		.loc 1 1409 26 is_stmt 0 view .LVU657
  2085 00a4 4A7F     		ldrb	r2, [r1, #29]	@ zero_extendqisi2
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 188
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 188
 
 
  2086              		.loc 1 1409 10 view .LVU658
@@ -11278,7 +11278,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1446:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** 
 1447:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       /* Enable OverSampling mode */
 1448:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       MODIFY_REG(hadc->Instance->CFGR2,
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 189
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 189
 
 
 1449:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****                  ADC_CFGR2_JOVSE |
@@ -11338,7 +11338,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  2135 00ec B540     		lsls	r5, r5, r6
  2136              	.LVL176:
 5461:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****              ADC_SMPR1_SMP0 << ((Channel & ADC_CHANNEL_SMPx_BITOFFSET_MASK) >> ADC_CHANNEL_SMPx_BIT
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 190
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 190
 
 
  2137              		.loc 2 5461 3 view .LVU672
@@ -11398,7 +11398,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  2175 0114 07F0F847 		and	r7, r7, #2080374784
  2176 0118 3A43     		orrs	r2, r2, r7
  2177              	.LVL181:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 191
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 191
 
 
 3192:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****              ADC_OFR1_OFFSET1_EN | ADC_OFR1_OFFSET1_CH | ADC_OFR1_OFFSET1,
@@ -11458,7 +11458,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  2219 0154 E064     		str	r0, [r4, #76]
 1288:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** 
  2220              		.loc 1 1288 7 view .LVU698
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 192
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 192
 
 
 1288:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** 
@@ -11518,7 +11518,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  2261 017e 2243     		orrs	r2, r2, r4
  2262              	.LVL191:
 1347:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 193
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 193
 
 
  2263              		.loc 1 1347 5 is_stmt 1 view .LVU713
@@ -11578,7 +11578,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  2306              	.LVL194:
 1184:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   uint32_t tmpOffsetShifted;
  2307              		.loc 1 1184 21 view .LVU725
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 194
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 194
 
 
  2308 01c6 76E7     		b	.L153
@@ -11638,7 +11638,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  2350              	.LVL199:
  2351              	.L157:
 1476:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****                        tmpOffsetShifted);
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 195
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 195
 
 
 1477:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** 
@@ -11698,7 +11698,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  2389              	.L161:
 1484:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       {
 1485:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****         LL_ADC_SetOffsetState(hadc->Instance, LL_ADC_OFFSET_1, LL_ADC_OFFSET_DISABLE);
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 196
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 196
 
 
 1486:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       }
@@ -11758,7 +11758,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1489:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****         LL_ADC_SetOffsetState(hadc->Instance, LL_ADC_OFFSET_2, LL_ADC_OFFSET_DISABLE);
 1490:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       }
 1491:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       if(__LL_ADC_CHANNEL_TO_DECIMAL_NB(LL_ADC_GetOffsetChannel(hadc->Instance, LL_ADC_OFFSET_3)) =
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 197
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 197
 
 
  2431              		.loc 1 1491 7 is_stmt 1 view .LVU769
@@ -11818,7 +11818,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1495:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****       if(__LL_ADC_CHANNEL_TO_DECIMAL_NB(LL_ADC_GetOffsetChannel(hadc->Instance, LL_ADC_OFFSET_4)) =
  2472              		.loc 1 1495 7 is_stmt 1 view .LVU785
  2473              		.loc 1 1495 10 is_stmt 0 view .LVU786
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 198
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 198
 
 
  2474 0248 1D68     		ldr	r5, [r3]
@@ -11878,7 +11878,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 3314:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** {
  2516              		.loc 2 3314 22 view .LVU802
  2517              	.LBB311:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 199
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 199
 
 
 3316:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** 
@@ -11938,7 +11938,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
   36:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __has_builtin(x) (0)
   37:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   38:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 200
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 200
 
 
   39:Drivers/CMSIS/Include/cmsis_gcc.h **** /* CMSIS compiler specific defines */
@@ -11998,7 +11998,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
   93:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   94:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_WRITE
   95:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 201
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 201
 
 
   96:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
@@ -12058,7 +12058,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  150:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  151:Drivers/CMSIS/Include/cmsis_gcc.h ****   for (__copy_table_t const* pTable = &__copy_table_start__; pTable < &__copy_table_end__; ++pTable
  152:Drivers/CMSIS/Include/cmsis_gcc.h ****     for(uint32_t i=0u; i<pTable->wlen; ++i) {
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 202
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 202
 
 
  153:Drivers/CMSIS/Include/cmsis_gcc.h ****       pTable->dest[i] = pTable->src[i];
@@ -12118,7 +12118,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  207:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __disable_irq(void)
  208:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  209:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsid i" : : : "memory");
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 203
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 203
 
 
  210:Drivers/CMSIS/Include/cmsis_gcc.h **** }
@@ -12178,7 +12178,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  264:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  265:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  266:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 204
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 204
 
 
  267:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
@@ -12238,7 +12238,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  321:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  322:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  323:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 205
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 205
 
 
  324:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
@@ -12298,7 +12298,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  378:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  379:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Main Stack Pointer (non-secure)
  380:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the non-secure Main Stack Pointer (MSP) when in secure stat
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 206
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 206
 
 
  381:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               MSP Register value
@@ -12358,7 +12358,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  435:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfStack  Stack Pointer value to set
  436:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  437:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_SP_NS(uint32_t topOfStack)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 207
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 207
 
 
  438:Drivers/CMSIS/Include/cmsis_gcc.h **** {
@@ -12418,7 +12418,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  492:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  493:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR primask_ns, %0" : : "r" (priMask) : "memory");
  494:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 208
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 208
 
 
  495:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -12478,7 +12478,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  549:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  550:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  551:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 209
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 209
 
 
  552:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -12538,7 +12538,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  606:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the non-secure Fault Mask register when in secure state.
  607:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Fault Mask register value
  608:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 210
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 210
 
 
  609:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_FAULTMASK_NS(void)
@@ -12598,7 +12598,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  663:Drivers/CMSIS/Include/cmsis_gcc.h ****     // without main extensions, the non-secure PSPLIM is RAZ/WI
  664:Drivers/CMSIS/Include/cmsis_gcc.h ****   return 0U;
  665:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 211
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 211
 
 
  666:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
@@ -12658,7 +12658,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  720:Drivers/CMSIS/Include/cmsis_gcc.h ****   Stack Pointer Limit register hence the write is silently ignored.
  721:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  722:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Process Stack Pointer Limit (PSPLIM) when in s
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 212
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 212
 
 
  723:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    ProcStackPtrLimit  Process Stack Pointer Limit value to set
@@ -12718,7 +12718,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  777:Drivers/CMSIS/Include/cmsis_gcc.h ****   return result;
  778:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  779:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 213
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 213
 
 
  780:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -12778,7 +12778,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  834:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  835:Drivers/CMSIS/Include/cmsis_gcc.h **** #if ((defined (__FPU_PRESENT) && (__FPU_PRESENT == 1U)) && \
  836:Drivers/CMSIS/Include/cmsis_gcc.h ****      (defined (__FPU_USED   ) && (__FPU_USED    == 1U))     )
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 214
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 214
 
 
  837:Drivers/CMSIS/Include/cmsis_gcc.h **** #if __has_builtin(__builtin_arm_get_fpscr) 
@@ -12838,7 +12838,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  891:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_RW_REG(r) "+l" (r)
  892:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_USE_REG(r) "l" (r)
  893:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 215
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 215
 
 
  894:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_OUT_REG(r) "=r" (r)
@@ -12898,7 +12898,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  948:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  949:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  950:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 216
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 216
 
 
  951:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Data Memory Barrier
@@ -12958,7 +12958,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1005:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
 1006:Drivers/CMSIS/Include/cmsis_gcc.h ****   int16_t result;
 1007:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 217
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 217
 
 
 1008:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("revsh %0, %1" : __CMSIS_GCC_OUT_REG (result) : __CMSIS_GCC_USE_REG (value) );
@@ -13018,7 +13018,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  2539 026c 92FAA2F2 		rbit r2, r2
  2540              	@ 0 "" 2
  2541              	.LVL213:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 218
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 218
 
 
 1056:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
@@ -13078,7 +13078,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  2558              	.LVL214:
  2559              		.loc 3 1093 10 view .LVU817
  2560 0276 CBE7     		b	.L159
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 219
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 219
 
 
  2561              	.LVL215:
@@ -13138,7 +13138,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  2602              		.thumb
  2603              		.syntax unified
  2604              	.LBE319:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 220
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 220
 
 
  2605              	.LBE318:
@@ -13198,7 +13198,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  2648              	.LBI324:
 1048:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  2649              		.loc 3 1048 31 is_stmt 1 discriminator 6 view .LVU845
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 221
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 221
 
 
  2650              	.LBB325:
@@ -13258,7 +13258,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 3316:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** 
  2693              		.loc 2 3316 3 view .LVU860
 3318:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h ****              ADC_OFR1_OFFSET1_EN,
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 222
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 222
 
 
  2694              		.loc 2 3318 3 view .LVU861
@@ -13318,7 +13318,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  2737              		.loc 3 1091 12 view .LVU875
  2738 02c6 2022     		movs	r2, #32
  2739              	.LVL234:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 223
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 223
 
 
 1091:Drivers/CMSIS/Include/cmsis_gcc.h ****   }
@@ -13378,7 +13378,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  2773              	.LBB336:
  2774              	.LBI336:
 5686:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** {
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 224
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 224
 
 
  2775              		.loc 2 5686 22 view .LVU887
@@ -13438,7 +13438,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  2809              	.LVL243:
  2810              		.loc 1 1526 7 view .LVU898
  2811 0308 0A42     		tst	r2, r1
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 225
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 225
 
 
  2812 030a 00F00181 		beq	.L173
@@ -13498,7 +13498,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  2845              		.loc 1 1537 9 is_stmt 1 view .LVU911
  2846              		.loc 1 1537 12 is_stmt 0 view .LVU912
  2847 0322 164C     		ldr	r4, .L230+24
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 226
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 226
 
 
  2848 0324 A242     		cmp	r2, r4
@@ -13558,7 +13558,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  2873 034c 45F48002 		orr	r2, r5, #4194304
  2874              	.LVL247:
  2875              	.LBB342:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 227
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 227
 
 
  2876              	.LBI342:
@@ -13618,7 +13618,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  2920              		.loc 1 1517 64 discriminator 1 view .LVU931
  2921 0394 940E     		lsrs	r4, r2, #26
  2922 0396 0134     		adds	r4, r4, #1
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 228
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 228
 
 
  2923 0398 04F01F04 		and	r4, r4, #31
@@ -13678,7 +13678,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  2968              	.LBB344:
  2969              	.LBI344:
 5445:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** {
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 229
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 229
 
 
  2970              		.loc 2 5445 22 is_stmt 1 discriminator 32 view .LVU941
@@ -13738,7 +13738,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  3012              		.loc 3 1068 3 is_stmt 0 discriminator 2 view .LVU953
  3013              		.thumb
  3014              		.syntax unified
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 230
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 230
 
 
  3015              	.LBE347:
@@ -13798,7 +13798,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  3059              		.loc 3 1055 4 discriminator 8 view .LVU966
  3060              		.syntax unified
  3061              	@ 1055 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 231
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 231
 
 
  3062 0424 92FAA2F5 		rbit r5, r2
@@ -13858,7 +13858,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1048:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  3107              		.loc 3 1048 31 is_stmt 1 discriminator 12 view .LVU979
  3108              	.LBB359:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 232
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 232
 
 
 1050:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -13918,7 +13918,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  3153              	.LVL272:
 1091:Drivers/CMSIS/Include/cmsis_gcc.h ****   }
  3154              		.loc 3 1091 12 view .LVU993
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 233
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 233
 
 
  3155              	.LBE362:
@@ -13978,7 +13978,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  3199              		.loc 3 1091 12 view .LVU1006
  3200 0472 2022     		movs	r2, #32
  3201              	.LVL276:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 234
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 234
 
 
 1091:Drivers/CMSIS/Include/cmsis_gcc.h ****   }
@@ -14038,7 +14038,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1050:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  3246              		.loc 3 1050 3 discriminator 21 view .LVU1017
 1055:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 235
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 235
 
 
  3247              		.loc 3 1055 4 discriminator 21 view .LVU1018
@@ -14098,7 +14098,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  3292              	.LBE375:
  3293              	.LBB376:
  3294              	.LBI376:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 236
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 236
 
 
 1048:Drivers/CMSIS/Include/cmsis_gcc.h **** {
@@ -14158,7 +14158,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  3338              		.loc 3 1091 12 view .LVU1044
  3339 04e2 F5E7     		b	.L194
  3340              	.L195:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 237
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 237
 
 
  3341              	.LVL287:
@@ -14218,7 +14218,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  3385              	.LVL290:
  3386              	.L218:
  3387              	.LBB387:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 238
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 238
 
 
  3388              	.LBB386:
@@ -14278,7 +14278,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  3414              	.L137:
 1593:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c **** }
  3415              		.loc 1 1593 1 is_stmt 0 view .LVU1067
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 239
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 239
 
 
  3416 0516 02B0     		add	sp, sp, #8
@@ -14338,7 +14338,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  3461              	.LBE388:
 1548:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****             while(wait_loop_index != 0UL)
  3462              		.loc 1 1548 13 is_stmt 1 view .LVU1077
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 240
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 240
 
 
 1548:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****             while(wait_loop_index != 0UL)
@@ -14398,7 +14398,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1559:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****           }
  3503              		.loc 1 1559 13 is_stmt 1 view .LVU1092
  3504 0572 45F08072 		orr	r2, r5, #16777216
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 241
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 241
 
 
  3505              	.LVL299:
@@ -14458,7 +14458,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1600:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   * @brief  Enable Injected Queue
 1601:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   * @note   This function resets CFGR register JQDIS bit in order to enable the
 1602:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   *         Injected Queue. JQDIS can be written only when ADSTART and JDSTART
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 242
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 242
 
 
 1603:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   *         are both equal to 0 to ensure that no regular nor injected
@@ -14518,7 +14518,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  3581              		.loc 2 7006 26 view .LVU1112
  3582              	.LBB395:
  3583              		.loc 2 7008 3 view .LVU1113
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 243
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 243
 
 
  3584              		.loc 2 7008 12 is_stmt 0 view .LVU1114
@@ -14578,7 +14578,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  3622              		.loc 1 1634 20 view .LVU1127
  3623 0030 7047     		bx	lr
  3624              	.LVL311:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 244
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 244
 
 
  3625              	.L239:
@@ -14638,7 +14638,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  3657 0000 0168     		ldr	r1, [r0]
  3658              	.LVL314:
  3659              	.LBB396:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 245
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 245
 
 
  3660              	.LBI396:
@@ -14698,7 +14698,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  3700              	.LBI400:
 5050:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** {
  3701              		.loc 2 5050 22 view .LVU1153
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 246
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 246
 
 
  3702              	.LBB401:
@@ -14758,7 +14758,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  3745              		.fpu fpv4-sp-d16
  3747              	HAL_ADCEx_DisableVoltageRegulator:
  3748              	.LVL325:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 247
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 247
 
 
  3749              	.LFB1124:
@@ -14818,7 +14818,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  3776              	.LBB404:
  3777              	.LBI404:
 6626:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** {
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 248
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 248
 
 
  3778              		.loc 2 6626 22 view .LVU1176
@@ -14878,7 +14878,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
 1713:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   * @note   This mode is achieved in setting DEEPPWD bit and allows to save power
 1714:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   *         in reducing leakage currents. It is particularly interesting before
 1715:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   *         entering stop modes.
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 249
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 249
 
 
 1716:Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c ****   * @note   Setting DEEPPWD automatically clears ADVREGEN bit and disables the
@@ -14938,7 +14938,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  3844              	.LBI408:
 6550:Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_adc.h **** {
  3845              		.loc 2 6550 22 view .LVU1196
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 250
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 250
 
 
  3846              	.LBB409:
@@ -14994,59 +14994,59 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 1
  3886              		.file 14 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_flash.h"
  3887              		.file 15 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_uart.h"
  3888              		.file 16 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h"
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 251
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 251
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32wbxx_hal_adc_ex.c
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:18     .text.HAL_ADCEx_Calibration_Start:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:26     .text.HAL_ADCEx_Calibration_Start:0000000000000000 HAL_ADCEx_Calibration_Start
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:188    .text.HAL_ADCEx_Calibration_Start:0000000000000098 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:193    .text.HAL_ADCEx_Calibration_GetValue:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:200    .text.HAL_ADCEx_Calibration_GetValue:0000000000000000 HAL_ADCEx_Calibration_GetValue
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:241    .text.HAL_ADCEx_Calibration_SetValue:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:248    .text.HAL_ADCEx_Calibration_SetValue:0000000000000000 HAL_ADCEx_Calibration_SetValue
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:418    .text.HAL_ADCEx_InjectedStart:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:425    .text.HAL_ADCEx_InjectedStart:0000000000000000 HAL_ADCEx_InjectedStart
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:608    .text.HAL_ADCEx_InjectedStop:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:615    .text.HAL_ADCEx_InjectedStop:0000000000000000 HAL_ADCEx_InjectedStop
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:715    .text.HAL_ADCEx_InjectedPollForConversion:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:722    .text.HAL_ADCEx_InjectedPollForConversion:0000000000000000 HAL_ADCEx_InjectedPollForConversion
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:962    .text.HAL_ADCEx_InjectedStart_IT:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:969    .text.HAL_ADCEx_InjectedStart_IT:0000000000000000 HAL_ADCEx_InjectedStart_IT
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:1197   .text.HAL_ADCEx_InjectedStop_IT:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:1204   .text.HAL_ADCEx_InjectedStop_IT:0000000000000000 HAL_ADCEx_InjectedStop_IT
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:1309   .text.HAL_ADCEx_InjectedGetValue:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:1316   .text.HAL_ADCEx_InjectedGetValue:0000000000000000 HAL_ADCEx_InjectedGetValue
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:1379   .text.HAL_ADCEx_InjectedConvCpltCallback:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:1386   .text.HAL_ADCEx_InjectedConvCpltCallback:0000000000000000 HAL_ADCEx_InjectedConvCpltCallback
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:1401   .text.HAL_ADCEx_InjectedQueueOverflowCallback:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:1408   .text.HAL_ADCEx_InjectedQueueOverflowCallback:0000000000000000 HAL_ADCEx_InjectedQueueOverflowCallback
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:1423   .text.HAL_ADCEx_LevelOutOfWindow2Callback:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:1430   .text.HAL_ADCEx_LevelOutOfWindow2Callback:0000000000000000 HAL_ADCEx_LevelOutOfWindow2Callback
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:1445   .text.HAL_ADCEx_LevelOutOfWindow3Callback:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:1452   .text.HAL_ADCEx_LevelOutOfWindow3Callback:0000000000000000 HAL_ADCEx_LevelOutOfWindow3Callback
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:1467   .text.HAL_ADCEx_EndOfSamplingCallback:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:1474   .text.HAL_ADCEx_EndOfSamplingCallback:0000000000000000 HAL_ADCEx_EndOfSamplingCallback
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:1489   .text.HAL_ADCEx_RegularStop:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:1496   .text.HAL_ADCEx_RegularStop:0000000000000000 HAL_ADCEx_RegularStop
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:1599   .text.HAL_ADCEx_RegularStop_IT:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:1606   .text.HAL_ADCEx_RegularStop_IT:0000000000000000 HAL_ADCEx_RegularStop_IT
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:1714   .text.HAL_ADCEx_RegularStop_DMA:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:1721   .text.HAL_ADCEx_RegularStop_DMA:0000000000000000 HAL_ADCEx_RegularStop_DMA
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:1870   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:1877   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000000 HAL_ADCEx_InjectedConfigChannel
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:2902   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000364 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:2914   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000388 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:3531   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000588 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:3539   .text.HAL_ADCEx_EnableInjectedQueue:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:3546   .text.HAL_ADCEx_EnableInjectedQueue:0000000000000000 HAL_ADCEx_EnableInjectedQueue
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:3636   .text.HAL_ADCEx_DisableInjectedQueue:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:3643   .text.HAL_ADCEx_DisableInjectedQueue:0000000000000000 HAL_ADCEx_DisableInjectedQueue
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:3740   .text.HAL_ADCEx_DisableVoltageRegulator:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:3747   .text.HAL_ADCEx_DisableVoltageRegulator:0000000000000000 HAL_ADCEx_DisableVoltageRegulator
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:3807   .text.HAL_ADCEx_EnterADCDeepPowerDownMode:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s:3814   .text.HAL_ADCEx_EnterADCDeepPowerDownMode:0000000000000000 HAL_ADCEx_EnterADCDeepPowerDownMode
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:18     .text.HAL_ADCEx_Calibration_Start:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:26     .text.HAL_ADCEx_Calibration_Start:0000000000000000 HAL_ADCEx_Calibration_Start
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:188    .text.HAL_ADCEx_Calibration_Start:0000000000000098 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:193    .text.HAL_ADCEx_Calibration_GetValue:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:200    .text.HAL_ADCEx_Calibration_GetValue:0000000000000000 HAL_ADCEx_Calibration_GetValue
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:241    .text.HAL_ADCEx_Calibration_SetValue:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:248    .text.HAL_ADCEx_Calibration_SetValue:0000000000000000 HAL_ADCEx_Calibration_SetValue
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:418    .text.HAL_ADCEx_InjectedStart:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:425    .text.HAL_ADCEx_InjectedStart:0000000000000000 HAL_ADCEx_InjectedStart
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:608    .text.HAL_ADCEx_InjectedStop:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:615    .text.HAL_ADCEx_InjectedStop:0000000000000000 HAL_ADCEx_InjectedStop
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:715    .text.HAL_ADCEx_InjectedPollForConversion:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:722    .text.HAL_ADCEx_InjectedPollForConversion:0000000000000000 HAL_ADCEx_InjectedPollForConversion
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:962    .text.HAL_ADCEx_InjectedStart_IT:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:969    .text.HAL_ADCEx_InjectedStart_IT:0000000000000000 HAL_ADCEx_InjectedStart_IT
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:1197   .text.HAL_ADCEx_InjectedStop_IT:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:1204   .text.HAL_ADCEx_InjectedStop_IT:0000000000000000 HAL_ADCEx_InjectedStop_IT
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:1309   .text.HAL_ADCEx_InjectedGetValue:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:1316   .text.HAL_ADCEx_InjectedGetValue:0000000000000000 HAL_ADCEx_InjectedGetValue
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:1379   .text.HAL_ADCEx_InjectedConvCpltCallback:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:1386   .text.HAL_ADCEx_InjectedConvCpltCallback:0000000000000000 HAL_ADCEx_InjectedConvCpltCallback
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:1401   .text.HAL_ADCEx_InjectedQueueOverflowCallback:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:1408   .text.HAL_ADCEx_InjectedQueueOverflowCallback:0000000000000000 HAL_ADCEx_InjectedQueueOverflowCallback
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:1423   .text.HAL_ADCEx_LevelOutOfWindow2Callback:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:1430   .text.HAL_ADCEx_LevelOutOfWindow2Callback:0000000000000000 HAL_ADCEx_LevelOutOfWindow2Callback
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:1445   .text.HAL_ADCEx_LevelOutOfWindow3Callback:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:1452   .text.HAL_ADCEx_LevelOutOfWindow3Callback:0000000000000000 HAL_ADCEx_LevelOutOfWindow3Callback
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:1467   .text.HAL_ADCEx_EndOfSamplingCallback:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:1474   .text.HAL_ADCEx_EndOfSamplingCallback:0000000000000000 HAL_ADCEx_EndOfSamplingCallback
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:1489   .text.HAL_ADCEx_RegularStop:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:1496   .text.HAL_ADCEx_RegularStop:0000000000000000 HAL_ADCEx_RegularStop
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:1599   .text.HAL_ADCEx_RegularStop_IT:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:1606   .text.HAL_ADCEx_RegularStop_IT:0000000000000000 HAL_ADCEx_RegularStop_IT
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:1714   .text.HAL_ADCEx_RegularStop_DMA:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:1721   .text.HAL_ADCEx_RegularStop_DMA:0000000000000000 HAL_ADCEx_RegularStop_DMA
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:1870   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:1877   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000000 HAL_ADCEx_InjectedConfigChannel
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:2902   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000364 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:2914   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000388 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:3531   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000588 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:3539   .text.HAL_ADCEx_EnableInjectedQueue:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:3546   .text.HAL_ADCEx_EnableInjectedQueue:0000000000000000 HAL_ADCEx_EnableInjectedQueue
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:3636   .text.HAL_ADCEx_DisableInjectedQueue:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:3643   .text.HAL_ADCEx_DisableInjectedQueue:0000000000000000 HAL_ADCEx_DisableInjectedQueue
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:3740   .text.HAL_ADCEx_DisableVoltageRegulator:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:3747   .text.HAL_ADCEx_DisableVoltageRegulator:0000000000000000 HAL_ADCEx_DisableVoltageRegulator
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:3807   .text.HAL_ADCEx_EnterADCDeepPowerDownMode:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s:3814   .text.HAL_ADCEx_EnterADCDeepPowerDownMode:0000000000000000 HAL_ADCEx_EnterADCDeepPowerDownMode
 
 UNDEFINED SYMBOLS
 ADC_Disable
@@ -15054,7 +15054,7 @@ ADC_Enable
 ADC_ConversionStop
 HAL_GetTick
 HAL_DMA_Abort
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cc3TrO05.s 			page 252
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cclF9i5Z.s 			page 252
 
 
 SystemCoreClock

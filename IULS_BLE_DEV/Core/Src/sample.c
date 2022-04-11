@@ -14,7 +14,7 @@
 #include "date_time_set.h"
 #include <time.h>
 
-// extern uint32_t period; 
+extern uint32_t period; 
 extern flash_status_t flash_status;
 
 void sample_command(char *args) {
@@ -45,12 +45,12 @@ int sample(void) {
     sd.watermark = 1;
     sd.status=1;
     sd.timestamp=create_sample_time();
-//   sd.battery_voltage = (uint16_t) read_vrefint();
-//   sd.temperature = (uint16_t) read_temp();
-//   sd.sensor_period = period;
-    sd.battery_voltage = 3;
-    sd.temperature = 50;
-    sd.sensor_period = 2000;
+    sd.battery_voltage = (uint16_t) read_vrefint();
+    sd.temperature = (uint16_t) read_temp();
+    sd.sensor_period = period;
+    // sd.battery_voltage = 3;
+    // sd.temperature = 50;
+    // sd.sensor_period = 2000;
     write_raw(&flash_status,(raw_t *) &sd);
     return(0);
 }
@@ -79,8 +79,9 @@ int read_data_records(flash_status_t *fs) {
       sprintf(date_time,
             "%02d/%02d/%02d,%02d:%02d:%02d",
             // Weekdays[curDate->tm_wday],
-            recover->tm_mday,
             recover->tm_mon+1,
+            recover->tm_mday,
+            // recover->tm_mon+1,
             recover->tm_year+1900,
             recover->tm_hour,
             recover->tm_min,
@@ -95,7 +96,7 @@ int read_data_records(flash_status_t *fs) {
             (int) p->sensor_period);
   
       printf("%s\r\n", samp);
-      fflush;
+      // fflush;
       count++;
     }
     p--;

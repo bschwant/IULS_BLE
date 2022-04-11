@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s 			page 1
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -44,7 +44,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s 			page 1
   14:Core/Src/sample.c **** #include "date_time_set.h"
   15:Core/Src/sample.c **** #include <time.h>
   16:Core/Src/sample.c **** 
-  17:Core/Src/sample.c **** // extern uint32_t period; 
+  17:Core/Src/sample.c **** extern uint32_t period; 
   18:Core/Src/sample.c **** extern flash_status_t flash_status;
   19:Core/Src/sample.c **** 
   20:Core/Src/sample.c **** void sample_command(char *args) {
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s 			page 1
   28:Core/Src/sample.c ****   }
   29:Core/Src/sample.c ****   printf("OK\n\r");
   30:Core/Src/sample.c **** }  
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s 			page 2
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s 			page 2
 
 
   31:Core/Src/sample.c **** 
@@ -103,513 +103,524 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s 			page 1
   51              	.LVL0:
   52              		.loc 1 47 17 view .LVU8
   53 0012 0190     		str	r0, [sp, #4]
-  48:Core/Src/sample.c **** //   sd.battery_voltage = (uint16_t) read_vrefint();
-  49:Core/Src/sample.c **** //   sd.temperature = (uint16_t) read_temp();
-  50:Core/Src/sample.c **** //   sd.sensor_period = period;
-  51:Core/Src/sample.c ****     sd.battery_voltage = 3;
-  54              		.loc 1 51 5 is_stmt 1 view .LVU9
-  55              		.loc 1 51 24 is_stmt 0 view .LVU10
-  56 0014 0323     		movs	r3, #3
-  57 0016 ADF80830 		strh	r3, [sp, #8]	@ movhi
-  52:Core/Src/sample.c ****     sd.temperature = 50;
-  58              		.loc 1 52 5 is_stmt 1 view .LVU11
-  59              		.loc 1 52 20 is_stmt 0 view .LVU12
-  60 001a 3223     		movs	r3, #50
-  61 001c ADF80A30 		strh	r3, [sp, #10]	@ movhi
-  53:Core/Src/sample.c ****     sd.sensor_period = 2000;
-  62              		.loc 1 53 5 is_stmt 1 view .LVU13
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s 			page 3
+  48:Core/Src/sample.c ****     sd.battery_voltage = (uint16_t) read_vrefint();
+  54              		.loc 1 48 5 is_stmt 1 view .LVU9
+  55              		.loc 1 48 37 is_stmt 0 view .LVU10
+  56 0014 FFF7FEFF 		bl	read_vrefint
+  57              	.LVL1:
+  58              		.loc 1 48 24 view .LVU11
+  59 0018 ADF80800 		strh	r0, [sp, #8]	@ movhi
+  49:Core/Src/sample.c ****     sd.temperature = (uint16_t) read_temp();
+  60              		.loc 1 49 5 is_stmt 1 view .LVU12
+  61              		.loc 1 49 33 is_stmt 0 view .LVU13
+  62 001c FFF7FEFF 		bl	read_temp
+  63              	.LVL2:
+  64              		.loc 1 49 20 view .LVU14
+  65 0020 ADF80A00 		strh	r0, [sp, #10]	@ movhi
+  50:Core/Src/sample.c ****     sd.sensor_period = period;
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s 			page 3
 
 
-  63              		.loc 1 53 22 is_stmt 0 view .LVU14
-  64 0020 4FF4FA63 		mov	r3, #2000
-  65 0024 0393     		str	r3, [sp, #12]
+  66              		.loc 1 50 5 is_stmt 1 view .LVU15
+  67              		.loc 1 50 22 is_stmt 0 view .LVU16
+  68 0024 054B     		ldr	r3, .L3
+  69 0026 1B68     		ldr	r3, [r3]
+  70 0028 0393     		str	r3, [sp, #12]
+  51:Core/Src/sample.c ****     // sd.battery_voltage = 3;
+  52:Core/Src/sample.c ****     // sd.temperature = 50;
+  53:Core/Src/sample.c ****     // sd.sensor_period = 2000;
   54:Core/Src/sample.c ****     write_raw(&flash_status,(raw_t *) &sd);
-  66              		.loc 1 54 5 is_stmt 1 view .LVU15
-  67 0026 6946     		mov	r1, sp
-  68 0028 0348     		ldr	r0, .L3
-  69 002a FFF7FEFF 		bl	write_raw
-  70              	.LVL1:
+  71              		.loc 1 54 5 is_stmt 1 view .LVU17
+  72 002a 6946     		mov	r1, sp
+  73 002c 0448     		ldr	r0, .L3+4
+  74 002e FFF7FEFF 		bl	write_raw
+  75              	.LVL3:
   55:Core/Src/sample.c ****     return(0);
-  71              		.loc 1 55 5 view .LVU16
+  76              		.loc 1 55 5 view .LVU18
   56:Core/Src/sample.c **** }
-  72              		.loc 1 56 1 is_stmt 0 view .LVU17
-  73 002e 0020     		movs	r0, #0
-  74 0030 05B0     		add	sp, sp, #20
-  75              	.LCFI2:
-  76              		.cfi_def_cfa_offset 4
-  77              		@ sp needed
-  78 0032 5DF804FB 		ldr	pc, [sp], #4
-  79              	.L4:
-  80 0036 00BF     		.align	2
-  81              	.L3:
-  82 0038 00000000 		.word	flash_status
-  83              		.cfi_endproc
-  84              	.LFE1825:
-  86              		.section	.rodata.sample_command.str1.4,"aMS",%progbits,1
-  87              		.align	2
-  88              	.LC0:
-  89 0000 4E4F4B0A 		.ascii	"NOK\012\015\000"
-  89      0D00
-  90 0006 0000     		.align	2
-  91              	.LC1:
-  92 0008 53616D70 		.ascii	"Sample Sensors\012\015\000"
-  92      6C652053 
-  92      656E736F 
-  92      72730A0D 
-  92      00
-  93 0019 000000   		.align	2
-  94              	.LC2:
-  95 001c 4F4B0A0D 		.ascii	"OK\012\015\000"
-  95      00
-  96              		.section	.text.sample_command,"ax",%progbits
-  97              		.align	1
-  98              		.global	sample_command
-  99              		.syntax unified
- 100              		.thumb
- 101              		.thumb_func
- 102              		.fpu fpv4-sp-d16
- 104              	sample_command:
- 105              	.LVL2:
- 106              	.LFB1823:
-  20:Core/Src/sample.c ****   if (args) {
- 107              		.loc 1 20 33 is_stmt 1 view -0
- 108              		.cfi_startproc
- 109              		@ args = 0, pretend = 0, frame = 0
- 110              		@ frame_needed = 0, uses_anonymous_args = 0
-  20:Core/Src/sample.c ****   if (args) {
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s 			page 4
+  77              		.loc 1 56 1 is_stmt 0 view .LVU19
+  78 0032 0020     		movs	r0, #0
+  79 0034 05B0     		add	sp, sp, #20
+  80              	.LCFI2:
+  81              		.cfi_def_cfa_offset 4
+  82              		@ sp needed
+  83 0036 5DF804FB 		ldr	pc, [sp], #4
+  84              	.L4:
+  85 003a 00BF     		.align	2
+  86              	.L3:
+  87 003c 00000000 		.word	period
+  88 0040 00000000 		.word	flash_status
+  89              		.cfi_endproc
+  90              	.LFE1825:
+  92              		.section	.rodata.sample_command.str1.4,"aMS",%progbits,1
+  93              		.align	2
+  94              	.LC0:
+  95 0000 4E4F4B0A 		.ascii	"NOK\012\015\000"
+  95      0D00
+  96 0006 0000     		.align	2
+  97              	.LC1:
+  98 0008 53616D70 		.ascii	"Sample Sensors\012\015\000"
+  98      6C652053 
+  98      656E736F 
+  98      72730A0D 
+  98      00
+  99 0019 000000   		.align	2
+ 100              	.LC2:
+ 101 001c 4F4B0A0D 		.ascii	"OK\012\015\000"
+ 101      00
+ 102              		.section	.text.sample_command,"ax",%progbits
+ 103              		.align	1
+ 104              		.global	sample_command
+ 105              		.syntax unified
+ 106              		.thumb
+ 107              		.thumb_func
+ 108              		.fpu fpv4-sp-d16
+ 110              	sample_command:
+ 111              	.LVL4:
+ 112              	.LFB1823:
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s 			page 4
 
 
- 111              		.loc 1 20 33 is_stmt 0 view .LVU19
- 112 0000 08B5     		push	{r3, lr}
- 113              	.LCFI3:
- 114              		.cfi_def_cfa_offset 8
- 115              		.cfi_offset 3, -8
- 116              		.cfi_offset 14, -4
+  20:Core/Src/sample.c ****   if (args) {
+ 113              		.loc 1 20 33 is_stmt 1 view -0
+ 114              		.cfi_startproc
+ 115              		@ args = 0, pretend = 0, frame = 0
+ 116              		@ frame_needed = 0, uses_anonymous_args = 0
+  20:Core/Src/sample.c ****   if (args) {
+ 117              		.loc 1 20 33 is_stmt 0 view .LVU21
+ 118 0000 08B5     		push	{r3, lr}
+ 119              	.LCFI3:
+ 120              		.cfi_def_cfa_offset 8
+ 121              		.cfi_offset 3, -8
+ 122              		.cfi_offset 14, -4
   21:Core/Src/sample.c ****     printf("NOK\n\r");
- 117              		.loc 1 21 3 is_stmt 1 view .LVU20
+ 123              		.loc 1 21 3 is_stmt 1 view .LVU22
   21:Core/Src/sample.c ****     printf("NOK\n\r");
- 118              		.loc 1 21 6 is_stmt 0 view .LVU21
- 119 0002 18B1     		cbz	r0, .L6
+ 124              		.loc 1 21 6 is_stmt 0 view .LVU23
+ 125 0002 18B1     		cbz	r0, .L6
   22:Core/Src/sample.c ****     return;
- 120              		.loc 1 22 5 is_stmt 1 view .LVU22
- 121 0004 0648     		ldr	r0, .L9
- 122              	.LVL3:
+ 126              		.loc 1 22 5 is_stmt 1 view .LVU24
+ 127 0004 0648     		ldr	r0, .L9
+ 128              	.LVL5:
   22:Core/Src/sample.c ****     return;
- 123              		.loc 1 22 5 is_stmt 0 view .LVU23
- 124 0006 FFF7FEFF 		bl	printf
- 125              	.LVL4:
+ 129              		.loc 1 22 5 is_stmt 0 view .LVU25
+ 130 0006 FFF7FEFF 		bl	printf
+ 131              	.LVL6:
   23:Core/Src/sample.c ****   }
- 126              		.loc 1 23 5 is_stmt 1 view .LVU24
- 127              	.L5:
+ 132              		.loc 1 23 5 is_stmt 1 view .LVU26
+ 133              	.L5:
   30:Core/Src/sample.c **** 
- 128              		.loc 1 30 1 is_stmt 0 view .LVU25
- 129 000a 08BD     		pop	{r3, pc}
- 130              	.LVL5:
- 131              	.L6:
+ 134              		.loc 1 30 1 is_stmt 0 view .LVU27
+ 135 000a 08BD     		pop	{r3, pc}
+ 136              	.LVL7:
+ 137              	.L6:
   26:Core/Src/sample.c ****     sample();
- 132              		.loc 1 26 5 is_stmt 1 view .LVU26
- 133 000c 0548     		ldr	r0, .L9+4
- 134              	.LVL6:
-  26:Core/Src/sample.c ****     sample();
- 135              		.loc 1 26 5 is_stmt 0 view .LVU27
- 136 000e FFF7FEFF 		bl	printf
- 137              	.LVL7:
-  27:Core/Src/sample.c ****   }
- 138              		.loc 1 27 5 is_stmt 1 view .LVU28
- 139 0012 FFF7FEFF 		bl	sample
+ 138              		.loc 1 26 5 is_stmt 1 view .LVU28
+ 139 000c 0548     		ldr	r0, .L9+4
  140              	.LVL8:
+  26:Core/Src/sample.c ****     sample();
+ 141              		.loc 1 26 5 is_stmt 0 view .LVU29
+ 142 000e FFF7FEFF 		bl	printf
+ 143              	.LVL9:
+  27:Core/Src/sample.c ****   }
+ 144              		.loc 1 27 5 is_stmt 1 view .LVU30
+ 145 0012 FFF7FEFF 		bl	sample
+ 146              	.LVL10:
   29:Core/Src/sample.c **** }  
- 141              		.loc 1 29 3 view .LVU29
- 142 0016 0448     		ldr	r0, .L9+8
- 143 0018 FFF7FEFF 		bl	printf
- 144              	.LVL9:
- 145 001c F5E7     		b	.L5
- 146              	.L10:
- 147 001e 00BF     		.align	2
- 148              	.L9:
- 149 0020 00000000 		.word	.LC0
- 150 0024 08000000 		.word	.LC1
- 151 0028 1C000000 		.word	.LC2
- 152              		.cfi_endproc
- 153              	.LFE1823:
- 155              		.section	.rodata.read_data_records.str1.4,"aMS",%progbits,1
- 156              		.align	2
- 157              	.LC3:
- 158 0000 25303264 		.ascii	"%02d/%02d/%02d,%02d:%02d:%02d\000"
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s 			page 5
+ 147              		.loc 1 29 3 view .LVU31
+ 148 0016 0448     		ldr	r0, .L9+8
+ 149 0018 FFF7FEFF 		bl	printf
+ 150              	.LVL11:
+ 151 001c F5E7     		b	.L5
+ 152              	.L10:
+ 153 001e 00BF     		.align	2
+ 154              	.L9:
+ 155 0020 00000000 		.word	.LC0
+ 156 0024 08000000 		.word	.LC1
+ 157 0028 1C000000 		.word	.LC2
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s 			page 5
 
 
- 158      2F253032 
- 158      642F2530 
- 158      32642C25 
- 158      3032643A 
- 159 001e 0000     		.align	2
- 160              	.LC4:
- 161 0020 442C2564 		.ascii	"D,%d,%s,%d.%d,%d,%d\000"
- 161      2C25732C 
- 161      25642E25 
- 161      642C2564 
- 161      2C256400 
+ 158              		.cfi_endproc
+ 159              	.LFE1823:
+ 161              		.section	.rodata.read_data_records.str1.4,"aMS",%progbits,1
  162              		.align	2
- 163              	.LC5:
- 164 0034 25730D0A 		.ascii	"%s\015\012\000"
- 164      00
- 165              		.section	.text.read_data_records,"ax",%progbits
- 166              		.align	1
- 167              		.global	read_data_records
- 168              		.syntax unified
- 169              		.thumb
- 170              		.thumb_func
- 171              		.fpu fpv4-sp-d16
- 173              	read_data_records:
- 174              	.LVL10:
- 175              	.LFB1826:
+ 163              	.LC3:
+ 164 0000 25303264 		.ascii	"%02d/%02d/%02d,%02d:%02d:%02d\000"
+ 164      2F253032 
+ 164      642F2530 
+ 164      32642C25 
+ 164      3032643A 
+ 165 001e 0000     		.align	2
+ 166              	.LC4:
+ 167 0020 442C2564 		.ascii	"D,%d,%s,%d.%d,%d,%d\000"
+ 167      2C25732C 
+ 167      25642E25 
+ 167      642C2564 
+ 167      2C256400 
+ 168              		.align	2
+ 169              	.LC5:
+ 170 0034 25730D0A 		.ascii	"%s\015\012\000"
+ 170      00
+ 171              		.section	.text.read_data_records,"ax",%progbits
+ 172              		.align	1
+ 173              		.global	read_data_records
+ 174              		.syntax unified
+ 175              		.thumb
+ 176              		.thumb_func
+ 177              		.fpu fpv4-sp-d16
+ 179              	read_data_records:
+ 180              	.LVL12:
+ 181              	.LFB1826:
   57:Core/Src/sample.c **** 
   58:Core/Src/sample.c **** int read_data_records(flash_status_t *fs) {
- 176              		.loc 1 58 43 view -0
- 177              		.cfi_startproc
- 178              		@ args = 0, pretend = 0, frame = 168
- 179              		@ frame_needed = 0, uses_anonymous_args = 0
- 180              		.loc 1 58 43 is_stmt 0 view .LVU31
- 181 0000 F0B5     		push	{r4, r5, r6, r7, lr}
- 182              	.LCFI4:
- 183              		.cfi_def_cfa_offset 20
- 184              		.cfi_offset 4, -20
- 185              		.cfi_offset 5, -16
- 186              		.cfi_offset 6, -12
- 187              		.cfi_offset 7, -8
- 188              		.cfi_offset 14, -4
- 189 0002 AFB0     		sub	sp, sp, #188
- 190              	.LCFI5:
- 191              		.cfi_def_cfa_offset 208
- 192 0004 0546     		mov	r5, r0
+ 182              		.loc 1 58 43 view -0
+ 183              		.cfi_startproc
+ 184              		@ args = 0, pretend = 0, frame = 168
+ 185              		@ frame_needed = 0, uses_anonymous_args = 0
+ 186              		.loc 1 58 43 is_stmt 0 view .LVU33
+ 187 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 188              	.LCFI4:
+ 189              		.cfi_def_cfa_offset 20
+ 190              		.cfi_offset 4, -20
+ 191              		.cfi_offset 5, -16
+ 192              		.cfi_offset 6, -12
+ 193              		.cfi_offset 7, -8
+ 194              		.cfi_offset 14, -4
+ 195 0002 AFB0     		sub	sp, sp, #188
+ 196              	.LCFI5:
+ 197              		.cfi_def_cfa_offset 208
+ 198 0004 0546     		mov	r5, r0
   59:Core/Src/sample.c ****   sensordata_t * p;
- 193              		.loc 1 59 3 is_stmt 1 view .LVU32
+ 199              		.loc 1 59 3 is_stmt 1 view .LVU34
   60:Core/Src/sample.c ****   char samp[124];
- 194              		.loc 1 60 3 view .LVU33
+ 200              		.loc 1 60 3 view .LVU35
   61:Core/Src/sample.c ****   struct tm * recover;
- 195              		.loc 1 61 3 view .LVU34
+ 201              		.loc 1 61 3 view .LVU36
   62:Core/Src/sample.c ****   struct tm * temp;
- 196              		.loc 1 62 3 view .LVU35
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s 			page 6
+
+
+ 202              		.loc 1 62 3 view .LVU37
   63:Core/Src/sample.c ****   int count = 1;
- 197              		.loc 1 63 3 view .LVU36
- 198              	.LVL11:
+ 203              		.loc 1 63 3 view .LVU38
+ 204              	.LVL13:
   64:Core/Src/sample.c ****   p = (sensordata_t *) fs->data_start;
- 199              		.loc 1 64 3 view .LVU37
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s 			page 6
-
-
- 200              		.loc 1 64 5 is_stmt 0 view .LVU38
- 201 0006 0468     		ldr	r4, [r0]
- 202              	.LVL12:
+ 205              		.loc 1 64 3 view .LVU39
+ 206              		.loc 1 64 5 is_stmt 0 view .LVU40
+ 207 0006 0468     		ldr	r4, [r0]
+ 208              	.LVL14:
   65:Core/Src/sample.c **** 
   66:Core/Src/sample.c ****   uint32_t epoch_time;
- 203              		.loc 1 66 3 is_stmt 1 view .LVU39
+ 209              		.loc 1 66 3 is_stmt 1 view .LVU41
   67:Core/Src/sample.c ****   char date_time[32];
- 204              		.loc 1 67 3 view .LVU40
+ 210              		.loc 1 67 3 view .LVU42
   68:Core/Src/sample.c ****   char * test;
- 205              		.loc 1 68 3 view .LVU41
+ 211              		.loc 1 68 3 view .LVU43
   69:Core/Src/sample.c ****   time_t t_of_day;
- 206              		.loc 1 69 3 view .LVU42
+ 212              		.loc 1 69 3 view .LVU44
   70:Core/Src/sample.c **** 
   71:Core/Src/sample.c ****   while (p>((sensordata_t *)fs->next_address)) {
- 207              		.loc 1 71 3 view .LVU43
+ 213              		.loc 1 71 3 view .LVU45
   63:Core/Src/sample.c ****   p = (sensordata_t *) fs->data_start;
- 208              		.loc 1 63 7 is_stmt 0 view .LVU44
- 209 0008 0126     		movs	r6, #1
- 210              		.loc 1 71 9 view .LVU45
- 211 000a 39E0     		b	.L12
- 212              	.LVL13:
- 213              	.L17:
- 214              	.LBB2:
+ 214              		.loc 1 63 7 is_stmt 0 view .LVU46
+ 215 0008 0126     		movs	r6, #1
+ 216              		.loc 1 71 9 view .LVU47
+ 217 000a 39E0     		b	.L12
+ 218              	.LVL15:
+ 219              	.L17:
+ 220              	.LBB2:
   72:Core/Src/sample.c ****     if (p->status==1) {
   73:Core/Src/sample.c ****       memset(date_time, 0 , 32);
- 215              		.loc 1 73 7 is_stmt 1 view .LVU46
- 216 000c 2022     		movs	r2, #32
- 217 000e 0021     		movs	r1, #0
- 218 0010 07A8     		add	r0, sp, #28
- 219 0012 FFF7FEFF 		bl	memset
- 220              	.LVL14:
+ 221              		.loc 1 73 7 is_stmt 1 view .LVU48
+ 222 000c 2022     		movs	r2, #32
+ 223 000e 0021     		movs	r1, #0
+ 224 0010 07A8     		add	r0, sp, #28
+ 225 0012 FFF7FEFF 		bl	memset
+ 226              	.LVL16:
   74:Core/Src/sample.c ****       t_of_day = p->timestamp;
- 221              		.loc 1 74 7 view .LVU47
- 222              		.loc 1 74 19 is_stmt 0 view .LVU48
- 223 0016 6368     		ldr	r3, [r4, #4]
- 224              		.loc 1 74 16 view .LVU49
- 225 0018 0493     		str	r3, [sp, #16]
- 226 001a 0023     		movs	r3, #0
- 227 001c 0593     		str	r3, [sp, #20]
+ 227              		.loc 1 74 7 view .LVU49
+ 228              		.loc 1 74 19 is_stmt 0 view .LVU50
+ 229 0016 6368     		ldr	r3, [r4, #4]
+ 230              		.loc 1 74 16 view .LVU51
+ 231 0018 0493     		str	r3, [sp, #16]
+ 232 001a 0023     		movs	r3, #0
+ 233 001c 0593     		str	r3, [sp, #20]
   75:Core/Src/sample.c **** 
   76:Core/Src/sample.c ****       struct tm * recover;
- 228              		.loc 1 76 7 is_stmt 1 view .LVU50
+ 234              		.loc 1 76 7 is_stmt 1 view .LVU52
   77:Core/Src/sample.c ****       recover = localtime(&t_of_day);
- 229              		.loc 1 77 7 view .LVU51
- 230              		.loc 1 77 17 is_stmt 0 view .LVU52
- 231 001e 04A8     		add	r0, sp, #16
- 232 0020 FFF7FEFF 		bl	localtime
- 233              	.LVL15:
+ 235              		.loc 1 77 7 view .LVU53
+ 236              		.loc 1 77 17 is_stmt 0 view .LVU54
+ 237 001e 04A8     		add	r0, sp, #16
+ 238 0020 FFF7FEFF 		bl	localtime
+ 239              	.LVL17:
   78:Core/Src/sample.c **** 
   79:Core/Src/sample.c ****       sprintf(date_time,
- 234              		.loc 1 79 7 is_stmt 1 view .LVU53
+ 240              		.loc 1 79 7 is_stmt 1 view .LVU55
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s 			page 7
+
+
   80:Core/Src/sample.c ****             "%02d/%02d/%02d,%02d:%02d:%02d",
   81:Core/Src/sample.c ****             // Weekdays[curDate->tm_wday],
-  82:Core/Src/sample.c ****             recover->tm_mday,
-  83:Core/Src/sample.c ****             recover->tm_mon+1,
- 235              		.loc 1 83 20 is_stmt 0 view .LVU54
- 236 0024 0369     		ldr	r3, [r0, #16]
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s 			page 7
-
-
-  84:Core/Src/sample.c ****             recover->tm_year+1900,
- 237              		.loc 1 84 20 view .LVU55
- 238 0026 4169     		ldr	r1, [r0, #20]
+  82:Core/Src/sample.c ****             recover->tm_mon+1,
+ 241              		.loc 1 82 20 is_stmt 0 view .LVU56
+ 242 0024 0269     		ldr	r2, [r0, #16]
+  83:Core/Src/sample.c ****             recover->tm_mday,
+  84:Core/Src/sample.c ****             // recover->tm_mon+1,
+  85:Core/Src/sample.c ****             recover->tm_year+1900,
+ 243              		.loc 1 85 20 view .LVU57
+ 244 0026 4169     		ldr	r1, [r0, #20]
   79:Core/Src/sample.c ****             "%02d/%02d/%02d,%02d:%02d:%02d",
- 239              		.loc 1 79 7 view .LVU56
- 240 0028 C268     		ldr	r2, [r0, #12]
- 241 002a 0768     		ldr	r7, [r0]
- 242 002c 0397     		str	r7, [sp, #12]
- 243 002e 4768     		ldr	r7, [r0, #4]
- 244 0030 0297     		str	r7, [sp, #8]
- 245 0032 8068     		ldr	r0, [r0, #8]
- 246              	.LVL16:
+ 245              		.loc 1 79 7 view .LVU58
+ 246 0028 C368     		ldr	r3, [r0, #12]
+ 247 002a 0768     		ldr	r7, [r0]
+ 248 002c 0397     		str	r7, [sp, #12]
+ 249 002e 4768     		ldr	r7, [r0, #4]
+ 250 0030 0297     		str	r7, [sp, #8]
+ 251 0032 8068     		ldr	r0, [r0, #8]
+ 252              	.LVL18:
   79:Core/Src/sample.c ****             "%02d/%02d/%02d,%02d:%02d:%02d",
- 247              		.loc 1 79 7 view .LVU57
- 248 0034 0190     		str	r0, [sp, #4]
- 249 0036 01F26C71 		addw	r1, r1, #1900
- 250 003a 0091     		str	r1, [sp]
- 251 003c 0133     		adds	r3, r3, #1
- 252 003e 1749     		ldr	r1, .L18
- 253 0040 07A8     		add	r0, sp, #28
- 254 0042 FFF7FEFF 		bl	sprintf
- 255              	.LVL17:
-  85:Core/Src/sample.c ****             recover->tm_hour,
-  86:Core/Src/sample.c ****             recover->tm_min,
-  87:Core/Src/sample.c ****             recover->tm_sec);
-  88:Core/Src/sample.c **** 
-  89:Core/Src/sample.c ****       sprintf(samp, "D,%d,%s,%d.%d,%d,%d", 
- 256              		.loc 1 89 7 is_stmt 1 view .LVU58
+ 253              		.loc 1 79 7 view .LVU59
+ 254 0034 0190     		str	r0, [sp, #4]
+ 255 0036 01F26C71 		addw	r1, r1, #1900
+ 256 003a 0091     		str	r1, [sp]
+ 257 003c 0132     		adds	r2, r2, #1
+ 258 003e 1749     		ldr	r1, .L18
+ 259 0040 07A8     		add	r0, sp, #28
+ 260 0042 FFF7FEFF 		bl	sprintf
+ 261              	.LVL19:
+  86:Core/Src/sample.c ****             recover->tm_hour,
+  87:Core/Src/sample.c ****             recover->tm_min,
+  88:Core/Src/sample.c ****             recover->tm_sec);
+  89:Core/Src/sample.c **** 
+  90:Core/Src/sample.c ****       sprintf(samp, "D,%d,%s,%d.%d,%d,%d", 
+ 262              		.loc 1 90 7 is_stmt 1 view .LVU60
+  91:Core/Src/sample.c ****             count, 
+  92:Core/Src/sample.c ****             date_time,
+  93:Core/Src/sample.c ****             p->battery_voltage/1000,
+ 263              		.loc 1 93 14 is_stmt 0 view .LVU61
+ 264 0046 2189     		ldrh	r1, [r4, #8]
+  94:Core/Src/sample.c ****             p->battery_voltage%1000,
+  95:Core/Src/sample.c ****             p->temperature,
+ 265              		.loc 1 95 14 view .LVU62
+ 266 0048 B4F90A30 		ldrsh	r3, [r4, #10]
+  96:Core/Src/sample.c ****             (int) p->sensor_period);
+ 267              		.loc 1 96 20 view .LVU63
+ 268 004c E268     		ldr	r2, [r4, #12]
   90:Core/Src/sample.c ****             count, 
-  91:Core/Src/sample.c ****             date_time,
-  92:Core/Src/sample.c ****             p->battery_voltage/1000,
- 257              		.loc 1 92 14 is_stmt 0 view .LVU59
- 258 0046 2189     		ldrh	r1, [r4, #8]
-  93:Core/Src/sample.c ****             p->battery_voltage%1000,
-  94:Core/Src/sample.c ****             p->temperature,
- 259              		.loc 1 94 14 view .LVU60
- 260 0048 B4F90A30 		ldrsh	r3, [r4, #10]
-  95:Core/Src/sample.c ****             (int) p->sensor_period);
- 261              		.loc 1 95 20 view .LVU61
- 262 004c E268     		ldr	r2, [r4, #12]
-  89:Core/Src/sample.c ****             count, 
- 263              		.loc 1 89 7 view .LVU62
- 264 004e 0392     		str	r2, [sp, #12]
- 265 0050 0293     		str	r3, [sp, #8]
- 266 0052 134B     		ldr	r3, .L18+4
- 267 0054 A3FB0123 		umull	r2, r3, r3, r1
- 268 0058 9B09     		lsrs	r3, r3, #6
- 269 005a 4FF47A72 		mov	r2, #1000
- 270 005e 02FB1312 		mls	r2, r2, r3, r1
- 271 0062 92B2     		uxth	r2, r2
- 272 0064 0192     		str	r2, [sp, #4]
- 273 0066 0093     		str	r3, [sp]
- 274 0068 07AB     		add	r3, sp, #28
- 275 006a 3246     		mov	r2, r6
- 276 006c 0D49     		ldr	r1, .L18+8
- 277 006e 0FA8     		add	r0, sp, #60
- 278 0070 FFF7FEFF 		bl	sprintf
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s 			page 8
+ 269              		.loc 1 90 7 view .LVU64
+ 270 004e 0392     		str	r2, [sp, #12]
+ 271 0050 0293     		str	r3, [sp, #8]
+ 272 0052 134B     		ldr	r3, .L18+4
+ 273 0054 A3FB0123 		umull	r2, r3, r3, r1
+ 274 0058 9B09     		lsrs	r3, r3, #6
+ 275 005a 4FF47A72 		mov	r2, #1000
+ 276 005e 02FB1312 		mls	r2, r2, r3, r1
+ 277 0062 92B2     		uxth	r2, r2
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s 			page 8
 
 
- 279              	.LVL18:
-  96:Core/Src/sample.c ****   
-  97:Core/Src/sample.c ****       printf("%s\r\n", samp);
- 280              		.loc 1 97 7 is_stmt 1 view .LVU63
- 281 0074 0FA9     		add	r1, sp, #60
- 282 0076 0C48     		ldr	r0, .L18+12
- 283 0078 FFF7FEFF 		bl	printf
- 284              	.LVL19:
-  98:Core/Src/sample.c ****       fflush;
- 285              		.loc 1 98 7 view .LVU64
-  99:Core/Src/sample.c ****       count++;
- 286              		.loc 1 99 7 view .LVU65
- 287              		.loc 1 99 12 is_stmt 0 view .LVU66
- 288 007c 0136     		adds	r6, r6, #1
- 289              	.LVL20:
- 290              	.L13:
- 291              		.loc 1 99 12 view .LVU67
- 292              	.LBE2:
- 100:Core/Src/sample.c ****     }
- 101:Core/Src/sample.c ****     p--;
- 293              		.loc 1 101 5 is_stmt 1 view .LVU68
- 294              		.loc 1 101 6 is_stmt 0 view .LVU69
- 295 007e 103C     		subs	r4, r4, #16
- 296              	.LVL21:
- 297              	.L12:
+ 278 0064 0192     		str	r2, [sp, #4]
+ 279 0066 0093     		str	r3, [sp]
+ 280 0068 07AB     		add	r3, sp, #28
+ 281 006a 3246     		mov	r2, r6
+ 282 006c 0D49     		ldr	r1, .L18+8
+ 283 006e 0FA8     		add	r0, sp, #60
+ 284 0070 FFF7FEFF 		bl	sprintf
+ 285              	.LVL20:
+  97:Core/Src/sample.c ****   
+  98:Core/Src/sample.c ****       printf("%s\r\n", samp);
+ 286              		.loc 1 98 7 is_stmt 1 view .LVU65
+ 287 0074 0FA9     		add	r1, sp, #60
+ 288 0076 0C48     		ldr	r0, .L18+12
+ 289 0078 FFF7FEFF 		bl	printf
+ 290              	.LVL21:
+  99:Core/Src/sample.c ****       // fflush;
+ 100:Core/Src/sample.c ****       count++;
+ 291              		.loc 1 100 7 view .LVU66
+ 292              		.loc 1 100 12 is_stmt 0 view .LVU67
+ 293 007c 0136     		adds	r6, r6, #1
+ 294              	.LVL22:
+ 295              	.L13:
+ 296              		.loc 1 100 12 view .LVU68
+ 297              	.LBE2:
+ 101:Core/Src/sample.c ****     }
+ 102:Core/Src/sample.c ****     p--;
+ 298              		.loc 1 102 5 is_stmt 1 view .LVU69
+ 299              		.loc 1 102 6 is_stmt 0 view .LVU70
+ 300 007e 103C     		subs	r4, r4, #16
+ 301              	.LVL23:
+ 302              	.L12:
   71:Core/Src/sample.c ****     if (p->status==1) {
- 298              		.loc 1 71 9 is_stmt 1 view .LVU70
+ 303              		.loc 1 71 9 is_stmt 1 view .LVU71
   71:Core/Src/sample.c ****     if (p->status==1) {
- 299              		.loc 1 71 31 is_stmt 0 view .LVU71
- 300 0080 AB68     		ldr	r3, [r5, #8]
+ 304              		.loc 1 71 31 is_stmt 0 view .LVU72
+ 305 0080 AB68     		ldr	r3, [r5, #8]
   71:Core/Src/sample.c ****     if (p->status==1) {
- 301              		.loc 1 71 9 view .LVU72
- 302 0082 A342     		cmp	r3, r4
- 303 0084 03D2     		bcs	.L16
+ 306              		.loc 1 71 9 view .LVU73
+ 307 0082 A342     		cmp	r3, r4
+ 308 0084 03D2     		bcs	.L16
   72:Core/Src/sample.c ****       memset(date_time, 0 , 32);
- 304              		.loc 1 72 5 is_stmt 1 view .LVU73
+ 309              		.loc 1 72 5 is_stmt 1 view .LVU74
   72:Core/Src/sample.c ****       memset(date_time, 0 , 32);
- 305              		.loc 1 72 10 is_stmt 0 view .LVU74
- 306 0086 6378     		ldrb	r3, [r4, #1]	@ zero_extendqisi2
+ 310              		.loc 1 72 10 is_stmt 0 view .LVU75
+ 311 0086 6378     		ldrb	r3, [r4, #1]	@ zero_extendqisi2
   72:Core/Src/sample.c ****       memset(date_time, 0 , 32);
- 307              		.loc 1 72 8 view .LVU75
- 308 0088 012B     		cmp	r3, #1
- 309 008a F8D1     		bne	.L13
- 310 008c BEE7     		b	.L17
- 311              	.L16:
- 102:Core/Src/sample.c ****   }
- 103:Core/Src/sample.c ****   free(recover);
- 312              		.loc 1 103 3 is_stmt 1 view .LVU76
- 313 008e 0020     		movs	r0, #0
- 314 0090 FFF7FEFF 		bl	free
- 315              	.LVL22:
- 104:Core/Src/sample.c ****   return(0);
- 316              		.loc 1 104 3 view .LVU77
- 105:Core/Src/sample.c **** }
- 317              		.loc 1 105 1 is_stmt 0 view .LVU78
- 318 0094 0020     		movs	r0, #0
- 319 0096 2FB0     		add	sp, sp, #188
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s 			page 9
+ 312              		.loc 1 72 8 view .LVU76
+ 313 0088 012B     		cmp	r3, #1
+ 314 008a F8D1     		bne	.L13
+ 315 008c BEE7     		b	.L17
+ 316              	.L16:
+ 103:Core/Src/sample.c ****   }
+ 104:Core/Src/sample.c ****   free(recover);
+ 317              		.loc 1 104 3 is_stmt 1 view .LVU77
+ 318 008e 0020     		movs	r0, #0
+ 319 0090 FFF7FEFF 		bl	free
+ 320              	.LVL24:
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s 			page 9
 
 
- 320              	.LCFI6:
- 321              		.cfi_def_cfa_offset 20
- 322              		@ sp needed
- 323 0098 F0BD     		pop	{r4, r5, r6, r7, pc}
- 324              	.LVL23:
- 325              	.L19:
- 326              		.loc 1 105 1 view .LVU79
- 327 009a 00BF     		.align	2
- 328              	.L18:
- 329 009c 00000000 		.word	.LC3
- 330 00a0 D34D6210 		.word	274877907
- 331 00a4 20000000 		.word	.LC4
- 332 00a8 34000000 		.word	.LC5
- 333              		.cfi_endproc
- 334              	.LFE1826:
- 336              		.section	.text.data_command,"ax",%progbits
- 337              		.align	1
- 338              		.global	data_command
- 339              		.syntax unified
- 340              		.thumb
- 341              		.thumb_func
- 342              		.fpu fpv4-sp-d16
- 344              	data_command:
- 345              	.LVL24:
- 346              	.LFB1824:
+ 105:Core/Src/sample.c ****   return(0);
+ 321              		.loc 1 105 3 view .LVU78
+ 106:Core/Src/sample.c **** }
+ 322              		.loc 1 106 1 is_stmt 0 view .LVU79
+ 323 0094 0020     		movs	r0, #0
+ 324 0096 2FB0     		add	sp, sp, #188
+ 325              	.LCFI6:
+ 326              		.cfi_def_cfa_offset 20
+ 327              		@ sp needed
+ 328 0098 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 329              	.LVL25:
+ 330              	.L19:
+ 331              		.loc 1 106 1 view .LVU80
+ 332 009a 00BF     		.align	2
+ 333              	.L18:
+ 334 009c 00000000 		.word	.LC3
+ 335 00a0 D34D6210 		.word	274877907
+ 336 00a4 20000000 		.word	.LC4
+ 337 00a8 34000000 		.word	.LC5
+ 338              		.cfi_endproc
+ 339              	.LFE1826:
+ 341              		.section	.text.data_command,"ax",%progbits
+ 342              		.align	1
+ 343              		.global	data_command
+ 344              		.syntax unified
+ 345              		.thumb
+ 346              		.thumb_func
+ 347              		.fpu fpv4-sp-d16
+ 349              	data_command:
+ 350              	.LVL26:
+ 351              	.LFB1824:
   32:Core/Src/sample.c ****   if (args) {
- 347              		.loc 1 32 31 is_stmt 1 view -0
- 348              		.cfi_startproc
- 349              		@ args = 0, pretend = 0, frame = 0
- 350              		@ frame_needed = 0, uses_anonymous_args = 0
+ 352              		.loc 1 32 31 is_stmt 1 view -0
+ 353              		.cfi_startproc
+ 354              		@ args = 0, pretend = 0, frame = 0
+ 355              		@ frame_needed = 0, uses_anonymous_args = 0
   32:Core/Src/sample.c ****   if (args) {
- 351              		.loc 1 32 31 is_stmt 0 view .LVU81
- 352 0000 08B5     		push	{r3, lr}
- 353              	.LCFI7:
- 354              		.cfi_def_cfa_offset 8
- 355              		.cfi_offset 3, -8
- 356              		.cfi_offset 14, -4
+ 356              		.loc 1 32 31 is_stmt 0 view .LVU82
+ 357 0000 08B5     		push	{r3, lr}
+ 358              	.LCFI7:
+ 359              		.cfi_def_cfa_offset 8
+ 360              		.cfi_offset 3, -8
+ 361              		.cfi_offset 14, -4
   33:Core/Src/sample.c ****     printf("NOK\n\r");
- 357              		.loc 1 33 3 is_stmt 1 view .LVU82
+ 362              		.loc 1 33 3 is_stmt 1 view .LVU83
   33:Core/Src/sample.c ****     printf("NOK\n\r");
- 358              		.loc 1 33 6 is_stmt 0 view .LVU83
- 359 0002 18B1     		cbz	r0, .L21
+ 363              		.loc 1 33 6 is_stmt 0 view .LVU84
+ 364 0002 18B1     		cbz	r0, .L21
   34:Core/Src/sample.c ****     return;
- 360              		.loc 1 34 5 is_stmt 1 view .LVU84
- 361 0004 0548     		ldr	r0, .L24
- 362              	.LVL25:
+ 365              		.loc 1 34 5 is_stmt 1 view .LVU85
+ 366 0004 0548     		ldr	r0, .L24
+ 367              	.LVL27:
   34:Core/Src/sample.c ****     return;
- 363              		.loc 1 34 5 is_stmt 0 view .LVU85
- 364 0006 FFF7FEFF 		bl	printf
- 365              	.LVL26:
+ 368              		.loc 1 34 5 is_stmt 0 view .LVU86
+ 369 0006 FFF7FEFF 		bl	printf
+ 370              	.LVL28:
   35:Core/Src/sample.c ****   }
- 366              		.loc 1 35 5 is_stmt 1 view .LVU86
- 367              	.L20:
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s 			page 10
+
+
+ 371              		.loc 1 35 5 is_stmt 1 view .LVU87
+ 372              	.L20:
   41:Core/Src/sample.c **** 
- 368              		.loc 1 41 1 is_stmt 0 view .LVU87
- 369 000a 08BD     		pop	{r3, pc}
- 370              	.LVL27:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s 			page 10
-
-
- 371              	.L21:
+ 373              		.loc 1 41 1 is_stmt 0 view .LVU88
+ 374 000a 08BD     		pop	{r3, pc}
+ 375              	.LVL29:
+ 376              	.L21:
   38:Core/Src/sample.c ****   }
- 372              		.loc 1 38 5 is_stmt 1 view .LVU88
- 373 000c 0448     		ldr	r0, .L24+4
- 374              	.LVL28:
+ 377              		.loc 1 38 5 is_stmt 1 view .LVU89
+ 378 000c 0448     		ldr	r0, .L24+4
+ 379              	.LVL30:
   38:Core/Src/sample.c ****   }
- 375              		.loc 1 38 5 is_stmt 0 view .LVU89
- 376 000e FFF7FEFF 		bl	read_data_records
- 377              	.LVL29:
+ 380              		.loc 1 38 5 is_stmt 0 view .LVU90
+ 381 000e FFF7FEFF 		bl	read_data_records
+ 382              	.LVL31:
   40:Core/Src/sample.c **** }  
- 378              		.loc 1 40 3 is_stmt 1 view .LVU90
- 379 0012 0448     		ldr	r0, .L24+8
- 380 0014 FFF7FEFF 		bl	printf
- 381              	.LVL30:
- 382 0018 F7E7     		b	.L20
- 383              	.L25:
- 384 001a 00BF     		.align	2
- 385              	.L24:
- 386 001c 00000000 		.word	.LC0
- 387 0020 00000000 		.word	flash_status
- 388 0024 1C000000 		.word	.LC2
- 389              		.cfi_endproc
- 390              	.LFE1824:
- 392              		.text
- 393              	.Letext0:
- 394              		.file 2 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
- 395              		.file 3 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/lock.h"
- 396              		.file 4 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_types.
- 397              		.file 5 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/inclu
- 398              		.file 6 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/reent.h
- 399              		.file 7 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
- 400              		.file 8 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_timeva
- 401              		.file 9 "Drivers/CMSIS/Include/core_cm4.h"
- 402              		.file 10 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/system_stm32wbxx.h"
- 403              		.file 11 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_def.h"
- 404              		.file 12 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_flash.h"
- 405              		.file 13 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_uart.h"
- 406              		.file 14 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h"
- 407              		.file 15 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
- 408              		.file 16 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_usart.h"
- 409              		.file 17 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_lpuart.h"
- 410              		.file 18 "Core/Inc/flash.h"
- 411              		.file 19 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/time.h"
- 412              		.file 20 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdio.h"
- 413              		.file 21 "Core/Inc/date_time_set.h"
- 414              		.file 22 "<built-in>"
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s 			page 11
+ 383              		.loc 1 40 3 is_stmt 1 view .LVU91
+ 384 0012 0448     		ldr	r0, .L24+8
+ 385 0014 FFF7FEFF 		bl	printf
+ 386              	.LVL32:
+ 387 0018 F7E7     		b	.L20
+ 388              	.L25:
+ 389 001a 00BF     		.align	2
+ 390              	.L24:
+ 391 001c 00000000 		.word	.LC0
+ 392 0020 00000000 		.word	flash_status
+ 393 0024 1C000000 		.word	.LC2
+ 394              		.cfi_endproc
+ 395              	.LFE1824:
+ 397              		.text
+ 398              	.Letext0:
+ 399              		.file 2 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
+ 400              		.file 3 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/lock.h"
+ 401              		.file 4 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_types.
+ 402              		.file 5 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/inclu
+ 403              		.file 6 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/reent.h
+ 404              		.file 7 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
+ 405              		.file 8 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_timeva
+ 406              		.file 9 "Drivers/CMSIS/Include/core_cm4.h"
+ 407              		.file 10 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/system_stm32wbxx.h"
+ 408              		.file 11 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_def.h"
+ 409              		.file 12 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_flash.h"
+ 410              		.file 13 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_uart.h"
+ 411              		.file 14 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h"
+ 412              		.file 15 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
+ 413              		.file 16 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_usart.h"
+ 414              		.file 17 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_ll_lpuart.h"
+ 415              		.file 18 "Core/Inc/flash.h"
+ 416              		.file 19 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/time.h"
+ 417              		.file 20 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdio.h"
+ 418              		.file 21 "Core/Inc/date_time_set.h"
+ 419              		.file 22 "Core/Inc/battery.h"
+ 420              		.file 23 "Core/Inc/temperature.h"
+ 421              		.file 24 "<built-in>"
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 sample.c
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s:18     .text.sample:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s:26     .text.sample:0000000000000000 sample
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s:82     .text.sample:0000000000000038 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s:87     .rodata.sample_command.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s:97     .text.sample_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s:104    .text.sample_command:0000000000000000 sample_command
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s:149    .text.sample_command:0000000000000020 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s:156    .rodata.read_data_records.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s:166    .text.read_data_records:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s:173    .text.read_data_records:0000000000000000 read_data_records
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s:329    .text.read_data_records:000000000000009c $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s:337    .text.data_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s:344    .text.data_command:0000000000000000 data_command
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccZgMzgf.s:386    .text.data_command:000000000000001c $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s:18     .text.sample:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s:26     .text.sample:0000000000000000 sample
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s:87     .text.sample:000000000000003c $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s:93     .rodata.sample_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s:103    .text.sample_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s:110    .text.sample_command:0000000000000000 sample_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s:155    .text.sample_command:0000000000000020 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s:162    .rodata.read_data_records.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s:172    .text.read_data_records:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s:179    .text.read_data_records:0000000000000000 read_data_records
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s:334    .text.read_data_records:000000000000009c $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s:342    .text.data_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s:349    .text.data_command:0000000000000000 data_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccxbbFAh.s:391    .text.data_command:000000000000001c $d
 
 UNDEFINED SYMBOLS
 create_sample_time
+read_vrefint
+read_temp
 write_raw
+period
 flash_status
 printf
 memset

@@ -274,8 +274,8 @@ int read_data_records_ble(flash_status_t *fs) {
       sprintf(date_time,
             "%02d/%02d/%02d,%02d:%02d:%02d",
             // Weekdays[curDate->tm_wday],
-            recover->tm_mday,
             recover->tm_mon+1,
+            recover->tm_mday,
             recover->tm_year+1900,
             recover->tm_hour,
             recover->tm_min,
@@ -302,3 +302,4 @@ int read_data_records_ble(flash_status_t *fs) {
   return(0);
 }
 /* USER CODE END FD_LOCAL_FUNCTIONS*/
+
