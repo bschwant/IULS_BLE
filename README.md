@@ -1,5 +1,5 @@
 # IULS_BLE
-## Implemented Functions
+## Implemented BLE Functions, some differ from command line functions.
 
 ### 1. Time Set: sent as "ts,11,35,30"
 - Represents hour (0-23), minute (0-59) and second (0-59).
