@@ -29,6 +29,19 @@ void sample_command(char *args) {
   printf("OK\n\r");
 }  
 
+
+void log_command(char *args) {
+  // if (args) {
+  //   printf("NOK\n\r");
+  //   return;
+  // }
+  // else {
+  printf("Sample Sensors\n\r");
+  log((uint8_t *)args);
+  // }
+  printf("OK\n\r");
+}  
+
 void data_command(char *args) {
   if (args) {
     printf("NOK\n\r");
@@ -39,6 +52,16 @@ void data_command(char *args) {
   }
   printf("OK\n\r");
 }  
+void print_log_command(char *args) {
+  if (args) {
+    printf("NOK\n\r");
+    return;
+  }
+  else {
+    read_log_records(&flash_status);
+  }
+  printf("OK\n\r");
+} 
 
 int sample(void) {
     sensordata_t sd;
@@ -48,10 +71,19 @@ int sample(void) {
     sd.battery_voltage = (uint16_t) read_vrefint();
     sd.temperature = (uint16_t) read_temp();
     sd.sensor_period = period;
-    // sd.battery_voltage = 3;
-    // sd.temperature = 50;
-    // sd.sensor_period = 2000;
     write_raw(&flash_status,(raw_t *) &sd);
+    return(0);
+}
+int log(uint8_t * msg) {
+    int len = strlen((char *) msg);
+    logdata_t ld;
+    ld.watermark = 1;
+    ld.status=2;
+    ld.timestamp=create_sample_time();
+    memset(ld.msg, 0 , 8);
+    memcpy(ld.msg, msg, len);
+    // ld.msg = msg;
+    write_raw(&flash_status,(raw_t *) &ld);
     return(0);
 }
 
@@ -94,6 +126,52 @@ int read_data_records(flash_status_t *fs) {
             p->battery_voltage%1000,
             p->temperature,
             (int) p->sensor_period);
+  
+      printf("%s\r\n", samp);
+      // fflush;
+      count++;
+    }
+    p--;
+  }
+  free(recover);
+  return(0);
+}
+
+int read_log_records(flash_status_t *fs) {
+  logdata_t * p;
+  char samp[124];
+  struct tm * recover;
+  struct tm * temp;
+  int count = 1;
+  p = (sensordata_t *) fs->data_start;
+
+  uint32_t epoch_time;
+  char date_time[32];
+  char * test;
+  time_t t_of_day;
+
+  while (p>((sensordata_t *)fs->next_address)) {
+    if (p->status==2) {
+      memset(date_time, 0 , 32);
+      t_of_day = p->timestamp;
+
+      struct tm * recover;
+      recover = localtime(&t_of_day);
+
+      sprintf(date_time,
+            "%02d/%02d/%02d,%02d:%02d:%02d",
+            recover->tm_mon+1,
+            recover->tm_mday,
+            recover->tm_year+1900,
+            recover->tm_hour,
+            recover->tm_min,
+            recover->tm_sec);
+
+      sprintf(samp, "L,%d,%s,%s%c", 
+            count, 
+            date_time,
+            p->msg,
+            '\0');
   
       printf("%s\r\n", samp);
       // fflush;

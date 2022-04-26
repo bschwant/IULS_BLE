@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s 			page 1
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cciDMiUo.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s 			page 1
   28:Core/Src/battery.c **** uint32_t read_vrefint(void) {
   29              		.loc 1 28 29 view -0
   30              		.cfi_startproc
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s 			page 2
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cciDMiUo.s 			page 2
 
 
   31              		@ args = 0, pretend = 0, frame = 0
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s 			page 1
   73 001e 1A60     		str	r2, [r3]
   74              	.L2:
   41:Core/Src/battery.c ****   }
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s 			page 3
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cciDMiUo.s 			page 3
 
 
   42:Core/Src/battery.c ****   sConfig.Rank = ADC_REGULAR_RANK_1;
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s 			page 1
  120              	.LVL7:
   51:Core/Src/battery.c ****   sConfig.Rank = ADC_REGULAR_RANK_2;
  121              		.loc 1 51 3 is_stmt 1 view .LVU35
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s 			page 4
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cciDMiUo.s 			page 4
 
 
  122              		.loc 1 51 16 is_stmt 0 view .LVU36
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s 			page 1
  169      0D00
  170 0006 0000     		.align	2
  171              	.LC1:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s 			page 5
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cciDMiUo.s 			page 5
 
 
  172 0008 25642E25 		.ascii	"%d.%03d V\012\015\000"
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s 			page 1
  214 000c FFF7FEFF 		bl	read_vrefint
  215              	.LVL17:
   23:Core/Src/battery.c ****     printf("%d.%03d V\n\r",(int)battery_voltage/1000,(int)battery_voltage%1000);
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s 			page 6
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cciDMiUo.s 			page 6
 
 
  216              		.loc 1 23 5 is_stmt 1 view .LVU55
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s 			page 1
  268              		.file 10 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_adc.h"
  269              		.file 11 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_flash.h"
  270              		.file 12 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_uart.h"
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s 			page 7
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cciDMiUo.s 			page 7
 
 
  271              		.file 13 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h"
@@ -372,22 +372,22 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s 			page 1
  279              		.file 21 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_adc_ex.h"
  280              		.file 22 "Core/Inc/main.h"
  281              		.file 23 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdio.h"
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s 			page 8
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cciDMiUo.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 battery.c
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s:18     .text.read_vrefint:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s:26     .text.read_vrefint:0000000000000000 read_vrefint
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s:158    .text.read_vrefint:0000000000000088 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s:167    .rodata.batt_command.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s:177    .text.batt_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s:184    .text.batt_command:0000000000000000 batt_command
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s:237    .text.batt_command:0000000000000034 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s:245    .bss.sConfig.16963:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s:249    .bss.sConfig.16963:0000000000000000 sConfig.16963
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s:252    .data.first_time_up.16962:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchf5Ma0.s:256    .data.first_time_up.16962:0000000000000000 first_time_up.16962
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cciDMiUo.s:18     .text.read_vrefint:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cciDMiUo.s:26     .text.read_vrefint:0000000000000000 read_vrefint
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cciDMiUo.s:158    .text.read_vrefint:0000000000000088 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cciDMiUo.s:167    .rodata.batt_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cciDMiUo.s:177    .text.batt_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cciDMiUo.s:184    .text.batt_command:0000000000000000 batt_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cciDMiUo.s:237    .text.batt_command:0000000000000034 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cciDMiUo.s:245    .bss.sConfig.16963:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cciDMiUo.s:249    .bss.sConfig.16963:0000000000000000 sConfig.16963
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cciDMiUo.s:252    .data.first_time_up.16962:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cciDMiUo.s:256    .data.first_time_up.16962:0000000000000000 first_time_up.16962
 
 UNDEFINED SYMBOLS
 HAL_ADC_ConfigChannel

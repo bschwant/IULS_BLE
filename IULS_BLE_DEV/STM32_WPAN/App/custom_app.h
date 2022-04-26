@@ -70,6 +70,11 @@ typedef struct
 /* USER CODE BEGIN EF */
   void send_data(void);
   int read_data_records_ble(flash_status_t *);
+  int read_log_records_ble(flash_status_t *);
+  void get_time();
+  void get_date();
+  void sample_ble();
+  void tsl237_ble();
 /* USER CODE END EF */
 
 #ifdef __cplusplus

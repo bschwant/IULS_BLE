@@ -47,6 +47,7 @@ void batt_command(char *);
 void tsl237_command(char *);
 void ef_command(char *);
 void sample_command(char *);
+void log_command(char *);
 void data_command(char *);
 void time_command(char *);
 void flash_info_command(char *arguments);
@@ -66,7 +67,9 @@ command_t commands[] = {
   {"tsl237",tsl237_command},
   {"ef",ef_command},
   {"sample",sample_command},
+  {"log",log_command},
   {"data",data_command},
+  {"print_log",print_log_command},
   {"time",time_command},
   {"flash_info",flash_info_command},
   {"st", create_sample_time},
@@ -101,6 +104,11 @@ void __attribute__((weak)) data_command(char *arguments) {
 
 void __attribute__((weak)) sample_command(char *arguments) {
   printf("Sample Weak command\n\r");
+  printf("OK\n\r");
+}
+
+void __attribute__((weak)) log_command(char *arguments) {
+  printf("Log Weak command\n\r");
   printf("OK\n\r");
 }
 

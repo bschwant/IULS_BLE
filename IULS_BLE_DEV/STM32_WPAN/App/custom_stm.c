@@ -60,7 +60,7 @@ typedef struct{
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-static const uint8_t SizeRead_Write_Char=8;
+static const uint8_t SizeRead_Write_Char=12;
 static const uint8_t SizeIndication_Char=64;
 /**
  * START of Section BLE_DRIVER_CONTEXT
@@ -335,7 +335,7 @@ void SVCCTL_InitCustomSvc(void)
                     ATTR_PERMISSION_NONE,
                     GATT_NOTIFY_ATTRIBUTE_WRITE| GATT_NOTIFY_READ_REQ_AND_WAIT_FOR_APPL_RESP,
                     0x10,
-                    8,
+                    CHAR_VALUE_LEN_VARIABLE,
                     &(CustomContext.CustomRead_Write_CharHdle));
   /**
    *  IULS_INDICATION_CHAR
@@ -379,7 +379,7 @@ tBleStatus Custom_STM_App_Update_Char(Custom_STM_Char_Opcode_t CharOpcode, uint8
       result = aci_gatt_update_char_value(CustomContext.CustomIuls_BleHdle,
                                           CustomContext.CustomRead_Write_CharHdle,
                                           0, /* charValOffset */
-                                          SizeRead_Write_Char, /* charValueLen */
+                                          20, /* charValueLen */
                                           (uint8_t *)  pPayload);
       /* USER CODE BEGIN CUSTOM_STM_Service_1_Char_1*/
       APP_DBG_MSG("Update Write Char");

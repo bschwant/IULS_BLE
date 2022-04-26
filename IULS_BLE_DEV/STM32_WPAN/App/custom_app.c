@@ -26,6 +26,7 @@
 #include "custom_app.h"
 #include "custom_stm.h"
 #include "stm32_seq.h"
+#include "command.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -34,6 +35,8 @@
 
 uint8_t payload[8];
 extern flash_status_t flash_status;
+extern RTC_HandleTypeDef hrtc;
+extern uint32_t period; 
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -126,14 +129,50 @@ void Custom_STM_App_Notification(Custom_STM_App_Notification_evt_t *pNotificatio
         read_data_records_ble(&flash_status);
         APP_DBG_MSG("COMMAND: data");
         APP_DBG_MSG("Turning on datasend");
-        // P2P_Send_Data()
       }
 
-      // APP_DBG_MSG("Event: Write no response");
-      // APP_DBG_MSG("Notifcation recieved: %s\r\n", payload);
-      // if(strncmp(payload, "data", 4) == 0) {
-      //   send_data();
-      // }
+      else if(strncmp(command, "log", 3) == 0) {
+        uint8_t temp_line[12];
+        memcpy(temp_line, command, 12);
+        execute_command(temp_line);
+        APP_DBG_MSG("COMMAND: log: writing log record");
+      }
+      
+      // check for command rlog, which is read log
+      else if(strncmp(command, "rlog", 4) == 0) {
+        read_log_records_ble(&flash_status);
+        APP_DBG_MSG("COMMAND: rlog: reading all log records");
+      }
+
+      // checks for command ts, which is time set
+      else if (strncmp(command, "ts", 2) == 0 && strncmp(command, "tsl", 3) != 0) {
+        uint8_t temp_line[11];
+        memcpy(temp_line, command, 11);
+        execute_command(temp_line);
+      }
+
+      // checks for command ds, which is date set
+      else if (strncmp(command, "ds", 2) == 0){
+        uint8_t temp_line[11];
+        memcpy(temp_line, command, 11);
+        execute_command(temp_line);
+      }
+      // tg: Time Get, functions returns notifcation of string with current time
+      else if (strncmp(command, "tg", 2) == 0){
+        get_time();
+      }
+      // dg: Date Get, functions returns notifcation of string with current date
+      else if (strncmp(command, "dg", 2) == 0){
+        get_date();
+      }
+      // sample: function records new sample to flash
+      else if (strncmp(command, "sample", 6) == 0){
+        sample_ble();
+      }
+      // sample: functions returns notifcation of string with light sensor frequency
+      else if (strncmp(command, "tsl237", 6) == 0){
+        tsl237_ble();
+      }
       /* USER CODE END CUSTOM_STM_READ_WRITE_CHAR_WRITE_NO_RESP_EVT */
       break;
 
@@ -249,7 +288,86 @@ void send_data(void) {
 
 
 }
+void tsl237_ble(){
+  float clock_period;
+  float sensor_period;
+  float sensor_frequency;
+  
+  uint8_t temp_freq[16];
+  clock_period = SystemCoreClock;
+  clock_period = 1/clock_period;
+  sensor_period = clock_period * (float) period;
+  sensor_frequency = 1/sensor_period;
+  // printf("%0.3f hz\n\r", sensor_frequency);
+  sprintf(temp_freq, "%0.3f\n\r", sensor_frequency);
+  int len = strlen(temp_freq);
+  memcpy(UpdateCharData, temp_freq, len);
+  Custom_Indication_char_Update_Char();
 
+}
+
+/**
+ *  Function sends "sample" command to execute command function in command.c
+ * 
+ *  Nothing returned, no output.
+ **/
+void sample_ble() {
+  char temp_line[6] = "sample";
+  execute_command(temp_line);
+ 
+}
+
+/**
+ *  Function to get the current time, and sends the current time in string format
+ *  as a notification to an app.
+ * 
+ *  example output: "12:31:22"  - hour:minute:second
+ * 
+ *  Note: Must be listening to notifications to recieve time
+ **/
+void get_time() {
+  uint8_t curr_time[8];
+
+  RTC_TimeTypeDef current_time = {0};
+  HAL_RTC_GetTime(&hrtc,&current_time,RTC_FORMAT_BIN);
+
+  sprintf(curr_time,"%02d:%02d:%02d", current_time.Hours,current_time.Minutes, current_time.Seconds);
+
+  int len = strlen(curr_time);
+  memcpy(UpdateCharData, curr_time, len);
+  Custom_Indication_char_Update_Char();
+}
+
+/**
+ *  Function to get the current date, and sends current the current date
+ *  in string format as a notification to an app. 
+ * 
+ *  example output: "04/26/2022"  - month/day/year
+ * 
+ *  Note: Must be listening to notifications to recieve date
+ **/
+void get_date() {
+
+  uint8_t curr_date[10];
+
+  RTC_DateTypeDef current_date = {0};
+  HAL_RTC_GetDate(&hrtc,&current_date,RTC_FORMAT_BIN);
+
+  sprintf(curr_date,"%02d/%02d/20%02d", current_date.Month,current_date.Date,current_date.Year);
+
+  int len = strlen(curr_date);
+  memcpy(UpdateCharData, curr_date, len);
+  Custom_Indication_char_Update_Char();
+}
+
+/**
+ * Function that reads all of the sample data from flash and sends each
+ * as a notifcation to the app.
+ * 
+ * Format: "D,7,01/01/2000,00:00:02,3.313,28,331"
+ * 
+ * Note: Must be listening to notifications to recieve data 
+ **/
 int read_data_records_ble(flash_status_t *fs) {
   sensordata_t * p;
   char samp[124];
@@ -294,6 +412,72 @@ int read_data_records_ble(flash_status_t *fs) {
       memcpy(UpdateCharData, samp, len);
       Custom_Indication_char_Update_Char();
       fflush;
+      count++;
+    }
+    p--;
+  }
+  free(recover);
+  return(0);
+}
+
+
+/**
+ * Function that reads all of the log records from flash and sends each
+ * as a notifcation to the app.
+ * 
+ * Format: "D,7,01/01/2000,00:00:02,3.313,28,331"
+ * 
+ * Note: Must be listening to notifications to recieve data 
+ **/
+int read_log_records_ble(flash_status_t *fs) {
+  logdata_t * p;
+  char samp[124];
+  struct tm * recover;
+  struct tm * temp;
+  int count = 1;
+  p = (logdata_t *) fs->data_start;
+
+  uint32_t epoch_time;
+  char date_time[32];
+  char * test;
+  time_t t_of_day;
+
+  while (p>((logdata_t *)fs->next_address)) {
+    if (p->status==2) {
+      memset(date_time, 0 , 32);
+      t_of_day = p->timestamp;
+
+      struct tm * recover;
+      recover = localtime(&t_of_day);
+
+      uint8_t msg[8];
+
+      memcpy(msg, p->msg, 8);
+
+      sprintf(date_time,
+            "%02d/%02d/%02d,%02d:%02d:%02d",
+            // Weekdays[curDate->tm_wday],
+            recover->tm_mon+1,
+            recover->tm_mday,
+            recover->tm_year+1900,
+            recover->tm_hour,
+            recover->tm_min,
+            recover->tm_sec);
+
+      sprintf(samp, "D,%d,%s,%s", 
+            count, 
+            date_time,
+            msg);
+            // p->battery_voltage/1000,
+            // p->battery_voltage%1000,
+            // p->temperature,
+            // (int) p->sensor_period);
+  
+      printf("%s\r\n", samp);
+      int len = strlen(samp);
+      memcpy(UpdateCharData, samp, len);
+      Custom_Indication_char_Update_Char();
+      // fflush;
       count++;
     }
     p--;

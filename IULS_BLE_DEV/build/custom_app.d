@@ -105,7 +105,8 @@ build/custom_app.o: STM32_WPAN/App/custom_app.c Core/Inc/main.h \
  Middlewares/ST/STM32_WPAN/ble/svc/Inc/template_stm.h \
  Middlewares/ST/STM32_WPAN/ble/svc/Inc/svc_ctl.h \
  Middlewares/ST/STM32_WPAN/ble/svc/Inc/uuid.h STM32_WPAN/App/custom_app.h \
- STM32_WPAN/App/custom_stm.h Utilities/sequencer/stm32_seq.h
+ STM32_WPAN/App/custom_stm.h Utilities/sequencer/stm32_seq.h \
+ Core/Inc/command.h Core/Inc/queue.h
 
 Core/Inc/main.h:
 
@@ -344,3 +345,7 @@ STM32_WPAN/App/custom_app.h:
 STM32_WPAN/App/custom_stm.h:
 
 Utilities/sequencer/stm32_seq.h:
+
+Core/Inc/command.h:
+
+Core/Inc/queue.h:

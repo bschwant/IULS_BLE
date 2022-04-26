@@ -38,6 +38,7 @@
 /* USER CODE BEGIN PD */
 // #define MAX_COMMAND_LENGTH
 #define MAX_COMMAND_BUFF_LENGTH 20
+
 // #define PRINT_DEBUG_TEMP 0
 /* USER CODE END PD */
 
@@ -110,7 +111,6 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
   last = current;
   // printf("%ld\r\n", period);
 }
-
 
 /* USER CODE END 0 */
 
@@ -199,6 +199,8 @@ int main(void)
   // printf("\r\nSystem Up and Running\r\n");
   prompt();
 
+  // check_max();
+
   LL_USART_EnableIT_RXNE(USART1);
   LL_USART_EnableIT_ERROR(USART1);
 
@@ -212,11 +214,11 @@ int main(void)
     /* Starting Error */
     Error_Handler();
   }
-  if(HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_2) != HAL_OK)
-  {
-    /* Starting Error */
-    Error_Handler();
-  }
+  // if(HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_2) != HAL_OK)
+  // {
+  //   /* Starting Error */
+  //   Error_Handler();
+  // }
 
   while (1)
   {
