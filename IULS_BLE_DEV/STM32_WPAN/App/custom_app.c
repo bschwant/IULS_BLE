@@ -98,19 +98,13 @@ void Custom_STM_App_Notification(Custom_STM_App_Notification_evt_t *pNotificatio
 {
   /* USER CODE BEGIN CUSTOM_STM_App_Notification_1 */
   memset(payload, NULL, 8);
-  // strncpy(payload, pNotification->DataTransfered.pPayload, pNotification->DataTransfered.Length);
-  // payload = pNotification->DataTransfered.pPayload;
-  // payload[pNotification->DataTransfered.Length] = '\0';
-// /  strncpy()
   
   /* USER CODE END CUSTOM_STM_App_Notification_1 */
   switch(pNotification->Custom_Evt_Opcode)
   {
     APP_DBG_MSG("pNotifcation: in switch");
     /* USER CODE BEGIN CUSTOM_STM_App_Notification_Custom_Evt_Opcode */
-    // memset(payload, NULL, 8);
-    // strncpy(payload, pNotification->DataTransfered.pPayload, pNotification->DataTransfered.Length);
-    // APP_DBG_MSG("Notifcation recieved: %s\r\n", payload);
+   
     /* USER CODE END CUSTOM_STM_App_Notification_Custom_Evt_Opcode */
 
   /* IULS_BLE_Service */
@@ -283,11 +277,12 @@ void Custom_Indication_char_Send_Indication(void) /* Property Indication */
 
 /* USER CODE BEGIN FD_LOCAL_FUNCTIONS*/
 void send_data(void) {
-  // sensordata_t * temp = read_data_records_ble(&flash_status);
-  // flash_status
-
-
 }
+
+/**
+ *  Function computers current frequency of light sensor.
+ *  One frequency reading is sent as notifcaiton to the app
+ **/
 void tsl237_ble(){
   float clock_period;
   float sensor_period;
@@ -298,11 +293,10 @@ void tsl237_ble(){
   clock_period = 1/clock_period;
   sensor_period = clock_period * (float) period;
   sensor_frequency = 1/sensor_period;
-  // printf("%0.3f hz\n\r", sensor_frequency);
   sprintf(temp_freq, "%0.3f\n\r", sensor_frequency);
   int len = strlen(temp_freq);
-  memcpy(UpdateCharData, temp_freq, len);
-  Custom_Indication_char_Update_Char();
+  memcpy(UpdateCharData, temp_freq, len);   // Copy data to UpdateCharData 
+  Custom_Indication_char_Update_Char(); // Update notifcation characteristic
 
 }
 
@@ -391,7 +385,6 @@ int read_data_records_ble(flash_status_t *fs) {
 
       sprintf(date_time,
             "%02d/%02d/%02d,%02d:%02d:%02d",
-            // Weekdays[curDate->tm_wday],
             recover->tm_mon+1,
             recover->tm_mday,
             recover->tm_year+1900,
@@ -411,7 +404,6 @@ int read_data_records_ble(flash_status_t *fs) {
       int len = strlen(samp);
       memcpy(UpdateCharData, samp, len);
       Custom_Indication_char_Update_Char();
-      fflush;
       count++;
     }
     p--;
@@ -468,16 +460,11 @@ int read_log_records_ble(flash_status_t *fs) {
             count, 
             date_time,
             msg);
-            // p->battery_voltage/1000,
-            // p->battery_voltage%1000,
-            // p->temperature,
-            // (int) p->sensor_period);
   
       printf("%s\r\n", samp);
       int len = strlen(samp);
       memcpy(UpdateCharData, samp, len);
       Custom_Indication_char_Update_Char();
-      // fflush;
       count++;
     }
     p--;

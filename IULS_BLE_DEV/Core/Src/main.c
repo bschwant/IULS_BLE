@@ -109,7 +109,6 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
     period = htim->Instance->ARR - last + current;
   }
   last = current;
-  // printf("%ld\r\n", period);
 }
 
 /* USER CODE END 0 */
@@ -121,10 +120,6 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-  // Clear command_buff and set index to 0
-  // command_index = 0;
-  // memset(command_buff, 0, MAX_COMMAND_BUFF_LEN)
-  // Change to same size as RX_queue eventually
   uint8_t command[20];
   int command_length;
   /* USER CODE END 1 */
@@ -179,7 +174,6 @@ int main(void)
   //   LL_USART_EnableIT_ERROR(USART1);
   // }
   // RetargetInit(&huart1);
-  // printf("\r\n\r\nIU Light Sensor System Running\r\n");
 
   /* USER CODE END 2 */
 
