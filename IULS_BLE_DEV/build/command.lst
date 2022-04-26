@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
   11:Core/Src/command.c **** #include "main.h"
   12:Core/Src/command.c **** #include <stdio.h>
   13:Core/Src/command.c **** #include <stdlib.h>
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 2
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 2
 
 
   14:Core/Src/command.c **** #include <ctype.h>
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
   68:Core/Src/command.c ****   {"ef",ef_command},
   69:Core/Src/command.c ****   {"sample",sample_command},
   70:Core/Src/command.c ****   {"log",log_command},
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 3
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 3
 
 
   71:Core/Src/command.c ****   {"data",data_command},
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
   85:Core/Src/command.c ****   }
   86:Core/Src/command.c ****   printf("OK\n\r");
   79              		.loc 1 86 3 is_stmt 1 view .LVU14
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 4
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 4
 
 
   80 0018 0448     		ldr	r0, .L6+12
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
   91:Core/Src/command.c ****   printf("OK\n\r");
  128              		.loc 1 91 3 is_stmt 1 view .LVU21
  129 0008 0248     		ldr	r0, .L10+4
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 5
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 5
 
 
  130 000a FFF7FEFF 		bl	printf
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  176              	.LVL16:
   98:Core/Src/command.c **** }
  177              		.loc 1 98 1 is_stmt 0 view .LVU28
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 6
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 6
 
 
  178 000e 08BD     		pop	{r3, pc}
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  225              		.align	2
  226              	.L18:
  227 0010 00000000 		.word	.LC5
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 7
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 7
 
 
  228 0014 20000000 		.word	.LC2
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  275              	.LFE1828:
  277              		.section	.rodata.log_command.str1.4,"aMS",%progbits,1
  278              		.align	2
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 8
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 8
 
 
  279              	.LC7:
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  325      6520466C 
  325      61736820 
  325      5765616B 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 9
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 9
 
 
  325      20636F6D 
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  372              		.align	1
  373              		.weak	temp_command
  374              		.syntax unified
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 10
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 10
 
 
  375              		.thumb
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  422              		.fpu fpv4-sp-d16
  424              	batt_command:
  425              	.LVL37:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 11
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 11
 
 
  426              	.LFB1832:
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  130:Core/Src/command.c **** void __attribute__((weak)) tsl237_command(char *arguments) {
  472              		.loc 1 130 60 is_stmt 1 view -0
  473              		.cfi_startproc
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 12
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 12
 
 
  474              		@ args = 0, pretend = 0, frame = 0
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  521              		.loc 1 135 58 is_stmt 0 view .LVU72
  522 0000 08B5     		push	{r3, lr}
  523              	.LCFI10:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 13
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 13
 
 
  524              		.cfi_def_cfa_offset 8
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  566              		.cfi_startproc
  567              		@ args = 0, pretend = 0, frame = 0
  568              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 14
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 14
 
 
  569              		.loc 1 141 57 is_stmt 0 view .LVU78
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  616              	.LVL54:
  617              	.LFB1836:
  147:Core/Src/command.c **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 15
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 15
 
 
  148:Core/Src/command.c **** void __attribute__((weak)) lof_command(char *arguments) {
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  663              		.syntax unified
  664              		.thumb
  665              		.thumb_func
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 16
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 16
 
 
  666              		.fpu fpv4-sp-d16
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  712      61756C74 
  712      2066756E 
  713              		.section	.text.ts_command,"ax",%progbits
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 17
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 17
 
 
  714              		.align	1
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  763              		.align	2
  764              	.LC18:
  765 0000 53657420 		.ascii	"Set date default command\012\015\000"
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 18
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 18
 
 
  765      64617465 
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  810 0018 00000000 		.word	.LC18
  811 001c 1C000000 		.word	.LC14
  812              		.cfi_endproc
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 19
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 19
 
 
  813              	.LFE1839:
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
   30:Core/Src/command.c ****   HAL_RTC_GetTime(&hrtc,&current_time,RTC_FORMAT_BIN);
  857              		.loc 1 30 19 is_stmt 0 view .LVU126
  858 0010 0094     		str	r4, [sp]
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 20
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 20
 
 
   31:Core/Src/command.c ****   HAL_RTC_GetDate(&hrtc,&current_date,RTC_FORMAT_BIN);
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  908              		.global	parse_command
  909              		.syntax unified
  910              		.thumb
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 21
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 21
 
 
  911              		.thumb_func
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  219:Core/Src/command.c ****   // looks for the first comma, places a NULL and captures the remainder as the arguments
  220:Core/Src/command.c ****   uint8_t *p; 
  922              		.loc 1 220 3 view .LVU134
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 22
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 22
 
 
  221:Core/Src/command.c ****   
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  960              	.LVL83:
  232:Core/Src/command.c ****     }
  961              		.loc 1 232 7 is_stmt 1 view .LVU154
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 23
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 23
 
 
  232:Core/Src/command.c ****     }
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  1006 0000 4572726F 		.ascii	"Error with parse command\012\015\000"
  1006      72207769 
  1006      74682070 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 24
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 24
 
 
  1006      61727365 
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  1048              		.loc 1 186 6 view .LVU180
  1049 0012 B0F1FF3F 		cmp	r0, #-1
  1050 0016 08D0     		beq	.L98
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 25
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 25
 
 
  180:Core/Src/command.c ****   int success = 0;
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  195:Core/Src/command.c ****       success = 1;
  1089              		.loc 1 195 7 is_stmt 1 view .LVU197
  195:Core/Src/command.c ****       success = 1;
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 26
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 26
 
 
  1090              		.loc 1 195 8 is_stmt 0 view .LVU198
@@ -1558,7 +1558,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  1129              	.LVL108:
  1130              	.L87:
  216:Core/Src/command.c **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 27
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 27
 
 
  1131              		.loc 1 216 1 view .LVU214
@@ -1618,7 +1618,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  1176              	.LFE1840:
  1178              		.section	.rodata.get_command.str1.4,"aMS",%progbits,1
  1179              		.align	2
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 28
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 28
 
 
  1180              	.LC23:
@@ -1678,7 +1678,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  251:Core/Src/command.c ****   while (ch!=0) {
  1224              		.loc 1 251 3 is_stmt 1 view .LVU234
  1225              		.loc 1 251 9 is_stmt 0 view .LVU235
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 29
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 29
 
 
  1226 000c 13E0     		b	.L104
@@ -1738,7 +1738,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  1257              	.LVL124:
  1258 002e 0446     		mov	r4, r0
  1259              	.LVL125:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 30
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 30
 
 
  275:Core/Src/command.c ****     restore(mask);  
@@ -1798,7 +1798,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  1299 005c 0F4B     		ldr	r3, .L115+12
  1300 005e 0122     		movs	r2, #1
  1301 0060 1A60     		str	r2, [r3]
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 31
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 31
 
 
  265:Core/Src/command.c ****         }
@@ -1858,7 +1858,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  279:Core/Src/command.c ****     counter = 0;
  1336              		.loc 1 279 5 is_stmt 1 view .LVU275
  1337 007e 0848     		ldr	r0, .L115+16
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 32
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 32
 
 
  1338 0080 FFF7FEFF 		bl	printf
@@ -1918,7 +1918,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  295:Core/Src/command.c ****   int count = 0;
  1381              		.loc 1 295 3 view .LVU287
  296:Core/Src/command.c ****   
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 33
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 33
 
 
  297:Core/Src/command.c ****   if (!instr) {
@@ -1978,7 +1978,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  1421              	.L120:
  1422              		.loc 1 309 24 is_stmt 1 discriminator 2 view .LVU303
  1423              		.loc 1 309 27 is_stmt 0 discriminator 2 view .LVU304
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 34
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 34
 
 
  1424 0020 0133     		adds	r3, r3, #1
@@ -2038,7 +2038,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  1461              		.loc 1 313 7 is_stmt 1 view .LVU319
  314:Core/Src/command.c ****     }
  1462              		.loc 1 314 7 view .LVU320
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 35
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 35
 
 
  314:Core/Src/command.c ****     }
@@ -2098,7 +2098,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  304:Core/Src/command.c ****   }
  1508              		.loc 1 304 12 view .LVU332
  1509 005e 4FF0FF30 		mov	r0, #-1
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 36
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 36
 
 
  1510              	.LVL149:
@@ -2158,7 +2158,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  1558 0047 00       		.align	2
  1559              	.LC37:
  1560 0048 6C6F6700 		.ascii	"log\000"
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 37
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 37
 
 
  1561              		.align	2
@@ -2218,7 +2218,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  1615 004c 00000000 		.word	tsl237_command
  1616 0050 3C000000 		.word	.LC35
  1617 0054 00000000 		.word	ef_command
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 38
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 38
 
 
  1618 0058 40000000 		.word	.LC36
@@ -2263,102 +2263,102 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 1
  1657              		.file 23 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/string.h"
  1658              		.file 24 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdio.h"
  1659              		.file 25 "Core/Inc/interrupt.h"
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 39
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 39
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 command.c
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:18     .rodata.help_command.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:28     .text.help_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:36     .text.help_command:0000000000000000 help_command
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:90     .text.help_command:0000000000000020 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:98     .rodata.flash_info_command.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:102    .text.flash_info_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:109    .text.flash_info_command:0000000000000000 flash_info_command
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:137    .text.flash_info_command:0000000000000010 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:143    .rodata.time_command.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:147    .text.time_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:154    .text.time_command:0000000000000000 time_command
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:182    .text.time_command:0000000000000010 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:188    .rodata.data_command.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:192    .text.data_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:199    .text.data_command:0000000000000000 data_command
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:227    .text.data_command:0000000000000010 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:233    .rodata.sample_command.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:237    .text.sample_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:244    .text.sample_command:0000000000000000 sample_command
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:272    .text.sample_command:0000000000000010 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:278    .rodata.log_command.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:282    .text.log_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:289    .text.log_command:0000000000000000 log_command
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:317    .text.log_command:0000000000000010 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:323    .rodata.ef_command.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:327    .text.ef_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:334    .text.ef_command:0000000000000000 ef_command
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:362    .text.ef_command:0000000000000010 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:368    .rodata.temp_command.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:372    .text.temp_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:379    .text.temp_command:0000000000000000 temp_command
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:407    .text.temp_command:0000000000000010 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:413    .rodata.batt_command.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:417    .text.batt_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:424    .text.batt_command:0000000000000000 batt_command
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:452    .text.batt_command:0000000000000010 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:458    .rodata.tsl237_command.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:462    .text.tsl237_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:469    .text.tsl237_command:0000000000000000 tsl237_command
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:497    .text.tsl237_command:0000000000000010 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:503    .rodata.test_command.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:507    .text.test_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:514    .text.test_command:0000000000000000 test_command
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:542    .text.test_command:0000000000000010 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:548    .rodata.lon_command.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:555    .text.lon_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:562    .text.lon_command:0000000000000000 lon_command
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:598    .text.lon_command:0000000000000018 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:604    .rodata.lof_command.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:608    .text.lof_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:615    .text.lof_command:0000000000000000 lof_command
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:651    .text.lof_command:0000000000000018 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:657    .rodata.uid_command.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:661    .text.uid_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:668    .text.uid_command:0000000000000000 uid_command
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s 			page 40
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:18     .rodata.help_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:28     .text.help_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:36     .text.help_command:0000000000000000 help_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:90     .text.help_command:0000000000000020 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:98     .rodata.flash_info_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:102    .text.flash_info_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:109    .text.flash_info_command:0000000000000000 flash_info_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:137    .text.flash_info_command:0000000000000010 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:143    .rodata.time_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:147    .text.time_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:154    .text.time_command:0000000000000000 time_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:182    .text.time_command:0000000000000010 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:188    .rodata.data_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:192    .text.data_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:199    .text.data_command:0000000000000000 data_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:227    .text.data_command:0000000000000010 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:233    .rodata.sample_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:237    .text.sample_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:244    .text.sample_command:0000000000000000 sample_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:272    .text.sample_command:0000000000000010 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:278    .rodata.log_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:282    .text.log_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:289    .text.log_command:0000000000000000 log_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:317    .text.log_command:0000000000000010 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:323    .rodata.ef_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:327    .text.ef_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:334    .text.ef_command:0000000000000000 ef_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:362    .text.ef_command:0000000000000010 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:368    .rodata.temp_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:372    .text.temp_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:379    .text.temp_command:0000000000000000 temp_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:407    .text.temp_command:0000000000000010 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:413    .rodata.batt_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:417    .text.batt_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:424    .text.batt_command:0000000000000000 batt_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:452    .text.batt_command:0000000000000010 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:458    .rodata.tsl237_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:462    .text.tsl237_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:469    .text.tsl237_command:0000000000000000 tsl237_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:497    .text.tsl237_command:0000000000000010 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:503    .rodata.test_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:507    .text.test_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:514    .text.test_command:0000000000000000 test_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:542    .text.test_command:0000000000000010 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:548    .rodata.lon_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:555    .text.lon_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:562    .text.lon_command:0000000000000000 lon_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:598    .text.lon_command:0000000000000018 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:604    .rodata.lof_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:608    .text.lof_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:615    .text.lof_command:0000000000000000 lof_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:651    .text.lof_command:0000000000000018 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:657    .rodata.uid_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:661    .text.uid_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:668    .text.uid_command:0000000000000000 uid_command
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s 			page 40
 
 
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:704    .text.uid_command:0000000000000018 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:710    .rodata.ts_command.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:714    .text.ts_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:721    .text.ts_command:0000000000000000 ts_command
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:757    .text.ts_command:0000000000000018 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:763    .rodata.ds_command.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:767    .text.ds_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:774    .text.ds_command:0000000000000000 ds_command
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:810    .text.ds_command:0000000000000018 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:816    .rodata.prompt.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:826    .text.prompt:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:833    .text.prompt:0000000000000000 prompt
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:899    .text.prompt:0000000000000058 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:907    .text.parse_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:914    .text.parse_command:0000000000000000 parse_command
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:1004   .rodata.execute_command.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:1008   .text.execute_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:1015   .text.execute_command:0000000000000000 execute_command
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:1172   .text.execute_command:000000000000007c $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:1179   .rodata.get_command.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:1186   .text.get_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:1193   .text.get_command:0000000000000000 get_command
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:1354   .text.get_command:0000000000000090 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:1363   .text.delspace:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:1370   .text.delspace:0000000000000000 delspace
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:1516   .text.delspace:0000000000000064 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:1595   .data.commands:0000000000000000 commands
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:1522   .rodata.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:1577   .bss.counter.17302:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:1581   .bss.counter.17302:0000000000000000 counter.17302
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:1584   .bss.mode.17303:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:1588   .bss.mode.17303:0000000000000000 mode.17303
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccR3PkI8.s:1591   .data.commands:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:704    .text.uid_command:0000000000000018 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:710    .rodata.ts_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:714    .text.ts_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:721    .text.ts_command:0000000000000000 ts_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:757    .text.ts_command:0000000000000018 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:763    .rodata.ds_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:767    .text.ds_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:774    .text.ds_command:0000000000000000 ds_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:810    .text.ds_command:0000000000000018 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:816    .rodata.prompt.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:826    .text.prompt:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:833    .text.prompt:0000000000000000 prompt
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:899    .text.prompt:0000000000000058 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:907    .text.parse_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:914    .text.parse_command:0000000000000000 parse_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:1004   .rodata.execute_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:1008   .text.execute_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:1015   .text.execute_command:0000000000000000 execute_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:1172   .text.execute_command:000000000000007c $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:1179   .rodata.get_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:1186   .text.get_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:1193   .text.get_command:0000000000000000 get_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:1354   .text.get_command:0000000000000090 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:1363   .text.delspace:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:1370   .text.delspace:0000000000000000 delspace
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:1516   .text.delspace:0000000000000064 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:1595   .data.commands:0000000000000000 commands
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:1522   .rodata.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:1577   .bss.counter.17302:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:1581   .bss.counter.17302:0000000000000000 counter.17302
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:1584   .bss.mode.17303:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:1588   .bss.mode.17303:0000000000000000 mode.17303
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccXAGWAV.s:1591   .data.commands:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 printf

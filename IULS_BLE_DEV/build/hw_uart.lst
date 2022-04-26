@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 1
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 1
   27:Core/Src/hw_uart.c **** #if (CFG_HW_USART1_ENABLED == 1)
   28:Core/Src/hw_uart.c **** extern UART_HandleTypeDef huart1;
   29:Core/Src/hw_uart.c **** #endif
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 2
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s 			page 2
 
 
   30:Core/Src/hw_uart.c **** 
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 1
   42 0004 0228     		cmp	r0, #2
   43 0006 08D0     		beq	.L3
   44              	.LVL1:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 3
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s 			page 3
 
 
   45              	.L1:
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 1
   81:Core/Src/hw_uart.c ****             break;
   71              		.loc 1 81 13 view .LVU13
   72 001a 0748     		ldr	r0, .L6+12
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 4
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s 			page 4
 
 
   73              	.LVL7:
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 1
  119              		.cfi_def_cfa_offset 8
  120              		.cfi_offset 4, -8
  121              		.cfi_offset 14, -4
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 5
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s 			page 5
 
 
   94:Core/Src/hw_uart.c ****     switch (hw_uart_id)
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 1
  148              		.loc 1 99 13 view .LVU32
  149 0018 F6E7     		b	.L8
  150              	.LVL16:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 6
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s 			page 6
 
 
  151              	.L10:
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 1
  195              		.cfi_startproc
  196              		@ args = 0, pretend = 0, frame = 0
  197              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 7
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s 			page 7
 
 
  198              		.loc 1 116 1 is_stmt 0 view .LVU43
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 1
  155:Core/Src/hw_uart.c **** 
  156:Core/Src/hw_uart.c ****         default:
  157:Core/Src/hw_uart.c ****             break;
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 8
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s 			page 8
 
 
  158:Core/Src/hw_uart.c ****     }
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 1
  252 002a 0460     		str	r4, [r0]
  130:Core/Src/hw_uart.c ****             break;
  253              		.loc 1 130 13 is_stmt 1 view .LVU61
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 9
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s 			page 9
 
 
  254 002c FFF7FEFF 		bl	HAL_UART_Transmit
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 1
  170:Core/Src/hw_uart.c **** #if (CFG_HW_USART1_ENABLED == 1)
  171:Core/Src/hw_uart.c ****         case hw_uart1:
  172:Core/Src/hw_uart.c ****             HW_huart1TxCb = cb;
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 10
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s 			page 10
 
 
  173:Core/Src/hw_uart.c ****             huart1.Instance = USART1;
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 1
  310 000e 0360     		str	r3, [r0]
  173:Core/Src/hw_uart.c ****             hal_status = HAL_UART_Transmit_DMA(&huart1, p_data, size);
  311              		.loc 1 173 13 is_stmt 1 view .LVU74
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 11
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s 			page 11
 
 
  173:Core/Src/hw_uart.c ****             hal_status = HAL_UART_Transmit_DMA(&huart1, p_data, size);
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 1
  351              		.loc 1 182 13 is_stmt 1 view .LVU89
  182:Core/Src/hw_uart.c ****             break;
  352              		.loc 1 182 26 is_stmt 0 view .LVU90
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 12
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s 			page 12
 
 
  353 0034 FFF7FEFF 		bl	HAL_UART_Transmit_DMA
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 1
  226:Core/Src/hw_uart.c ****         case hw_lpuart1:
  227:Core/Src/hw_uart.c ****             HAL_UART_IRQHandler(&hlpuart1);
  228:Core/Src/hw_uart.c ****             break;
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 13
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s 			page 13
 
 
  229:Core/Src/hw_uart.c **** #endif
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 1
  437              	.LFB1420:
  237:Core/Src/hw_uart.c **** 
  238:Core/Src/hw_uart.c **** void HW_UART_DMA_Interrupt_Handler(hw_uart_id_t hw_uart_id)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 14
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s 			page 14
 
 
  239:Core/Src/hw_uart.c **** {
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 1
  468              	.L42:
  250:Core/Src/hw_uart.c ****             break;
  469              		.loc 1 250 13 view .LVU110
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 15
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s 			page 15
 
 
  470 0014 034B     		ldr	r3, .L45+4
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 1
  265:Core/Src/hw_uart.c **** #if (CFG_HW_USART1_ENABLED == 1)
  266:Core/Src/hw_uart.c ****         case (uint32_t)USART1:
  267:Core/Src/hw_uart.c ****             if(HW_huart1RxCb)
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 16
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s 			page 16
 
 
  518              		.loc 1 267 13 is_stmt 1 view .LVU119
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 1
  546              	.L51:
  547 0028 00800040 		.word	1073774592
  548 002c 00000000 		.word	HW_huart1RxCb
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 17
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s 			page 17
 
 
  549 0030 00000000 		.word	HW_hlpuart1RxCb
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 1
  300:Core/Src/hw_uart.c ****             break;
  301:Core/Src/hw_uart.c **** #endif
  302:Core/Src/hw_uart.c **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 18
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s 			page 18
 
 
  303:Core/Src/hw_uart.c **** #if (CFG_HW_LPUART1_ENABLED == 1)
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 1
  630      00000000 
  630      00000000 
  630      00000000 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 19
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s 			page 19
 
 
  630      00000000 
@@ -1109,43 +1109,43 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 1
  653              		.file 16 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h"
  654              		.file 17 "Core/Inc/hw_if.h"
  655              		.file 18 "Core/Inc/app_conf.h"
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s 			page 20
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s 			page 20
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 hw_uart.c
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:18     .text.HW_UART_Receive_IT:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:26     .text.HW_UART_Receive_IT:0000000000000000 HW_UART_Receive_IT
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:92     .text.HW_UART_Receive_IT:000000000000002c $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:18     .text.HW_UART_Receive_IT:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:26     .text.HW_UART_Receive_IT:0000000000000000 HW_UART_Receive_IT
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:92     .text.HW_UART_Receive_IT:000000000000002c $d
                             *COM*:0000000000000004 HW_huart1RxCb
                             *COM*:0000000000000004 HW_hlpuart1RxCb
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:102    .text.HW_UART_Transmit_IT:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:109    .text.HW_UART_Transmit_IT:0000000000000000 HW_UART_Transmit_IT
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:174    .text.HW_UART_Transmit_IT:000000000000002c $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:102    .text.HW_UART_Transmit_IT:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:109    .text.HW_UART_Transmit_IT:0000000000000000 HW_UART_Transmit_IT
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:174    .text.HW_UART_Transmit_IT:000000000000002c $d
                             *COM*:0000000000000004 HW_huart1TxCb
                             *COM*:0000000000000004 HW_hlpuart1TxCb
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:184    .text.HW_UART_Transmit:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:191    .text.HW_UART_Transmit:0000000000000000 HW_UART_Transmit
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:262    .text.HW_UART_Transmit:0000000000000034 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:270    .text.HW_UART_Transmit_DMA:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:277    .text.HW_UART_Transmit_DMA:0000000000000000 HW_UART_Transmit_DMA
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:360    .text.HW_UART_Transmit_DMA:000000000000003c $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:370    .text.HW_UART_Interrupt_Handler:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:377    .text.HW_UART_Interrupt_Handler:0000000000000000 HW_UART_Interrupt_Handler
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:422    .text.HW_UART_Interrupt_Handler:000000000000001c $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:428    .text.HW_UART_DMA_Interrupt_Handler:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:435    .text.HW_UART_DMA_Interrupt_Handler:0000000000000000 HW_UART_DMA_Interrupt_Handler
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:482    .text.HW_UART_DMA_Interrupt_Handler:0000000000000020 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:488    .text.HAL_UART_RxCpltCallback:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:495    .text.HAL_UART_RxCpltCallback:0000000000000000 HAL_UART_RxCpltCallback
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:547    .text.HAL_UART_RxCpltCallback:0000000000000028 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:554    .text.HAL_UART_TxCpltCallback:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:561    .text.HAL_UART_TxCpltCallback:0000000000000000 HAL_UART_TxCpltCallback
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:613    .text.HAL_UART_TxCpltCallback:0000000000000028 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:629    .bss.HW_hdma_hlpuart1_tx:0000000000000000 HW_hdma_hlpuart1_tx
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:635    .bss.HW_hdma_huart1_tx:0000000000000000 HW_hdma_huart1_tx
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:626    .bss.HW_hdma_hlpuart1_tx:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//cchBTPvz.s:632    .bss.HW_hdma_huart1_tx:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:184    .text.HW_UART_Transmit:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:191    .text.HW_UART_Transmit:0000000000000000 HW_UART_Transmit
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:262    .text.HW_UART_Transmit:0000000000000034 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:270    .text.HW_UART_Transmit_DMA:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:277    .text.HW_UART_Transmit_DMA:0000000000000000 HW_UART_Transmit_DMA
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:360    .text.HW_UART_Transmit_DMA:000000000000003c $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:370    .text.HW_UART_Interrupt_Handler:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:377    .text.HW_UART_Interrupt_Handler:0000000000000000 HW_UART_Interrupt_Handler
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:422    .text.HW_UART_Interrupt_Handler:000000000000001c $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:428    .text.HW_UART_DMA_Interrupt_Handler:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:435    .text.HW_UART_DMA_Interrupt_Handler:0000000000000000 HW_UART_DMA_Interrupt_Handler
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:482    .text.HW_UART_DMA_Interrupt_Handler:0000000000000020 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:488    .text.HAL_UART_RxCpltCallback:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:495    .text.HAL_UART_RxCpltCallback:0000000000000000 HAL_UART_RxCpltCallback
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:547    .text.HAL_UART_RxCpltCallback:0000000000000028 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:554    .text.HAL_UART_TxCpltCallback:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:561    .text.HAL_UART_TxCpltCallback:0000000000000000 HAL_UART_TxCpltCallback
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:613    .text.HAL_UART_TxCpltCallback:0000000000000028 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:629    .bss.HW_hdma_hlpuart1_tx:0000000000000000 HW_hdma_hlpuart1_tx
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:635    .bss.HW_hdma_huart1_tx:0000000000000000 HW_hdma_huart1_tx
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:626    .bss.HW_hdma_hlpuart1_tx:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccBsxLr7.s:632    .bss.HW_hdma_huart1_tx:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 HAL_UART_Receive_IT

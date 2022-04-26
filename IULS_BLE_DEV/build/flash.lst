@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 1
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 1
   28:Core/Src/flash.c **** //   /**
   29:Core/Src/flash.c **** //    * The linker script defines the following sectors for binaries as
   30:Core/Src/flash.c **** //    * residing in flash. Parenthetical values indicate global symbols
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 2
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s 			page 2
 
 
   31:Core/Src/flash.c **** //    * which mark the start/end of each section. These symbols start at 
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 1
   85:Core/Src/flash.c **** 
   86:Core/Src/flash.c ****     uint32_t top = 0x0800C000;
   87:Core/Src/flash.c ****     // uint32_t bottom = 0x0803FFC0;
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 3
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s 			page 3
 
 
   88:Core/Src/flash.c ****     // uint32_t bottom = 0x0803EF10;
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 1
  142:Core/Src/flash.c ****     HAL_FLASH_Lock();
  143:Core/Src/flash.c ****     return (-1);
  144:Core/Src/flash.c ****   }
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 4
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s 			page 4
 
 
  145:Core/Src/flash.c ****   HAL_FLASH_Lock();
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 1
  162:Core/Src/flash.c ****   
  163:Core/Src/flash.c ****   return page;
   66              		.loc 1 163 3 is_stmt 1 view .LVU14
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 5
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s 			page 5
 
 
  164:Core/Src/flash.c **** }
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 1
  100              		.thumb
  101              		.thumb_func
  102              		.fpu fpv4-sp-d16
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 6
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s 			page 6
 
 
  104              	flash_info_command:
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 1
   79:Core/Src/flash.c ****   printf("OK\n\r");
  148              		.loc 1 79 3 is_stmt 1 view .LVU26
   79:Core/Src/flash.c ****   printf("OK\n\r");
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 7
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s 			page 7
 
 
  149              		.loc 1 79 58 is_stmt 0 view .LVU27
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 1
  199              	.LFB1825:
   83:Core/Src/flash.c ****     sensordata_t * p;
  200              		.loc 1 83 43 is_stmt 1 view -0
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 8
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s 			page 8
 
 
  201              		.cfi_startproc
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 1
  102:Core/Src/flash.c **** 
  238              		.loc 1 102 1 view .LVU52
  239 001a 7047     		bx	lr
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 9
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s 			page 9
 
 
  240              	.LVL18:
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 1
  285              		.cfi_offset 14, -4
  286 0002 0446     		mov	r4, r0
  287 0004 0D46     		mov	r5, r1
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 10
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s 			page 10
 
 
  105:Core/Src/flash.c ****   HAL_StatusTypeDef status = 0;
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 1
  325 002c 0120     		movs	r0, #1
  326              	.LVL28:
  119:Core/Src/flash.c ****     HAL_FLASH_Lock();
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 11
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s 			page 11
 
 
  327              		.loc 1 119 17 view .LVU77
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 1
  367              	.L26:
  110:Core/Src/flash.c ****   }
  368              		.loc 1 110 11 view .LVU92
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 12
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s 			page 12
 
 
  369 0056 4FF0FF30 		mov	r0, #-1
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 1
  135:Core/Src/flash.c ****   /* Fill EraseInit structure*/
  417              		.loc 1 135 3 view .LVU101
  135:Core/Src/flash.c ****   /* Fill EraseInit structure*/
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 13
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s 			page 13
 
 
  418              		.loc 1 135 3 view .LVU102
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 1
  457              		.cfi_remember_state
  458              		.cfi_def_cfa_offset 12
  459              		@ sp needed
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 14
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s 			page 14
 
 
  460 003a 30BD     		pop	{r4, r5, pc}
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 1
  505              		.loc 1 172 14 is_stmt 0 view .LVU124
  506 0004 0023     		movs	r3, #0
  507 0006 0193     		str	r3, [sp, #4]
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 15
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s 			page 15
 
 
  173:Core/Src/flash.c ****     /* __IO uint32_t data32 = 0 , MemoryProgramStatus = 0; */
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 1
  525 0014 1048     		ldr	r0, .L45+4
  526 0016 FFF7FEFF 		bl	GetPage
  527              	.LVL47:
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 16
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s 			page 16
 
 
  528 001a 0446     		mov	r4, r0
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 1
  229:Core/Src/flash.c ****     HAL_FLASH_Lock();
  563              		.loc 1 229 5 is_stmt 1 view .LVU152
  564 0038 FFF7FEFF 		bl	HAL_FLASH_Lock
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 17
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s 			page 17
 
 
  565              	.LVL54:
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 1
  612      65204865 
  612      7265210A 
  612      0D00
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 18
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s 			page 18
 
 
  613              		.section	.text.ef_command,"ax",%progbits
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 1
  657              	.LVL63:
  658              	.L47:
   72:Core/Src/flash.c **** 
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 19
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s 			page 19
 
 
  659              		.loc 1 72 1 is_stmt 0 view .LVU171
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 1
  709              		.file 7 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
  710              		.file 8 "Drivers/CMSIS/Include/core_cm4.h"
  711              		.file 9 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/system_stm32wbxx.h"
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 20
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s 			page 20
 
 
  712              		.file 10 "Drivers/CMSIS/Device/ST/STM32WBxx/Include/stm32wb55xx.h"
@@ -1153,39 +1153,39 @@ ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 1
  721              		.file 19 "Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_flash_ex.h"
  722              		.file 20 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdio.h"
  723              		.file 21 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/string.h"
-ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s 			page 21
+ARM GAS  /var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s 			page 21
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 flash.c
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:18     .text.GetPage:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:25     .text.GetPage:0000000000000000 GetPage
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:72     .text.GetPage:0000000000000024 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:78     .rodata.flash_info_command.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:97     .text.flash_info_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:104    .text.flash_info_command:0000000000000000 flash_info_command
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:179    .text.flash_info_command:0000000000000050 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:190    .text.flash_write_init:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:197    .text.flash_write_init:0000000000000000 flash_write_init
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:254    .text.flash_write_init:0000000000000024 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:260    .rodata.write_raw.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:264    .text.write_raw:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:271    .text.write_raw:0000000000000000 write_raw
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:377    .text.write_raw:0000000000000064 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:382    .text.erase_one_page:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:389    .text.erase_one_page:0000000000000000 erase_one_page
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:475    .text.erase_one_page:0000000000000048 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:481    .text.flash_erase:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:488    .text.flash_erase:0000000000000000 flash_erase
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:595    .text.flash_erase:0000000000000054 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:604    .rodata.ef_command.str1.4:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:614    .text.ef_command:0000000000000000 $t
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:621    .text.ef_command:0000000000000000 ef_command
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:681    .text.ef_command:0000000000000030 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:689    .bss.EraseInitStruct.16993:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:693    .bss.EraseInitStruct.16993:0000000000000000 EraseInitStruct.16993
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:696    .bss.EraseInitStruct.17006:0000000000000000 $d
-/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccMgXdLL.s:700    .bss.EraseInitStruct.17006:0000000000000000 EraseInitStruct.17006
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:18     .text.GetPage:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:25     .text.GetPage:0000000000000000 GetPage
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:72     .text.GetPage:0000000000000024 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:78     .rodata.flash_info_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:97     .text.flash_info_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:104    .text.flash_info_command:0000000000000000 flash_info_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:179    .text.flash_info_command:0000000000000050 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:190    .text.flash_write_init:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:197    .text.flash_write_init:0000000000000000 flash_write_init
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:254    .text.flash_write_init:0000000000000024 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:260    .rodata.write_raw.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:264    .text.write_raw:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:271    .text.write_raw:0000000000000000 write_raw
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:377    .text.write_raw:0000000000000064 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:382    .text.erase_one_page:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:389    .text.erase_one_page:0000000000000000 erase_one_page
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:475    .text.erase_one_page:0000000000000048 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:481    .text.flash_erase:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:488    .text.flash_erase:0000000000000000 flash_erase
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:595    .text.flash_erase:0000000000000054 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:604    .rodata.ef_command.str1.4:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:614    .text.ef_command:0000000000000000 $t
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:621    .text.ef_command:0000000000000000 ef_command
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:681    .text.ef_command:0000000000000030 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:689    .bss.EraseInitStruct.16993:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:693    .bss.EraseInitStruct.16993:0000000000000000 EraseInitStruct.16993
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:696    .bss.EraseInitStruct.17006:0000000000000000 $d
+/var/folders/lt/l_qrc8c54t93n_phsj7cf5tc0000gn/T//ccOxKnsG.s:700    .bss.EraseInitStruct.17006:0000000000000000 EraseInitStruct.17006
 
 UNDEFINED SYMBOLS
 printf
